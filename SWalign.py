@@ -5,10 +5,12 @@ alignment between the two.
 Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
+import argparse
+import re
 import numpy as np
 
 
-def SW_align(seq1, seq2, pssm_matrix):
+def local_align(seq1, seq2, subs_matrix):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and  
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -16,7 +18,7 @@ def SW_align(seq1, seq2, pssm_matrix):
 
     :param seq1: first sequence
     :param seq2: second sequence
-    :param pssm_matrix: position-specific weight matrix (i.e. BLOSUM62)
+    :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
@@ -46,10 +48,10 @@ def SW_align(seq1, seq2, pssm_matrix):
             horizontal = score_m[i+1][j]
             vertical = score_m[i][j+1]
 
-            # Score residues based off BLOSUM matrix 
+            # Score residues based off BLOSUM matrix
             # print(f'Char1: {seq1_char}, Char2: {seq2_char}, BLOSUM score: {score}')
             seq2_index = chars.index(seq2_char)  # Corresponding column in BLOSUM matrix
-            matrix_score = pssm_matrix[seq2_index][seq1_index]
+            matrix_score = subs_matrix[seq2_index][seq1_index]
 
             # Add to matrix values via scoring method
             diagonal += matrix_score
@@ -123,7 +125,7 @@ def traceback(score_m, trace_m, seq1, seq2):
     seq1 = ''.join(rev_seq1)
     seq2 = ''.join(rev_seq2)
 
-    # Need to store alignment data somehow, but until then we are printing spaces
+    # Store alignment
     space = ' '
     print(index[1]*space+seq1[::-1])
     print(index[0]*space+seq2[::-1])
@@ -135,6 +137,12 @@ def main():
     the scoring and traceback matrix from SW alignment, and then calls traceback() to print the
     local alignment.
     ============================================================================================="""
+
+    # Take fasta sequences for arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-seq1', type=str, default='AGFISVISKKQGEYLEDEWY')
+    parser.add_argument('-seq2', type=str, default='QVLDKFGS')
+    args = parser.parse_args()
 
     # Intialize BLOSUM62 matrix
     blosum = [[4,0,-2,-1,-2,0,-2,-1,-1,-1,-1,-2,-1,-1,-1,1,0,0,-3,-2],
@@ -158,15 +166,11 @@ def main():
     [-3,-2,-4,-3,1,-2,-2,-3,-3,-2,-1,-4,-4,-2,-3,-3,-2,-3,11,2],
     [-2,-2,-3,-2,3,-3,2,-1,-2,-1,-1,-2,-3,-1,-2,-2,-2,-1,2,7]]
 
-    # Initialize protein sequences
-    seq1 = 'AGFISVISKKQGEYLEDEWY'
-    seq2 = 'AETTEDYNSPTT'
-
     # Call SW_align() to get scoring and traceback matrix
-    score_m, trace_m = SW_align(seq1, seq2, blosum)
+    score_m, trace_m = local_align(args.seq1, args.seq2, blosum)
 
     # Call traceback() to get highest scoring local alignment between seq1 and seq2
-    traceback(score_m, trace_m, seq1, seq2)
+    traceback(score_m, trace_m, args.seq1, args.seq2)
 
 
 if __name__ == '__main__':
