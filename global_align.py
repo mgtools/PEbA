@@ -18,11 +18,11 @@ def global_align(seq1, seq2, subs_matrix):
     :param seq1: first sequence
     :param seq2: second sequence
     :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
-    return: scoring and traceback matrices of optimal scores for the NW-alignment of sequences
+    return: traceback matrix
     ============================================================================================="""
 
     # Gap costs
-    gap_open = -10
+    gap_open = -11
     gap_ext = -1
     gap = False
 
@@ -86,8 +86,8 @@ def global_align(seq1, seq2, subs_matrix):
 
             # Assign value to scoring matrix
             score_m[i+1][j+1] = score
-    print(trace_m)
-    return score_m, trace_m
+
+    return trace_m
 
 
 def write_align(seq1, seq2):
@@ -105,19 +105,18 @@ def write_align(seq1, seq2):
 
     # Find max length sequence and write to file based on its length
     max_length = max(len(seq1_split), len(seq2_split))
-    with open('alignment.txt', 'w', encoding='utf8') as file:
+    with open('global_alignment.txt', 'w', encoding='utf8') as file:
         file.write('Needleman-Wunsch Pairwise Sequence Alignment\n\n\n')
         for i in range(max_length):
             file.write(f'Sequence 1   {seq1_split[i]}\n')
             file.write(f'Sequence 2   {seq2_split[i]}\n\n\n')
 
 
-def traceback(score_m, trace_m, seq1, seq2):
+def traceback(trace_m, seq1, seq2):
     """=============================================================================================
-    This function accepts a scoring and a traceback matrix and two sequences and returns the highest
-    scoring local alignment between the two sequences
+    This function accepts a scoring and a traceback matrix and two sequences and returns global
+    alignment between the two sequences
 
-    :param score_m: scoring matrix
     :param trace_m: traceback matrix
     :param seq1: first sequence
     :param seq2: second sequence
@@ -133,18 +132,16 @@ def traceback(score_m, trace_m, seq1, seq2):
     index = [rows-1, cols-1]
     count = 0
     while index != [0, 0]:
-        print(index)
         val = trace_m[index[0], index[1]]
-
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
-            index[0] = index[0] - 1
+            index[0] = max(index[0] - 1, 0)  # Taking max of new index and 0 so index never falls below 0
             rev_seq2.insert(count, '-')
         if val == -1:  # If cell is equal to -1, insert a gap into the first sequence
-            index[1] = index[1] - 1
+            index[1] = max(index[1] - 1, 0)
             rev_seq1.insert(count, '-')
         if val == 0:  # If cell is equal to 0, there is no gap
-            index[0] = index[0] - 1
-            index[1] = index[1] - 1
+            index[0] = max(index[0] - 1, 0)
+            index[1] = max(index[1] - 1, 0)
         count += 1
 
     # Join lists and reverse strings again
@@ -159,9 +156,9 @@ def traceback(score_m, trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes the BLOSUM62 matrix and two protein sequences, calls SW_align() to get
-    the scoring and traceback matrix from SW alignment, and then calls traceback() to print the
-    local alignment.
+    This function initializes the BLOSUM62 matrix and two protein sequences, calls global_align() to
+    get the scoring and traceback matrix from NW alignment, and then calls traceback() to print the
+    global alignment.
     ============================================================================================="""
 
     # Take fasta sequences for arguments
@@ -192,11 +189,11 @@ def main():
     [-3,-2,-4,-3,1,-2,-2,-3,-3,-2,-1,-4,-4,-2,-3,-3,-2,-3,11,2],
     [-2,-2,-3,-2,3,-3,2,-1,-2,-1,-1,-2,-3,-1,-2,-2,-2,-1,2,7]]
 
-    # Call SW_align() to get scoring and traceback matrix
-    score_m, trace_m = global_align(args.seq1, args.seq2, blosum)
+    # Call global_align() to get traceback matrix
+    trace_m = global_align(args.seq1, args.seq2, blosum)
 
-    # Call traceback() to get highest scoring local alignment between seq1 and seq2
-    traceback(score_m, trace_m, args.seq1, args.seq2)
+    # Call traceback() to get global alignment between seq1 and seq2
+    traceback(trace_m, args.seq1, args.seq2)
 
 
 if __name__ == '__main__':

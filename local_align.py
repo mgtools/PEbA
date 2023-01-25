@@ -134,6 +134,7 @@ def traceback(score_m, trace_m, seq1, seq2):
     count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
     while (index[0] and index[1]) != 0:
+
         val = trace_m[index[0], index[1]]
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
@@ -172,7 +173,7 @@ def main():
 
     # Take fasta sequences for arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVTTKAIYNSGQDHVKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIY')
+    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVTTKAIYNSGQDHKSVKAIYKKSVKAIY')
     parser.add_argument('-seq2', type=str, default='KVKKSVKAIY')
     args = parser.parse_args()
 
@@ -198,7 +199,7 @@ def main():
     [-3,-2,-4,-3,1,-2,-2,-3,-3,-2,-1,-4,-4,-2,-3,-3,-2,-3,11,2],
     [-2,-2,-3,-2,3,-3,2,-1,-2,-1,-1,-2,-3,-1,-2,-2,-2,-1,2,7]]
 
-    # Call SW_align() to get scoring and traceback matrix
+    # Call local_align() to get scoring and traceback matrix
     score_m, trace_m = local_align(args.seq1, args.seq2, blosum)
 
     # Call traceback() to get highest scoring local alignment between seq1 and seq2
