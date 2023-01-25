@@ -6,13 +6,12 @@ Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
 import argparse
-import re
 import numpy as np
 
 
 def local_align(seq1, seq2, subs_matrix):
     """=============================================================================================
-    This function accepts two sequences, creates a matrix corresponding to their lengths, and  
+    This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
     best alignment can be tracebacked.
 
@@ -22,8 +21,8 @@ def local_align(seq1, seq2, subs_matrix):
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
-    # NCBI default gap costs
-    gap_open = -11
+    # Gap costs
+    gap_open = -3
     gap_ext = -1
     gap = False
 
@@ -77,7 +76,7 @@ def local_align(seq1, seq2, subs_matrix):
             if score == horizontal:
                 trace_m[i+1][j+1] = -1
             if score == vertical:
-                trace_m[i+1][j+1] = -1
+                trace_m[i+1][j+1] = 1
 
             # Assign max value to scoring matrix
             score_m[i+1][j+1] = max(score, 0)
@@ -104,18 +103,23 @@ def traceback(score_m, trace_m, seq1, seq2):
     rev_seq1 = list(seq1[::-1])
     rev_seq2 = list(seq2[::-1])
 
-    # Move through matrix starting at bottom right
+    # Move through matrix starting at highest scoring cell
     index = [high_score_ind[0], high_score_ind[1]]
+
+    # Gaps are inserted based on count increasing as we move through sequences
+    # If we don't start at bottom right, need to adjust position at which gaps inserted
+    count_adjust1 = len(seq1) - high_score_ind[0]
+    count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
     while (index[0] and index[1]) != 0:
         val = trace_m[index[0], index[1]]
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
             index[0] = index[0] - 1
-            rev_seq2.insert(count, '_')
+            rev_seq2.insert(count+count_adjust2, '-')
         if val == -1:  # If cell is equal to -1, insert a gap into the first sequence
             index[1] = index[1] - 1
-            rev_seq1.insert(count, '_')
+            rev_seq1.insert(count+count_adjust1, '-')
         if val == 0:  # If cell is equal to 0, there is no gap
             index[0] = index[0] - 1
             index[1] = index[1] - 1
@@ -140,8 +144,8 @@ def main():
 
     # Take fasta sequences for arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-seq1', type=str, default='AGFISVISKKQGEYLEDEWY')
-    parser.add_argument('-seq2', type=str, default='QVLDKFGS')
+    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVKAIYNSGQDHV')
+    parser.add_argument('-seq2', type=str, default='TRHNCRNTVT')
     args = parser.parse_args()
 
     # Intialize BLOSUM62 matrix
