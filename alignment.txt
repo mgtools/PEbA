@@ -1,0 +1,11 @@
+Smith-Waterman Pairwise Sequence Alignment
+
+
+Sequence 1   DRTALQKVKKSVTTKAIYNSGQDHVKKSVKAIYKKSVKAIYKKSVKAIYK
+Sequence 2   ------KVKKSV--KAIY--------------------------------
+
+
+Sequence 1   KSVKAIYKKSVKAIYKKSVKAIYKKSVKAIY
+Sequence 2   -------------------------------
+
+

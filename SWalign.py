@@ -84,9 +84,31 @@ def local_align(seq1, seq2, subs_matrix):
     return score_m, trace_m
 
 
+def write_align(seq1, seq2):
+    """=============================================================================================
+    This function accepts two sequences after gaps have been introduced and writes them to a file
+    in no particular format (yet).
+
+    :param seq1: first aligned sequence
+    :param seq2: second aligned sequence
+    ============================================================================================="""
+
+    # Split sequences every 50 characters
+    seq1_split = [seq1[i:i+50] for i in range(0, len(seq1), 50)]
+    seq2_split = [seq2[i:i+50] for i in range(0, len(seq2), 50)]
+
+    # Find max length sequence and write to file based on its length
+    max_length = max(len(seq1_split), len(seq2_split))
+    with open('alignment.txt', 'w', encoding='utf8') as file:
+        file.write('Smith-Waterman Pairwise Sequence Alignment\n\n\n')
+        for i in range(max_length):
+            file.write(f'Sequence 1   {seq1_split[i]}\n')
+            file.write(f'Sequence 2   {seq2_split[i]}\n\n\n')
+
+
 def traceback(score_m, trace_m, seq1, seq2):
     """=============================================================================================
-    This function accepts a scoring and a traceback matrix and two sequences and returns the highest 
+    This function accepts a scoring and a traceback matrix and two sequences and returns the highest
     scoring local alignment between the two sequences
 
     :param score_m: scoring matrix
@@ -128,11 +150,17 @@ def traceback(score_m, trace_m, seq1, seq2):
     # Join lists and reverse strings again
     seq1 = ''.join(rev_seq1)
     seq2 = ''.join(rev_seq2)
+    seq1 = seq1[::-1]
+    seq2 = seq2[::-1]
 
-    # Store alignment
-    space = ' '
-    print(index[1]*space+seq1[::-1])
-    print(index[0]*space+seq2[::-1])
+    # Introduce gaps at beginning of either sequence based off final index positions
+    seq1 = "-"*index[1]+seq1
+    seq2 = "-"*index[0]+seq2
+
+    # Introduce gaps at end of either sequence based off length of other sequence
+    seq1 = seq1+"-"*max(0, len(seq2)-len(seq1))
+    seq2 = seq2+"-"*max(0, len(seq1)-len(seq2))
+    write_align(seq1, seq2)
 
 
 def main():
@@ -144,8 +172,8 @@ def main():
 
     # Take fasta sequences for arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVKAIYNSGQDHV')
-    parser.add_argument('-seq2', type=str, default='TRHNCRNTVT')
+    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVTTKAIYNSGQDHVKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIYKKSVKAIY')
+    parser.add_argument('-seq2', type=str, default='KVKKSVKAIY')
     args = parser.parse_args()
 
     # Intialize BLOSUM62 matrix
