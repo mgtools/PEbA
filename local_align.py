@@ -7,9 +7,26 @@ Ben Iovino  01/23/23   VecAligns
 
 import argparse
 import numpy as np
+from Bio import SeqIO
 
 
-def local_align(seq1, seq2, subs_matrix):
+def parse_fasta(filename):
+    """=============================================================================================
+    This function accepts a fasta file name and returns the sequence.
+
+    :param filename: name of file
+    return: sequence
+    ============================================================================================="""
+
+    # Parse fasta file
+    seq = ''
+    with open(filename, 'r', encoding='utf8') as file:
+        for seq in SeqIO.parse(file, 'fasta'):
+            seq = str(seq.seq)
+    return seq
+
+
+def local_align(seq1, seq2, subs_matrix, gopen, gext):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -18,13 +35,10 @@ def local_align(seq1, seq2, subs_matrix):
     :param seq1: first sequence
     :param seq2: second sequence
     :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
+    :param gopen: gap penalty for opening a new gap
+    :param gext: gap penalty for extending a gap
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
-
-    # Gap costs
-    gap_open = -3
-    gap_ext = -1
-    gap = False
 
     # Protein alphabet
     chars = 'ACDEFGHIKLMNPQRSTVWY'
@@ -36,6 +50,7 @@ def local_align(seq1, seq2, subs_matrix):
     trace_m = np.full((row_length, col_length), 0)
 
     # Score matrix by moving through each index
+    gap = False
     for i, char in enumerate(seq1):
         seq1_char = char  # Character in 1st sequence
         seq1_index = chars.index(seq1_char)  # Corresponding row in BLOSUM matrix
@@ -54,12 +69,12 @@ def local_align(seq1, seq2, subs_matrix):
 
             # Add to matrix values via scoring method
             diagonal += matrix_score
-            if gap is False:  # Apply gap_open penalty if there is no gap
-                horizontal += gap_open
-                vertical += gap_open
-            if gap is True:  # Apply gap_extension penalty if there is a gap
-                horizontal += gap_ext
-                vertical += gap_ext
+            if gap is False:  # Apply gap open penalty if there is no gap
+                horizontal += gopen
+                vertical += gopen
+            if gap is True:  # Apply gap extension penalty if there is a gap
+                horizontal += gext
+                vertical += gext
 
             # Update gap status
             score = max(diagonal, horizontal, vertical)
@@ -93,17 +108,27 @@ def write_align(seq1, seq2):
     :param seq2: second aligned sequence
     ============================================================================================="""
 
+    # Add space every 10 characters
+    seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
+    seq1 = ' '.join(seq1)
+    seq2 = [seq2[i:i+10] for i in range(0, len(seq2), 10)]
+    seq2 = ' '.join(seq2)
+
     # Split sequences every 50 characters
-    seq1_split = [seq1[i:i+50] for i in range(0, len(seq1), 50)]
-    seq2_split = [seq2[i:i+50] for i in range(0, len(seq2), 50)]
+    seq1_split = [seq1[i:i+55] for i in range(0, len(seq1), 55)]
+    seq2_split = [seq2[i:i+55] for i in range(0, len(seq2), 55)]
 
     # Find max length sequence and write to file based on its length
-    max_length = max(len(seq1_split), len(seq2_split))
-    with open('alignment.txt', 'w', encoding='utf8') as file:
-        file.write('Smith-Waterman Pairwise Sequence Alignment\n\n\n')
-        for i in range(max_length):
-            file.write(f'Sequence 1   {seq1_split[i]}\n')
-            file.write(f'Sequence 2   {seq2_split[i]}\n\n\n')
+    name1 = 'seque1'
+    name2 = 'seque2'
+    with open('local_alignment.txt', 'w', encoding='utf8') as file:
+        file.write('PileUp\n\n\n')
+        file.write(f'   MSF:  {len(seq1)}  Type:  P\n\n')
+        file.write(f'Name: {name1} oo  Len:  {len(seq1)}\n')
+        file.write(f'Name: {name2} oo  Len:  {len(seq2)}\n\n//\n\n\n\n')
+        for i in range(len(seq1_split)):
+            file.write(f'{name1}      {seq1_split[i]}\n')
+            file.write(f'{name2}      {seq2_split[i]}\n\n')
 
 
 def traceback(score_m, trace_m, seq1, seq2):
@@ -139,10 +164,10 @@ def traceback(score_m, trace_m, seq1, seq2):
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
             index[0] = index[0] - 1
-            rev_seq2.insert(count+count_adjust2, '-')
+            rev_seq2.insert(count+count_adjust2, '.')
         if val == -1:  # If cell is equal to -1, insert a gap into the first sequence
             index[1] = index[1] - 1
-            rev_seq1.insert(count+count_adjust1, '-')
+            rev_seq1.insert(count+count_adjust1, '.')
         if val == 0:  # If cell is equal to 0, there is no gap
             index[0] = index[0] - 1
             index[1] = index[1] - 1
@@ -155,12 +180,12 @@ def traceback(score_m, trace_m, seq1, seq2):
     seq2 = seq2[::-1]
 
     # Introduce gaps at beginning of either sequence based off final index positions
-    seq1 = "-"*index[1]+seq1
-    seq2 = "-"*index[0]+seq2
+    seq1 = "."*index[1]+seq1
+    seq2 = "."*index[0]+seq2
 
     # Introduce gaps at end of either sequence based off length of other sequence
-    seq1 = seq1+"-"*max(0, len(seq2)-len(seq1))
-    seq2 = seq2+"-"*max(0, len(seq1)-len(seq2))
+    seq1 = seq1+"."*max(0, len(seq2)-len(seq1))
+    seq2 = seq2+"."*max(0, len(seq1)-len(seq2))
     write_align(seq1, seq2)
 
 
@@ -173,9 +198,15 @@ def main():
 
     # Take fasta sequences for arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-seq1', type=str, default='DRTALQKVKKSVTTKAIYNSGQDHKSVKAIYKKSVKAIY')
-    parser.add_argument('-seq2', type=str, default='KVKKSVKAIY')
+    parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
+    parser.add_argument('-gopen', type=int, default=-3, help='Penalty for opening a gap')
+    parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
+
+    # Parse fasta files
+    seq1 = parse_fasta(args.file1)
+    seq2 = parse_fasta(args.file2)
 
     # Intialize BLOSUM62 matrix
     blosum = [[4,0,-2,-1,-2,0,-2,-1,-1,-1,-1,-2,-1,-1,-1,1,0,0,-3,-2],
@@ -200,10 +231,10 @@ def main():
     [-2,-2,-3,-2,3,-3,2,-1,-2,-1,-1,-2,-3,-1,-2,-2,-2,-1,2,7]]
 
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m = local_align(args.seq1, args.seq2, blosum)
+    score_m, trace_m = local_align(seq1, seq2, blosum, args.gopen, args.gext)
 
     # Call traceback() to get highest scoring local alignment between seq1 and seq2
-    traceback(score_m, trace_m, args.seq1, args.seq2)
+    traceback(score_m, trace_m, seq1, seq2)
 
 
 if __name__ == '__main__':
