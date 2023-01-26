@@ -1,0 +1,15 @@
+PileUp
+
+
+   MSF:  10  Type:  P
+
+Name: seque1 oo  Len:  10
+Name: seque2 oo  Len:  10
+
+//
+
+
+
+seque1      KKSVK.....
+seque2      KVKKSVKAIY
+
