@@ -40,7 +40,7 @@ def embed_seq(seq, tokenizer, encoder):
 
     # Remove padding and special tokens
     features = []
-    for seq_num in range(len(embedding)):
+    for seq_num in range(len(embedding)):  # pylint: disable=C0200
         seq_len = (attention_mask[seq_num] == 1).sum()
         seq_emd = embedding[seq_num][:seq_len-1]
         features.append(seq_emd)
@@ -68,17 +68,19 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
 
-    # Initialize first row and column with gap values for scoring matrix
+    # Initialize first row and column with gap values for S matrix, traceback values for T matrix
     for i in range(1, len(score_m[0])):
         score_m[0][i] = gopen+gext*i+1  # +1 to offset i starting at 1
+        trace_m[0][i] = -1
     for i in range(1, len(score_m.T[0])):
         score_m.T[0][i] = gopen+gext*i+1
+        trace_m.T[0][i] = 1
 
     # Score matrix by moving through each index
     gap = False
-    for i, char in enumerate(seq1):
+    for i in range(len(seq1)):
         seq1_vec = vecs1[i]  # Corresponding amino acid vector
-        for j, char in enumerate(seq2):
+        for j in range(len(seq2)):
 
             # Preceding scoring matrix values
             diagonal = score_m[i][j]

@@ -7,7 +7,7 @@ Ben Iovino  01/25/23   VecAligns
 
 import argparse
 import numpy as np
-from utility import parse_fasta, write_align  # pylint: disable=E0611
+from utility import parse_fasta, write_align, get_blosum  # pylint: disable=E0611
 
 
 def global_align(seq1, seq2, subs_matrix, gopen, gext):
@@ -33,11 +33,13 @@ def global_align(seq1, seq2, subs_matrix, gopen, gext):
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
 
-    # Initialize first row and column with gap values for scoring matrix
+    # Initialize first row and column with gap values for S matrix, traceback values for T matrix
     for i in range(1, len(score_m[0])):
         score_m[0][i] = gopen+gext*i+1  # +1 to offset i starting at 1
+        trace_m[0][i] = -1
     for i in range(1, len(score_m.T[0])):
         score_m.T[0][i] = gopen+gext*i+1
+        trace_m.T[0][i] = 1
 
     # Score matrix by moving through each index
     gap = False
@@ -153,30 +155,10 @@ def main():
     seq2 = parse_fasta(args.file2)
 
     # Intialize BLOSUM62 matrix
-    blosum = [[4,0,-2,-1,-2,0,-2,-1,-1,-1,-1,-2,-1,-1,-1,1,0,0,-3,-2],
-    [0,9,-3,-4,-2,-3,-3,-1,-3,-1,-1,-3,-3,-3,-3,-1,-1,-1,-2,-2],
-    [-2,-3,6,2,-3,-1,-1,-3,-1,-4,-3,1,-1,0,-2,0,-1,-3,-4,-3],
-    [-1,-4,2,5,-3,-2,0,-3,1,-3,-2,0,-1,2,0,0,-1,-2,-3,-2],
-    [-2,-2,-3,-3,6,-3,-1,0,-3,0,0,-3,-4,-3,-3,-2,-2,-1,1,3],
-    [0,-3,-1,-2,-3,6,-2,-4,-2,-4,-3,0,-2,-2,-2,0,-2,-3,-2,-3],
-    [-2,-3,-1,0,-1,-2,8,-3,-1,-3,-2,1,-2,0,0,-1,-2,-3,-2,2],
-    [-1,-1,-3,-3,0,-4,-3,4,-3,2,1,-3,-3,-3,-3,-2,-1,3,-3,-1],
-    [-1,-3,-1,1,-3,-2,-1,-3,5,-2,-1,0,-1,1,2,0,-1,-2,-3,-2],
-    [-1,-1,-4,-3,0,-4,-3,2,-2,4,2,-3,-3,-2,-2,-2,-1,1,-2,-1],
-    [-1,-1,-3,-2,0,-3,-2,1,-1,2,5,-2,-2,0,-1,-1,-1,1,-1,-1],
-    [-2,-3,1,0,-3,0,1,-3,0,-3,-2,6,-2,0,0,1,0,-3,-4,-2],
-    [-1,-3,-1,-1,-4,-2,-2,-3,-1,-3,-2,-2,7,-1,-2,-1,-1,-2,-4,-3],
-    [-1,-3,0,2,-3,-2,0,-3,1,-2,0,0,-1,5,1,0,-1,-2,-2,-1],
-    [-1,-3,-2,0,-3,-2,0,-3,2,-2,-1,0,-2,1,5,-1,-1,-3,-3,-2],
-    [1,-1,0,0,-2,0,-1,-2,0,-2,-1,1,-1,0,-1,4,1,-2,-3,-2],
-    [0,-1,-1,-1,-2,-2,-2,-1,-1,-1,-1,0,-1,-1,-1,1,5,0,-2,-2],
-    [0,-1,-3,-2,-1,-3,-3,3,-2,1,1,-3,-2,-2,-3,-2,0,4,-3,-1],
-    [-3,-2,-4,-3,1,-2,-2,-3,-3,-2,-1,-4,-4,-2,-3,-3,-2,-3,11,2],
-    [-2,-2,-3,-2,3,-3,2,-1,-2,-1,-1,-2,-3,-1,-2,-2,-2,-1,2,7]]
+    blosum = get_blosum()
 
     # Call global_align() to get traceback matrix
     trace_m = global_align(seq1, seq2, blosum, args.gopen, args.gext)
-
 
     # Call traceback() to get global alignment between seq1 and seq2
     traceback(trace_m, seq1, seq2)
