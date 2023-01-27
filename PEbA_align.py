@@ -10,24 +10,8 @@ Ben Iovino  01/26/23   VecAligns
 import argparse
 import torch
 import numpy as np
-from Bio import SeqIO
 from transformers import T5EncoderModel, T5Tokenizer
-
-
-def parse_fasta(filename):
-    """=============================================================================================
-    This function accepts a fasta file name and returns the sequence.
-
-    :param filename: name of file
-    return: sequence
-    ============================================================================================="""
-
-    # Parse fasta file
-    seq = ''
-    with open(filename, 'r', encoding='utf8') as file:
-        for seq in SeqIO.parse(file, 'fasta'):
-            seq = str(seq.seq)
-    return seq
+from utility import parse_fasta, write_align  # pylint: disable=E0611
 
 
 def embed_seq(seq, tokenizer, encoder):
@@ -46,8 +30,8 @@ def embed_seq(seq, tokenizer, encoder):
 
     # Tokenize, encode, and load sequence
     ids = tokenizer.batch_encode_plus(seq, add_special_tokens=True, padding=True)
-    input_ids = torch.tensor(ids['input_ids'])
-    attention_mask = torch.tensor(ids['attention_mask'])
+    input_ids = torch.tensor(ids['input_ids'])  # pylint: disable=E1101
+    attention_mask = torch.tensor(ids['attention_mask'])  # pylint: disable=E1101
 
     # Extract sequence features
     with torch.no_grad():
@@ -104,10 +88,7 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             # Score residues based off cosine similarity between vectors
             seq2_vec = vecs2[j]  # Corresponding amino acid vector
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-
-            '''NOT SETTLED ON WEIGHT OF COSINE SIMILARITY YET'''
-            #cos_sim = (cos_sim*10)
-            print(f'{cos_sim=}')
+            cos_sim = (cos_sim*10)
 
             # Add to matrix values via scoring method
             diagonal += cos_sim
@@ -120,7 +101,6 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
 
             # Update gap status
             score = max(diagonal, horizontal, vertical)
-            print(f'max{score=}')
             if score == horizontal:
                 gap = True
             if score == vertical:
@@ -139,41 +119,7 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             # Assign value to scoring matrix
             score_m[i+1][j+1] = score
 
-    print(score_m)
-    print(trace_m)
     return trace_m
-
-
-def write_align(seq1, seq2):
-    """=============================================================================================
-    This function accepts two sequences after gaps have been introduced and writes them to a file
-    in no particular format (yet).
-
-    :param seq1: first aligned sequence
-    :param seq2: second aligned sequence
-    ============================================================================================="""
-
-    # Add space every 10 characters
-    seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
-    seq1 = ' '.join(seq1)
-    seq2 = [seq2[i:i+10] for i in range(0, len(seq2), 10)]
-    seq2 = ' '.join(seq2)
-
-    # Split sequences every 50 characters
-    seq1_split = [seq1[i:i+55] for i in range(0, len(seq1), 55)]
-    seq2_split = [seq2[i:i+55] for i in range(0, len(seq2), 55)]
-
-    # Find max length sequence and write to file based on its length
-    name1 = 'seque1'
-    name2 = 'seque2'
-    with open('PEbA_alignment.txt', 'w', encoding='utf8') as file:
-        file.write('PileUp\n\n\n')
-        file.write(f'   MSF:  {len(seq1)}  Type:  P\n\n')
-        file.write(f'Name: {name1} oo  Len:  {len(seq1)}\n')
-        file.write(f'Name: {name2} oo  Len:  {len(seq2)}\n\n//\n\n\n\n')
-        for i in range(len(seq1_split)):
-            file.write(f'{name1}      {seq1_split[i]}\n')
-            file.write(f'{name2}      {seq2_split[i]}\n\n')
 
 
 def traceback(trace_m, seq1, seq2):
