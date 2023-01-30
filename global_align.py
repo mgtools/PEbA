@@ -99,7 +99,7 @@ def traceback(trace_m, seq1, seq2):
     :param trace_m: traceback matrix
     :param seq1: first sequence
     :param seq2: second sequence
-    return: highest scoring local alignment of the two sequences
+    return: seq1 with gaps, seq2 with gaps
     ============================================================================================="""
 
     # Reverse strings and convert to lists so gaps can be inserted
@@ -130,19 +130,18 @@ def traceback(trace_m, seq1, seq2):
     seq2 = seq2[::-1]
 
     # Introduce gaps at end of either sequence based off length of other sequence
-    seq1 = seq1+"."*max(0, len(seq2)-len(seq1))
-    seq2 = seq2+"."*max(0, len(seq1)-len(seq2))
-    write_align(seq1, seq2)
+    align1 = seq1+"."*max(0, len(seq2)-len(seq1))
+    align2 = seq2+"."*max(0, len(seq1)-len(seq2))
+    return align1, align2
 
 
 def main():
     """=============================================================================================
     This function initializes the BLOSUM62 matrix and two protein sequences, calls global_align() to
-    get the scoring and traceback matrix from NW alignment, and then calls traceback() to print the
-    global alignment.
+    get the scoring and traceback matrix from NW alignment, calls traceback() to get the global
+    alignment, and then write_align() to write the alignment to a file in MSF format.
     ============================================================================================="""
 
-    # Take fasta sequences for arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
@@ -150,9 +149,9 @@ def main():
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
 
-    # Parse fasta files
-    seq1 = parse_fasta(args.file1)
-    seq2 = parse_fasta(args.file2)
+    # Parse fasta files for sequences and ids
+    seq1, id1 = parse_fasta(args.file1)
+    seq2, id2 = parse_fasta(args.file2)
 
     # Intialize BLOSUM62 matrix
     blosum = get_blosum()
@@ -160,8 +159,9 @@ def main():
     # Call global_align() to get traceback matrix
     trace_m = global_align(seq1, seq2, blosum, args.gopen, args.gext)
 
-    # Call traceback() to get global alignment between seq1 and seq2
-    traceback(trace_m, seq1, seq2)
+    # Get global alignment between seq1 and seq2 and write to file
+    align1, align2 = traceback(trace_m, seq1, seq2)
+    write_align(align1, align2, id1, id2)  # pylint: disable=E1121
 
 
 if __name__ == '__main__':
