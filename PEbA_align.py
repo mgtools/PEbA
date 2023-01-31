@@ -101,22 +101,17 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
                 horizontal += gext
                 vertical += gext
 
-            # Update gap status
+            # Assign value to traceback matrix and update gap status
             score = max(diagonal, horizontal, vertical)
-            if score == horizontal:
-                gap = True
-            if score == vertical:
-                gap = True
-            if score == diagonal:
-                gap = False
-
-            # Assign value to traceback matrix
             if score == diagonal:
                 trace_m[i+1][j+1] = 0
+                gap = False
             if score == horizontal:
                 trace_m[i+1][j+1] = -1
+                gap = True
             if score == vertical:
                 trace_m[i+1][j+1] = 1
+                gap = True
 
             # Assign value to scoring matrix
             score_m[i+1][j+1] = score
@@ -179,7 +174,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
-    parser.add_argument('-gopen', type=int, default=-2, help='Penalty for opening a gap')
+    parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
 
@@ -200,7 +195,7 @@ def main():
 
     # Get global alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2)  # pylint: disable=E1121
+    write_align(align1, align2, id1, id2, 'PEbA')  # pylint: disable=E1121
 
 
 if __name__ == '__main__':

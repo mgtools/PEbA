@@ -9,7 +9,7 @@ from datetime import datetime
 from Bio import SeqIO
 
 
-def write_align(seq1, seq2, id1, id2):
+def write_align(seq1, seq2, id1, id2, script):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
     in MSF format.
@@ -18,6 +18,7 @@ def write_align(seq1, seq2, id1, id2):
     :param seq2: second aligned sequence
     :param id1: first sequence id
     :param id2: second sequence id
+    :param script: type of alignment performed
     ============================================================================================="""
 
     # Add space every 10 characters
@@ -30,10 +31,17 @@ def write_align(seq1, seq2, id1, id2):
     seq1_split = [seq1[i:i+55] for i in range(0, len(seq1), 55)]
     seq2_split = [seq2[i:i+55] for i in range(0, len(seq2), 55)]
 
+    # Add extra spaces to either id if they are not the same length
+    if len(id1) != len(id2):
+        if len(id1) > len(id2):
+            id2 = id2 + ' ' * (len(id1) - len(id2))
+        else:
+            id1 = id1 + ' ' * (len(id2) - len(id1))
+
     # Write to a new line for every index in the split list i.e. every 55 characters
     if not os.path.isdir('alignments'):
         os.makedirs('alignments')
-    with open(f'alignments/{datetime.now()}.txt', 'w', encoding='utf8') as file:
+    with open(f'alignments/{script}-{datetime.now()}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
         file.write(f'   MSF:  {len(seq1)}  Type:  P\n\n')
         file.write(f' Name: {id1} oo  Len:  {len(seq1)}\n')
