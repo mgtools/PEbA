@@ -7,7 +7,8 @@ Ben Iovino  01/23/23   VecAligns
 
 import argparse
 import numpy as np
-from utility import parse_fasta, write_align, get_blosum  # pylint: disable=E0611
+import blosum as bl
+from utility import parse_fasta, write_align  # pylint: disable=E0611
 
 
 def local_align(seq1, seq2, subs_matrix, gopen, gext):
@@ -24,9 +25,6 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
-    # Protein alphabet
-    chars = 'ACDEFGHIKLMNPQRSTVWY'
-
     # Initialize scoring and traceback matrix based on sequence lengths
     row_length = len(seq1)+1
     col_length = len(seq2)+1
@@ -37,19 +35,16 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
     gap = False
     for i, char in enumerate(seq1):
         seq1_char = char  # Character in 1st sequence
-        seq1_index = chars.index(seq1_char)  # Corresponding row in BLOSUM matrix
         for j, char in enumerate(seq2):
-            seq2_char = char
+            seq2_char = char  # Character in 2nd sequence
 
             # Preceding scoring matrix values
             diagonal = score_m[i][j]
             horizontal = score_m[i+1][j]
             vertical = score_m[i][j+1]
 
-            # Score residues based off BLOSUM matrix
-            # print(f'Char1: {seq1_char}, Char2: {seq2_char}, BLOSUM score: {score}')
-            seq2_index = chars.index(seq2_char)  # Corresponding column in BLOSUM matrix
-            matrix_score = subs_matrix[seq2_index][seq1_index]
+            # Score pair of residues based off BLOSUM matrix
+            matrix_score = subs_matrix[f'{seq1_char}{seq2_char}']
 
             # Add to matrix values via scoring method
             diagonal += matrix_score
@@ -153,14 +148,15 @@ def main():
     parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-3, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-blosum', type=int, default=62, help='BLOSUM matrix to use')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
     seq1, id1 = parse_fasta(args.file1)
     seq2, id2 = parse_fasta(args.file2)
 
-    # Intialize BLOSUM62 matrix
-    blosum = get_blosum()
+    # Intialize BLOSUM matrix
+    blosum = bl.BLOSUM(args.blosum)
 
     # Call local_align() to get scoring and traceback matrix
     score_m, trace_m = local_align(seq1, seq2, blosum, args.gopen, args.gext)
