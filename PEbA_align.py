@@ -11,7 +11,7 @@ import argparse
 import torch
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
-from utility import parse_fasta, write_align  # pylint: disable=E0611
+from utility import parse_fasta, write_align
 
 
 def embed_seq(seq, tokenizer, encoder):
@@ -172,8 +172,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='sequences/BB30004_1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='sequences/BB30004_2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
@@ -195,7 +195,7 @@ def main():
 
     # Get global alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'PEbA')  # pylint: disable=E1121
+    write_align(align1, align2, id1, id2, 'PEbA')
 
 
 if __name__ == '__main__':

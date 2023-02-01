@@ -8,7 +8,7 @@ Ben Iovino  01/23/23   VecAligns
 import argparse
 import numpy as np
 import blosum as bl
-from utility import parse_fasta, write_align  # pylint: disable=E0611
+from utility import parse_fasta, write_align
 
 
 def local_align(seq1, seq2, subs_matrix, gopen, gext):
@@ -139,8 +139,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='sequences/BB50012_1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='sequences/BB50012_2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-blosum', type=int, default=62, help='BLOSUM matrix to use')
@@ -158,7 +158,7 @@ def main():
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'local')  # pylint: disable=E1121
+    write_align(align1, align2, id1, id2, 'local')
 
 
 if __name__ == '__main__':
