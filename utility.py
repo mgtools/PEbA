@@ -24,6 +24,9 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
     :param gext: gap penalty for extending a gap
     ============================================================================================="""
 
+    # Length of alignment
+    length = len(seq1)
+
     # Add space every 10 characters
     seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
     seq1 = ' '.join(seq1)
@@ -46,9 +49,9 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
         os.makedirs('alignments')
     with open(f'alignments/{script}-{datetime.now()}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF:  {len(seq1)}  Type:  P  Matrix:  {matrix}  Gap Open:  {gopen}  Gap Ext:  {gext}\n\n')
-        file.write(f' Name: {id1} oo  Len:  {len(seq1)}\n')
-        file.write(f' Name: {id2} oo  Len:  {len(seq2)}\n\n//\n\n\n\n')
+        file.write(f'   MSF:  {length}  Type:  P  Matrix:  {matrix}  Gap Open:  {gopen}  Gap Ext:  {gext}\n\n')
+        file.write(f' Name: {id1} oo  Len:  {length}\n')
+        file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200
             file.write(f'{id1}      {seq1_split[i]}\n')
             file.write(f'{id2}      {seq2_split[i]}\n\n')

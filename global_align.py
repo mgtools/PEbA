@@ -134,8 +134,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='sequences/BB11004_1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='sequences/BB11004_2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-blosum', type=int, default=45, help='BLOSUM matrix to use')
