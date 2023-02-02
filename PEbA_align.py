@@ -195,7 +195,7 @@ def main():
 
     # Get global alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'PEbA')
+    write_align(align1, align2, id1, id2, 'PEbA', 'None', args.gopen, args.gext)  #pylint: disable=E1121
 
 
 if __name__ == '__main__':

@@ -101,7 +101,6 @@ def traceback(score_m, trace_m, seq1, seq2):
     count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
     while (index[0] and index[1]) != 0:
-
         val = trace_m[index[0], index[1]]
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
@@ -139,8 +138,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='sequences/BB50012_1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='sequences/BB50012_2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='sequences/BB11004_1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='sequences/BB11004_2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-blosum', type=int, default=62, help='BLOSUM matrix to use')

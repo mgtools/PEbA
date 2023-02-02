@@ -9,16 +9,19 @@ from datetime import datetime
 from Bio import SeqIO
 
 
-def write_align(seq1, seq2, id1, id2, script):
+def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
-    in MSF format.
+    in MSF format, with some extra information about the alignment parameters.
 
     :param seq1: first aligned sequence
     :param seq2: second aligned sequence
     :param id1: first sequence id
     :param id2: second sequence id
     :param script: type of alignment performed
+    :param matrix: scoring matrix used
+    :param gopen: gap penalty for opening a new gap
+    :param gext: gap penalty for extending a gap
     ============================================================================================="""
 
     # Add space every 10 characters
@@ -43,7 +46,7 @@ def write_align(seq1, seq2, id1, id2, script):
         os.makedirs('alignments')
     with open(f'alignments/{script}-{datetime.now()}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF:  {len(seq1)}  Type:  P\n\n')
+        file.write(f'   MSF:  {len(seq1)}  Type:  P  Matrix:  {matrix}  Gap Open:  {gopen}  Gap Ext:  {gext}\n\n')
         file.write(f' Name: {id1} oo  Len:  {len(seq1)}\n')
         file.write(f' Name: {id2} oo  Len:  {len(seq2)}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200
