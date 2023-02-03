@@ -1,6 +1,6 @@
 """================================================================================================
 This script parses BAliBASE reference folders. MSF files are written pairwise alignments between
-each pair of two sequences. It also parses FASTA files to then write each sequence to an individual 
+each pair of two sequences. It also parses FASTA files to then write each sequence to an individual
 FASTA file.
 
 Ben Iovino  02/02/23   VecAligns
@@ -133,10 +133,11 @@ def main():
     ============================================================================================="""
 
     # Parse reference folder of interest
-    path = '/home/ben/Desktop/BAliBASE_R1-5/bb3_release/RV11'
+    path = '/home/ben/Desktop/BAliBASE_R1-5/bb3_release/RV20'
+    ref_dir = path.rsplit('/', maxsplit=1)[-1]  # Get last directory in path
     msf_files, fasta_files = parse_ref_folder(path)
-    if not os.path.isdir(f'bb_data/{path.split("/")[-1]}'):  #pylint: disable=C0207
-        os.makedirs(f'bb_data/{path.split("/")[-1]}')  #pylint: disable=C0207
+    if not os.path.isdir(f'bb_data/{ref_dir}'):
+        os.makedirs(f'bb_data/{ref_dir}')
 
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
@@ -150,20 +151,21 @@ def main():
 
     # Parse each msf file
     for i, file in enumerate(msf_files):
-        print(file)
+        ref_align = file.rsplit('/', maxsplit=1)[-1].strip('.msf')  # Get name of ref alignment
         sequences = seqs[i]  # Get corresponding fasta files for this msf file
-        # Only want to align each sequence to every other sequence once
-        for i, seq in enumerate(sequences):
-            count = i
-            while count != len(sequences):
-                if seq != sequences[count]:
-                    seq1, seq2 = seq.strip('.fa'), sequences[count].strip('.fa')  # Remove .fa
-                    align1, align2 = parse_msf(file, seq1, seq2)
-                    write_align(align1, align2, seq1, seq2, f'{file}_{i}')
-                    '''TODO: Write alignment to correct directory'''
-                count+=1
 
-        break
+        # Only want to align each sequence to every other sequence once
+        file_count = 0  # Keep track of number of files for naming purposes
+        for i, seq in enumerate(sequences):
+            loop_count = i  # Keep track of number of loops so no repeats occur
+            while loop_count != len(sequences):
+                if seq != sequences[loop_count]:
+                    seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]
+                    align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
+                    file_path = f'bb_data/{ref_dir}/{ref_align}/{ref_align}_{file_count}'
+                    write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
+                    file_count += 1
+                loop_count+=1
 
 if __name__ == '__main__':
     main()
