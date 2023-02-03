@@ -5,11 +5,10 @@ Ben Iovino  01/27/23   VecAligns
 ================================================================================================"""
 
 import os
-from datetime import datetime
 from Bio import SeqIO
 
 
-def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
+def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext, path):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
     in MSF format, with some extra information about the alignment parameters.
@@ -22,6 +21,7 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
     :param matrix: scoring matrix used
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
+    :param path: directory to write alignment to
     ============================================================================================="""
 
     # Length of alignment
@@ -44,10 +44,19 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext):
         else:
             id1 = id1 + ' ' * (len(id2) - len(id1))
 
+    # Keep track of number of alignments in directory to name them
+    path = '/'.join(path.split('/')[:-1])  # Remove fa file from path
+    count = 0
+    for file in os.listdir(path):
+        if file.startswith('global') and script == 'global':
+            count += 1
+        if file.startswith('local') and script == 'local':
+            count += 1
+        if file.startswith('PEbA') and script == 'PEbA':
+            count += 1
+
     # Write to a new line for every index in the split list i.e. every 55 characters
-    if not os.path.isdir('alignments'):
-        os.makedirs('alignments')
-    with open(f'alignments/{script}-{datetime.now()}.msf', 'w', encoding='utf8') as file:
+    with open(f'{path}/{script}_{count}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
         file.write(f'   MSF:  {length}  Type:  P  Matrix:  {matrix}  Gap Open:  {gopen}  Gap Ext:  {gext}\n\n')
         file.write(f' Name: {id1} oo  Len:  {length}\n')
