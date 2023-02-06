@@ -7,6 +7,7 @@ two residues should be aligned.
 Ben Iovino  01/26/23   VecAligns
 ================================================================================================"""
 
+import os
 import argparse
 import torch
 import numpy as np
@@ -172,8 +173,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='test2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
@@ -183,8 +184,16 @@ def main():
     seq2, id2 = parse_fasta(args.file2)
 
     # Load model tokenizer and encoder models
-    tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-    model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+    if os.path.exists('tok.pt'):
+        tokenizer = torch.load('tok.pt')
+    else:
+        tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
+        torch.save(tokenizer, 'tok.pt')
+    if os.path.exists('prottrans.pt'):
+        model = torch.load('prottrans.pt')
+    else:
+        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+        torch.save(model, 'prottrans.pt')
 
     # Vectorize sequences
     vecs1 = embed_seq(seq1, tokenizer, model)

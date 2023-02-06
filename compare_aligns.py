@@ -128,7 +128,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id1}      {seq1_split[i]}\n')
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
-
+            
 def parse_align_files(msf_files, fasta_files, ref_dir):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
@@ -138,6 +138,8 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
     :param msf_files: list of msf files
     :param fasta_files: list of fasta files
     :param ref_dir: directory to place files in
+    :param tokenizer: loaded tokenizer
+    :param model: loaded encoder
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -166,10 +168,11 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-blosum {45}')
                     os.system(f"python global_align.py {args}")
 
+                    # Embed sequences in this script to save time on loading models
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
-                            f'-gext {-1}')
+                            f'-gext {-1} ')
                     os.system(f"python PEbA_align.py {args}")
 
                     # Grab alignment from reference MSA
@@ -178,6 +181,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     file_path = f'bb_data/{ref_dir}/{ref_align}/{ref_align}_{file_count}'
                     write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
                     file_count += 1
+
                 loop_count+=1
 
 
@@ -196,6 +200,7 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, ref_dir)
+
 
 
 if __name__ == '__main__':
