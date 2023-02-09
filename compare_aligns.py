@@ -103,13 +103,13 @@ def graph_compare(path):
     alignments compared the reference alignment.
     ============================================================================================="""
 
+    global_sim = []
+    peba_sim = []
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
         if 'compare.csv' in files:  # Only parse folders with comparison csvs
             with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
-                global_sim = []
-                peba_sim = []
                 for line in file:
                     line = line.split(',')
                     if line[0].startswith('global'):
@@ -117,16 +117,19 @@ def graph_compare(path):
                     if line[0].startswith('PEbA'):
                         peba_sim.append(float(line[3]))
 
-                # Graph the the similarity scores on the same plot to compare
-                fig = plt.figure()
-                ax = fig.add_subplot()
-                ax.plot(global_sim)
-                ax.plot(peba_sim)
-                ax.set_title('Similarity Scores of Global and PEbA Alignments to Reference')
-                ax.set_xlabel('Alignment Number')
-                ax.set_ylabel('Similarity Score (%)')
-                ax.legend(['Global', 'PEbA'])
-                plt.savefig(f'{path}/{folder}/compare.png')
+    # Graph the the similarity scores on the same plot to compare
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    sim_diff = []
+    for i, gsim in enumerate(global_sim):
+        sim_diff.append(peba_sim[i]-gsim)
+    ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
+    ax.set_title('Difference in Similarity Scores Between PEbA and NW')
+    ax.set_xlabel('Alignment Number')
+    ax.set_ylabel('Similarity Difference')
+    ax.legend('PEbA vs. Global')
+    ax.axhline(0, color='black')
+    plt.savefig(f'{path}/compare.png')
 
 
 def main():

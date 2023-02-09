@@ -8,6 +8,7 @@ Ben Iovino  02/03/23   VecAligns
 ================================================================================================"""
 
 import os
+from random import sample
 from Bio import SeqIO
 
 
@@ -148,10 +149,19 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
         new_seqs = parse_fasta(file)
         seqs.append(new_seqs)  # Store in nested list to access only relevant fa files for each msf
 
+    # To speed up the testing process, two random sequences from each group of sequences will be
+    # selected for pairwise alignment
+    random_seqs = []
+    for seq in seqs:
+        random_seqs.append(sample(seq, 2))
+
     # Parse each msf file
     for i, file in enumerate(msf_files):
         ref_align = file.rsplit('/', maxsplit=1)[-1].strip('.msf')  # Get name of ref alignment
-        sequences = seqs[i]  # Get corresponding fasta files for this msf file
+
+        # Get corresponding fasta files for this msf file
+        # CHANGE 'random_seqs[i]' TO 'seqs[i]' TO USE ALL SEQUENCES
+        sequences = random_seqs[i]
 
         # Only want to align each sequence to every other sequence once
         file_count = 0  # Keep track of number of files for naming purposes
