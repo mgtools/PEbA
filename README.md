@@ -3,9 +3,9 @@
 **************************************************************************************************************
 
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
-embed protein sequences and then calculates the cosine similarity between residues to align them using 
-traditional Needleman-Wunsch and Smith-Waterman algorithms. The cosine similarity scores are used in place of 
-substitution matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share 
+embed protein sequences and then calculates the cosine similarity between each residue's vector to align them 
+using traditional Needleman-Wunsch and Smith-Waterman algorithms. The cosine similarity scores are used in place 
+of substitution matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share 
 low character identity (<20%), referred to as the "twilight zone" of protein sequence alignments.
 
 To determine if protein embedding based alignments (PEbA) produce more accurate alignments than those with

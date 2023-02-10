@@ -179,14 +179,14 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-gopen {-11} '
                             f'-gext {-1} '
                             f'-blosum {45}')
-                    os.system(f"python global_align.py {args}")
+                    os.system(f"python global_BLOSUM.py {args}")
 
                     # Embed sequences in this script to save time on loading models
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
                             f'-gext {-1} ')
-                    os.system(f"python PEbA_align.py {args}")
+                    os.system(f"python global_PEbA.py {args}")
 
                     # Grab alignment from reference MSA
                     seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]  # Remove fa

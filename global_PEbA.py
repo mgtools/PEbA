@@ -80,7 +80,7 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
     # Score matrix by moving through each index
     gap = False
     for i in range(len(seq1)):
-        seq1_vec = vecs1[i]  # Corresponding amino acid vector
+        seq1_vec = vecs1[i]  # Corresponding amino acid vector in first sequence
         for j in range(len(seq2)):
 
             # Preceding scoring matrix values
@@ -89,7 +89,7 @@ def global_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             vertical = score_m[i][j+1]
 
             # Score residues based off cosine similarity between vectors
-            seq2_vec = vecs2[j]  # Corresponding amino acid vector
+            seq2_vec = vecs2[j]  # Corresponding amino acid vector in second sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
             cos_sim = (cos_sim*10)
 
@@ -204,7 +204,7 @@ def main():
 
     # Get global alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'PEbA', 'None', args.gopen, args.gext, args.file1)  #pylint: disable=E1121
+    write_align(align1, align2, id1, id2, 'global_PEbA', 'None', args.gopen, args.gext, args.file1)  #pylint: disable=E1121
 
 
 if __name__ == '__main__':
