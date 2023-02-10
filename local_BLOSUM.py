@@ -142,7 +142,7 @@ def main():
     parser.add_argument('-file2', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-blosum', type=int, default=62, help='BLOSUM matrix to use')
+    parser.add_argument('-blosum', type=int, default=45, help='BLOSUM matrix to use')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -157,7 +157,7 @@ def main():
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'local', 'None', args.gopen, args.gext, args.file1)  #pylint: disable=E1121
+    write_align(align1, align2, id1, id2, 'local_BLOSUM', 'None', args.gopen, args.gext, args.file1)  #pylint: disable=E1121
 
 
 if __name__ == '__main__':

@@ -157,6 +157,8 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
     random_seqs = []
     for seq in seqs:
         random_seqs.append(sample(seq, 2))
+    # random_seqs = random_seqs[:3]
+    # msf_files = msf_files[:3]
 
     # Parse each msf file
     for i, file in enumerate(msf_files):
@@ -208,33 +210,33 @@ def compare_aligns(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        if 'global_0.msf' in files:  # Only parse folders with alignments
-            global_aligns = []
-            peba_aligns = []
-            ref_aligns = []
-            for file in files: # Add each alignment to list of alignments
-                if file.startswith('global'):
-                    global_aligns.append(f'{path}/{folder}/{file}')
-                if file.startswith('PEbA'):
-                    peba_aligns.append(f'{path}/{folder}/{file}')
-                if file.startswith('BB'):
-                    ref_aligns.append(f'{path}/{folder}/{file}')
+        blosum_aligns = []
+        peba_aligns = []
+        ref_aligns = []
+        for file in files: # Add each alignment to list of alignments
+            if 'BLOSUM' in file:
+                blosum_aligns.append(f'{path}/{folder}/{file}')
+            if 'PEbA' in file:
+                peba_aligns.append(f'{path}/{folder}/{file}')
+            if file.startswith('BB'):
+                ref_aligns.append(f'{path}/{folder}/{file}')
 
-            # Sort so that correct alignments are compared
-            global_aligns.sort()
-            peba_aligns.sort()
-            ref_aligns.sort()
+        # Sort so that correct alignments are compared
+        blosum_aligns.sort()
+        peba_aligns.sort()
+        ref_aligns.sort()
 
-            # Call t_coffee to compare global and peba aligns to refs
-            for i, ref_align in enumerate(ref_aligns):
-                global_align = global_aligns[i]
-                peba_align = peba_aligns[i]
+        # Call t_coffee to compare global and peba aligns to refs
+        for i, ref_align in enumerate(ref_aligns):
+            blosum_align = blosum_aligns[i]
+            peba_align = peba_aligns[i]
 
-                # Get names of alignments for output file
-                global_name = global_align.split('/')[-1].split('.')[0]
-                peba_name = peba_align.split('/')[-1].split('.')[0]
-                os.system(f't_coffee -other_pg aln_compare -al1 {global_align} -al2 {ref_align} > {path}/{folder}/{global_name}_compare.txt')
-                os.system(f't_coffee -other_pg aln_compare -al1 {peba_align} -al2 {ref_align} > {path}/{folder}/{peba_name}_compare.txt')
+            # Get names of alignments for output file
+            blosum_name = blosum_align.split('/')[-1].strip('.msf')
+            peba_name = peba_align.split('/')[-1].strip('.msf')
+            print(f'Comparing {blosum_name} and {peba_name} to {ref_align}')
+            os.system(f't_coffee -other_pg aln_compare -al1 {blosum_align} -al2 {ref_align} > {path}/{folder}/blosum_{blosum_name}_compare.txt')
+            os.system(f't_coffee -other_pg aln_compare -al1 {peba_align} -al2 {ref_align} > {path}/{folder}/peba_{peba_name}_compare.txt')
 
 
 def parse_compare(path):
@@ -248,40 +250,39 @@ def parse_compare(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        if 'global_0.msf' in files:  # Only parse folders with alignments
-            global_compares = []
-            peba_compares = []
-            for file in files:
-                if 'compare' in file:
-                    if file.startswith('global'):
-                        global_compares.append(f'{path}/{folder}/{file}')
-                    if file.startswith('peba'):
-                        peba_compares.append(f'{path}/{folder}/{file}')
+        blosum_compares = []
+        peba_compares = []
+        for file in files:
+            if file.startswith('blosum'):
+                blosum_compares.append(f'{path}/{folder}/{file}')
+            if file.startswith('peba'):
+                peba_compares.append(f'{path}/{folder}/{file}')
 
-            # Sort so that correct comparisons are compared
-            global_compares.sort()
-            peba_compares.sort()
+        # Sort so that correct comparisons are compared
+        blosum_compares.sort()
+        peba_compares.sort()
+        print(blosum_compares, peba_compares)
 
-            # For both compare files, store their third line in a csv
-            global_lines = []
-            peba_lines = []
-            for i, compare in enumerate(global_compares):
-                with open(compare, 'r', encoding='utf8') as file:
-                    lines = file.readlines()
-                    third_line = lines[2].split()
-                    third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                    global_lines.append(third_line)
-                    os.remove(compare)
-                with open(peba_compares[i], 'r', encoding='utf8') as file:
-                    lines = file.readlines()
-                    third_line = lines[2].split()
-                    third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                    peba_lines.append(third_line)
-                    os.remove(peba_compares[i])
-            with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file:
-                for i, line in enumerate(global_lines):
-                    file.write(line)
-                    file.write(peba_lines[i])
+        # For both compare files, store their third line in a csv
+        blosum_lines = []
+        peba_lines = []
+        for i, compare in enumerate(blosum_compares):
+            with open(compare, 'r', encoding='utf8') as file1:
+                lines = file1.readlines()
+                third_line = lines[2].split()
+                third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
+                blosum_lines.append(third_line)
+                os.remove(compare)
+            with open(peba_compares[i], 'r', encoding='utf8') as file2:
+                lines = file2.readlines()
+                third_line = lines[2].split()
+                third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
+                peba_lines.append(third_line)
+                os.remove(peba_compares[i])
+        with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:
+            for i, line in enumerate(blosum_lines):
+                file3.write(line)
+                file3.write(peba_lines[i])
 
 
 def graph_compare(path):
@@ -294,15 +295,13 @@ def graph_compare(path):
     peba_sim = []
     folders = os.listdir(path)
     for folder in folders:
-        files = os.listdir(f'{path}/{folder}')
-        if 'compare.csv' in files:  # Only parse folders with comparison csvs
-            with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
-                for line in file:
-                    line = line.split(',')
-                    if line[0].startswith('global'):
-                        global_sim.append(float(line[3]))
-                    if line[0].startswith('PEbA'):
-                        peba_sim.append(float(line[3]))
+        with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
+            for line in file:
+                line = line.split(',')
+                if 'BLOSUM' in line[0]:
+                    global_sim.append(float(line[3]))
+                if 'PEbA' in line[0]:
+                    peba_sim.append(float(line[3]))
 
     # Graph the the similarity scores on the same plot to compare
     fig = plt.figure()
@@ -314,6 +313,7 @@ def graph_compare(path):
     ax.set_title('Difference in Total Column Score PEbA vs BLOSUM')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
+    ax.set_ylim(-20, 80)
     ax.axhline(0, color='black')
     plt.savefig(f'{path}/compare.png')
 
