@@ -10,6 +10,8 @@ Ben Iovino  02/10/23   VecAligns
 ================================================================================================"""
 
 import os
+import sys
+from time import strftime
 from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
@@ -179,14 +181,16 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-gopen {-11} '
                             f'-gext {-1} '
                             f'-blosum {45}')
-                    print(f'BLOSUM Aligning: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}')
+                    print(f'{strftime("%H:%M:%S")} BLOSUM: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
+                           file=sys.stdout)
                     os.system(f"python global_BLOSUM.py {args}")
 
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
                             f'-gext {-1} ')
-                    print(f'PEbA Aligning: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}')
+                    print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
+                           file=sys.stdout)
                     os.system(f"python global_PEbA.py {args}")
 
                     # Grab alignment from reference MSA
@@ -305,8 +309,8 @@ def graph_compare(path):
                     peba_sim.append(float(line[3]))
 
     # Average the similarity scores for graphing
-    global_avg = round(sum(global_sim)/len(global_sim), 3)
-    peba_avg = round(sum(peba_sim)/len(peba_sim), 3)
+    global_avg = round(sum(global_sim)/len(global_sim), 0)
+    peba_avg = round(sum(peba_sim)/len(peba_sim), 0)
 
     # Graph the the similarity scores on the same plot to compare
     fig = plt.figure()
@@ -315,7 +319,7 @@ def graph_compare(path):
     for i, gsim in enumerate(global_sim):
         sim_diff.append(peba_sim[i]-gsim)
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title(f'Difference in TCS PEbA {peba_avg} vs BLOSUM {global_avg}')
+    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs BLOSUM (Avg={global_avg})')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
     ax.set_ylim(-20, 80)
@@ -332,6 +336,7 @@ def main():
     ============================================================================================="""
 
     # Parse reference folder of interest
+    print(f'{strftime("%H:%M:%S")} Parsing and computing alignments...\n', file=sys.stdout)
     path = 'BAliBASE_R1-5/bb3_release/RV11'
     ref_dir = path.rsplit('/', maxsplit=1)[-1]  # Get last directory in path
     msf_files, fasta_files = parse_ref_folder(path)
@@ -344,10 +349,12 @@ def main():
     parse_align_files(msf_files, fasta_files, ref_dir)
 
     # Compare alignments using t_coffee
+    print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     path = 'bb_data/RV11'
     compare_aligns(path)
     parse_compare(path)
     graph_compare(path)
+    print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 
 if __name__ == '__main__':
