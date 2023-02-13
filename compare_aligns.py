@@ -157,8 +157,6 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
     random_seqs = []
     for seq in seqs:
         random_seqs.append(sample(seq, 2))
-    # random_seqs = random_seqs[:3]
-    # msf_files = msf_files[:3]
 
     # Parse each msf file
     for i, file in enumerate(msf_files):
@@ -181,13 +179,14 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-gopen {-11} '
                             f'-gext {-1} '
                             f'-blosum {45}')
+                    print(f'BLOSUM Aligning: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}')
                     os.system(f"python global_BLOSUM.py {args}")
 
-                    # Embed sequences in this script to save time on loading models
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
                             f'-gext {-1} ')
+                    print(f'PEbA Aligning: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}')
                     os.system(f"python global_PEbA.py {args}")
 
                     # Grab alignment from reference MSA
@@ -261,7 +260,6 @@ def parse_compare(path):
         # Sort so that correct comparisons are compared
         blosum_compares.sort()
         peba_compares.sort()
-        print(blosum_compares, peba_compares)
 
         # For both compare files, store their third line in a csv
         blosum_lines = []
@@ -289,8 +287,11 @@ def graph_compare(path):
     """=============================================================================================
     This function takes a directory and graphs the differences between the global and PEbA
     alignments compared the reference alignment.
+
+    :param path: directory where compare.csv files exist
     ============================================================================================="""
 
+    # Get the similarity scores from the compare files
     global_sim = []
     peba_sim = []
     folders = os.listdir(path)
@@ -303,6 +304,10 @@ def graph_compare(path):
                 if 'PEbA' in line[0]:
                     peba_sim.append(float(line[3]))
 
+    # Average the similarity scores for graphing
+    global_avg = round(sum(global_sim)/len(global_sim), 3)
+    peba_avg = round(sum(peba_sim)/len(peba_sim), 3)
+
     # Graph the the similarity scores on the same plot to compare
     fig = plt.figure()
     ax = fig.add_subplot()
@@ -310,7 +315,7 @@ def graph_compare(path):
     for i, gsim in enumerate(global_sim):
         sim_diff.append(peba_sim[i]-gsim)
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title('Difference in Total Column Score PEbA vs BLOSUM')
+    ax.set_title(f'Difference in TCS PEbA {peba_avg} vs BLOSUM {global_avg}')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
     ax.set_ylim(-20, 80)
