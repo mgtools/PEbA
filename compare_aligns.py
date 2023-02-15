@@ -179,7 +179,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
-                            f'-gext {-1} '
+                            f'-gext {-1.5} '
                             f'-blosum {45}')
                     print(f'{strftime("%H:%M:%S")} BLOSUM: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
@@ -188,7 +188,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
-                            f'-gext {-1} ')
+                            f'-gext {-1.5} ')
                     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
                     os.system(f"python local_PEbA.py {args}")

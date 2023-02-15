@@ -8,7 +8,6 @@ Ben Iovino  01/23/23   VecAligns
 import os
 import argparse
 import torch
-import math
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
 from utility import parse_fasta, write_align
@@ -81,7 +80,7 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             # Score pair of residues based off BLOSUM matrix
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-            cos_sim = 15*math.sqrt(abs(cos_sim))-4
+            cos_sim = 10*(cos_sim)
 
             # Add to matrix values via scoring method
             diagonal += cos_sim
@@ -178,8 +177,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
-    parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
+    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
