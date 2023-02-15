@@ -8,6 +8,7 @@ Ben Iovino  01/23/23   VecAligns
 import os
 import argparse
 import torch
+import math
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
 from utility import parse_fasta, write_align
@@ -80,7 +81,7 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             # Score pair of residues based off BLOSUM matrix
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-            cos_sim = (cos_sim*10)
+            cos_sim = 15*math.sqrt(abs(cos_sim))-4
 
             # Add to matrix values via scoring method
             diagonal += cos_sim

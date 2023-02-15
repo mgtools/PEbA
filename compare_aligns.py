@@ -183,7 +183,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-blosum {45}')
                     print(f'{strftime("%H:%M:%S")} BLOSUM: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
-                    os.system(f"python global_BLOSUM.py {args}")
+                    os.system(f"python local_BLOSUM.py {args}")
 
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
@@ -191,7 +191,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-gext {-1} ')
                     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
-                    os.system(f"python global_PEbA.py {args}")
+                    os.system(f"python local_PEbA.py {args}")
 
                     # Grab alignment from reference MSA
                     seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]  # Remove fa
@@ -289,14 +289,16 @@ def parse_compare(path):
 
 def graph_compare(path):
     """=============================================================================================
-    This function takes a directory and graphs the differences between the global and PEbA
-    alignments compared the reference alignment.
+    This function takes a directory and makes two graphs. The first graphs the differences between 
+    the global and PEbA alignments compared the reference alignment and the second graphs the sim
+    scores against each other with the better BLOSUM scores on the left side of the diagonal line
+    and the better PEbA scores on the right side of the diagonal line.
 
     :param path: directory where compare.csv files exist
     ============================================================================================="""
 
     # Get the similarity scores from the compare files
-    global_sim = []
+    blosum_sim = []
     peba_sim = []
     folders = os.listdir(path)
     for folder in folders:
@@ -304,27 +306,45 @@ def graph_compare(path):
             for line in file:
                 line = line.split(',')
                 if 'BLOSUM' in line[0]:
-                    global_sim.append(float(line[3]))
+                    blosum_sim.append(float(line[3]))
                 if 'PEbA' in line[0]:
                     peba_sim.append(float(line[3]))
 
     # Average the similarity scores for graphing
-    global_avg = round(sum(global_sim)/len(global_sim), 0)
-    peba_avg = round(sum(peba_sim)/len(peba_sim), 0)
+    blosum_avg = round(sum(blosum_sim)/len(blosum_sim), 1)
+    peba_avg = round(sum(peba_sim)/len(peba_sim), 1)
 
-    # Graph the the similarity scores on the same plot to compare
+    # Graph the difference between similarity scores for each alignment
     fig = plt.figure()
     ax = fig.add_subplot()
     sim_diff = []
-    for i, gsim in enumerate(global_sim):
-        sim_diff.append(peba_sim[i]-gsim)
+    for i, bsim in enumerate(blosum_sim):
+        sim_diff.append(peba_sim[i]-bsim)
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs BLOSUM (Avg={global_avg})')
+    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs. BLOSUM (Avg={blosum_avg})')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
     ax.set_ylim(-20, 80)
     ax.axhline(0, color='black')
-    plt.savefig(f'{path}/compare.png')
+    plt.savefig(f'{path}/differences.png')
+
+    # Graph the similarity scores against each other, better score on either side of diag line
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    peba_scores = []
+    blosum_scores = []
+    for i, gsim in enumerate(blosum_sim):
+        if gsim < peba_sim[i]:
+            peba_scores.append([peba_sim[i], gsim])
+        else:
+            blosum_scores.append([gsim, peba_sim[i]])
+    ax.scatter([i[0] for i in peba_scores], [i[1] for i in peba_scores], color='red')
+    ax.scatter([i[1] for i in blosum_scores], [i[0] for i in blosum_scores], color='blue')
+    ax.set_title(f'PEbA Alignment (Avg={peba_avg}) vs. BLOSUM Alignment (Avg={blosum_avg})')
+    ax.set_xlabel('TCS PEbA')
+    ax.set_ylabel('TCS BLOSUM')
+    plt.plot([0, 100], [0, 100], color='black')
+    plt.savefig(f'{path}/comparison.png')
 
 
 def main():
