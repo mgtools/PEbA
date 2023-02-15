@@ -80,3 +80,29 @@ def parse_fasta(filename):
             name = seq.id
             seq = str(seq.seq)
     return seq, name
+
+
+def parse_matrix(file):
+    """=============================================================================================
+    This function takes a text file containing a substitution matrix and parses it into a dict.
+
+    :param file: text file containing substitution matrix
+    :return subs_matrix: dictionary of substitution matrix values
+    ============================================================================================="""
+
+    # Open file and read lines
+    with open(file, 'r', encoding='utf8') as f:
+        lines = f.readlines()
+
+    # Parse first line to get amino acids
+    amino_acids = lines[0].split()
+
+    # Parse remaining lines to get substitution scores
+    subs_matrix = {}
+    for line in lines[1:]:
+        line = line.split()
+        for j, score in enumerate(line[1:]):
+            subs_matrix[f'{line[0]}{amino_acids[j]}'] = int(score)
+            subs_matrix[f'{amino_acids[j]}{line[0]}'] = int(score)
+
+    return subs_matrix

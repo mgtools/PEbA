@@ -146,6 +146,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
     :param ref_dir: directory to place files in
     :param tokenizer: loaded tokenizer
     :param model: loaded encoder
+    :return: arguments used to call matrix and PEbA alignments
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -179,16 +180,17 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
-                            f'-gext {-1.5} '
-                            f'-blosum {45}')
-                    print(f'{strftime("%H:%M:%S")} BLOSUM: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
+                            f'-gext {-1} '
+                            f'-matrix pfasum '
+                            f'-score {60}')
+                    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
-                    os.system(f"python local_BLOSUM.py {args}")
+                    os.system(f"python local_MATRIX.py {args}")
 
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
-                            f'-gext {-1.5} ')
+                            f'-gext {-1} ')
                     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
                     os.system(f"python local_PEbA.py {args}")
@@ -200,11 +202,12 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
                     file_count += 1
                 loop_count+=1
+    return args
 
 
 def compare_aligns(path):
     """=============================================================================================
-    This function takes a directory and compares global and PEbA alignments to the reference
+    This function takes a directory and compares matrix and PEbA alignments to the reference
     alignment using t_coffee's aln_compare function. The output is stored in a text file.
 
     :param path: directory where alignments exist
@@ -213,32 +216,32 @@ def compare_aligns(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        blosum_aligns = []
+        matrix_aligns = []
         peba_aligns = []
         ref_aligns = []
         for file in files: # Add each alignment to list of alignments
-            if 'BLOSUM' in file:
-                blosum_aligns.append(f'{path}/{folder}/{file}')
+            if 'MATRIX' in file:
+                matrix_aligns.append(f'{path}/{folder}/{file}')
             if 'PEbA' in file:
                 peba_aligns.append(f'{path}/{folder}/{file}')
             if file.startswith('BB'):
                 ref_aligns.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct alignments are compared
-        blosum_aligns.sort()
+        matrix_aligns.sort()
         peba_aligns.sort()
         ref_aligns.sort()
 
         # Call t_coffee to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
-            blosum_align = blosum_aligns[i]
+            matrix_align = matrix_aligns[i]
             peba_align = peba_aligns[i]
 
             # Get names of alignments for output file
-            blosum_name = blosum_align.split('/')[-1].strip('.msf')
+            matrix_name = matrix_align.split('/')[-1].strip('.msf')
             peba_name = peba_align.split('/')[-1].strip('.msf')
-            print(f'Comparing {blosum_name} and {peba_name} to {ref_align}')
-            os.system(f't_coffee -other_pg aln_compare -al1 {blosum_align} -al2 {ref_align} > {path}/{folder}/blosum_{blosum_name}_compare.txt')
+            print(f'Comparing {matrix_name} and {peba_name} to {ref_align}')
+            os.system(f't_coffee -other_pg aln_compare -al1 {matrix_align} -al2 {ref_align} > {path}/{folder}/matrix_{matrix_name}_compare.txt')
             os.system(f't_coffee -other_pg aln_compare -al1 {peba_align} -al2 {ref_align} > {path}/{folder}/peba_{peba_name}_compare.txt')
 
 
@@ -253,27 +256,27 @@ def parse_compare(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        blosum_compares = []
+        matrix_compares = []
         peba_compares = []
         for file in files:
-            if file.startswith('blosum'):
-                blosum_compares.append(f'{path}/{folder}/{file}')
+            if file.startswith('matrix'):
+                matrix_compares.append(f'{path}/{folder}/{file}')
             if file.startswith('peba'):
                 peba_compares.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct comparisons are compared
-        blosum_compares.sort()
+        matrix_compares.sort()
         peba_compares.sort()
 
         # For both compare files, store their third line in a csv
-        blosum_lines = []
+        matrix_lines = []
         peba_lines = []
-        for i, compare in enumerate(blosum_compares):
+        for i, compare in enumerate(matrix_compares):
             with open(compare, 'r', encoding='utf8') as file1:
                 lines = file1.readlines()
                 third_line = lines[2].split()
                 third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                blosum_lines.append(third_line)
+                matrix_lines.append(third_line)
                 os.remove(compare)
             with open(peba_compares[i], 'r', encoding='utf8') as file2:
                 lines = file2.readlines()
@@ -282,12 +285,12 @@ def parse_compare(path):
                 peba_lines.append(third_line)
                 os.remove(peba_compares[i])
         with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:
-            for i, line in enumerate(blosum_lines):
+            for i, line in enumerate(matrix_lines):
                 file3.write(line)
                 file3.write(peba_lines[i])
 
 
-def graph_compare(path):
+def graph_compare(path, args):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
     the global and PEbA alignments compared the reference alignment and the second graphs the sim
@@ -295,33 +298,38 @@ def graph_compare(path):
     and the better PEbA scores on the right side of the diagonal line.
 
     :param path: directory where compare.csv files exist
+    :param args: arguments used for calling the matrix and PEbA alignments
     ============================================================================================="""
 
+    # Get type of matrix used from args
+    split_args = args.split('-')
+    matrix = split_args[4].split(' ')[1]
+
     # Get the similarity scores from the compare files
-    blosum_sim = []
+    matrix_sim = []
     peba_sim = []
     folders = os.listdir(path)
     for folder in folders:
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for line in file:
                 line = line.split(',')
-                if 'BLOSUM' in line[0]:
-                    blosum_sim.append(float(line[3]))
+                if 'MATRIX' in line[0]:
+                    matrix_sim.append(float(line[3]))
                 if 'PEbA' in line[0]:
                     peba_sim.append(float(line[3]))
 
     # Average the similarity scores for graphing
-    blosum_avg = round(sum(blosum_sim)/len(blosum_sim), 1)
+    blosum_avg = round(sum(matrix_sim)/len(matrix_sim), 1)
     peba_avg = round(sum(peba_sim)/len(peba_sim), 1)
 
     # Graph the difference between similarity scores for each alignment
     fig = plt.figure()
     ax = fig.add_subplot()
     sim_diff = []
-    for i, bsim in enumerate(blosum_sim):
-        sim_diff.append(peba_sim[i]-bsim)
+    for i, mat_sim in enumerate(matrix_sim):
+        sim_diff.append(peba_sim[i]-mat_sim)
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs. BLOSUM (Avg={blosum_avg})')
+    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs. {matrix} (Avg={blosum_avg})')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
     ax.set_ylim(-20, 80)
@@ -332,17 +340,17 @@ def graph_compare(path):
     fig = plt.figure()
     ax = fig.add_subplot()
     peba_scores = []
-    blosum_scores = []
-    for i, gsim in enumerate(blosum_sim):
-        if gsim < peba_sim[i]:
-            peba_scores.append([peba_sim[i], gsim])
+    matrix_scores = []
+    for i, mat_sim in enumerate(matrix_sim):
+        if mat_sim < peba_sim[i]:
+            peba_scores.append([peba_sim[i], mat_sim])
         else:
-            blosum_scores.append([gsim, peba_sim[i]])
+            matrix_scores.append([mat_sim, peba_sim[i]])
     ax.scatter([i[0] for i in peba_scores], [i[1] for i in peba_scores], color='red')
-    ax.scatter([i[1] for i in blosum_scores], [i[0] for i in blosum_scores], color='blue')
-    ax.set_title(f'PEbA Alignment (Avg={peba_avg}) vs. BLOSUM Alignment (Avg={blosum_avg})')
+    ax.scatter([i[1] for i in matrix_scores], [i[0] for i in matrix_scores], color='blue')
+    ax.set_title(f'PEbA Alignment (Avg={peba_avg}) vs. {matrix} Alignment (Avg={blosum_avg})')
     ax.set_xlabel('TCS PEbA')
-    ax.set_ylabel('TCS BLOSUM')
+    ax.set_ylabel('TCS MATRIX')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 
@@ -366,14 +374,14 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    parse_align_files(msf_files, fasta_files, ref_dir)
+    args = parse_align_files(msf_files, fasta_files, ref_dir)
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     path = 'bb_data/RV11'
     compare_aligns(path)
     parse_compare(path)
-    graph_compare(path)
+    graph_compare(path, args)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

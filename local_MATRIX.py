@@ -1,17 +1,17 @@
 """================================================================================================
-This script takes two protein sequences of varying length and finds the highest scoring global
+This script takes two protein sequences of varying length and finds the highest scoring local
 alignment between the two.
 
-Ben Iovino  01/25/23   VecAligns
+Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
 import argparse
 import numpy as np
 import blosum as bl
-from utility import parse_fasta, write_align
+from utility import parse_fasta, write_align, parse_matrix
 
 
-def global_align(seq1, seq2, subs_matrix, gopen, gext):
+def local_align(seq1, seq2, subs_matrix, gopen, gext):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -22,7 +22,7 @@ def global_align(seq1, seq2, subs_matrix, gopen, gext):
     :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
-    return: traceback matrix
+    return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
     # Initialize scoring and traceback matrix based on sequence lengths
@@ -30,14 +30,6 @@ def global_align(seq1, seq2, subs_matrix, gopen, gext):
     col_length = len(seq2)+1
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
-
-    # Initialize first row and column with gap values for S matrix, traceback values for T matrix
-    for i in range(1, len(score_m[0])):
-        score_m[0][i] = gopen+gext*i+1  # +1 to offset i starting at 1
-        trace_m[0][i] = -1
-    for i in range(1, len(score_m.T[0])):
-        score_m.T[0][i] = gopen+gext*i+1
-        trace_m.T[0][i] = 1
 
     # Score matrix by moving through each index
     gap = False
@@ -56,10 +48,10 @@ def global_align(seq1, seq2, subs_matrix, gopen, gext):
 
             # Add to matrix values via scoring method
             diagonal += matrix_score
-            if gap is False:  # Apply gap_open penalty if there is no gap
+            if gap is False:  # Apply gap open penalty if there is no gap
                 horizontal += gopen
                 vertical += gopen
-            if gap is True:  # Apply gap_extension penalty if there is a gap
+            if gap is True:  # Apply gap extension penalty if there is a gap
                 horizontal += gext
                 vertical += gext
 
@@ -75,43 +67,51 @@ def global_align(seq1, seq2, subs_matrix, gopen, gext):
                 trace_m[i+1][j+1] = 1
                 gap = True
 
-            # Assign value to scoring matrix
-            score_m[i+1][j+1] = score
+            # Assign max value to scoring matrix
+            score_m[i+1][j+1] = max(score, 0)
 
-    # print maximum value in list of lists
-    return trace_m
+    return score_m, trace_m
 
 
-def traceback(trace_m, seq1, seq2):
+def traceback(score_m, trace_m, seq1, seq2):
     """=============================================================================================
-    This function accepts a scoring and a traceback matrix and two sequences and returns global
-    alignment between the two sequences
+    This function accepts a scoring and a traceback matrix and two sequences and returns the highest
+    scoring local alignment between the two sequences
 
+    :param score_m: scoring matrix
     :param trace_m: traceback matrix
     :param seq1: first sequence
     :param seq2: second sequence
     return: seq1 with gaps, seq2 with gaps
     ============================================================================================="""
 
+    # Find index of highest score in scoring matrix, start traceback at this matrix
+    high_score_ind = np.unravel_index(np.argmax(score_m, axis=None), score_m.shape)
+
     # Reverse strings and convert to lists so gaps can be inserted
     rev_seq1 = list(seq1[::-1])
     rev_seq2 = list(seq2[::-1])
 
-    # Move through matrix starting at bottom right
-    rows, cols = trace_m.shape
-    index = [rows-1, cols-1]
+    # Move through matrix starting at highest scoring cell
+    index = [high_score_ind[0], high_score_ind[1]]
+
+    # Gaps are inserted based on count increasing as we move through sequences
+    # If we don't start at bottom right, need to adjust position at which gaps inserted
+    count_adjust1 = len(seq1) - high_score_ind[0]
+    count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
-    while index != [0, 0]:
+    while (index[0] and index[1]) != 0:
         val = trace_m[index[0], index[1]]
+
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
-            index[0] = max(index[0] - 1, 0)  # Taking max of new index and 0 so index never below 0
-            rev_seq2.insert(count, '.')
+            index[0] = index[0] - 1
+            rev_seq2.insert(count+count_adjust2, '.')
         if val == -1:  # If cell is equal to -1, insert a gap into the first sequence
-            index[1] = max(index[1] - 1, 0)
-            rev_seq1.insert(count, '.')
+            index[1] = index[1] - 1
+            rev_seq1.insert(count+count_adjust1, '.')
         if val == 0:  # If cell is equal to 0, there is no gap
-            index[0] = max(index[0] - 1, 0)
-            index[1] = max(index[1] - 1, 0)
+            index[0] = index[0] - 1
+            index[1] = index[1] - 1
         count += 1
 
     # Join lists and reverse strings again
@@ -119,6 +119,10 @@ def traceback(trace_m, seq1, seq2):
     seq2 = ''.join(rev_seq2)
     seq1 = seq1[::-1]
     seq2 = seq2[::-1]
+
+    # Introduce gaps at beginning of either sequence based off final index positions
+    seq1 = "."*index[1]+seq1
+    seq2 = "."*index[0]+seq2
 
     # Introduce gaps at end of either sequence based off length of other sequence
     align1 = seq1+"."*max(0, len(seq2)-len(seq1))
@@ -128,17 +132,18 @@ def traceback(trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes the BLOSUM62 matrix and two protein sequences, calls global_align() to
-    get the scoring and traceback matrix from NW alignment, calls traceback() to get the global
+    This function initializes the BLOSUM62 matrix and two protein sequences, calls SW_align() to get
+    the scoring and traceback matrix from SW alignment, calls traceback() to get the local
     alignment, and then write_align() to write the alignment to a file in MSF format.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_2.fa', help='Name of second fasta file')
-    parser.add_argument('-gopen', type=int, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=int, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-blosum', type=int, default=62, help='BLOSUM matrix to use')
+    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
+    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-matrix', type=str, default='blosum', help='substitution matrix to use')
+    parser.add_argument('-score', type=int, default=62, help='log odds score of subsitution matrix')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -146,14 +151,17 @@ def main():
     seq2, id2 = parse_fasta(args.file2)
 
     # Intialize BLOSUM matrix
-    blosum = bl.BLOSUM(args.blosum)
+    if args.matrix == 'blosum':
+        matrix = bl.BLOSUM(args.score)
+    if args.matrix == 'pfasum':
+        matrix = parse_matrix('PFASUM60.txt')
 
-    # Call global_align() to get traceback matrix
-    trace_m = global_align(seq1, seq2, blosum, args.gopen, args.gext)
+    # Call local_align() to get scoring and traceback matrix
+    score_m, trace_m = local_align(seq1, seq2, matrix, args.gopen, args.gext)
 
-    # Get global alignment between seq1 and seq2 and write to file
-    align1, align2 = traceback(trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'global_BLOSUM', args.blosum, args.gopen, args.gext, args.file1)  #pylint: disable=E1121
+    # Get highest scoring local alignment between seq1 and seq2 and write to file
+    align1, align2 = traceback(score_m, trace_m, seq1, seq2)
+    write_align(align1, align2, id1, id2, 'local_MATRIX', args.matrix+str(args.score), args.gopen, args.gext, args.file1)  #pylint: disable=E1121
 
 
 if __name__ == '__main__':
