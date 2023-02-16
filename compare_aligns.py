@@ -23,6 +23,7 @@ def parse_ref_folder(path):
     alignment and fasta sequence to their own files.
 
     :param path: directory path to folder
+    :return: list of msf files, list of fasta files
     ============================================================================================="""
 
     # Get MSF and FASTA files
@@ -181,14 +182,16 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
                             f'-gext {-1} '
-                            f'-matrix pfasum '
-                            f'-score {60}')
+                            f'-matrix blosum '
+                            f'-score {45}')
                     print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
                     os.system(f"python local_MATRIX.py {args}")
 
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
+                            f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq.split(".")[0]}.txt '
+                            f'-embed2 bb_embed/{ref_dir}/{ref_align}/{sequences[loop_count].split(".")[0]}.txt '
                             f'-gopen {-11} '
                             f'-gext {-1} ')
                     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
@@ -290,7 +293,7 @@ def parse_compare(path):
                 file3.write(peba_lines[i])
 
 
-def graph_compare(path, args):
+def graph_compare(path, matrix):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
     the global and PEbA alignments compared the reference alignment and the second graphs the sim
@@ -298,12 +301,8 @@ def graph_compare(path, args):
     and the better PEbA scores on the right side of the diagonal line.
 
     :param path: directory where compare.csv files exist
-    :param args: arguments used for calling the matrix and PEbA alignments
+    :param matrix: matrix used for substitution matrix alignments
     ============================================================================================="""
-
-    # Get type of matrix used from args
-    split_args = args.split('-')
-    matrix = split_args[4].split(' ')[1]
 
     # Get the similarity scores from the compare files
     matrix_sim = []
@@ -312,6 +311,7 @@ def graph_compare(path, args):
     for folder in folders:
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for line in file:
+                print(line)
                 line = line.split(',')
                 if 'MATRIX' in line[0]:
                     matrix_sim.append(float(line[3]))
@@ -376,12 +376,16 @@ def main():
     fasta_files.sort()
     args = parse_align_files(msf_files, fasta_files, ref_dir)
 
+    # Get type of matrix used from args
+    split_args = args.split('-')
+    matrix = split_args[4].split(' ')[1]
+
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
-    path = 'bb_data/RV11'
+    path = 'bb_data/RV20'
     compare_aligns(path)
     parse_compare(path)
-    graph_compare(path, args)
+    graph_compare(path, matrix)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

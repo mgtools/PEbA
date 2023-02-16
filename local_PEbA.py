@@ -7,6 +7,7 @@ Ben Iovino  01/23/23   VecAligns
 
 import os
 import argparse
+import re
 import torch
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
@@ -24,7 +25,8 @@ def embed_seq(seq, tokenizer, encoder):
     return: list of vectors
     ============================================================================================="""
 
-    # Add space after each amino acid so each residue is vectorized
+    # Remove special chars, add space after each amino acid so each residue is vectorized
+    seq = re.sub(r"[UZOB]", "X", seq)
     seq = [' '.join([*seq])]
 
     # Tokenize, encode, and load sequence
@@ -168,38 +170,44 @@ def traceback(score_m, trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes two protein sequences, calls embed_seq() to vectorize each sequence,
-    calls local_align() to obtain the scoring and traceback matrix from SW alignment (with vector
-    similarity in the scoring system), calls traceback() to get the local alignment, and
-    then write_align() to write the alignment to a file in MSF format.
+    This function initializes two protein sequences, calls embed_seq() to vectorize each sequence, 
+    if fasta files are provided, calls local_align() to obtain the scoring and traceback matrix from 
+    SW alignment (with vector similarity in the scoring system), calls traceback() to get the local 
+    alignment, and then write_align() to write the alignment to a file in MSF format.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
+    parser.add_argument('-embed1', type=str, default='n', help='Name of first embedding')
+    parser.add_argument('-embed2', type=str, default='n', help='Name of second embedding')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     args = parser.parse_args()
 
-    # Parse fasta files for sequences and ids
+    # Load fasta files and ids
     seq1, id1 = parse_fasta(args.file1)
     seq2, id2 = parse_fasta(args.file2)
 
-    # Load model tokenizer and encoder models
-    if os.path.exists('tok.pt'):
-        tokenizer = torch.load('tok.pt')
-    else:
-        tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-        torch.save(tokenizer, 'tok.pt')
-    if os.path.exists('prottrans.pt'):
-        model = torch.load('prottrans.pt')
-    else:
-        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-        torch.save(model, 'prottrans.pt')
+    # Load models, embed sequences
+    if args.embed1=='n':
+        if os.path.exists('tok.pt'):
+            tokenizer = torch.load('tok.pt')
+        else:
+            tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
+            torch.save(tokenizer, 'tok.pt')
+        if os.path.exists('prottrans.pt'):
+            model = torch.load('prottrans.pt')
+        else:
+            model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+            torch.save(model, 'prottrans.pt')
+        vecs1 = embed_seq(seq1, tokenizer, model)
+        vecs2 = embed_seq(seq2, tokenizer, model)
 
-    # Vectorize sequences
-    vecs1 = embed_seq(seq1, tokenizer, model)
-    vecs2 = embed_seq(seq2, tokenizer, model)
+    # Load numpy arrays
+    else:
+        vecs1 = np.loadtxt(args.embed1)
+        vecs2 = np.loadtxt(args.embed2)
 
     # Call local_align() to get scoring and traceback matrix
     score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, args.gopen, args.gext)
