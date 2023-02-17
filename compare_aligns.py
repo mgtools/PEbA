@@ -180,16 +180,6 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     # Align sequences with local programs
                     args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
                             f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
-                            f'-gopen {-11} '
-                            f'-gext {-1} '
-                            f'-matrix blosum '
-                            f'-score {45}')
-                    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
-                           file=sys.stdout)
-                    os.system(f"python local_MATRIX.py {args}")
-
-                    args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
-                            f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq.split(".")[0]}.txt '
                             f'-embed2 bb_embed/{ref_dir}/{ref_align}/{sequences[loop_count].split(".")[0]}.txt '
                             f'-gopen {-11} '
@@ -197,6 +187,16 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
                            file=sys.stdout)
                     os.system(f"python local_PEbA.py {args}")
+
+                    args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
+                            f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
+                            f'-gopen {-11} '
+                            f'-gext {-1} '
+                            f'-matrix blosum '
+                            f'-score {45}')
+                    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
+                           file=sys.stdout)
+                    os.system(f"python local_MATRIX.py {args}")
 
                     # Grab alignment from reference MSA
                     seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]  # Remove fa
@@ -311,7 +311,6 @@ def graph_compare(path, matrix):
     for folder in folders:
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for line in file:
-                print(line)
                 line = line.split(',')
                 if 'MATRIX' in line[0]:
                     matrix_sim.append(float(line[3]))
@@ -378,11 +377,13 @@ def main():
 
     # Get type of matrix used from args
     split_args = args.split('-')
-    matrix = split_args[4].split(' ')[1]
+    matrix = split_args[7].split(' ')[1]
+    score = split_args[8].split(' ')[1]
+    matrix = matrix+score
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
-    path = 'bb_data/RV20'
+    path = f'bb_data/{ref_dir}'
     compare_aligns(path)
     parse_compare(path)
     graph_compare(path, matrix)
