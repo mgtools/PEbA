@@ -37,27 +37,28 @@ def parse_ref_folder(path):
     return msf_files, fasta_files
 
 
-def parse_fasta(filename):
+def parse_fasta(filename, bb_dir):
     """=============================================================================================
     This function accepts a fasta file with multiple sequences in each one and writes each sequence
     to its own file in the corresponding folder.
 
     :param filename: name of file
+    :param bb_dir: directory to place parsed files
     return: sequence and id
     ============================================================================================="""
 
     # Get reference folder name and folder for the correpsonding fasta files
-    refname = filename.split('/')[-2:]  # First index is ref folder, second is fa file
-    refname[1] = refname[1].split('.tfa')[0]  # Remove file extension
-    if not os.path.isdir(f'bb_data/{refname[0]}/{refname[1]}'):
-        os.makedirs(f'bb_data/{refname[0]}/{refname[1]}')
+    famname = filename.split('/')[-1]  # Get fasta file name
+    famname = famname.split('.tfa')[0]  # Remove file extension
+    if not os.path.isdir(f'{bb_dir}/{famname}'):
+        os.makedirs(f'{bb_dir}/{famname}')
 
     # Parse fasta file and write each sequence to its own file in the corresponding folder
     seq = ''
     seqs = []
     with open(filename, 'r', encoding='utf8') as file:
         for seq in SeqIO.parse(file, 'fasta'):
-            SeqIO.write(seq, f'bb_data/{refname[0]}/{refname[1]}/{seq.id}.fa', 'fasta')
+            SeqIO.write(seq, f'{bb_dir}/{famname}/{seq.id}.fa', 'fasta')
             seqs.append(f'{seq.id}.fa')
     return seqs
 
@@ -136,7 +137,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
             
-def parse_align_files(msf_files, fasta_files, ref_dir):
+def parse_align_files(msf_files, fasta_files, bb_dir):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
     are parsed correspondingly. As they are parsed, they are also aligned using global_align.py
@@ -144,7 +145,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
 
     :param msf_files: list of msf files
     :param fasta_files: list of fasta files
-    :param ref_dir: directory to place files in
+    :param bb_dir: directory to place files in
     :param tokenizer: loaded tokenizer
     :param model: loaded encoder
     :return: arguments used to call matrix and PEbA alignments
@@ -153,7 +154,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
     # Parse each fasta file, store names of each for subsequent msf parsing
     seqs = []
     for file in fasta_files:
-        new_seqs = parse_fasta(file)
+        new_seqs = parse_fasta(file, bb_dir)
         seqs.append(new_seqs)  # Store in nested list to access only relevant fa files for each msf
 
     # To speed up the testing process, two random sequences from each group of sequences will be
@@ -178,8 +179,9 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                 if seq != sequences[loop_count]:  # Don't want to align a sequence to itself
 
                     # Align sequences with local programs
-                    args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
-                            f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
+                    ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
+                    args = (f'-file1 {bb_dir}/{ref_align}/{seq} '
+                            f'-file2 {bb_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq.split(".")[0]}.txt '
                             f'-embed2 bb_embed/{ref_dir}/{ref_align}/{sequences[loop_count].split(".")[0]}.txt '
                             f'-gopen {-11} '
@@ -188,8 +190,8 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                            file=sys.stdout)
                     os.system(f"python local_PEbA.py {args}")
 
-                    args = (f'-file1 bb_data/{ref_dir}/{ref_align}/{seq} '
-                            f'-file2 bb_data/{ref_dir}/{ref_align}/{sequences[loop_count]} '
+                    args = (f'-file1 {bb_dir}/{ref_align}/{seq} '
+                            f'-file2 {bb_dir}/{ref_align}/{sequences[loop_count]} '
                             f'-gopen {-11} '
                             f'-gext {-1} '
                             f'-matrix blosum '
@@ -201,7 +203,7 @@ def parse_align_files(msf_files, fasta_files, ref_dir):
                     # Grab alignment from reference MSA
                     seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]  # Remove fa
                     align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
-                    file_path = f'bb_data/{ref_dir}/{ref_align}/{ref_align}_{file_count}'
+                    file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
                     write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
                     file_count += 1
                 loop_count+=1
@@ -362,18 +364,26 @@ def main():
     compared using t_coffee's 'aln_compare' function and the results are parsed and graphed.
     ============================================================================================="""
 
+    # Get directory of reference alignments
+    path = 'BAliBASE_R1-5/bb3_release/RV11'
+    ref_dir = path.rsplit('/', maxsplit=1)[-1]
+
+    # Create unique directory for results, this allows for parallel runs of the script
+    bb_ct = 0
+    for direc in os.listdir():
+        if direc.startswith('bb_data'):
+            bb_ct += 1
+    bb_dir = f'bb_data{bb_ct}/{ref_dir}'
+    os.makedirs(bb_dir)
+
     # Parse reference folder of interest
     print(f'{strftime("%H:%M:%S")} Parsing and computing alignments...\n', file=sys.stdout)
-    path = 'BAliBASE_R1-5/bb3_release/RV11'
-    ref_dir = path.rsplit('/', maxsplit=1)[-1]  # Get last directory in path
     msf_files, fasta_files = parse_ref_folder(path)
-    if not os.path.isdir(f'bb_data/{ref_dir}'):
-        os.makedirs(f'bb_data/{ref_dir}')
 
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    args = parse_align_files(msf_files, fasta_files, ref_dir)
+    args = parse_align_files(msf_files, fasta_files, bb_dir)
 
     # Get type of matrix used from args
     split_args = args.split('-')
@@ -383,10 +393,9 @@ def main():
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
-    path = f'bb_data/{ref_dir}'
-    compare_aligns(path)
-    parse_compare(path)
-    graph_compare(path, matrix)
+    compare_aligns(bb_dir)
+    parse_compare(bb_dir)
+    graph_compare(bb_dir, matrix)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 
