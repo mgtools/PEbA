@@ -225,9 +225,9 @@ def compare_aligns(path):
         peba_aligns = []
         ref_aligns = []
         for file in files: # Add each alignment to list of alignments
-            if 'MATRIX' in file:
+            if file.startswith('MATRIX'):
                 matrix_aligns.append(f'{path}/{folder}/{file}')
-            if 'PEbA' in file:
+            if file.startswith('PEbA'):
                 peba_aligns.append(f'{path}/{folder}/{file}')
             if file.startswith('BB'):
                 ref_aligns.append(f'{path}/{folder}/{file}')

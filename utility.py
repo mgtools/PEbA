@@ -47,18 +47,17 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext, path):
     # Keep track of number of alignments in directory to name them
     path = '/'.join(path.split('/')[:-1])  # Remove fa file from path
     count = 0
+    script = script.split('_')
     for file in os.listdir(path):
-        if file.startswith('global') and script == 'global':
+        if file.startswith('MATRIX') and script[1] == 'MATRIX':
             count += 1
-        if file.startswith('local') and script == 'local':
-            count += 1
-        if file.startswith('PEbA') and script == 'PEbA':
+        if file.startswith('PEbA') and script[1] == 'PEbA':
             count += 1
 
     # Write to a new line for every index in the split list i.e. every 55 characters
-    with open(f'{path}/{script}_{count}.msf', 'w', encoding='utf8') as file:
+    with open(f'{path}/{script[1]}_{count}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF:  {length}  Type:  P  Matrix:  {matrix}  Gap Open:  {gopen}  Gap Ext:  {gext}\n\n')
+        file.write(f'   MSF: {length}  Type: P  Algorithm: {script[0]}  Matrix: {matrix}  Gopen: {gopen}  Gext: {gext}\n\n')
         file.write(f' Name: {id1} oo  Len:  {length}\n')
         file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200
