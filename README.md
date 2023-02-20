@@ -1,18 +1,38 @@
 **************************************************************************************************************
-# Protein Embedding Based Alignments
+# Protein Embedding Based Alignments (PEbA)
 **************************************************************************************************************
 
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
 embed protein sequences and then calculates the cosine similarity between each residue's vector to align them 
-using traditional Needleman-Wunsch and Smith-Waterman algorithms. The cosine similarity scores are used in place 
-of substitution matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share 
-low character identity (<20%), referred to as the "twilight zone" of protein sequence alignments.
+using traditional sequence alignment algorithms. The cosine similarity scores are used in place of substitution
+matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share low character
+identity (<35%), referred to as the "twilight zone" of protein sequence alignments.
 
-To determine if protein embedding based alignments (PEbA) produce more accurate alignments than those with
-subsitution matrices, both types of alignments are compared to reference alignments from BAliBASE 4
-(https://www.lbgi.fr/balibase/). BAliBASE alignments are structure based benchmarks used to compare new methods
-of alignment, such as this one. The current references of interest include RV11, sequences with <20% identity,
-and RV12, sequences with 20-40% identity.
+There are two implementations of PEbA, one using the Needleman-Wunsch algorithm (global_PEbA.py) and the other
+using the Smith-Waterman algorithm (local_PEbA.py). The scripts for substitution matrix based alignments are in 
+global_MATRIX.py and local_MATRIX.py, which currently support all BLOSUM matrices and PFASUM60 for testing 
+purposes.
+
+The PEbA scripts are designed to be run from the command line. The following arguments are allowed, with 
+-embed1 and -embed2 being optional arguments if the corresponding sequences from -file1 and -file2 have already 
+been embedded and saved as a numpy array:
+
+    -file1 <file1.fa>   : Path to first sequence fasta file
+    -file2 <file2.fa>   : Path to second sequence fasta file
+    -embed1 <file1.txt> : Path to first sequence embedding file
+    -embed2 <file2.txt> : Path to second sequence embedding file
+    -gopen <int/float>  : Gap opening penalty
+    -gext <int/float>   : Gap extension penalty
+
+**************************************************************************************************************
+# Comparing PEbA to Reference Alignments
+**************************************************************************************************************
+
+To determine if PEbA alignments produce more accurate alignments than those with, subsitution matrices, both 
+types of alignments are compared to reference alignments from BAliBASE 4 (https://www.lbgi.fr/balibase/).
+BAliBASE alignments are structure based benchmarks used to compare new methods of alignment, such as this one. 
+The references of most interest include RV11, sequences with <20% identity, and RV12, sequences with 20-40% 
+identity, but other references with higher % identity are also used for comparison.
 
 t_coffee's "aln_compare" function is used to compare the performance between BLOSUM and PEbA alignments to the
 reference alignments. An example of aln_compare output:
