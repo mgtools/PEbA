@@ -172,7 +172,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
                 loop_count+=1
 
         # Set a sample size for the PW aligns - sometimes there are 1000+ pairs
-        sample_size = 25
+        sample_size = 1
         if len(pairwise_aligns) > sample_size:
             pairwise_aligns = sample(pairwise_aligns, sample_size)
 
@@ -348,11 +348,11 @@ def graph_compare(path, matrix):
             peba_scores.append([peba_sim[i], mat_sim])
         else:
             matrix_scores.append([mat_sim, peba_sim[i]])
-    ax.scatter([i[0] for i in peba_scores], [i[1] for i in peba_scores], color='red')
-    ax.scatter([i[1] for i in matrix_scores], [i[0] for i in matrix_scores], color='blue')
+    ax.scatter([i[0] for i in matrix_scores], [i[1] for i in matrix_scores], color='blue')
+    ax.scatter([i[1] for i in peba_scores], [i[0] for i in peba_scores], color='red')
     ax.set_title(f'PEbA Alignment (Avg={peba_avg}) vs. {matrix} Alignment (Avg={blosum_avg})')
-    ax.set_xlabel('TCS PEbA')
-    ax.set_ylabel('TCS MATRIX')
+    ax.set_xlabel('TCS MATRIX')
+    ax.set_ylabel('TCS PEbA')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 

@@ -4,7 +4,6 @@ Test script for DEDAL model. Place dedal folder in the same directory as this sc
 Ben Iovino  02/21/23   VecAligns
 ================================================================================================"""
 
-
 import tensorflow as tf
 import tensorflow_hub as hub
 import argparse
@@ -43,7 +42,8 @@ def main():
     # Load model and preprocess proteins
     dedal_model = tf.saved_model.load('dedal_3')
     alignment = dedal(dedal_model, seq1, seq2)
-    print(alignment)
+    with open('dedal_output2.txt', 'w', encoding='utf8') as f:
+        f.write(str(alignment))
 
 
 if __name__ == '__main__':
