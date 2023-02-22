@@ -157,56 +157,57 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
         new_seqs = parse_fasta(file, bb_dir)
         seqs.append(new_seqs)  # Store in nested list to access only relevant fa files for each msf
 
-    # To speed up the testing process, two random sequences from each group of sequences will be
-    # selected for pairwise alignment
-    random_seqs = []
-    for seq in seqs:
-        random_seqs.append(sample(seq, 2))
-
-    # Parse each msf file
+    # Each MSF files corresponds to a set of fasta files
     for i, file in enumerate(msf_files):
         ref_align = file.rsplit('/', maxsplit=1)[-1].strip('.msf')  # Get name of ref alignment
 
-        # Get corresponding fasta files for this msf file
-        # CHANGE 'random_seqs[i]' TO 'seqs[i]' TO USE ALL SEQUENCES
-        sequences = random_seqs[i]
-
-        # Only want to align each sequence to every other sequence once
-        file_count = 0  # Keep track of number of files for naming purposes
+        # Get all pairwise alignments from the fasta files correpsonding to the MSF file
+        sequences = seqs[i]
+        pairwise_aligns = []
         for i, seq in enumerate(sequences):
             loop_count = i  # Keep track of number of loops so no repeats occur
             while loop_count != len(sequences):
                 if seq != sequences[loop_count]:  # Don't want to align a sequence to itself
-
-                    # Align sequences with local programs
-                    ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
-                    args = (f'-file1 {bb_dir}/{ref_align}/{seq} '
-                            f'-file2 {bb_dir}/{ref_align}/{sequences[loop_count]} '
-                            f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq.split(".")[0]}.txt '
-                            f'-embed2 bb_embed/{ref_dir}/{ref_align}/{sequences[loop_count].split(".")[0]}.txt '
-                            f'-gopen {-11} '
-                            f'-gext {-1} ')
-                    print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
-                           file=sys.stdout)
-                    os.system(f"python local_PEbA.py {args}")
-
-                    args = (f'-file1 {bb_dir}/{ref_align}/{seq} '
-                            f'-file2 {bb_dir}/{ref_align}/{sequences[loop_count]} '
-                            f'-gopen {-11} '
-                            f'-gext {-1} '
-                            f'-matrix blosum '
-                            f'-score {45}')
-                    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq} and {ref_align}/{sequences[loop_count]}\n',
-                           file=sys.stdout)
-                    os.system(f"python local_MATRIX.py {args}")
-
-                    # Grab alignment from reference MSA
-                    seq1, seq2 = seq.split('.')[0], sequences[loop_count].split('.')[0]  # Remove fa
-                    align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
-                    file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
-                    write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
-                    file_count += 1
+                    pairwise_aligns.append([seq, sequences[loop_count]])
                 loop_count+=1
+
+        # Set a sample size for the PW aligns - sometimes there are 1000+ pairs
+        sample_size = 25
+        if len(pairwise_aligns) > sample_size:
+            pairwise_aligns = sample(pairwise_aligns, sample_size)
+
+        # For the selected pairs, align them using local programs
+        file_count = 0
+        for pair in pairwise_aligns:
+            seq1 = pair[0]  #pylint: disable=E1136
+            seq2 = pair[1]  #pylint: disable=E1136
+            ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
+            args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+                    f'-file2 {bb_dir}/{ref_align}/{seq2} '
+                    f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+                    f'-embed2 bb_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+                    f'-gopen {-11} '
+                    f'-gext {-1} ')
+            print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                           file=sys.stdout)
+            os.system(f"python local_PEbA.py {args}")
+
+            args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+                    f'-file2 {bb_dir}/{ref_align}/{seq2} '
+                    f'-gopen {-11} '
+                    f'-gext {-1} '
+                    f'-matrix blosum '
+                    f'-score {45}')
+            print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                           file=sys.stdout)
+            os.system(f"python local_MATRIX.py {args}")
+
+            # Grab alignment from reference MSA
+            seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
+            align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
+            file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
+            write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
+            file_count += 1
     return args
 
 

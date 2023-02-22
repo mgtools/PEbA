@@ -7,7 +7,23 @@ Ben Iovino  02/21/23   VecAligns
 
 import tensorflow as tf
 import tensorflow_hub as hub
-from dedal import infer
+import argparse
+from dedal import infer  #pylint: disable=E0401
+from utility import parse_fasta
+
+
+def dedal(model, seq1, seq2):
+    """=============================================================================================
+    Runs the DEDAL model to get a pairwise alignment between two proteins.
+    ============================================================================================="""
+
+    inputs = infer.preprocess(seq1, seq2)
+    align_out = model(inputs)
+    output = infer.expand(
+        [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
+    output = infer.postprocess(output, len(seq1), len(seq2))
+    alignment = infer.Alignment(seq1, seq2, *output)
+    return alignment
 
 
 def main():
@@ -15,24 +31,19 @@ def main():
     Run the DEDAL model to get a pairwise alignment between two proteins.
     ============================================================================================="""
 
-    # Load model and preprocess inputs
-    dedal_model = hub.load('https://tfhub.dev/google/dedal/3')
-    protein_a = 'SVCCRDYVRYRLPLRVVKHFYWTS'
-    protein_b = 'VKCKCSRKGPKI'
-    inputs = infer.preprocess(protein_a, protein_b)
-    with open('inputs.txt', 'w', encoding='utf8') as f:
-        f.write(str(inputs))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
+    args = parser.parse_args()
 
-    align_out = dedal_model(inputs)
-    with open('align_out.txt', 'w', encoding='utf8') as f:
-        f.write(str(align_out))
+    # Load fasta files and ids
+    seq1, id1 = parse_fasta(args.file1)
+    seq2, id2 = parse_fasta(args.file2)
 
-    output = infer.expand(
-        [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
-    output = infer.postprocess(output, len(protein_a), len(protein_b))
-    alignment = infer.Alignment(protein_a, protein_b, *output)
-    with open('alignment.txt', 'w', encoding='utf8') as f:
-        f.write(str(alignment))
+    # Load model and preprocess proteins
+    dedal_model = tf.saved_model.load('dedal_3')
+    alignment = dedal(dedal_model, seq1, seq2)
+    print(alignment)
 
 
 if __name__ == '__main__':
