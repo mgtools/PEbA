@@ -29,20 +29,85 @@ def dedal(model, seq1, seq2):
     return alignment
 
 
-def parse_align(file, seq1, seq2, id1, id2):
+def parse_align(file):
     """=============================================================================================
-    Parses written alignment file from DEDAL to match msf format.
+    This function gathers the truncated sequences and their beggining and ending indices from the
+    alignment file.
 
     :param file: alignment file
-    :param seq1: First protein sequence
-    :param seq2: Second protein sequence
-    :param id1: First protein id
-    :param id2: Second protein id
+    return: truncated sequences and their positions
     ============================================================================================="""
 
+    # Gather beginning position, truncated sequence, and ending position
+    tseq1 = [0, '', 0]
+    tseq2 = [0, '', 0]
     with open(file, 'r', encoding='utf8') as f:
+        count = 0
         for line in f:
-            print(line)
+            split_line = line.split()
+            if count == 0:  # First line contains first sequence
+                tseq1[0] = int(split_line[0])
+                tseq1[1] = split_line[1].replace('-', '.')
+                tseq1[2] = int(split_line[2])
+            if count == 2:  # Third line contains second sequence
+                tseq2[0] = int(split_line[0])
+                tseq2[1] = split_line[1].replace('-', '.')
+                tseq2[2] = int(split_line[2])
+            count += 1
+
+    return tseq1, tseq2
+
+
+def match_seq(seq, tseq):
+    """=============================================================================================
+    This function adds any missing characters from an original protein sequence to the truncated 
+    sequence so that they can be accurately compared.
+
+    :param seq: original protein sequence
+    :param trunc_seq: list with beginning position, truncated sequence, and ending position
+    return: full sequence
+    ============================================================================================="""
+
+    full_seq = ''
+    beg, end = tseq[0], tseq[2]
+    beg_chars = seq[:beg]  # Characters before truncated sequence
+    end_chars = seq[end:]  # Characters after truncated sequence
+    full_seq = beg_chars + tseq[1] + end_chars
+
+    return full_seq
+
+
+def pad_seq(seq1, seq2):
+    """=============================================================================================
+    This function adds gaps to the beginning and end of either sequence so their lengths are equal.
+
+    :param seq1: list with beginning position, full first sequence, and ending position
+    :param seq2: list with beginning position, full second sequence, and ending position
+    return: padded sequences
+    ============================================================================================="""
+
+    # Pad the beginning of the shorter sequence
+    fseq1, fseq2 = seq1[1], seq2[1]
+    beg1, beg2 = seq1[0], seq2[0]
+    if beg1 < beg2:
+        pad = beg2 - beg1  # Number of gaps to add
+        fseq1 = '.' * pad + fseq1
+    elif beg2 < beg1:
+        pad = beg1 - beg2
+        fseq2 = '.' * pad + fseq2
+
+    # Pad the end of the shorter sequence
+    end1, end2 = seq1[2], seq2[2]
+    if end1 > end2:
+        pad = end1 - end2
+        fseq1 += '.' * pad
+    elif end2 > end1:
+        pad = end2 - end1
+        fseq2 += '.' * pad
+
+    print(fseq1)
+    print()
+    print(fseq2)
 
 
 def main():
@@ -67,8 +132,11 @@ def main():
         f.write(str(alignment))
     '''
 
-    # Parse alignment file to match msf format
-    parse_align('dedal_output.txt', seq1, seq2, id1, id2)
+    # Parse alignment file, match to original sequences, and write to msf file
+    tseq1, tseq2 = parse_align('dedal_output.txt')
+    tseq1[1] = match_seq(seq1, tseq1)
+    tseq2[1] = match_seq(seq2, tseq2)
+    pad_seq(tseq1, tseq2)
 
 
 if __name__ == '__main__':
