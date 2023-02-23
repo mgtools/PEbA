@@ -9,7 +9,7 @@ import os
 import re
 import torch
 import numpy as np
-from transformers import T5EncoderModel, T5Tokenizer
+from transformers import T5EncoderModel, T5Tokenizer, AutoTokenizer, EsmModel
 from Bio import SeqIO
 
 
@@ -27,13 +27,17 @@ def parse_ref_folder(path):
     for file in os.listdir(path):
         if file.endswith('.tfa'):  # Append to fasta list
             fasta_files.append(f'{path}/{file}')
+        if file.endswith('.in_tfa'):
+            new_file = file.split('.in_tfa')[0] + '.tfa'
+            os.rename(f'{path}/{file}',f'{path}/{new_file}')
+            fasta_files.append(f'{path}/{new_file}')
     return fasta_files
 
 
-def embed_seq(seq, tokenizer, encoder):
+def prot_t5xl_embed(seq, tokenizer, encoder):
     """=============================================================================================
     This function accepts a protein sequence and returns a list of vectors, each vector representing
-    a single amino acid.
+    a single amino acid using RostLab's ProtT5_XL_UniRef50 model.
 
     :param seq: protein sequence
     :param: tokenizer: tokenizer model
@@ -64,6 +68,23 @@ def embed_seq(seq, tokenizer, encoder):
     return features[0]
 
 
+def esm2_embed(seq, tokenizer, encoder):
+    """=============================================================================================
+    This function accepts a protein sequence and returns a list of vectors, each vector representing
+    a single amino acid using Facebook's ESM-2 model.
+
+    :param seq: protein sequence
+    :param: tokenizer: tokenizer model
+    :param encoder: encoder model
+    return: list of vectors
+    ============================================================================================="""
+
+    inputs = tokenizer(seq, return_tensors="pt")
+    outputs = encoder(**inputs)
+    last_hidden_states = outputs.last_hidden_state
+    return last_hidden_states
+
+
 def parse_fasta(filename, tokenizer, model):
     """=============================================================================================
     This function accepts a fasta file with multiple sequences in each one and writes each sequence
@@ -82,7 +103,9 @@ def parse_fasta(filename, tokenizer, model):
     # Parse fasta file and write each sequence to its own file in the corresponding folder
     with open(filename, 'r', encoding='utf8') as file:
         for seq in SeqIO.parse(file, 'fasta'):
-            vec = embed_seq(str(seq.seq), tokenizer, model)
+            # vec = prot_t5xl_embed(str(seq.seq), tokenizer, model)
+            vec = esm2_embed(str(seq.seq), tokenizer, model)
+            print(vec)
             seqname = seq.id
             with open(f'bb_embed/{refname[0]}/{refname[1]}/{seqname}.txt', 'w', encoding='utf8') as seqfile:
                 np.savetxt(seqfile, vec, fmt='%4.6f', delimiter=' ')
@@ -99,6 +122,7 @@ def main():
     if not os.path.isdir(f'bb_embed/{ref_dir}'):
         os.makedirs(f'bb_embed/{ref_dir}')
 
+    '''
     # Load model tokenizer and encoder models
     if os.path.exists('tok.pt'):
         tokenizer = torch.load('tok.pt')
@@ -110,6 +134,11 @@ def main():
     else:
         model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
         torch.save(model, 'prottrans.pt')
+    '''
+
+    # Load model tokenizer and encoder models
+    tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t6_8M_UR50D")
+    model = EsmModel.from_pretrained("facebook/esm2_t6_8M_UR50D")
 
     # Parse each fasta file and write each embedding to its own file
     for file in fasta_files:

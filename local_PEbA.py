@@ -7,45 +7,11 @@ Ben Iovino  01/23/23   VecAligns
 
 import os
 import argparse
-import re
 import torch
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
 from utility import parse_fasta, write_align
-
-
-def embed_seq(seq, tokenizer, encoder):
-    """=============================================================================================
-    This function accepts a protein sequence and returns a list of vectors, each vector representing
-    a single amino acid.
-
-    :param seq: protein sequence
-    :param: tokenizer: tokenizer model
-    :param encoder: encoder model
-    return: list of vectors
-    ============================================================================================="""
-
-    # Remove special chars, add space after each amino acid so each residue is vectorized
-    seq = re.sub(r"[UZOB]", "X", seq)
-    seq = [' '.join([*seq])]
-
-    # Tokenize, encode, and load sequence
-    ids = tokenizer.batch_encode_plus(seq, add_special_tokens=True, padding=True)
-    input_ids = torch.tensor(ids['input_ids'])  # pylint: disable=E1101
-    attention_mask = torch.tensor(ids['attention_mask'])  # pylint: disable=E1101
-
-    # Extract sequence features
-    with torch.no_grad():
-        embedding = encoder(input_ids=input_ids,attention_mask=attention_mask)
-    embedding = embedding.last_hidden_state.cpu().numpy()
-
-    # Remove padding and special tokens
-    features = []
-    for seq_num in range(len(embedding)):  # pylint: disable=C0200
-        seq_len = (attention_mask[seq_num] == 1).sum()
-        seq_emd = embedding[seq_num][:seq_len-1]
-        features.append(seq_emd)
-    return features[0]
+from embed_seqs import prot_t5xl_embed
 
 
 def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
@@ -114,7 +80,7 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
 def traceback(score_m, trace_m, seq1, seq2):
     """=============================================================================================
     This function accepts a scoring and a traceback matrix and two sequences and returns the highest
-    scoring local alignment between the two sequences
+    scoring local alignment between the two sequences.
 
     :param score_m: scoring matrix
     :param trace_m: traceback matrix
@@ -170,8 +136,8 @@ def traceback(score_m, trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes two protein sequences, calls embed_seq() to vectorize each sequence, 
-    if fasta files are provided, calls local_align() to obtain the scoring and traceback matrix from 
+    This function initializes two protein sequences, calls an embedding function if embeddings are
+    not provided, calls local_align() to obtain the scoring and traceback matrix from 
     SW alignment (with vector similarity in the scoring system), calls traceback() to get the local 
     alignment, and then write_align() to write the alignment to a file in MSF format.
     ============================================================================================="""
@@ -201,8 +167,8 @@ def main():
         else:
             model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
             torch.save(model, 'prottrans.pt')
-        vecs1 = embed_seq(seq1, tokenizer, model)
-        vecs2 = embed_seq(seq2, tokenizer, model)
+        vecs1 = prot_t5xl_embed(seq1, tokenizer, model)
+        vecs2 = prot_t5xl_embed(seq2, tokenizer, model)
 
     # Load numpy arrays
     else:

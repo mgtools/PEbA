@@ -34,6 +34,10 @@ def parse_ref_folder(path):
             msf_files.append(f'{path}/{file}')
         if file.endswith('.tfa'):  # Append to fasta list
             fasta_files.append(f'{path}/{file}')
+        if file.endswith('.in_tfa'):
+            new_file = file.split('.in_tfa')[0] + '.tfa'
+            os.rename(f'{path}/{file}',f'{path}/{new_file}')
+            fasta_files.append(f'{path}/{new_file}')
     return msf_files, fasta_files
 
 
