@@ -4,10 +4,11 @@ Test script for DEDAL model. Place dedal folder in the same directory as this sc
 Ben Iovino  02/21/23   VecAligns
 ================================================================================================"""
 
+import os
 import tensorflow as tf
 import argparse
-#from dedal import infer  #pylint: disable=E0401
-from utility import parse_fasta
+from dedal import infer  #pylint: disable=E0401
+from utility import parse_fasta, write_align
 
 
 def dedal(model, seq1, seq2):
@@ -65,16 +66,19 @@ def match_seq(seq, tseq):
 
     :param seq: original protein sequence
     :param trunc_seq: list with beginning position, truncated sequence, and ending position
-    return: full sequence
+    return: list with update beginning position, full sequence, and update ending position
     ============================================================================================="""
 
-    full_seq = ''
     beg, end = tseq[0], tseq[2]
     beg_chars = seq[:beg]  # Characters before truncated sequence
     end_chars = seq[end:]  # Characters after truncated sequence
-    full_seq = beg_chars + tseq[1] + end_chars
+    tseq[1] = beg_chars + tseq[1] + end_chars
 
-    return full_seq
+    # Update beginning and ending positions
+    #tseq[0] = 0
+    #tseq[2] = len(tseq[1].replace('.', ''))
+
+    return tseq
 
 
 def pad_seq(seq1, seq2):
@@ -97,17 +101,14 @@ def pad_seq(seq1, seq2):
         fseq2 = '.' * pad + fseq2
 
     # Pad the end of the shorter sequence
-    end1, end2 = seq1[2], seq2[2]
-    if end1 > end2:
-        pad = end1 - end2
+    if len(fseq1) < len(fseq2):
+        pad = len(fseq2) - len(fseq1)
         fseq1 += '.' * pad
-    elif end2 > end1:
-        pad = end2 - end1
+    elif len(fseq2) < len(fseq1):
+        pad = len(fseq1) - len(fseq2)
         fseq2 += '.' * pad
 
-    print(fseq1)
-    print()
-    print(fseq2)
+    return fseq1, fseq2
 
 
 def main():
@@ -124,19 +125,19 @@ def main():
     seq1, id1 = parse_fasta(args.file1)
     seq2, id2 = parse_fasta(args.file2)
 
-    '''
     # Load model and preprocess proteins
     dedal_model = tf.saved_model.load('dedal_3')
     alignment = dedal(dedal_model, seq1, seq2)
     with open('dedal_output.txt', 'w', encoding='utf8') as f:
         f.write(str(alignment))
-    '''
 
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
-    tseq1[1] = match_seq(seq1, tseq1)
-    tseq2[1] = match_seq(seq2, tseq2)
-    pad_seq(tseq1, tseq2)
+    tseq1 = match_seq(seq1, tseq1)
+    tseq2 = match_seq(seq2, tseq2)
+    fseq1, fseq2 = pad_seq(tseq1, tseq2)
+    write_align(fseq1, fseq2, id1, id2, 'local_MATRIX', 'None', 'None', 'None', args.file1)
+    os.remove('dedal_output.txt')
 
 
 if __name__ == '__main__':

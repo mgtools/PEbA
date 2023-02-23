@@ -136,7 +136,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id1}      {seq1_split[i]}\n')
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
-            
+
 def parse_align_files(msf_files, fasta_files, bb_dir):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
@@ -193,14 +193,14 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
             os.system(f"python local_PEbA.py {args}")
 
             args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-                    f'-file2 {bb_dir}/{ref_align}/{seq2} '
-                    f'-gopen {-11} '
-                    f'-gext {-1} '
-                    f'-matrix blosum '
-                    f'-score {45}')
+                    f'-file2 {bb_dir}/{ref_align}/{seq2}')
+                    # f'-gopen {-11} '
+                    # f'-gext {-1} '
+                    # f'-matrix blosum '
+                    # f'-score {45}')
             print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-            os.system(f"python local_MATRIX.py {args}")
+            os.system(f"python run_DEDAL.py {args}")
 
             # Grab alignment from reference MSA
             seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa

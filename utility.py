@@ -53,6 +53,8 @@ def write_align(seq1, seq2, id1, id2, script, matrix, gopen, gext, path):
             count += 1
         if file.startswith('PEbA') and script[1] == 'PEbA':
             count += 1
+        if file.startswith('DEDAL') and script[1] == 'DEDAL':
+            count += 1
 
     # Write to a new line for every index in the split list i.e. every 55 characters
     with open(f'{path}/{script[1]}_{count}.msf', 'w', encoding='utf8') as file:
