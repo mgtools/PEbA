@@ -1,7 +1,7 @@
 """================================================================================================
 This script parses BAliBASE reference folders. MSF files are written pairwise alignments between
 each pair of two sequences. It also parses FASTA files to then write each sequence to an individual
-FASTA file. It then creates global BLOSUM and PEbA alignments between each pair of sequences for the
+FASTA file. It then creates MATRIX and PEbA alignments between each pair of sequences for the
 purpose of comparison to the reference BAliBASE pairwise alignments. Each PW align is compared to
 the ref, the results are stored in a csv, and then a scatterplot is created to show the difference
 between the similarity score of PEbA vs. BLOSUM.
@@ -11,6 +11,7 @@ Ben Iovino  02/10/23   VecAligns
 
 import os
 import sys
+import argparse
 from time import strftime
 from random import sample
 from Bio import SeqIO
@@ -141,7 +142,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
 
-def parse_align_files(msf_files, fasta_files, bb_dir):
+def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext, samp, dedal):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
     are parsed correspondingly. As they are parsed, they are also aligned using global_align.py
@@ -150,9 +151,12 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
     :param msf_files: list of msf files
     :param fasta_files: list of fasta files
     :param bb_dir: directory to place files in
-    :param tokenizer: loaded tokenizer
-    :param model: loaded encoder
-    :return: arguments used to call matrix and PEbA alignments
+    :param matrix: subsitution matrix
+    :param value: value for sub matrix
+    :param gopen: gap opening penalty
+    :param gext: gap extension penalty
+    :param samp: number of alignments per MSA to perform
+    :param dedal: flag to determine whether to use dedal or not
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -176,7 +180,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
                 loop_count+=1
 
         # Set a sample size for the PW aligns - sometimes there are 1000+ pairs
-        sample_size = 1
+        sample_size = samp
         if len(pairwise_aligns) > sample_size:
             pairwise_aligns = sample(pairwise_aligns, sample_size)
 
@@ -190,21 +194,28 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
                     f'-file2 {bb_dir}/{ref_align}/{seq2} '
                     f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
                     f'-embed2 bb_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
-                    f'-gopen {-11} '
-                    f'-gext {-1} ')
+                    f'-gopen {gopen} '
+                    f'-gext {gext} ')
             print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
             os.system(f"python local_PEbA.py {args}")
 
-            args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-                    f'-file2 {bb_dir}/{ref_align}/{seq2}')
-                    # f'-gopen {-11} '
-                    # f'-gext {-1} '
-                    # f'-matrix blosum '
-                    # f'-score {45}')
-            print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+            if dedal == 'n':
+                args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+                        f'-file2 {bb_dir}/{ref_align}/{seq2} '
+                        f'-gopen {gopen} '
+                        f'-gext {gext} '
+                        f'-matrix {matrix} '
+                        f'-score {value}')
+                print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-            os.system(f"python run_DEDAL.py {args}")
+                os.system(f"python local_MATRIX.py {args}")
+            else:
+                args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+                        f'-file2 {bb_dir}/{ref_align}/{seq2}')
+                print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                            file=sys.stdout)
+                os.system(f"python run_DEDAL.py {args}")
 
             # Grab alignment from reference MSA
             seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
@@ -212,7 +223,6 @@ def parse_align_files(msf_files, fasta_files, bb_dir):
             file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
             write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
             file_count += 1
-    return args
 
 
 def compare_aligns(path):
@@ -236,15 +246,21 @@ def compare_aligns(path):
                 peba_aligns.append(f'{path}/{folder}/{file}')
             if file.startswith('BB'):
                 ref_aligns.append(f'{path}/{folder}/{file}')
+            if file.startswith('BOX'):
+                ref_aligns.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct alignments are compared
         matrix_aligns.sort()
         peba_aligns.sort()
         ref_aligns.sort()
 
+        print(len(matrix_aligns))
+        print(len(peba_aligns))
+
         # Call t_coffee to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
             matrix_align = matrix_aligns[i]
+            print(matrix_align)
             peba_align = peba_aligns[i]
 
             # Get names of alignments for output file
@@ -369,9 +385,18 @@ def main():
     compared using t_coffee's 'aln_compare' function and the results are parsed and graphed.
     ============================================================================================="""
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
+    parser.add_argument('-matrix', type=str, default='blosum', help='Sub matrix')
+    parser.add_argument('-value', type=int, default=45, help='Sub matrix value')
+    parser.add_argument('-gopen', type=int, default=-11, help='Gap open')
+    parser.add_argument('-gext', type=int, default=-1, help='Gap ext')
+    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
+    parser.add_argument('-dedal', type=str, default='n', help='y/n to dedal align instead of matrix')
+    args = parser.parse_args()
+
     # Get directory of reference alignments
-    path = 'BAliBASE_R1-5/bb3_release/RV11'
-    ref_dir = path.rsplit('/', maxsplit=1)[-1]
+    ref_dir = args.path.rsplit('/', maxsplit=1)[-1]
 
     # Create unique directory for results, this allows for parallel runs of the script
     bb_ct = 0
@@ -383,24 +408,18 @@ def main():
 
     # Parse reference folder of interest
     print(f'{strftime("%H:%M:%S")} Parsing and computing alignments...\n', file=sys.stdout)
-    msf_files, fasta_files = parse_ref_folder(path)
+    msf_files, fasta_files = parse_ref_folder(args.path)
 
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    args = parse_align_files(msf_files, fasta_files, bb_dir)
-
-    # Get type of matrix used from args
-    split_args = args.split('-')
-    matrix = split_args[7].split(' ')[1]
-    score = split_args[8].split(' ')[1]
-    matrix = matrix+score
+    parse_align_files(msf_files, fasta_files, bb_dir, args.matrix, args.value, args.gopen, args.gext, args.sample, args.dedal)
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)
-    graph_compare(bb_dir, matrix)
+    graph_compare(bb_dir, args.matrix)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

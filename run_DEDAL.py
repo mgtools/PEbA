@@ -5,8 +5,8 @@ Ben Iovino  02/21/23   VecAligns
 ================================================================================================"""
 
 import os
-import tensorflow as tf
 import argparse
+import tensorflow as tf
 from dedal import infer  #pylint: disable=E0401
 from utility import parse_fasta, write_align
 
@@ -71,12 +71,8 @@ def match_seq(seq, tseq):
 
     beg, end = tseq[0], tseq[2]
     beg_chars = seq[:beg]  # Characters before truncated sequence
-    end_chars = seq[end:]  # Characters after truncated sequence
+    end_chars = seq[end+1:]  # Characters after truncated sequence
     tseq[1] = beg_chars + tseq[1] + end_chars
-
-    # Update beginning and ending positions
-    #tseq[0] = 0
-    #tseq[2] = len(tseq[1].replace('.', ''))
 
     return tseq
 
