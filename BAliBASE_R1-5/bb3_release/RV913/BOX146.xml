@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>P32120</seq-name>
+<seq-info>
+<accession>P32120</accession>
+<nid>P32120</nid>
+<definition>   Beta-arrestin-2 Arrestin beta 2 Arrestin-3.</definition>
+<organism>   Bos taurus (Bovine). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>19</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>194</fstart><fstop>349</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>19</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>194</fstart><fstop>349</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>420</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>368</fstart><fstop>368</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>420</fstart><fstop>420</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>5</fstart><fstop>43</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>44</fstart><fstop>51</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>52</fstart><fstop>62</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>69</fstart><fstop>77</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>86</fstart><fstop>89</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>105</fstart><fstop>115</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>129</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>155</fstart><fstop>161</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>162</fstart><fstop>182</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>183</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>197</fstart><fstop>245</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>261</fstart><fstop>268</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>274</fstart><fstop>287</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>288</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>296</fstart><fstop>309</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>311</fstart><fstop>333</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>334</fstart><fstop>345</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>391</fstart><fstop>404</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>405</fstart><fstop>411</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>247</fstart><fstop>258</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>248</fstart><fstop>259</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>26</fstart><fstop>30</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>134</fstart><fstop>139</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>317</fstart><fstop>330</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>53</fstart><fstop>65</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>229</fstart><fstop>242</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>186</fstart><fstop>190</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>244</fstart><fstop>246</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>7</fstart><fstop>13</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>113</fstart><fstop>118</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>46</fstart><fstop>49</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>192</fstart><fstop>196</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>279</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>128</fstart><fstop>131</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>76</fstart><fstop>89</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>141</fstart><fstop>154</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>314</fstart><fstop>316</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>38</fstart><fstop>43</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>215</fstart><fstop>223</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>343</fstart><fstop>353</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>20</fstart><fstop>24</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>405</fstart><fstop>409</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>286</fstart><fstop>292</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>267</fstart><fstop>275</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>164</fstart><fstop>173</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>100</fstart><fstop>108</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>161</fstart><fstop>163</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>207</fstart><fstop>210</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>198</fstart><fstop>205</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>397</fstart><fstop>401</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P17870</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>335</fstart><fstop>341</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>62</fstart><fstop>80</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00295 ARRESTINS</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>62</fstart><fstop>80</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00295 ARRESTINS</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>126</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_DISULFID_Probable from P08168</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>384</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_LIG_Clathr_ClatBox_1</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>384</fstart><fstop>388</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------------------------------mgekpgtrvfkksspnckltvylgkrdfvdhldkvdpvdgvvlvdpdylkd-rkvfvtltcafrygredldvlglsfrkdlfianyqafpptpn-pprpptrlqerllrklgqhahpffftipqnlpcsvtlqpgpedtgkacgvdfeirafca---ksleekshk---rnsvrlvirkvqfapekpgpqpsaettrhflmsdrslhleasldkelyyhgeplnvnvhvtnnstktvkkikvsvrqyadiclfstaqykcpvaqveqd--dqvspsstfckvytitpllsnnrekrglaldgklkhedtnlasstivkegankevlgilvsyrvkvklvvsrg---gdvsvelpfvlmhpkphdhialprpqsaath------------------------pptllpsavpetdapvdtnliefetn--yatdddivfedfarlrlkglkdedyddqfc-------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q8MYB1</seq-name>
+<seq-info>
+<accession>Q8MYB1</accession>
+<nid>Q8MYB1</nid>
+<definition>   Arrestin.</definition>
+<organism>   Ciona intestinalis (Transparent sea squirt). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>20</fstart><fstop>179</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>198</fstart><fstop>354</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>418</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>370</fstart><fstop>370</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>6</fstart><fstop>44</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>45</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>53</fstart><fstop>63</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>70</fstart><fstop>78</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>87</fstart><fstop>90</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>107</fstart><fstop>117</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>131</fstart><fstop>154</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>159</fstart><fstop>165</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>166</fstart><fstop>186</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>187</fstart><fstop>200</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>201</fstart><fstop>249</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>265</fstart><fstop>272</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>278</fstart><fstop>291</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>292</fstart><fstop>299</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>300</fstart><fstop>313</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>315</fstart><fstop>337</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>339</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>389</fstart><fstop>402</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>403</fstart><fstop>409</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>251</fstart><fstop>262</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>252</fstart><fstop>263</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>27</fstart><fstop>31</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>136</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>321</fstart><fstop>334</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>54</fstart><fstop>66</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>233</fstart><fstop>246</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>190</fstart><fstop>194</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>248</fstart><fstop>250</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>8</fstart><fstop>14</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>47</fstart><fstop>50</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>196</fstart><fstop>200</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>283</fstart><fstop>285</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>130</fstart><fstop>133</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>77</fstart><fstop>90</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>143</fstart><fstop>158</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>318</fstart><fstop>320</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>39</fstart><fstop>44</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>219</fstart><fstop>227</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>21</fstart><fstop>25</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>290</fstart><fstop>296</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>271</fstart><fstop>279</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>168</fstart><fstop>177</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>165</fstart><fstop>167</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>211</fstart><fstop>214</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>202</fstart><fstop>209</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>340</fstart><fstop>350</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P17870</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>397</fstart><fstop>399</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4r_A</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>63</fstart><fstop>81</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PS00295 ARRESTINS from Q7T2D2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>128</fstart><fstop>143</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_DISULFID_Probable from P08168</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>381</fstart><fstop>385</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>---------------------------------------madkgagtrvfkksspngkvtaylgkrdyvdhidhtdpidgvvlidpeyvke-rkvfvkllcafrygredldvlgltfrkdfctttiqvypplnegdrkpktrlqerlmkklgehsypffidipkdspcsvtlqpapgdtgkpcgvdyelktyvwdp-ednpdkthk---rnsvrlairkvqfapdkkgpqptaeiqklflmsdkplcleatldkdlyyhgesigvnvqvtnnssktvkkvkisvrqiadiclfsnaqykcpvafiead--dqvapsstlckvyqicpllgdnkdkrglaldgqlkhedtnlasstilkegvpkenlgiivqykvkvklvlgsl--ggevcvelpvtlmhskpadvdpiigspakvas--------------------------------gkpapepidhnlisfdtna-sppnddivfedfarmrlqgeaatggdgqta-------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q86BW6</seq-name>
+<seq-info>
+<accession>Q86BW6</accession>
+<nid>Q86BW6</nid>
+<definition>   Beta-arrestin.</definition>
+<organism>   Halocynthia roretzi (Sea squirt). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>18</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>194</fstart><fstop>350</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>419</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>401</fstart><fstop>419</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>401</fstart><fstop>419</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>350</fstart><fstop>365</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>366</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>418</fstart><fstop>419</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>4</fstart><fstop>42</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>43</fstart><fstop>50</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>51</fstart><fstop>61</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>68</fstart><fstop>76</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>85</fstart><fstop>88</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>105</fstart><fstop>115</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>129</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>157</fstart><fstop>161</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>162</fstart><fstop>182</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>183</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>197</fstart><fstop>245</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>261</fstart><fstop>268</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>274</fstart><fstop>287</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>288</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>296</fstart><fstop>309</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>311</fstart><fstop>333</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>335</fstart><fstop>346</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>388</fstart><fstop>401</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>402</fstart><fstop>408</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>247</fstart><fstop>258</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>248</fstart><fstop>259</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>25</fstart><fstop>29</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>134</fstart><fstop>139</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>317</fstart><fstop>330</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>52</fstart><fstop>64</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>229</fstart><fstop>242</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>244</fstart><fstop>246</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>6</fstart><fstop>12</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>113</fstart><fstop>118</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>45</fstart><fstop>48</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>192</fstart><fstop>196</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>279</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>128</fstart><fstop>131</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>75</fstart><fstop>88</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>314</fstart><fstop>316</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>37</fstart><fstop>42</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>215</fstart><fstop>223</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>344</fstart><fstop>354</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>19</fstart><fstop>23</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>286</fstart><fstop>292</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>267</fstart><fstop>275</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>164</fstart><fstop>173</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>100</fstart><fstop>108</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>161</fstart><fstop>163</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>207</fstart><fstop>210</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>198</fstart><fstop>205</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>394</fstart><fstop>398</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P17870</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>141</fstart><fstop>152</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>185</fstart><fstop>187</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>336</fstart><fstop>342</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>153</fstart><fstop>154</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1ayr_C</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>61</fstart><fstop>79</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PS00295 ARRESTINS from Q7T2D2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>126</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_DISULFID_Probable from P08168</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>380</fstart><fstop>384</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>344</fstart><fstop>419</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------------------------------mssagtrvfkkscpngkittylgkrdyvdhitttdpidgvvlidpeyvkg-rkvyvkllcafrygredldvlgltfrkdfytatkqvfpseteedkkpktrlqerlmkklgtnaypffieipanspcsvtlqpangdtgkpcgvdyelktyvg---depeeklhk---rnsvrlairkvqyapdkqgpqpsaevrkdfmmsekplcleasldkelyyhgekinvnvqvtnnssktvkkvkisvrqfadiclfssaqykcpvasiead--dtvspsstlckvyqicpllssnktkrglaldgqlkhedtnlasstimkdgvpkenlgiivqykvkvklviggl--ggecvlelpvslmhampepepekleekpksee-----------------------------qkqasnanpdlepnlisfdtkg-tpagddivfedfarmrlqvtpqgecekqheqk-----
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q5WNA5</seq-name>
+<seq-info>
+<accession>Q5WNA5</accession>
+<nid>Q5WNA5</nid>
+<definition>   Hypothetical protein CBG08085.</definition>
+<organism>   Caenorhabditis briggsae. Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>22</fstart><fstop>186</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>205</fstart><fstop>363</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>435</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>155</fstart><fstop>173</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>155</fstart><fstop>173</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>1</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>376</fstart><fstop>376</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>429</fstart><fstop>435</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>8</fstart><fstop>46</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>47</fstart><fstop>54</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>56</fstart><fstop>66</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>73</fstart><fstop>81</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>90</fstart><fstop>93</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>110</fstart><fstop>120</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>134</fstart><fstop>157</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>163</fstart><fstop>169</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>173</fstart><fstop>193</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>194</fstart><fstop>207</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>208</fstart><fstop>256</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>274</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>287</fstart><fstop>300</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>301</fstart><fstop>308</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>309</fstart><fstop>322</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>324</fstart><fstop>346</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>347</fstart><fstop>359</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>399</fstart><fstop>412</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>413</fstart><fstop>419</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>258</fstart><fstop>269</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>259</fstart><fstop>270</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>29</fstart><fstop>33</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>139</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>330</fstart><fstop>343</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>57</fstart><fstop>69</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>240</fstart><fstop>253</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>255</fstart><fstop>257</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>10</fstart><fstop>16</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>118</fstart><fstop>123</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>49</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>203</fstart><fstop>207</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>292</fstart><fstop>294</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>133</fstart><fstop>136</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>80</fstart><fstop>93</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>146</fstart><fstop>162</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>327</fstart><fstop>329</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>41</fstart><fstop>46</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>226</fstart><fstop>234</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>357</fstart><fstop>367</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>23</fstart><fstop>27</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>413</fstart><fstop>417</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>299</fstart><fstop>305</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>175</fstart><fstop>184</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>105</fstart><fstop>113</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>169</fstart><fstop>174</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>218</fstart><fstop>221</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>209</fstart><fstop>216</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>405</fstart><fstop>409</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P17870</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>347</fstart><fstop>359</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>196</fstart><fstop>198</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>283</fstart><fstop>288</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>66</fstart><fstop>84</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00295 ARRESTINS</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>1</fstart><fstop>94</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>WARN_PS00430</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>208</fstart><fstop>212</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>390</fstart><fstop>394</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>352</fstart><fstop>435</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------mvdedkksgtrvfkktspngkittylgkrdfidrgdyvdmidgmvlideeyvkenkkvtahllaafrygredldvlgltfrkdlisetfqvfpqtekaiarpltrlqerlkrklgpnaypfwfevapksassvtlqpapgdtgkpcgvdyelktfvactesgnsekskksaitntvrlairkltyapfearpqpmvdvskyfmmssgllhmevsldkemyyhgesiavnvhiqnnsnktvkklkiciiqvadiclfttasyscevariesnegfpvgpgatlskvfsvcpllsnnkdkrglaldgqlkhedtnlasstildaktskeslgivvqyrvkvravlgpl--ngelfaelpftlthskppetperterafs--------------------------------isdatngsdpqdidliqlheelelrddddlifedfarmrlhgndsedqpspsanlppsll
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q9V393</seq-name>
+<seq-info>
+<accession>Q9V393</accession>
+<nid>Q9V393</nid>
+<definition>   CG1487-PA LD31082p Kurtz arrestin.</definition>
+<organism>   Drosophila melanogaster (Fruit fly). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>59</fstart><fstop>214</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>233</fstart><fstop>393</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>1</fstart><fstop>460</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>470</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>392</fstart><fstop>470</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>392</fstart><fstop>470</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>2</fstart><fstop>16</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>24</fstart><fstop>38</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>38</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>407</fstart><fstop>418</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>45</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>84</fstart><fstop>91</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>92</fstart><fstop>102</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>109</fstart><fstop>117</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>126</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>144</fstart><fstop>154</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>168</fstart><fstop>191</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>194</fstart><fstop>200</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>201</fstart><fstop>221</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>222</fstart><fstop>235</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>236</fstart><fstop>284</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>301</fstart><fstop>305</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>315</fstart><fstop>328</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>329</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>337</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>352</fstart><fstop>374</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>377</fstart><fstop>389</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>448</fstart><fstop>460</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>461</fstart><fstop>467</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>286</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>287</fstart><fstop>298</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>66</fstart><fstop>70</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>173</fstart><fstop>178</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>358</fstart><fstop>371</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>268</fstart><fstop>281</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>283</fstart><fstop>285</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>47</fstart><fstop>53</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>152</fstart><fstop>157</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>86</fstart><fstop>89</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>320</fstart><fstop>322</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>167</fstart><fstop>170</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>116</fstart><fstop>129</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>180</fstart><fstop>193</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>355</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>78</fstart><fstop>83</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>254</fstart><fstop>262</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>387</fstart><fstop>397</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>60</fstart><fstop>64</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>327</fstart><fstop>333</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>203</fstart><fstop>212</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>139</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>200</fstart><fstop>202</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>246</fstart><fstop>249</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>237</fstart><fstop>244</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>93</fstart><fstop>104</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>377</fstart><fstop>389</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>428</fstart><fstop>430</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4r_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>224</fstart><fstop>226</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>311</fstart><fstop>316</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>227</fstart><fstop>232</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1ayr_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>102</fstart><fstop>120</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00295 ARRESTINS</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>440</fstart><fstop>444</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>53</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>386</fstart><fstop>470</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mngggggsgganvsngsstnvtaagstgggsagdetggdassrrqatrvfkksssngkitvylgkrdfvdhvthvdpidgvvfidpeyvkd-rkvfgqvlaafrygredldvlgltfrkdlylaheqiyppmql--drpmtrlqerlikklgpnahpfyfevppycpasvslqpapgdvgkscgvdyelkafvg---envedkphk---rnsvrltirkvmyapskvgeqpsievskefmmkpnkihleatldkelyhhgekisvnvhvannsnrtvkkikvcvrqfadiclfstaqyksvvaeiesedgcqvapgftlskvfelcpllannkdkwglaldgqlkhedtnlasstlitnpaqreslgimvhykvkvkllisspllngdlvaelpftlmhpkpeeeehpllgersp------------raslaggglplvsmsdgetesatggqdvptttnliqlddde--aqdddiifedfarlrlkgaetea-------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q16NE5</seq-name>
+<seq-info>
+<accession>Q16NE5</accession>
+<nid>Q16NE5</nid>
+<definition>   Beta-arrestin 1 putative.</definition>
+<organism>   Aedes aegypti (Yellowfever mosquito). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>25</fstart><fstop>180</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00339 Arrestin_N</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>199</fstart><fstop>357</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF02752 Arrestin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>421</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>356</fstart><fstop>418</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>356</fstart><fstop>418</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>382</fstart><fstop>394</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>4</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>371</fstart><fstop>394</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>11</fstart><fstop>49</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>50</fstart><fstop>57</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>58</fstart><fstop>68</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>75</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>92</fstart><fstop>95</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>110</fstart><fstop>120</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>134</fstart><fstop>157</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>160</fstart><fstop>166</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>167</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>201</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>202</fstart><fstop>250</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>267</fstart><fstop>271</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>281</fstart><fstop>294</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>295</fstart><fstop>302</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>303</fstart><fstop>316</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>318</fstart><fstop>340</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>341</fstart><fstop>353</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>252</fstart><fstop>263</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>253</fstart><fstop>264</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>32</fstart><fstop>36</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>139</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>324</fstart><fstop>337</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>234</fstart><fstop>247</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>249</fstart><fstop>251</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>13</fstart><fstop>19</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>118</fstart><fstop>123</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>52</fstart><fstop>55</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>286</fstart><fstop>288</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>133</fstart><fstop>136</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>82</fstart><fstop>95</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>146</fstart><fstop>159</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>321</fstart><fstop>323</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>44</fstart><fstop>49</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>220</fstart><fstop>228</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>351</fstart><fstop>361</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>26</fstart><fstop>30</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>293</fstart><fstop>299</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>169</fstart><fstop>178</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>105</fstart><fstop>113</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>166</fstart><fstop>168</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>212</fstart><fstop>215</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>203</fstart><fstop>210</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from ARRB1_BOVIN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>59</fstart><fstop>70</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>341</fstart><fstop>353</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4m_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>404</fstart><fstop>406</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1g4r_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>190</fstart><fstop>192</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>277</fstart><fstop>282</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P08168</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>193</fstart><fstop>198</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1ayr_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>68</fstart><fstop>86</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00295 ARRESTINS</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>416</fstart><fstop>420</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>352</fstart><fstop>421</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>506</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------------------------mtikspfsltalhrvfkksssngkitvylgkrdfvdhithvdpidgvvlidpdyvkd-rkvfghvlaafrygredldvlgltfrkdlylaseqifppqet--drpltrlqerlirklgpnaypfyfevpphcpasvslqpapgdtgkpcgvdyelkafvg---etpedkphk---rnsvrlairkimyapsklgeqpsievskeyilkpnkihleasldkelyhhgeslsvnvhiannssktvkkikvsvrqfadiclfstaqykctvaevesedgcqvapgftlskvftltpllannkdkwglaldgqlkhedtnlasstliadpsqrenlgiivqykvkvklcitpl--ggdlvaelpfilmhpkpdddepliggerspgrtignsdklhpgaggagggagtgasdlnknstnrgdaskedgpnliqldg----------------------------------------
+</seq-data></sequence>
+</alignment>
+</macsim>

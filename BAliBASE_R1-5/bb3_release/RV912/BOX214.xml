@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>Q07108</seq-name>
+<seq-info>
+<accession>Q07108</accession>
+<nid>Q07108</nid>
+<definition>   Early activation antigen CD69 Early T-cell activation antigen p60 GP3228 Leu-23 MHomo sap</definition>
+<organism>   Homo sapiens (Human). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>92</fstart><fstop>195</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>C-type lectin.</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>102</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>197</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>47</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>63</fstart><fstop>74</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>80</fstart><fstop>85</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>86</fstart><fstop>96</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>120</fstart><fstop>128</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>142</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>154</fstart><fstop>162</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>179</fstart><fstop>189</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>191</fstart><fstop>197</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>130</fstart><fstop>133</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>110</fstart><fstop>118</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>41</fstart><fstop>61</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Signal-anchor for type II membrane protei</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>38</fstart><fstop>71</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>126</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>HELIX</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>190</fstart><fstop>197</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>168</fstart><fstop>170</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>180</fstart><fstop>184</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>172</fstart><fstop>177</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>106</fstart><fstop>115</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>HELIX</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>89</fstart><fstop>92</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>95</fstart><fstop>99</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>141</fstart><fstop>146</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>STRAND</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>153</fstart><fstop>155</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>119</fstart><fstop>120</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>157</fstart><fstop>159</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>81</fstart><fstop>84</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>92</fstart><fstop>195</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>173</fstart><fstop>186</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>113</fstart><fstop>194</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>166</fstart><fstop>166</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>87</fstart><fstop>87</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from NKG2A_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>196</fstart><fstop>196</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>111</fstart><fstop>113</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_MOD_N-GLC_2</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>111</fstart><fstop>113</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>--mssencfvaensslhpesgqendatsphfstrhegsfqvpvlcavmnvvfitiliialialsvgqyncpgqytfsmpsdshvsscsedwvgyqrkcyfistvkrswtsaqnacsehgatlavidsekdmnflkryagree-hwvglkke-pghpwkwsngkefnn-----wfnvtgsd-----kcvf------lkntevssmecekn-lywicnkpyk-----------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q6ZYP3</seq-name>
+<seq-info>
+<accession>Q6ZYP3</accession>
+<nid>Q6ZYP3</nid>
+<definition>   B-lec protein.</definition>
+<organism>   Gallus gallus (Chicken). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>69</fstart><fstop>173</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>PROP_C-type lectin. from Q92478</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>79</fstart><fstop>174</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>57</fstart><fstop>62</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>63</fstart><fstop>73</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>97</fstart><fstop>105</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>119</fstart><fstop>124</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>132</fstart><fstop>140</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>157</fstart><fstop>167</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>169</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>107</fstart><fstop>110</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>150</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>75</fstart><fstop>79</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>81</fstart><fstop>84</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>26</fstart><fstop>57</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>168</fstart><fstop>175</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>158</fstart><fstop>162</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>66</fstart><fstop>69</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>118</fstart><fstop>123</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>131</fstart><fstop>133</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>96</fstart><fstop>97</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>102</fstart><fstop>104</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>135</fstart><fstop>137</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>58</fstart><fstop>61</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>151</fstart><fstop>172</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS00615 C_TYPE_LECTIN_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>69</fstart><fstop>173</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>135</fstart><fstop>135</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from P27814</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>172</fstart><fstop>172</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>104</fstart><fstop>104</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>174</fstart><fstop>174</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>88</fstart><fstop>90</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>183</fstart><fstop>185</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------meevreyphvlgtewsrregpsrgacvtfqltmaavftvllitavafavqafqph---------pqpcaqcpfdwigfrgkcyyfsedesnwtssqnncsalgaslavfdsaedlsftmrhkgssp-hwvglsregkehpwewvnrsplsh-----lfqvqgdg-----lcay------lgdaglssshcstr-rnwvctkpalqkprknfcist
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q92478</seq-name>
+<seq-info>
+<accession>Q92478</accession>
+<nid>Q92478</nid>
+<definition>   C-type lectin domain family 2 member B C-type lectin superfamily member 2 ActivatHomo sap</definition>
+<organism>   Homo sapiens (Human). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>42</fstart><fstop>145</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>C-type lectin.</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>52</fstart><fstop>146</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>33</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>36</fstart><fstop>46</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>70</fstart><fstop>78</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>92</fstart><fstop>97</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>104</fstart><fstop>112</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>129</fstart><fstop>139</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>141</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>80</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>122</fstart><fstop>124</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>48</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>54</fstart><fstop>57</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>8</fstart><fstop>25</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Signal-anchor for type II membrane protei</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>140</fstart><fstop>147</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>130</fstart><fstop>134</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>39</fstart><fstop>42</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>91</fstart><fstop>96</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>103</fstart><fstop>105</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>107</fstart><fstop>109</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>123</fstart><fstop>125</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P06734</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>42</fstart><fstop>145</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>57</fstart><fstop>57</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>123</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>100</fstart><fstop>100</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>35</fstart><fstop>46</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>63</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>62</fstart><fstop>62</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>146</fstart><fstop>146</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>44</fstart><fstop>46</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>61</fstart><fstop>63</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------mmtkhkkcfiivgvlittniitlivkltrdsq---------------slcpydwigfqnkcyyfskeegdwnsskyncstqhadltiidnieemnflrrykcssd-hwiglkma-knrtgqwvdgatftk-----sfgmrgse-----gcay------lsddgaatarcyte-rkwicrkrih-----------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q09Y73</seq-name>
+<seq-info>
+<accession>Q09Y73</accession>
+<nid>Q09Y73</nid>
+<definition>   C-type lectin-like receptor.</definition>
+<organism>   Gallus gallus (Chicken). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>81</fstart><fstop>185</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>PROP_C-type lectin. from Q92478</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>91</fstart><fstop>186</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>69</fstart><fstop>74</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>75</fstart><fstop>85</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>109</fstart><fstop>117</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>131</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>144</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>169</fstart><fstop>179</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>181</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>119</fstart><fstop>122</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>191</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>40</fstart><fstop>66</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>180</fstart><fstop>187</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>170</fstart><fstop>174</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>78</fstart><fstop>81</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>130</fstart><fstop>135</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>143</fstart><fstop>145</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>108</fstart><fstop>109</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>114</fstart><fstop>116</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>147</fstart><fstop>149</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>70</fstart><fstop>73</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>81</fstart><fstop>185</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>189</fstart><fstop>200</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_PS00615 C_TYPE_LECTIN_1 from CLC4C_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>172</fstart><fstop>172</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from Q8MIS5</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>181</fstart><fstop>181</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium via carbonyl oxygen By similar from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>184</fstart><fstop>184</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>116</fstart><fstop>116</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>100</fstart><fstop>102</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>------maepsppreamacegeeerlsqggsgc---selrqsrrcvlcvalcavlcilvsalvavivlqrp----scpppppfshvcpnawvgfqgkcyyfsytksdwnssrehchrlgaslatvdteeemgfimqyhgped-hwiglrraegdehwtwadgsafsn-----wfkpqggg-----qcvy------lhgdwinstlchse-kfwvcstadsyilwrngtnph
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q1XD31</seq-name>
+<seq-info>
+<accession>Q1XD31</accession>
+<nid>Q1XD31</nid>
+<definition>   AICL-like 2.</definition>
+<organism>   Anas platyrhynchos (Domestic duck). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>100</fstart><fstop>194</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>195</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>24</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>26</fstart><fstop>51</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>64</fstart><fstop>71</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>78</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>84</fstart><fstop>94</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>118</fstart><fstop>126</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>140</fstart><fstop>143</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>152</fstart><fstop>160</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>177</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>128</fstart><fstop>131</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>196</fstart><fstop>199</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>48</fstart><fstop>77</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>178</fstart><fstop>182</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>87</fstart><fstop>90</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>139</fstart><fstop>144</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>151</fstart><fstop>153</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>117</fstart><fstop>118</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>123</fstart><fstop>125</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>155</fstart><fstop>157</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>79</fstart><fstop>82</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>90</fstart><fstop>193</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>155</fstart><fstop>155</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from P27814</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>185</fstart><fstop>185</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>160</fstart><fstop>160</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from Q9GLF3</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>125</fstart><fstop>125</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>144</fstart><fstop>144</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 2 By similarity from Q5RBQ8</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>121</fstart><fstop>121</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>109</fstart><fstop>111</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>31</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mgkgaqeknhpdqeevlnpprdeekqckwdssphgmekkcrrvqqllaplcvvlsvivlallvalvvvhlq----shsshpqfshvcppkwigfqskcyyfsknesnwktslencktmeasltsidsqeeldfikrykgqan-hwfglhde-gnsqwrwtngaafnn-----wfevrggg-----pcay------inqekissafcnte-kywicsrpnnyvlwrqkiyp-
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q0ZCA7</seq-name>
+<seq-info>
+<accession>Q0ZCA7</accession>
+<nid>Q0ZCA7</nid>
+<definition>   CD69-like protein.</definition>
+<organism>   Rattus norvegicus (Rat). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>33</fstart><fstop>126</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>127</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>11</fstart><fstop>16</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>17</fstart><fstop>27</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>51</fstart><fstop>59</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>72</fstart><fstop>77</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>83</fstart><fstop>91</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>109</fstart><fstop>119</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>121</fstart><fstop>127</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>61</fstart><fstop>64</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>102</fstart><fstop>104</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>29</fstart><fstop>33</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>35</fstart><fstop>38</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>120</fstart><fstop>127</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>110</fstart><fstop>114</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>20</fstart><fstop>23</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>71</fstart><fstop>76</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>82</fstart><fstop>84</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>50</fstart><fstop>51</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>56</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>86</fstart><fstop>88</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>12</fstart><fstop>15</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>103</fstart><fstop>105</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P06734</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>103</fstart><fstop>124</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS00615 C_TYPE_LECTIN_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>23</fstart><fstop>125</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>86</fstart><fstop>86</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from P27814</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>103</fstart><fstop>103</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from KLRBC_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>18</fstart><fstop>18</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from NKG2A_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>124</fstart><fstop>124</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>12</fstart><fstop>12</fstop><fcolor>7</fcolor><fscore>0.00</fscore><fnote>PROP_DISULFID_Interchain from P78380</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>126</fstart><fstop>126</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>54</fstart><fstop>54</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>42</fstart><fstop>44</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------------------------------------------------------------msilaskgcikcetpcpedwllygrkcyyfseeprdwntgrqychtheaalaviqsqkelefmfkftrre--pwiglrrv--gddfhwvngdpfdp----dtftisgtg-----ecvf------veptrlvstecltt-rpwvcskmayt----------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q6S008</seq-name>
+<seq-info>
+<accession>Q6S008</accession>
+<nid>Q6S008</nid>
+<definition>   ORF26.</definition>
+<organism>   Avian adenovirus gal1 (strain Phelps) (FAdV-1) (Fowl adenovirus 1). Viruses   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>34</fstart><fstop>130</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>131</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>12</fstart><fstop>17</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>18</fstart><fstop>28</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>52</fstart><fstop>60</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>74</fstart><fstop>79</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>86</fstart><fstop>94</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>113</fstart><fstop>123</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>125</fstart><fstop>131</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>62</fstart><fstop>65</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>106</fstart><fstop>108</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>97</fstart><fstop>101</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>30</fstart><fstop>34</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>36</fstart><fstop>39</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>124</fstart><fstop>131</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>114</fstart><fstop>118</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>21</fstart><fstop>24</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>73</fstart><fstop>78</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>86</fstart><fstop>87</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>51</fstart><fstop>52</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>57</fstart><fstop>59</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>89</fstart><fstop>91</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>13</fstart><fstop>16</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>107</fstart><fstop>109</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from P06734</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>24</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>107</fstart><fstop>107</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from KLRBC_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>128</fstart><fstop>128</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>59</fstart><fstop>59</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>78</fstart><fstop>78</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 2 By similarity from P02706</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>43</fstart><fstop>45</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------------------------------------------------------------mlppigcdrlpefdvvcprdwigfqskcyyfsesesnwseaekfcrqqeaelavprseeekefllrqcgtgt-nwlgvtrk-skdgadwvd-asyddyv--pwyeirggg-----dcvy------lngdrvtsaycdtq-klfvcscqdsysywlenk---
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q6UVW9</seq-name>
+<seq-info>
+<accession>Q6UVW9</accession>
+<nid>Q6UVW9</nid>
+<definition>   C-type lectin domain family 2 member A.</definition>
+<organism>   Homo sapiens (Human). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>65</fstart><fstop>160</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>C-type lectin.</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>75</fstart><fstop>135</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>157</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>56</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>59</fstart><fstop>69</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>93</fstart><fstop>101</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>115</fstart><fstop>120</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>127</fstart><fstop>135</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>151</fstart><fstop>157</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>103</fstart><fstop>106</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>137</fstart><fstop>138</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>71</fstart><fstop>75</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>77</fstart><fstop>80</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>28</fstart><fstop>48</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Signal-anchor for type II membrane protei</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>27</fstart><fstop>54</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>150</fstart><fstop>157</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>62</fstart><fstop>65</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>114</fstart><fstop>119</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>126</fstart><fstop>128</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>92</fstart><fstop>93</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>139</fstart><fstop>139</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>98</fstart><fstop>100</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>130</fstart><fstop>132</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>65</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>86</fstart><fstop>145</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>DISULFID_By similarity</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>130</fstart><fstop>130</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>136</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) D (in dbSNP:rs526680). </fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>84</fstart><fstop>86</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------minpelrdgradgfihrivpkliqnwkiglmcflsiiittvciimiatwskh------------akpvacsgdwlgvrdkcfyfsddtrnwtaskifcslqkaelaqidtqedmeflkryagtdm-hwiglsrk-qgdswkwtngttfng-----wps-------------------------nskwscnwslrqwllllgplr----------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q3U271</seq-name>
+<seq-info>
+<accession>Q3U271</accession>
+<nid>Q3U271</nid>
+<definition>   NOD-derived CD11c ve dendritic cells cDNA RIKEN full-length enriched library clonMus musc</definition>
+<organism>   Mus musculus (Mouse). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>22</fstart><fstop>141</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>PROP_C-type lectin. from Q9R0Q8</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>32</fstart><fstop>142</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00059 Lectin_C</fnote></fitem>
+<fitem><ftype>REPEAT</ftype><fstart>84</fstart><fstop>106</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_7. from CD209_MACMU</fnote></fitem>
+<fitem><ftype>REPEAT</ftype><fstart>40</fstart><fstop>62</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_6. from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>143</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>118</fstart><fstop>137</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>118</fstart><fstop>137</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>10</fstart><fstop>15</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>16</fstart><fstop>26</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>50</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>73</fstart><fstop>78</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>86</fstart><fstop>94</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>125</fstart><fstop>135</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>137</fstart><fstop>143</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>60</fstart><fstop>63</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>113</fstart><fstop>118</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>97</fstart><fstop>103</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>104</fstart><fstop>110</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>28</fstart><fstop>32</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>34</fstart><fstop>37</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>136</fstart><fstop>143</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>126</fstart><fstop>130</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>19</fstart><fstop>22</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>72</fstart><fstop>77</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from Q07108</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>85</fstart><fstop>87</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1e87_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>49</fstart><fstop>50</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>102</fstart><fstop>103</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 1yxk_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>96</fstart><fstop>100</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1k9i_C</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>55</fstart><fstop>57</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from CLC4M_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>89</fstart><fstop>91</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from CD209_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>11</fstart><fstop>14</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>112</fstart><fstop>117</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from 2h2r_B</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>114</fstart><fstop>140</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS00615 C_TYPE_LECTIN_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>22</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50041 C_TYPE_LECTIN_2</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>42</fstart><fstop>42</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from Q9R0Q8</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>126</fstart><fstop>126</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from P37217</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>114</fstart><fstop>114</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from KLRBC_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>129</fstart><fstop>129</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from KLRD1_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>128</fstart><fstop>128</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from Q8MIS5</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>140</fstart><fstop>140</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from CD209_PANTR</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>57</fstart><fstop>57</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>117</fstart><fstop>117</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC5A_PIG</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>77</fstart><fstop>77</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 2 By similarity from P02706</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>51</fstart><fstop>51</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 1 via carbonyl oxygen By simil from P02706</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>127</fstart><fstop>127</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 3 By similarity from P02706</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>103</fstart><fstop>103</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Carbohydrate By similarity from P02706</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>112</fstart><fstop>112</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium 2 By similarity from P02706</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>100</fstart><fstop>100</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from CLC4C_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>139</fstart><fstop>139</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PROP_METAL_Calcium By similarity from C209A_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>53</fstart><fstop>53</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from C209D_MOUSE</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>13</fstart><fstop>15</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>41</fstart><fstop>43</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>231</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>------------------------------------------------------------------------mseaflllgsvknccplnwkhyqsscyffstttltwssslkncsdmgahlvvidtqeeqeflfrtkpkrkefyigltdqvvegqwqwvddtpfte-slsfwdagepnnivlvedcatirdssn-srknwndipcfys-mpwicempeispld-------
+</seq-data></sequence>
+</alignment>
+</macsim>

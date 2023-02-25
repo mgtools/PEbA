@@ -82,7 +82,7 @@ def esm2_embed(seq, tokenizer, encoder):
     inputs = tokenizer(seq, return_tensors="pt")
     outputs = encoder(**inputs)
     last_hidden_states = outputs.last_hidden_state
-    return last_hidden_states
+    return last_hidden_states[0]
 
 
 def parse_fasta(filename, tokenizer, model):
@@ -105,7 +105,8 @@ def parse_fasta(filename, tokenizer, model):
         for seq in SeqIO.parse(file, 'fasta'):
             # vec = prot_t5xl_embed(str(seq.seq), tokenizer, model)
             vec = esm2_embed(str(seq.seq), tokenizer, model)
-            print(vec)
+            if isinstance(vec, torch.Tensor):
+                vec = vec.detach().numpy()
             seqname = seq.id
             with open(f'bb_embed/{refname[0]}/{refname[1]}/{seqname}.txt', 'w', encoding='utf8') as seqfile:
                 np.savetxt(seqfile, vec, fmt='%4.6f', delimiter=' ')

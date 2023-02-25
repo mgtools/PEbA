@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>P47160</seq-name>
+<seq-info>
+<accession>P47160</accession>
+<nid>P47160</nid>
+<definition>   Epsin-3.</definition>
+<organism>   Saccharomyces cerevisiae (Bakers yeast). Eukaryota     </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>24</fstart><fstop>157</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>ENTH.</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>29</fstart><fstop>153</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF01417 ENTH</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>15</fstart><fstop>408</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>257</fstart><fstop>270</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>338</fstart><fstop>354</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>174</fstart><fstop>178</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>203</fstart><fstop>209</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>255</fstart><fstop>267</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>283</fstart><fstop>292</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>294</fstart><fstop>308</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>365</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>30</fstart><fstop>41</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>42</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>71</fstart><fstop>77</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>82</fstart><fstop>89</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>90</fstart><fstop>103</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>122</fstart><fstop>127</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>129</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>148</fstart><fstop>155</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>157</fstart><fstop>163</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>15</fstart><fstop>21</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>104</fstart><fstop>115</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>268</fstart><fstop>282</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>181</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>400</fstart><fstop>406</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>236</fstart><fstop>245</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>113</fstart><fstop>117</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>150</fstart><fstop>159</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>118</fstart><fstop>121</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>103</fstart><fstop>111</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>49</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>31</fstart><fstop>39</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>133</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>84</fstart><fstop>100</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>121</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>75</fstart><fstop>77</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q9Y6I3</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>80</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>42</fstart><fstop>45</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>10</fstart><fstop>28</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1h0a_A</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>24</fstart><fstop>157</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50942 ENTH</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>75</fstart><fstop>75</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>37</fstart><fstop>37</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>93</fstart><fstop>93</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>55</fstart><fstop>55</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>42</fstart><fstop>42</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>MOD_RES</ftype><fstart>407</fstart><fstop>407</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Phosphoserine</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>269</fstart><fstop>275</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_LIG_AP_GAE_1</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>269</fstart><fstop>275</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>376</fstart><fstop>382</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>159</fstart><fstop>408</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1038</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-msledtlanmslydakkyfrkaqnvvfnytemegkvreatnnepwgasstlmdqisqgtyn-----------frereeilsmifrrft---e----kagsewrqiykalqlldylikhgse--------rfiddtrnsinliriletfhyids-qgrdqginvrtrvkaliellsddnkiraerkkaret-akkykg--vagg------sasadgslnskagf------------------------------------------------------tstkvhgisvsadfdsdnednedgsfsqngyn------------dnasratstpgqgkqepedfvdffssesskpskeliqed----------------------------------ekkadeeeddddefsefqsavpvt-----------npansfnllntspiegmpattssmpf---------ynssttdqgkit---------paiaepkkvd-pfsslfstakasaeapsapkasqakaaasnpvsn---------------sttalstdqddddefgemhg-gavqqeqntnn--------nhtsskeidllsf-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q5ALM4</seq-name>
+<seq-info>
+<accession>Q5ALM4</accession>
+<nid>Q5ALM4</nid>
+<definition>   Potential epsin-like clathrin vesicle coat protein.</definition>
+<organism>   Candida albicans (Yeast). Eukaryota     </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>1</fstart><fstop>36</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF01417 ENTH</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>335</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>58</fstart><fstop>72</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>178</fstart><fstop>187</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>258</fstart><fstop>271</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>275</fstart><fstop>285</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>5</fstart><fstop>10</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>12</fstart><fstop>30</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>31</fstart><fstop>38</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>40</fstart><fstop>46</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>182</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>59</fstart><fstop>66</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>327</fstart><fstop>333</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>33</fstart><fstop>42</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>1</fstart><fstop>4</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>16</fstart><fstop>30</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>4</fstart><fstop>12</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>1</fstart><fstop>40</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50942 ENTH</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>183</fstart><fstop>189</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>61</fstart><fstop>335</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1038</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>------------------------------------------------------------------------------------------------------------------------------------------------mlksfhyids-kgrdqginvrnksknliaflnddnlirserkkaran-akkfgg-vssaay---ggassmgtgfgsggstftgddedfanrvygdggvyger---------fddpasaynngatgndnfeeydvqassshatskpttsssrvnakaskkepqn--------------------------------dllgdllsfdgdgqqtstn--------------------------------tatasrgtgandddddddfddfqaapsqpqkpan----------lsnnlnnlynpssqqqnqavsg---------pnynvnyqasqs---------tgpakttsnndafsslfssaktksktstgntstssstt-------------tpaaaaaasvnasnptssanddffggfssnnnsssnntktkpatngngtnntnsgdidllsf-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q6CQJ4</seq-name>
+<seq-info>
+<accession>Q6CQJ4</accession>
+<nid>Q6CQJ4</nid>
+<definition>   Similarities with sgdS0002560 Saccharomyces cerevisiae YDR153c.</definition>
+<organism>   Kluyveromyces lactis (Yeast) (Candida sphaerica). Eukaryota     </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>30</fstart><fstop>180</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF01417 ENTH</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>252</fstart><fstop>269</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_PF02809 UIM from Q7KU90</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>16</fstart><fstop>399</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>250</fstart><fstop>263</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>308</fstart><fstop>320</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>333</fstart><fstop>346</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>31</fstart><fstop>42</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>43</fstart><fstop>59</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>100</fstart><fstop>107</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>108</fstart><fstop>121</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>156</fstart><fstop>174</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>175</fstart><fstop>182</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>184</fstart><fstop>190</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>16</fstart><fstop>22</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>130</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>204</fstart><fstop>207</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>314</fstart><fstop>328</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>270</fstart><fstop>273</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>277</fstart><fstop>286</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>292</fstart><fstop>294</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>295</fstart><fstop>296</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_53</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>121</fstart><fstop>137</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>50</fstart><fstop>59</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>32</fstart><fstop>40</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>160</fstart><fstop>174</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>102</fstart><fstop>118</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>99</fstart><fstop>101</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>43</fstart><fstop>46</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>11</fstart><fstop>29</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1h0a_A</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>25</fstart><fstop>184</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50942 ENTH</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>38</fstart><fstop>38</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>111</fstart><fstop>111</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>315</fstart><fstop>321</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>183</fstart><fstop>399</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1038</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mdsiskklgnlglhdfrnaarfaqnvivqyepyqidirratntdswgptpkhlakvmrhryevsmflmteytlkrlvdhmakrpknmyekarkqyvnyg-newrvvlkclvlleyllmrsdrgketdqvlsclqahkhiltketmqyrvdfssdgkmelhergikkkcehiiqliedtsylkrersktaentqkivag-sagsrse------slyndisinadsfag-----------------------------------ssstiddsddf-eyept-ptahrdrrssa-vdeqrrqrrellrerirn----------------sehqrkvsaqepeidlldfddapapaspsi-----------------------------nnsnnanvfesfgvdgedddddefgdfqsekspvppasgnfnsfgndnnnnnnnnktsnnnatln--dlld---------fggssstttpaa---------tnnnnastksdafadlfsmsknqi------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q7XTR7</seq-name>
+<seq-info>
+<accession>Q7XTR7</accession>
+<nid>Q7XTR7</nid>
+<definition>   OSJNBa0083N12.8 protein Os04g0599900 protein.</definition>
+<organism>   Oryza sativa (japonica cultivar-group). Eukaryota     </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>25</fstart><fstop>148</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF01417 ENTH</fnote></fitem>
+<fitem><ftype>REPEAT</ftype><fstart>375</fstart><fstop>377</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_5. from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>REPEAT</ftype><fstart>389</fstart><fstop>391</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PROP_7. from Q9Y6I3</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>26</fstart><fstop>560</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>14</fstart><fstop>579</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>165</fstart><fstop>180</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>298</fstart><fstop>322</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>335</fstart><fstop>352</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>389</fstart><fstop>397</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>532</fstart><fstop>568</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>570</fstart><fstop>580</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>26</fstart><fstop>37</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>38</fstart><fstop>54</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>67</fstart><fstop>73</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>77</fstart><fstop>84</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>85</fstart><fstop>98</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>117</fstart><fstop>122</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>124</fstart><fstop>142</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>143</fstart><fstop>150</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>152</fstart><fstop>158</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>14</fstart><fstop>20</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>99</fstart><fstop>110</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>195</fstart><fstop>197</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>250</fstart><fstop>263</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>186</fstart><fstop>192</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>211</fstart><fstop>217</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>431</fstart><fstop>434</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_41</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>374</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_51</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>271</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_89</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>532</fstart><fstop>568</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_94</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>108</fstart><fstop>112</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>113</fstart><fstop>116</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>98</fstart><fstop>106</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>45</fstart><fstop>54</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>27</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>128</fstart><fstop>142</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>79</fstart><fstop>95</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>116</fstart><fstop>124</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>71</fstart><fstop>73</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q9Y6I3</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>76</fstart><fstop>78</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>38</fstart><fstop>41</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>9</fstart><fstop>24</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1h0a_A</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>20</fstart><fstop>152</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50942 ENTH</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>71</fstart><fstop>71</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>81</fstart><fstop>81</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>16</fstart><fstop>16</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>250</fstart><fstop>256</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>179</fstart><fstop>508</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1038</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>--mdfvkvfdqavreikrevnl---kvlkvpeleqkvldatsdepwgphgttlselshatkk-----------faecqmvmsvlwtrls---e----rg-skwrhvykaltiieyliangse--------ravddildhyskisvlssfeyvep-ngkdaginvrkkvetilglindkekiksvrekaasn-rdkyvglsstgityks-ssasfgsnyssgerygsfsgtreg-dsygdsyrdkep-------------vksspsytgsqksgsrikkdvnrrnedspsslk-----------------------------------------------------------------------------------------------------------snakgneddfddfdprgsssng------------aan-tntsgvdlfapnllddfidvpaaathetndsadaqvdlfadadfqsaipstetaagsdvqgnvdlfaeqpaftaafppqtgfipppssgtsean-tstsknttpepfdpfgaipinsfdgsdpfgafnsdvgsssippptq-----ssvgnistpsqnpqaasdfggfvsstvetaakdpfdfsss-nlgkt---pladpkadasdfgafvshseevakdpfdlslstssgrtnqaplaapksdtkkenfqvksgiwadslsrglidlnitgp-kkvnladvgivgglddgsddka-lps----wtmgagg---sslgmsgipsstqs---ggiesla------------------nynkyqfgfk-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q948G6</seq-name>
+<seq-info>
+<accession>Q948G6</accession>
+<nid>Q948G6</nid>
+<definition>   Putative epsin.</definition>
+<organism>   Oryza sativa (Rice). Eukaryota     </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>DOMAIN</ftype><fstart>19</fstart><fstop>150</fstop><fcolor>5</fcolor><fscore>0.00</fscore><fnote>PROP_ENTH. from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>23</fstart><fstop>146</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF01417 ENTH</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>24</fstart><fstop>652</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>12</fstart><fstop>677</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>556</fstart><fstop>572</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>834</fstart><fstop>850</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>851</fstart><fstop>866</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>870</fstart><fstop>884</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>890</fstart><fstop>906</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>24</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>36</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>65</fstart><fstop>71</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>75</fstart><fstop>82</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>83</fstart><fstop>96</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>115</fstart><fstop>120</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>122</fstart><fstop>140</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>141</fstart><fstop>148</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>150</fstart><fstop>156</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>12</fstart><fstop>18</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>97</fstart><fstop>108</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>368</fstart><fstop>382</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>174</fstart><fstop>181</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>530</fstart><fstop>533</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_41</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>458</fstart><fstop>469</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_51</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>349</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_53</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>106</fstart><fstop>110</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>111</fstart><fstop>114</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>96</fstart><fstop>104</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>43</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>25</fstart><fstop>33</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>126</fstart><fstop>140</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>77</fstart><fstop>93</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q14677</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>114</fstart><fstop>122</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>69</fstart><fstop>71</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from Q9Y6I3</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>74</fstart><fstop>76</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>36</fstart><fstop>39</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>PROP_STRAND from O88339</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>7</fstart><fstop>22</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1h0a_A</fnote></fitem>
+<fitem><ftype>STRUCT</ftype><fstart>142</fstart><fstop>167</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_HELIX from 1h0a_A</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>780</fstart><fstop>786</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>WARN_PS00307</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>808</fstart><fstop>817</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>WARN_PS00599</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>18</fstart><fstop>150</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS50942 ENTH</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>69</fstart><fstop>69</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_MOUSE</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>49</fstart><fstop>49</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from EPN4_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>36</fstart><fstop>36</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>79</fstart><fstop>79</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>14</fstart><fstop>14</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_BINDING_Phosphatidylinositol lipid headgroup By  from Q9Z1Z3</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>369</fstart><fstop>375</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>152</fstart><fstop>848</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1038</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----mkkvfdqtvrdlkrevnk---kvlkvpgieqkildatsnepwgphgsllaeiaqatqn-----------yheyqmvmnvvwkrin---d----tg-knwrhvykglivldylvahgte--------rviddirehsyqistladfqyids-sgrdqgsnvrrksqslvslvndkeriqevrqkalat-rdkyrsafatsgthrspggydndryegsygsrydnrngyggereygyrdddrygvagttpnregdrysrdsneqrysrdredeyk-gshsnheyaegsgrrsygrdrdsygddeayssrgrqsnadgptqderpmerkpsnqqiaspppnyedvtrdtqdnnhdgrnggtvpvpvaaakvsspprtsvppgqvngvhdntvedvpapppthpevngfdefdprgsvpdtsppv-------npsqavnslemdlfgpdpinslalvsv------pqptaspnveps--anpgfesnsfmgmppastgfneafdatnpfgdptpfkavheetpavsqt---naapagsfhatepaadanpfqpasaasfgfgdtlgdlsfgs---------------naapgqqdifvp------tsshsevppanpsvhpeqavpsyvssqapqpa----aagpqthaapasfa-------------sqapptsfasqapqagapypqaastfphsqashpaatnpstipqnvatpfaplqmpqpvpsgqsnyfmqpvpgtgingmsgapsqngapsyipsqasqfaaptnlqpsqptfppqtamaasqatsisrgasqplavpnsmpsgvnfplqssssappetilsalqvsqsepvkkfeskstvwadtlsrglvnldisgpkanphadigvdfdsinrkekrqekkvsqapvvstitmgkamgtgsgigragasamappanpmgasrgigmgmgaagsgygggmgmnrpmgmgmgmnqqmgmgmgmnqqamgmgmnqqamgmgmnqqpmgmnmgmgmnqgmgmnmrppmgmgpgsgynpmgtgyggqqpyggyr
+</seq-data></sequence>
+</alignment>
+</macsim>
