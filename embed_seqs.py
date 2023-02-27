@@ -82,7 +82,7 @@ def esm2_embed(seq, tokenizer, encoder):
     inputs = tokenizer(seq, return_tensors="pt")
     outputs = encoder(**inputs)
     last_hidden_states = outputs.last_hidden_state
-    return last_hidden_states[0]
+    return last_hidden_states[0][1:-1]  # First and last tokens are BOS and EOS tokens
 
 
 def parse_fasta(filename, tokenizer, model):
@@ -137,9 +137,16 @@ def main():
         torch.save(model, 'prottrans.pt')
     '''
 
-    # Load model tokenizer and encoder models
-    tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t6_8M_UR50D")
-    model = EsmModel.from_pretrained("facebook/esm2_t6_8M_UR50D")
+    if os.path.exists('auto_tok.pt'):
+        tokenizer = torch.load('auto_tok.pt')
+    else:
+        tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t36_3B_UR50D")
+        torch.save(tokenizer, 'auto_tok.pt')
+    if os.path.exists('esm2_t36_3B.pt'):
+        model = torch.load('esm2_t36_3B.pt')
+    else:
+        model = EsmModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
+        torch.save(model, 'esm2_t36_3B.pt')
 
     # Parse each fasta file and write each embedding to its own file
     for file in fasta_files:

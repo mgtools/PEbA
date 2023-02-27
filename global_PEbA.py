@@ -13,6 +13,7 @@ import torch
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
 from utility import parse_fasta, write_align
+from embed_seqs import prot_t5xl_embed
 
 
 def embed_seq(seq, tokenizer, encoder):
@@ -187,18 +188,18 @@ def main():
 
     # Load models, embed sequences
     if args.embed1=='n':
-        if os.path.exists('tok.pt'):
-            tokenizer = torch.load('tok.pt')
+        if os.path.exists('t5_tok.pt'):
+            tokenizer = torch.load('t5_tok.pt')
         else:
             tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-            torch.save(tokenizer, 'tok.pt')
-        if os.path.exists('prottrans.pt'):
-            model = torch.load('prottrans.pt')
+            torch.save(tokenizer, 't5_tok.pt')
+        if os.path.exists('prot_t5_xl.pt'):
+            model = torch.load('prot_t5_xl.pt')
         else:
             model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-            torch.save(model, 'prottrans.pt')
-        vecs1 = embed_seq(seq1, tokenizer, model)
-        vecs2 = embed_seq(seq2, tokenizer, model)
+            torch.save(model, 'prot_t5_xltrans.pt')
+        vecs1 = prot_t5xl_embed(seq1, tokenizer, model)
+        vecs2 = prot_t5xl_embed(seq2, tokenizer, model)
 
     # Load numpy arrays
     else:
