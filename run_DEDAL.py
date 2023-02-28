@@ -132,7 +132,7 @@ def main():
     tseq1 = match_seq(seq1, tseq1)
     tseq2 = match_seq(seq2, tseq2)
     fseq1, fseq2 = pad_seq(tseq1, tseq2)
-    write_align(fseq1, fseq2, id1, id2, 'local_MATRIX', 'None', 'None', 'None', args.file1)
+    write_align(fseq1, fseq2, id1, id2, 'local_MATRIX', 'DEDAL', 'None', 'None', args.file1)
     os.remove('dedal_output.txt')
 
 

@@ -142,7 +142,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
 
-def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext, samp, dedal):
+def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext, samp, dedal, peba):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
     are parsed correspondingly. As they are parsed, they are also aligned using global_align.py
@@ -157,6 +157,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
     :param gext: gap extension penalty
     :param samp: number of alignments per MSA to perform
     :param dedal: flag to determine whether to use dedal or not
+    :param peba: flag to determine whether to use peba (twice) or not
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -192,15 +193,17 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
             ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
             args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
                     f'-file2 {bb_dir}/{ref_align}/{seq2} '
-                    f'-embed1 bb_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
-                    f'-embed2 bb_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+                    f'-embed1 prot_t5_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+                    f'-embed2 prot_t5_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
                     f'-gopen {gopen} '
-                    f'-gext {gext} ')
+                    f'-gext {gext} '
+                    f'-encoder ProtT5')
+            
             print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
             os.system(f"python local_PEbA.py {args}")
 
-            if dedal == 'n':
+            if (dedal == 'n' and peba == 'n'):
                 args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
                         f'-file2 {bb_dir}/{ref_align}/{seq2} '
                         f'-gopen {gopen} '
@@ -210,12 +213,25 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
                 print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
                 os.system(f"python local_MATRIX.py {args}")
-            else:
+
+            if (dedal == 'y'):
                 args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
                         f'-file2 {bb_dir}/{ref_align}/{seq2}')
                 print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                             file=sys.stdout)
                 os.system(f"python run_DEDAL.py {args}")
+
+            if (peba == 'y'):
+                args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+                        f'-file2 {bb_dir}/{ref_align}/{seq2} '
+                        f'-embed1 esm2_t36_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+                        f'-embed2 esm2_t36_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+                        f'-gopen {gopen} '
+                        f'-gext {gext} '
+                        f'-encoder ESM2')
+                print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                            file=sys.stdout)
+                os.system(f"python local_PEbA.py {args}")
 
             # Grab alignment from reference MSA
             seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
@@ -240,9 +256,11 @@ def compare_aligns(path):
         peba_aligns = []
         ref_aligns = []
         for file in files: # Add each alignment to list of alignments
-            if file.startswith('MATRIX'):
+
+            ### This is a terrible solution, I need to change this
+            if (file.startswith('MATRIX') or file.startswith('PEbA_ESM2')):
                 matrix_aligns.append(f'{path}/{folder}/{file}')
-            if file.startswith('PEbA'):
+            if file.startswith('PEbA_T5'):
                 peba_aligns.append(f'{path}/{folder}/{file}')
             if file.startswith('BB'):
                 ref_aligns.append(f'{path}/{folder}/{file}')
@@ -253,9 +271,6 @@ def compare_aligns(path):
         matrix_aligns.sort()
         peba_aligns.sort()
         ref_aligns.sort()
-
-        print(len(matrix_aligns))
-        print(len(peba_aligns))
 
         # Call t_coffee to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
@@ -328,27 +343,27 @@ def graph_compare(path, matrix):
     ============================================================================================="""
 
     # Get the similarity scores from the compare files
-    matrix_sim = []
+    compare_sim = []
     peba_sim = []
     folders = os.listdir(path)
     for folder in folders:
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
-            for line in file:
+            for i, line in enumerate(file):
                 line = line.split(',')
-                if 'MATRIX' in line[0]:
-                    matrix_sim.append(float(line[3]))
-                if 'PEbA' in line[0]:
+                if i == 0 or i % 2 == 0:
+                    compare_sim.append(float(line[3]))
+                if i % 2 != 0:
                     peba_sim.append(float(line[3]))
 
     # Average the similarity scores for graphing
-    blosum_avg = round(sum(matrix_sim)/len(matrix_sim), 1)
+    blosum_avg = round(sum(compare_sim)/len(compare_sim), 1)
     peba_avg = round(sum(peba_sim)/len(peba_sim), 1)
 
     # Graph the difference between similarity scores for each alignment
     fig = plt.figure()
     ax = fig.add_subplot()
     sim_diff = []
-    for i, mat_sim in enumerate(matrix_sim):
+    for i, mat_sim in enumerate(compare_sim):
         sim_diff.append(peba_sim[i]-mat_sim)
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
     ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs. {matrix} (Avg={blosum_avg})')
@@ -363,16 +378,16 @@ def graph_compare(path, matrix):
     ax = fig.add_subplot()
     peba_scores = []
     matrix_scores = []
-    for i, mat_sim in enumerate(matrix_sim):
+    for i, mat_sim in enumerate(compare_sim):
         if mat_sim < peba_sim[i]:
             peba_scores.append([peba_sim[i], mat_sim])
         else:
             matrix_scores.append([mat_sim, peba_sim[i]])
     ax.scatter([i[0] for i in matrix_scores], [i[1] for i in matrix_scores], color='blue')
     ax.scatter([i[1] for i in peba_scores], [i[0] for i in peba_scores], color='red')
-    ax.set_title(f'PEbA Alignment (Avg={peba_avg}) vs. {matrix} Alignment (Avg={blosum_avg})')
-    ax.set_xlabel('TCS MATRIX')
-    ax.set_ylabel('TCS PEbA')
+    ax.set_title(f'PEbA_T5 Alignment (Avg={peba_avg}) vs. {matrix} Alignment (Avg={blosum_avg})')
+    ax.set_xlabel('TCS PEbA_ESM2')
+    ax.set_ylabel('TCS PEbA_T5')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 
@@ -386,13 +401,14 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-matrix', type=str, default='blosum', help='Sub matrix')
+    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV912', help='Ref direc')
+    parser.add_argument('-matrix', type=str, default='PEbA_ESM2', help='Sub matrix')
     parser.add_argument('-value', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen', type=int, default=-11, help='Gap open')
     parser.add_argument('-gext', type=int, default=-1, help='Gap ext')
     parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
     parser.add_argument('-dedal', type=str, default='n', help='y/n to dedal align instead of matrix')
+    parser.add_argument('-peba', type=str, default='y', help='y/n to peba align instead of matrix')
     args = parser.parse_args()
 
     # Get directory of reference alignments
@@ -413,7 +429,8 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    parse_align_files(msf_files, fasta_files, bb_dir, args.matrix, args.value, args.gopen, args.gext, args.sample, args.dedal)
+    parse_align_files(msf_files, fasta_files, bb_dir, args.matrix, args.value, 
+                      args.gopen, args.gext, args.sample, args.dedal, args.peba)
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
