@@ -80,6 +80,7 @@ def esm2_embed(seq, tokenizer, encoder):
     ============================================================================================="""
 
     inputs = tokenizer(seq, return_tensors="pt")
+    print(inputs)
     outputs = encoder(**inputs)
     last_hidden_states = outputs.last_hidden_state
     return last_hidden_states[0][1:-1]  # First and last tokens are BOS and EOS tokens

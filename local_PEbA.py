@@ -145,8 +145,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
     parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
-    parser.add_argument('-embed1', type=str, default='n', help='Name of first embedding')
-    parser.add_argument('-embed2', type=str, default='n', help='Name of second embedding')
+    parser.add_argument('-embed1', type=str, default='./test1.txt', help='Name of first embedding')
+    parser.add_argument('-embed2', type=str, default='./test2.txt', help='Name of second embedding')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
@@ -167,7 +167,7 @@ def main():
             model = torch.load('prot_t5_xl.pt')
         else:
             model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-            torch.save(model, 'prot_t5_xltrans.pt')
+            torch.save(model, 'prot_t5_xl.pt')
         vecs1 = prot_t5xl_embed(seq1, tokenizer, model)
         vecs2 = prot_t5xl_embed(seq2, tokenizer, model)
 
@@ -181,8 +181,8 @@ def main():
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'local_PEbA', f'{args.encoder}_Sim',
-                args.gopen, args.gext, args.file1)  #pylint: disable=E1121
+    write_align(align1, align2, id1, id2, f'{args.encoder}_Sim',
+                args.gopen, args.gext, args.file1)
 
 
 if __name__ == '__main__':

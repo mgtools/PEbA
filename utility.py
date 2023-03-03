@@ -8,7 +8,7 @@ import os
 from Bio import SeqIO
 
 
-def write_align(seq1, seq2, id1, id2, script, method, gopen, gext, path):
+def write_align(seq1, seq2, id1, id2, method, gopen, gext, path):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
     in MSF format, with some extra information about the alignment parameters.
@@ -47,31 +47,14 @@ def write_align(seq1, seq2, id1, id2, script, method, gopen, gext, path):
     # Keep track of number of alignments in directory to name them
     path = '/'.join(path.split('/')[:-1])  # Remove fa file from path
     count = 0
-    script = script.split('_')
     for file in os.listdir(path):
-        if file.startswith('MATRIX') and script[1] == 'MATRIX':
+        if file.startswith('alignment'):
             count += 1
-        if file.startswith('PEbA_T5') and method == 'ProtT5_Sim':
-            count += 1
-        if file.startswith('PEbA_ESM2') and method == 'ESM2_Sim':
-            count += 1
-        if file.startswith('DEDAL') and script[1] == 'DEDAL':
-            count += 1
-
-
-    # Name file
-    if script[1] == 'PEbA':
-        if method == 'ProtT5_Sim':
-            filename = f'{path}/{script[1]}_T5_{count}.msf'
-        if method == 'ESM2_Sim':
-            filename = f'{path}/{script[1]}_ESM2_{count}.msf'
-    else:
-        filename = f'{path}/{script[1]}_{count}.msf'
 
     # Write to a new line for every index in the split list i.e. every 55 characters
-    with open(filename, 'w', encoding='utf8') as file:
+    with open(f'{path}/alignment_{count}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF: {length}  Type: P  Algorithm: {script[0]}  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n')
+        file.write(f'   MSF: {length}  Type: P  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n')
         file.write(f' Name: {id1} oo  Len:  {length}\n')
         file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200

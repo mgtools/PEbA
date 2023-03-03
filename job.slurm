@@ -8,7 +8,7 @@
 #SBATCH --mail-user=username@iu.edu
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=48:00:00
+#SBATCH --time=96:00:00
 #SBATCH --mem=32G
 
 # Run script on job manager

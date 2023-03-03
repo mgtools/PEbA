@@ -142,7 +142,61 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
 
-def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext, samp, dedal, peba):
+def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder):
+    """=============================================================================================
+    This function accepts a list of arguments from parse_align_files and runs PEbA on two sequences.
+
+    :param bb_dir: directory of balibase reference alignments
+    :param ref_align: reference alignment (i.e. BB11001)
+    :param seq1: first fasta sequence in reference
+    :param ref_dir: directory of reference alignments (i.e. RV11, which contains BB11001)
+    :param seq2: second fasta sequence in ference
+    :param gopen: gap open penalty
+    :param gext: gap extension penalty
+    :param encoder: encoder to use
+    ============================================================================================="""
+
+    args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+            f'-file2 {bb_dir}/{ref_align}/{seq2} '
+            f'-embed1 embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+            f'-embed2 embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+            f'-gopen {gopen} '
+            f'-gext {gext} '
+            f'-encoder {encoder}')
+
+    print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                           file=sys.stdout)
+    os.system(f"python local_PEbA.py {args}")
+
+
+def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
+    """=============================================================================================
+    This function accepts a list of arguments from parse_align_files and runs substitution matrix
+    scoring based alignment on two sequences.
+
+    :param bb_dir: directory of balibase reference alignments
+    :param ref_align: reference alignment (i.e. BB11001)
+    :param seq1: first fasta sequence in reference
+    :param seq2: second fasta sequence in ference
+    :param gopen: gap open penalty
+    :param gext: gap extension penalty
+    :param matrix: substitution matrix
+    :param value: value for sub matrix
+    ============================================================================================="""
+
+    args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
+            f'-file2 {bb_dir}/{ref_align}/{seq2} '
+            f'-gopen {gopen} '
+            f'-gext {gext} '
+            f'-matrix {matrix} '
+            f'-score {value}')
+
+    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
+                           file=sys.stdout)
+    os.system(f"python local_MATRIX.py {args}")
+
+
+def parse_align_files(msf_files, fasta_files, bb_dir, method1, method2, matrix, value, gopen, gext, samp, dedal, encoder):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
     are parsed correspondingly. As they are parsed, they are also aligned using global_align.py
@@ -151,13 +205,16 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
     :param msf_files: list of msf files
     :param fasta_files: list of fasta files
     :param bb_dir: directory to place files in
-    :param matrix: subsitution matrix
+    :param method1: first method to compare
+    :param method2: second method to compare
+    :param matrix: substitution matrix
     :param value: value for sub matrix
     :param gopen: gap opening penalty
     :param gext: gap extension penalty
     :param samp: number of alignments per MSA to perform
     :param dedal: flag to determine whether to use dedal or not
     :param peba: flag to determine whether to use peba (twice) or not
+    :param encoder: determines which embeddings to use
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -191,28 +248,18 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
             seq1 = pair[0]  #pylint: disable=E1136
             seq2 = pair[1]  #pylint: disable=E1136
             ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
-            args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-                    f'-file2 {bb_dir}/{ref_align}/{seq2} '
-                    f'-embed1 prot_t5_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
-                    f'-embed2 prot_t5_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
-                    f'-gopen {gopen} '
-                    f'-gext {gext} '
-                    f'-encoder ProtT5')
-            
-            print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                           file=sys.stdout)
-            os.system(f"python local_PEbA.py {args}")
 
-            if (dedal == 'n' and peba == 'n'):
-                args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-                        f'-file2 {bb_dir}/{ref_align}/{seq2} '
-                        f'-gopen {gopen} '
-                        f'-gext {gext} '
-                        f'-matrix {matrix} '
-                        f'-score {value}')
-                print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                           file=sys.stdout)
-                os.system(f"python local_MATRIX.py {args}")
+            # Run alignment methods based on -compare1
+            if method1 == 'PEbA':
+                run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder)
+            if method1 == 'matrix':
+                run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value)
+
+            # Run alignment methods based on -compare2
+            if method2 == 'PEbA':
+                run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder)
+            if method2 == 'matrix':
+                run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value)
 
             if (dedal == 'y'):
                 args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
@@ -220,18 +267,6 @@ def parse_align_files(msf_files, fasta_files, bb_dir, matrix, value, gopen, gext
                 print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                             file=sys.stdout)
                 os.system(f"python run_DEDAL.py {args}")
-
-            if (peba == 'y'):
-                args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-                        f'-file2 {bb_dir}/{ref_align}/{seq2} '
-                        f'-embed1 esm2_t36_embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
-                        f'-embed2 esm2_t36_embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
-                        f'-gopen {gopen} '
-                        f'-gext {gext} '
-                        f'-encoder ESM2')
-                print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                            file=sys.stdout)
-                os.system(f"python local_PEbA.py {args}")
 
             # Grab alignment from reference MSA
             seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
@@ -252,38 +287,43 @@ def compare_aligns(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        matrix_aligns = []
-        peba_aligns = []
+        method1_aligns = []
+        method2_aligns = []
         ref_aligns = []
         for file in files: # Add each alignment to list of alignments
 
-            ### This is a terrible solution, I need to change this
-            if (file.startswith('MATRIX') or file.startswith('PEbA_ESM2')):
-                matrix_aligns.append(f'{path}/{folder}/{file}')
-            if file.startswith('PEbA_T5'):
-                peba_aligns.append(f'{path}/{folder}/{file}')
+            # Even numbered alignments are from method1, odd numbered from method2
+            if file.startswith('alignment'):
+                align_number = int(file.split('_')[1].strip('.msf'))
+                if align_number == 0 or align_number % 2 == 0:
+                    method1_aligns.append(f'{path}/{folder}/{file}')
+                else:
+                    method2_aligns.append(f'{path}/{folder}/{file}')
+
+            # Reference alignments
             if file.startswith('BB'):
                 ref_aligns.append(f'{path}/{folder}/{file}')
             if file.startswith('BOX'):
                 ref_aligns.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct alignments are compared
-        matrix_aligns.sort()
-        peba_aligns.sort()
+        method1_aligns.sort()
+        method2_aligns.sort()
         ref_aligns.sort()
 
         # Call t_coffee to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
-            matrix_align = matrix_aligns[i]
-            print(matrix_align)
-            peba_align = peba_aligns[i]
+            method1_align = method1_aligns[i]
+            method2_align = method2_aligns[i]
 
-            # Get names of alignments for output file
-            matrix_name = matrix_align.split('/')[-1].strip('.msf')
-            peba_name = peba_align.split('/')[-1].strip('.msf')
-            print(f'Comparing {matrix_name} and {peba_name} to {ref_align}')
-            os.system(f't_coffee -other_pg aln_compare -al1 {matrix_align} -al2 {ref_align} > {path}/{folder}/matrix_{matrix_name}_compare.txt')
-            os.system(f't_coffee -other_pg aln_compare -al1 {peba_align} -al2 {ref_align} > {path}/{folder}/peba_{peba_name}_compare.txt')
+            # Get names of alignments for output file and call t-coffee's aln_compare
+            method1_name = method1_align.split('/')[-1].strip('.msf')
+            method2_name = method2_align.split('/')[-1].strip('.msf')
+            print(f'Comparing {method1_name} and {method2_name} to {ref_align}')
+            os.system(f't_coffee -other_pg aln_compare -al1 {method1_align} -al2 {ref_align} > '
+                      f'{path}/{folder}/method1_{method1_name}_compare.txt')
+            os.system(f't_coffee -other_pg aln_compare -al1 {method2_align} -al2 {ref_align} > '
+                      f'{path}/{folder}/method2_{method2_name}_compare.txt')
 
 
 def parse_compare(path):
@@ -297,76 +337,78 @@ def parse_compare(path):
     folders = os.listdir(path)
     for folder in folders:
         files = os.listdir(f'{path}/{folder}')
-        matrix_compares = []
-        peba_compares = []
+        method1_compares = []
+        method2_compares = []
         for file in files:
-            if file.startswith('matrix'):
-                matrix_compares.append(f'{path}/{folder}/{file}')
-            if file.startswith('peba'):
-                peba_compares.append(f'{path}/{folder}/{file}')
+            if file.startswith('method1'):
+                method1_compares.append(f'{path}/{folder}/{file}')
+            if file.startswith('method2'):
+                method2_compares.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct comparisons are compared
-        matrix_compares.sort()
-        peba_compares.sort()
+        method1_compares.sort()
+        method2_compares.sort()
 
-        # For both compare files, store their third line in a csv
-        matrix_lines = []
-        peba_lines = []
-        for i, compare in enumerate(matrix_compares):
+        # For both compare files, store their third line in a csv (this line contains TCS)
+        method1_lines = []
+        method2_lines = []
+        for i, compare in enumerate(method1_compares):
             with open(compare, 'r', encoding='utf8') as file1:
                 lines = file1.readlines()
                 third_line = lines[2].split()
                 third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                matrix_lines.append(third_line)
+                method1_lines.append(third_line)
                 os.remove(compare)
-            with open(peba_compares[i], 'r', encoding='utf8') as file2:
+            with open(method2_compares[i], 'r', encoding='utf8') as file2:
                 lines = file2.readlines()
                 third_line = lines[2].split()
                 third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                peba_lines.append(third_line)
-                os.remove(peba_compares[i])
+                method2_lines.append(third_line)
+                os.remove(method2_compares[i])
         with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:
-            for i, line in enumerate(matrix_lines):
+            for i, line in enumerate(method1_lines):
                 file3.write(line)
-                file3.write(peba_lines[i])
+                file3.write(method2_lines[i])
 
 
-def graph_compare(path, matrix):
+def graph_compare(path, method1, method2):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
     the global and PEbA alignments compared the reference alignment and the second graphs the sim
     scores against each other with the better BLOSUM scores on the left side of the diagonal line
     and the better PEbA scores on the right side of the diagonal line.
 
+    (bb_dir, args.method1, args.method2, args.matrix, args.value, args.encoder)
+
     :param path: directory where compare.csv files exist
     :param matrix: matrix used for substitution matrix alignments
     ============================================================================================="""
 
     # Get the similarity scores from the compare files
-    compare_sim = []
-    peba_sim = []
+    method1_sim = []
+    method2_sim = []
     folders = os.listdir(path)
     for folder in folders:
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for i, line in enumerate(file):
                 line = line.split(',')
                 if i == 0 or i % 2 == 0:
-                    compare_sim.append(float(line[3]))
+                    method1_sim.append(float(line[3]))
                 if i % 2 != 0:
-                    peba_sim.append(float(line[3]))
+                    method2_sim.append(float(line[3]))
 
-    # Average the similarity scores for graphing
-    blosum_avg = round(sum(compare_sim)/len(compare_sim), 1)
-    peba_avg = round(sum(peba_sim)/len(peba_sim), 1)
+    # Average the similarity scores to put on the graph
+    method1_avg = round(sum(method1_sim)/len(method1_sim), 1)
+    method2_avg = round(sum(method2_sim)/len(method2_sim), 1)
 
     # Graph the difference between similarity scores for each alignment
     fig = plt.figure()
     ax = fig.add_subplot()
     sim_diff = []
-    for i, mat_sim in enumerate(compare_sim):
-        sim_diff.append(peba_sim[i]-mat_sim)
+    for i, mat_sim in enumerate(method1_sim):
+        sim_diff.append(mat_sim-method2_sim[i])
     ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title(f'Difference in TCS PEbA (Avg={peba_avg}) vs. {matrix} (Avg={blosum_avg})')
+    ax.set_title(f'Difference in {method1} (Avg={method1_avg}) vs. {method2} (Avg={method2_avg})')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
     ax.set_ylim(-20, 80)
@@ -376,18 +418,18 @@ def graph_compare(path, matrix):
     # Graph the similarity scores against each other, better score on either side of diag line
     fig = plt.figure()
     ax = fig.add_subplot()
-    peba_scores = []
-    matrix_scores = []
-    for i, mat_sim in enumerate(compare_sim):
-        if mat_sim < peba_sim[i]:
-            peba_scores.append([peba_sim[i], mat_sim])
+    method1_scores = []
+    method2_scores = []
+    for i, mat_sim in enumerate(method2_sim):
+        if mat_sim < method1_sim[i]:
+            method1_scores.append([method1_sim[i], mat_sim])
         else:
-            matrix_scores.append([mat_sim, peba_sim[i]])
-    ax.scatter([i[0] for i in matrix_scores], [i[1] for i in matrix_scores], color='blue')
-    ax.scatter([i[1] for i in peba_scores], [i[0] for i in peba_scores], color='red')
-    ax.set_title(f'PEbA_T5 Alignment (Avg={peba_avg}) vs. {matrix} Alignment (Avg={blosum_avg})')
-    ax.set_xlabel('TCS PEbA_ESM2')
-    ax.set_ylabel('TCS PEbA_T5')
+            method2_scores.append([mat_sim, method2_sim[i]])
+    ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
+    ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
+    ax.set_title(f'{method1} Alignment (Avg={method1_avg}) vs. {method2} Alignment (Avg={method2_avg})')
+    ax.set_xlabel(f'TCS {method2}')
+    ax.set_ylabel(f'TCS {method1}')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 
@@ -398,17 +440,29 @@ def main():
     reference directory of interest. It then calls parse_align_files to parse each tfa file and msf
     file, while also aligning each pariwise comparison of fasta sequences. These alignments are
     compared using t_coffee's 'aln_compare' function and the results are parsed and graphed.
+
+    Listed below are the current supported methods for comparison. You can put either method for
+    -method1 and -method2, the only major difference is how the results are presented in the
+    final scatterplot (method1 goes on the y-axis and method2 goes on the x-axis).
+
+    PEbA with ProtT5 encodings: -compare1 PEbA_T5 -encoder ProtT5
+    PEbA with ESM2 encodings: -compare1 PEbA_ESM2 -encoder ESM2
+    Substitution matrix with BLOSUM: -compare1 matrix -matrix blosum - value <integer>
+    Substitution matrix with PFASUM: -compare1 matrix -matrix pfasum - value 60  (pfasum60 only)
+    dedal: -compare1 DEDAL
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV912', help='Ref direc')
-    parser.add_argument('-matrix', type=str, default='PEbA_ESM2', help='Sub matrix')
+    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
+    parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
+    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-matrix', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen', type=int, default=-11, help='Gap open')
     parser.add_argument('-gext', type=int, default=-1, help='Gap ext')
-    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
+    parser.add_argument('-sample', type=int, default=3, help='MSA sample size')
     parser.add_argument('-dedal', type=str, default='n', help='y/n to dedal align instead of matrix')
-    parser.add_argument('-peba', type=str, default='y', help='y/n to peba align instead of matrix')
+    parser.add_argument('-encoder', type=str, default='ProtT5', help='ESM2 or ProtT5')
     args = parser.parse_args()
 
     # Get directory of reference alignments
@@ -429,14 +483,14 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    parse_align_files(msf_files, fasta_files, bb_dir, args.matrix, args.value, 
-                      args.gopen, args.gext, args.sample, args.dedal, args.peba)
+    parse_align_files(msf_files, fasta_files, bb_dir, args.method1, args.method2, args.matrix,
+                      args.value, args.gopen, args.gext, args.sample, args.dedal, args.encoder)
 
     # Compare alignments using t_coffee
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)
-    graph_compare(bb_dir, args.matrix)
+    graph_compare(bb_dir, args.method1, args.method2)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

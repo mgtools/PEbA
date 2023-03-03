@@ -138,8 +138,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='/home/ben/Desktop/test_aligns/sequences/BB11001_2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-matrix', type=str, default='blosum', help='substitution matrix to use')
@@ -150,7 +150,7 @@ def main():
     seq1, id1 = parse_fasta(args.file1)
     seq2, id2 = parse_fasta(args.file2)
 
-    # Intialize BLOSUM matrix
+    # Intialize scoring matrix
     if args.matrix == 'blosum':
         matrix = bl.BLOSUM(args.score)
     if args.matrix == 'pfasum':
@@ -161,7 +161,8 @@ def main():
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 'local_MATRIX', args.matrix+str(args.score), args.gopen, args.gext, args.file1)  #pylint: disable=E1121
+    write_align(align1, align2, id1, id2, args.matrix+str(args.score),
+                args.gopen, args.gext, args.file1)
 
 
 if __name__ == '__main__':
