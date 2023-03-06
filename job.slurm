@@ -11,5 +11,4 @@
 #SBATCH --time=96:00:00
 #SBATCH --mem=32G
 
-# Run script on job manager
-srun python /geode2/home/u010/biovino/Carbonate/VecAligns/compare_aligns.py
+srun python /N/slate/biovino/VecAligns/compare_aligns.py

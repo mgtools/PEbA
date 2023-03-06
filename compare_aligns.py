@@ -306,9 +306,9 @@ def compare_aligns(path):
                 ref_aligns.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct alignments are compared
-        method1_aligns.sort()
-        method2_aligns.sort()
-        ref_aligns.sort()
+        method1_aligns = sorted(method1_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
+        method2_aligns = sorted(method2_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
+        ref_aligns = sorted(ref_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
 
         # Call t_coffee to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
@@ -466,10 +466,10 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
-    parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
+    parser.add_argument('-sample', type=int, default=4, help='MSA sample size')
+    parser.add_argument('-method1', type=str, default='matrix', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
-    parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
+    parser.add_argument('-value1', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen1', type=int, default=-11, help='Gap open')
     parser.add_argument('-gext1', type=int, default=-1, help='Gap ext')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='ESM2 or ProtT5')
