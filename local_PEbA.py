@@ -45,12 +45,16 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             horizontal = score_m[i+1][j]
             vertical = score_m[i][j+1]
 
-            # Score pair of residues based off BLOSUM matrix
+            # Score pair of residues based off cosine similarity
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
             cos_sim = 10*(cos_sim)
 
-            # Add to matrix values via scoring method
+            # Scores at BOS and EOS are inflated, weight them differently
+            if [i, j] == [0, 0] or [i, j] == [len(seq1)-1, len(seq2)-1]:
+                cos_sim /= 5
+
+            # Add to scoring matrix values via scoring method
             diagonal += cos_sim
             if gap is False:  # Apply gap open penalty if there is no gap
                 horizontal += gopen
