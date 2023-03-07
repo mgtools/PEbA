@@ -6,9 +6,12 @@ Ben Iovino  02/21/23   VecAligns
 
 import os
 import argparse
+import logging
 import tensorflow as tf
 from dedal import infer  #pylint: disable=E0401
 from utility import parse_fasta, write_align
+
+logging.basicConfig(filename='dedal.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 
 def dedal(model, seq1, seq2):
@@ -22,11 +25,17 @@ def dedal(model, seq1, seq2):
     ============================================================================================="""
 
     inputs = infer.preprocess(seq1, seq2)
+    logging.info('DEDAL tokenization complete')
     align_out = model(inputs)
+    print(align_out)
+    with open('dedal_align_out.txt', 'w', encoding='utf8') as f:
+        f.write(str(align_out))
+    logging.info('DEDAL alignment complete')
     output = infer.expand(
         [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
     output = infer.postprocess(output, len(seq1), len(seq2))
     alignment = infer.Alignment(seq1, seq2, *output)
+    logging.info('DEDAL postprocessing complete')
     return alignment
 
 
@@ -121,8 +130,11 @@ def main():
     seq1, id1 = parse_fasta(args.file1)
     seq2, id2 = parse_fasta(args.file2)
 
+    logging.info('DEDAL starting to run')
+
     # Load model and preprocess proteins
     dedal_model = tf.saved_model.load('dedal_3')
+    logging.info('DEDAL model loaded')
     alignment = dedal(dedal_model, seq1, seq2)
     with open('dedal_output.txt', 'w', encoding='utf8') as f:
         f.write(str(alignment))
@@ -132,8 +144,8 @@ def main():
     tseq1 = match_seq(seq1, tseq1)
     tseq2 = match_seq(seq2, tseq2)
     fseq1, fseq2 = pad_seq(tseq1, tseq2)
-    write_align(fseq1, fseq2, id1, id2, 'local_MATRIX', 'DEDAL', 'None', 'None', args.file1)
-    os.remove('dedal_output.txt')
+    write_align(fseq1, fseq2, id1, id2, 'DEDAL', 'None', 'None', args.file1)
+    #os.remove('dedal_output.txt')
 
 
 if __name__ == '__main__':

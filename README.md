@@ -3,18 +3,17 @@
 **************************************************************************************************************
 
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
-embed protein sequences and then calculates the cosine similarity between each residue's vector to align them 
+embed protein sequences, and then calculates the cosine similarity between each residue's vector to align them 
 using traditional sequence alignment algorithms. The cosine similarity scores are used in place of substitution
 matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share low character
-identity (<35%), referred to as the "twilight zone" of protein sequence alignments.
+identity (<20-35%), referred to as the "twilight zone" of protein sequence alignment.
 
-There are two implementations of PEbA, one using the Needleman-Wunsch algorithm (global_PEbA.py) and the other
-using the Smith-Waterman algorithm (local_PEbA.py). The scripts for substitution matrix based alignments are in 
-global_MATRIX.py and local_MATRIX.py, which currently support all BLOSUM matrices and PFASUM60 for testing 
-purposes.
+PEbA is implemented in local_PEbA.py, where it uses the Smith-Waterman 'local' algorithm to align two sequences.
+The script for substitution matrix based alignments are in local_MATRIX.py, which currently supports all BLOSUM 
+matrices and PFASUM60 for testing purposes.
 
-The PEbA scripts are designed to be run from the command line. The following arguments are allowed, with 
--embed1 and -embed2 being optional arguments if the corresponding sequences from -file1 and -file2 have already 
+The PEbA script is designed to be run from the command line. The following arguments are allowed, with -embed1
+-embed2 being optional arguments if the corresponding sequences from -file1 and -file2 have already been
 been embedded and saved as a numpy array:
 
     -file1 <file1.fa>   : Path to first sequence fasta file
@@ -23,6 +22,10 @@ been embedded and saved as a numpy array:
     -embed2 <file2.txt> : Path to second sequence embedding file
     -gopen <int/float>  : Gap opening penalty
     -gext <int/float>   : Gap extension penalty
+    -encoder <str>      : Encoder used to generate embeddings
+
+Embeddings from any model can be used assuming the model outputs a 1D array the same length as the sequence.
+The -encoder argument is used to specify the model used and written to the output .msf file for reference.
 
 **************************************************************************************************************
 # Comparing PEbA to Reference Alignments

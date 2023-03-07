@@ -1,12 +1,11 @@
 """================================================================================================
-This script parses BAliBASE reference folders. MSF files are written pairwise alignments between
-each pair of two sequences. It also parses FASTA files to then write each sequence to an individual
-FASTA file. It then creates MATRIX and PEbA alignments between each pair of sequences for the
-purpose of comparison to the reference BAliBASE pairwise alignments. Each PW align is compared to
-the ref, the results are stored in a csv, and then a scatterplot is created to show the difference
-between the similarity score of PEbA vs. BLOSUM.
+This script takes multiple sequence alignments (MSAs) from BAliBASE and parses each one to get each
+pairwise (PW) alignment. It takes the FASTA sequences from these MSAs and aligns them using
+specified methods. The results from these methods are compared to the reference alignment using
+t-coffee to get a similarity score. A scatterplot is then generated to show the difference between
+the similarity score of the two specified methods.
 
-Ben Iovino  02/10/23   VecAligns
+Ben Iovino  03/07/23   VecAligns
 ================================================================================================"""
 
 import os
@@ -144,16 +143,7 @@ def write_align(seq1, seq2, id1, id2, path):
 
 def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder):
     """=============================================================================================
-    This function accepts a list of arguments runs PEbA on two sequences.
-
-    :param bb_dir: directory of balibase reference alignments
-    :param ref_align: reference alignment (i.e. BB11001)
-    :param seq1: first fasta sequence in reference
-    :param ref_dir: directory of reference alignments (i.e. RV11, which contains BB11001)
-    :param seq2: second fasta sequence in ference
-    :param gopen: gap open penalty
-    :param gext: gap extension penalty
-    :param encoder: encoder to use
+    This function accepts a list of args and runs PEbA on two sequences. Args explained in main().
     ============================================================================================="""
 
     args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
@@ -171,17 +161,8 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder):
 
 def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
     """=============================================================================================
-    This function accepts a list of arguments runs substitution matrix scoring based alignment on
-    two sequences.
-
-    :param bb_dir: directory of balibase reference alignments
-    :param ref_align: reference alignment (i.e. BB11001)
-    :param seq1: first fasta sequence in reference
-    :param seq2: second fasta sequence in ference
-    :param gopen: gap open penalty
-    :param gext: gap extension penalty
-    :param matrix: substitution matrix
-    :param value: value for sub matrix
+    This function accepts a list of args and runs substitution matrix scoring based alignment on
+    two sequences. Args explained in main().
     ============================================================================================="""
 
     args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
@@ -198,12 +179,7 @@ def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
 
 def dedal_run(bb_dir, ref_align, seq1, seq2):
     """=============================================================================================
-    This function accepts a list of arguments and runs dedal on two sequences.
-
-    :param bb_dir: directory of balibase reference alignments
-    :param ref_align: reference alignment (i.e. BB11001)
-    :param seq1: first fasta sequence
-    :param seq2: second fasta sequence
+    This function accepts a list of args and runs dedal on two sequences. Args explained in main().
     ============================================================================================="""
 
     args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
@@ -217,8 +193,8 @@ def dedal_run(bb_dir, ref_align, seq1, seq2):
 def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
-    are parsed correspondingly. As they are parsed, they are also aligned using global_align.py
-    and PEbA_align.py.
+    are parsed correspondingly. As they are parsed, they are also aligned using two different
+    alignment methods.
 
     :param msf_files: list of msf files
     :param fasta_files: list of fasta files
@@ -255,8 +231,8 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
         # For the selected pairs, align them using local programs
         file_count = 0
         for pair in pairwise_aligns:
-            seq1 = pair[0]  #pylint: disable=E1136
-            seq2 = pair[1]  #pylint: disable=E1136
+            seq1 = pair[0]
+            seq2 = pair[1]
             ref_dir = bb_dir.split('/')[1]  # Embedding dirs don't change like results dirs
 
             for method, pars in methods.items():  #pylint: disable=W0612
@@ -277,7 +253,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
 
 def compare_aligns(path):
     """=============================================================================================
-    This function takes a directory and compares matrix and PEbA alignments to the reference
+    This function takes a directory and compares the two alignment methods to the reference
     alignment using t_coffee's aln_compare function. The output is stored in a text file.
 
     :param path: directory where alignments exist
@@ -327,8 +303,7 @@ def compare_aligns(path):
 
 def parse_compare(path):
     """=============================================================================================
-    This function takes a directory and compares the global and PEbA alignment comparisons to the
-    reference alignment.
+    This function takes a directory and compares the two alignment methods to the reference.
 
     :param path: directory where alignments exist
     ============================================================================================="""
@@ -373,11 +348,9 @@ def parse_compare(path):
 def graph_compare(path, methods):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
-    the global and PEbA alignments compared the reference alignment and the second graphs the sim
-    scores against each other with the better BLOSUM scores on the left side of the diagonal line
-    and the better PEbA scores on the right side of the diagonal line.
-
-    (bb_dir, args.method1, args.method2, args.matrix, args.value, args.encoder)
+    the two methods compared the reference alignment and the second graphs the sim scores against
+    each other with the better method2 scores on the left side of the diagonal line and the better 
+    method1 scores on the right side of the diagonal line.
 
     :param path: directory where compare.csv files exist
     :param methods: dict of methods used and their parameters
@@ -400,7 +373,7 @@ def graph_compare(path, methods):
     m1_avg = round(sum(method1_sim)/len(method1_sim), 1)
     m2_avg = round(sum(method2_sim)/len(method2_sim), 1)
 
-    # {'method1': [args.method1, args.matrix1, args.value1, args.gopen1, args.gext1, args.encoder1],
+    # Get names and parameters of methods used for titles of graph
     titles = []
     for method, pars in methods.items():  #pylint: disable=W0612
         if pars[0] == 'PEbA':
@@ -466,29 +439,29 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=4, help='MSA sample size')
+    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
     parser.add_argument('-method1', type=str, default='matrix', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=62, help='Sub matrix value')
-    parser.add_argument('-gopen1', type=int, default=-11, help='Gap open')
-    parser.add_argument('-gext1', type=int, default=-1, help='Gap ext')
-    parser.add_argument('-encoder1', type=str, default='ProtT5', help='ESM2 or ProtT5')
+    parser.add_argument('-gopen1', type=int, default=-11, help='Gap open score')
+    parser.add_argument('-gext1', type=int, default=-1, help='Gap ext score')
+    parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
     parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
-    parser.add_argument('-gopen2', type=int, default=-11, help='Gap open')
-    parser.add_argument('-gext2', type=int, default=-1, help='Gap ext')
-    parser.add_argument('-encoder2', type=str, default='ProtT5', help='ESM2 or ProtT5')
+    parser.add_argument('-gopen2', type=int, default=-11, help='Gap open score')
+    parser.add_argument('-gext2', type=int, default=-1, help='Gap ext score')
+    parser.add_argument('-encoder2', type=str, default='ProtT5', help='Model used for embeddings')
     args = parser.parse_args()
 
     # Places methods and their arguments into dict for easy access and readability
     methods = {'method1': [args.method1, args.matrix1, args.value1, args.gopen1, args.gext1, args.encoder1],
                'method2': [args.method2, args.matrix2, args.value2, args.gopen2, args.gext2, args.encoder2]}
 
-    # Get directory of reference alignments
+    # Get directory of reference alignments i.e. 'RV11'
     ref_dir = args.path.rsplit('/', maxsplit=1)[-1]
 
-    # Create unique directory for results, this allows for parallel runs of the script
+    # Create unique directory for results, this allows for parallel runs of the script i.e. 'bb_data0'
     bb_ct = 0
     for direc in os.listdir():
         if direc.startswith('bb_data'):
@@ -503,9 +476,10 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
+    print(msf_files, fasta_files)
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample)
 
-    # Compare alignments using t_coffee
+    # Compare alignments using t_coffee and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)
