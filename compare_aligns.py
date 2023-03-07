@@ -402,11 +402,11 @@ def graph_compare(path, methods):
     ax = fig.add_subplot()
     method1_scores = []
     method2_scores = []
-    for i, mat_sim in enumerate(method2_sim):
-        if mat_sim < method1_sim[i]:
-            method1_scores.append([method1_sim[i], mat_sim])
-        else:
-            method2_scores.append([mat_sim, method2_sim[i]])
+    for i, tcs in enumerate(method2_sim):  # tcs = total column score
+        if tcs < method1_sim[i]:  # Make method1 tcs the x value if greater than method2 tcs
+            method1_scores.append([method1_sim[i], tcs])
+        else:  # Make method2 tcs the x value if greater than method1 tcs
+            method2_scores.append([tcs, method1_sim[i]])
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignment (Avg={m1_avg}) vs. {titles[1]} Alignment (Avg={m2_avg})')
@@ -440,9 +440,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
     parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
-    parser.add_argument('-method1', type=str, default='matrix', help='First method for comparison')
+    parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
-    parser.add_argument('-value1', type=int, default=62, help='Sub matrix value')
+    parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen1', type=int, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=int, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
