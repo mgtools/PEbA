@@ -320,8 +320,8 @@ def parse_compare(path):
                 method2_compares.append(f'{path}/{folder}/{file}')
 
         # Sort so that correct comparisons are compared
-        method1_compares.sort()
-        method2_compares.sort()
+        method1_compares = sorted(method1_compares, key=lambda x: int(x.split('_')[3]))
+        method2_compares = sorted(method2_compares, key=lambda x: int(x.split('_')[3]))
 
         # For both compare files, store their third line in a csv (this line contains TCS)
         method1_lines = []

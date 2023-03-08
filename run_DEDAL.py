@@ -27,13 +27,13 @@ def dedal(model, seq1, seq2):
     inputs = infer.preprocess(seq1, seq2)
     logging.info('DEDAL tokenization complete')
     align_out = model(inputs)
-    print(align_out)
-    with open('dedal_align_out.txt', 'w', encoding='utf8') as f:
-        f.write(str(align_out))
     logging.info('DEDAL alignment complete')
     output = infer.expand(
         [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
     output = infer.postprocess(output, len(seq1), len(seq2))
+    print(output)
+    with open('dedal_align_out.txt', 'w', encoding='utf8') as f:
+        f.write(str(output))
     alignment = infer.Alignment(seq1, seq2, *output)
     logging.info('DEDAL postprocessing complete')
     return alignment
