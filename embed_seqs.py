@@ -9,10 +9,8 @@ import os
 import re
 import torch
 import numpy as np
-import tensorflow as tf
 from transformers import T5EncoderModel, T5Tokenizer, AutoTokenizer, EsmModel
 from Bio import SeqIO
-from run_DEDAL import embed
 
 
 def parse_ref_folder(path):
@@ -118,14 +116,6 @@ def parse_fasta(filename, encoder, tokenizer, model):
                 vec = esm2_embed(str(seq.seq), tokenizer, model)
                 vec = vec.detach().numpy()
 
-            # Embed with DEDAL
-            if encoder == 'dedal':
-                vec = embed(str(seq.seq), model)
-                vec = vec.numpy()  # vec is tuple of length 2
-                print(vec[0].shape())
-                print(vec[0][0].shape())
-                print(vec[0][1].shape())
-
             # Write embeddings to file
             seqname = seq.id
             with open(f'bb_embed/{refname[0]}/{refname[1]}/{seqname}.txt', 'w', encoding='utf8') as seqfile:
@@ -175,14 +165,6 @@ def main():
         else:
             model = EsmModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
             torch.save(model, 'esm2_t36_3B.pt')
-
-        for file in fasta_files:
-            parse_fasta(file, encoder, tokenizer, model)
-
-    # DEDAL
-    if encoder == 'dedal':
-        model = tf.saved_model.load('dedal_3')
-        tokenizer = 'None'
 
         for file in fasta_files:
             parse_fasta(file, encoder, tokenizer, model)

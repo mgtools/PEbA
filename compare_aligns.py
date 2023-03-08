@@ -477,6 +477,7 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample)
+
     # Compare alignments using t_coffee and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)

@@ -14,20 +14,6 @@ from utility import parse_fasta, write_align
 logging.basicConfig(filename='dedal.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 
-def embed(seq, model):
-    """=============================================================================================
-    This function accepts a protein sequence and returns a list of vectors, each vector representing
-    a single amino acid using DEDAL.
-
-    :param seq: protein sequence
-    :param model: encoder model
-    return: list of vectors
-    ============================================================================================="""
-
-    inputs = infer.preprocess(seq, seq)
-    embeddings = model.call(inputs, embeddings_only=True)
-    return embeddings
-
 def dedal(model, seq1, seq2):
     """=============================================================================================
     Runs the DEDAL model to get a pairwise alignment between two proteins.
