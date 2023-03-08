@@ -9,8 +9,10 @@ import os
 import re
 import torch
 import numpy as np
+import tensorflow as tf
 from transformers import T5EncoderModel, T5Tokenizer, AutoTokenizer, EsmModel
 from Bio import SeqIO
+from run_DEDAL import embed
 
 
 def parse_ref_folder(path):
@@ -80,18 +82,20 @@ def esm2_embed(seq, tokenizer, encoder):
     ============================================================================================="""
 
     inputs = tokenizer(seq, return_tensors="pt")
-    print(inputs)
     outputs = encoder(**inputs)
     last_hidden_states = outputs.last_hidden_state
     return last_hidden_states[0][1:-1]  # First and last tokens are BOS and EOS tokens
 
 
-def parse_fasta(filename, tokenizer, model):
+def parse_fasta(filename, encoder, tokenizer, model):
     """=============================================================================================
     This function accepts a fasta file with multiple sequences in each one and writes each sequence
     to its own file in the corresponding folder.
 
     :param filename: name of file
+    :param encoder: encoder used
+    :param tokenizer: tokenizer model
+    :param model: model
     return: sequence and id
     ============================================================================================="""
 
@@ -104,10 +108,25 @@ def parse_fasta(filename, tokenizer, model):
     # Parse fasta file and write each sequence to its own file in the corresponding folder
     with open(filename, 'r', encoding='utf8') as file:
         for seq in SeqIO.parse(file, 'fasta'):
-            # vec = prot_t5xl_embed(str(seq.seq), tokenizer, model)
-            vec = esm2_embed(str(seq.seq), tokenizer, model)
-            if isinstance(vec, torch.Tensor):
+
+            # Embed with ProtT5_XL_UniRef50
+            if encoder == 'prott5':
+                vec = prot_t5xl_embed(str(seq.seq), tokenizer, model)
+
+            # Embed with ESM-2
+            if encoder == 'esm2':
+                vec = esm2_embed(str(seq.seq), tokenizer, model)
                 vec = vec.detach().numpy()
+
+            # Embed with DEDAL
+            if encoder == 'dedal':
+                vec = embed(str(seq.seq), model)
+                vec = vec.numpy()  # vec is tuple of length 2
+                print(vec[0].shape())
+                print(vec[0][0].shape())
+                print(vec[0][1].shape())
+
+            # Write embeddings to file
             seqname = seq.id
             with open(f'bb_embed/{refname[0]}/{refname[1]}/{seqname}.txt', 'w', encoding='utf8') as seqfile:
                 np.savetxt(seqfile, vec, fmt='%4.6f', delimiter=' ')
@@ -124,34 +143,49 @@ def main():
     if not os.path.isdir(f'bb_embed/{ref_dir}'):
         os.makedirs(f'bb_embed/{ref_dir}')
 
-    '''
-    # Load model tokenizer and encoder models
-    if os.path.exists('tok.pt'):
-        tokenizer = torch.load('tok.pt')
-    else:
-        tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-        torch.save(tokenizer, 'tok.pt')
-    if os.path.exists('prottrans.pt'):
-        model = torch.load('prottrans.pt')
-    else:
-        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-        torch.save(model, 'prottrans.pt')
-    '''
 
-    if os.path.exists('auto_tok.pt'):
-        tokenizer = torch.load('auto_tok.pt')
-    else:
-        tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t36_3B_UR50D")
-        torch.save(tokenizer, 'auto_tok.pt')
-    if os.path.exists('esm2_t36_3B.pt'):
-        model = torch.load('esm2_t36_3B.pt')
-    else:
-        model = EsmModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
-        torch.save(model, 'esm2_t36_3B.pt')
+    # Set an encoder and process each fasta file
+    encoder = 'dedal'
 
-    # Parse each fasta file and write each embedding to its own file
-    for file in fasta_files:
-        parse_fasta(file, tokenizer, model)
+    # ProtT5_XL_UniRef50
+    if encoder == 'prott5':
+        if os.path.exists('t5_tok.pt'):
+            tokenizer = torch.load('t5_tok.pt')
+        else:
+            tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
+            torch.save(tokenizer, 't5_tok.pt')
+        if os.path.exists('prot_t5_xl.pt'):
+            model = torch.load('prot_t5_xl.pt')
+        else:
+            model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+            torch.save(model, 'prot_t5_xl.pt')
+
+        for file in fasta_files:
+            parse_fasta(file, encoder, tokenizer, model)
+
+    # ESM-2_t36_3B
+    if encoder == 'esm2':
+        if os.path.exists('auto_tok.pt'):
+            tokenizer = torch.load('auto_tok.pt')
+        else:
+            tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t36_3B_UR50D")
+            torch.save(tokenizer, 'auto_tok.pt')
+        if os.path.exists('esm2_t36_3B.pt'):
+            model = torch.load('esm2_t36_3B.pt')
+        else:
+            model = EsmModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
+            torch.save(model, 'esm2_t36_3B.pt')
+
+        for file in fasta_files:
+            parse_fasta(file, encoder, tokenizer, model)
+
+    # DEDAL
+    if encoder == 'dedal':
+        model = tf.saved_model.load('dedal_3')
+        tokenizer = 'None'
+
+        for file in fasta_files:
+            parse_fasta(file, encoder, tokenizer, model)
 
 
 if __name__ == '__main__':

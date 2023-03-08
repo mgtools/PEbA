@@ -9,6 +9,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=96:00:00
-#SBATCH --mem=32G
+#SBATCH --mem=4G
 
-srun python /N/slate/biovino/VecAligns/compare_aligns.py srun python /N/slate/biovino/VecAligns/compare_aligns.py -path 'BAliBASE_R1-5/bb3_release/RV11' -sample 50 -method1 'PEbA' -encoder1 'ProtT5' -method2 'matrix' -matrix2 'blosum' -value2 45
+srun python /N/slate/biovino/VecAligns/compare_aligns.py -path 'BAliBASE_R1-5/bb3_release/RV11' -sample 50 -method1 'PEbA' -gext -0.5 -encoder1 'ProtT5' -method2 'matrix' -matrix2 'blosum' -value2 45 -gext -0.5

@@ -430,11 +430,11 @@ def main():
     If using pre-embedded sequences, you can use the -encoder to specify which encoder was used.
     Place them into the VecAligns/ folder and name the folder 'embed'.
 
-    PEbA with ProtT5 encodings: -compare1 PEbA_T5 -encoder ProtT5
-    PEbA with ESM2 encodings: -compare1 PEbA_ESM2 -encoder ESM2
+    PEbA with ProtT5 encodings: -compare1 PEbA -encoder ProtT5
+    PEbA with ESM2 encodings: -compare1 PEbA -encoder ESM2
     Substitution matrix with BLOSUM: -compare1 matrix -matrix1 blosum - value1 <integer>
     Substitution matrix with PFASUM: -compare1 matrix -matrix1 pfasum - value1 60  (60 only)
-    dedal: -compare1 DEDAL
+    dedal: -compare1 dedal
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
@@ -443,14 +443,14 @@ def main():
     parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
-    parser.add_argument('-gopen1', type=int, default=-11, help='Gap open score')
-    parser.add_argument('-gext1', type=int, default=-1, help='Gap ext score')
+    parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
+    parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
     parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
-    parser.add_argument('-gopen2', type=int, default=-11, help='Gap open score')
-    parser.add_argument('-gext2', type=int, default=-1, help='Gap ext score')
+    parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
+    parser.add_argument('-gext2', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder2', type=str, default='ProtT5', help='Model used for embeddings')
     args = parser.parse_args()
 
@@ -476,9 +476,7 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    print(msf_files, fasta_files)
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample)
-
     # Compare alignments using t_coffee and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
