@@ -12,7 +12,7 @@ import logging
 logger = logging.getLogger('compute_psc')
 logger.setLevel(logging.INFO)
 ch = logging.StreamHandler()
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter('%(message)s')
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
@@ -61,23 +61,34 @@ def compute_score(aligns, beg, end):
 
     # Compare columns in specified range
     shared_cols = 0
+    length = 0
+    similarity = 0
     for i in range(beg, end):
         pair1 = (align1[0][i], align1[1][i])
         pair2 = (align2[0][i], align2[1][i])
+        if '.' in pair1:  # Skip columns with gaps in reference alignment
+            continue
+        if pair1[0] == pair1[1]:  # Increment similarity if residues are identical
+            similarity += 1
         if pair1 == pair2:
             shared_cols += 1
+        length += 1  # Increment length of comparison
 
     # PSC is shared_cols / length of comparison
-    return shared_cols / (end-beg)
+    psc = round(shared_cols / length, 4)
+    sim = round(similarity / length, 4)
+    logger.info('PCS: %s   ref_length: %s   comparison_length: %s   comparison_region: %s-%s   similarity: %s',
+                psc, len(align1[0]), length, beg, end, sim)
+    return psc
 
 
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', default='peba0.msf', help='First alignment')
-    parser.add_argument('-align2', default='ref0.msf', help='Second alignment')
-    parser.add_argument('-id1', default='1aab_', help='Sequence ID for first sequence')
-    parser.add_argument('-id2', default='1j46_A', help='Sequence ID for second sequence')
+    parser.add_argument('-align1', default='ref0.msf', help='First alignment')
+    parser.add_argument('-align2', default='peba0.msf', help='Second alignment')
+    parser.add_argument('-id1', default='Q00X80', help='Sequence ID for first sequence')
+    parser.add_argument('-id2', default='Q8L936', help='Sequence ID for second sequence')
     parser.add_argument('-beg', default=0, help='Beginning of alignment')
     parser.add_argument('-end', default=0, help='End of alignment')
     args = parser.parse_args()
@@ -88,8 +99,7 @@ def main():
     aligns[args.align2] = parse_align(args.align2, args.id1, args.id2)
 
     # Compute PSC
-    psc = compute_score(aligns, args.beg, args.end)
-    print(psc)
+    compute_score(aligns, args.beg, args.end)
 
 
 if __name__ == '__main__':
