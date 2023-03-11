@@ -39,10 +39,11 @@ def parse_align(filename, id1, id2):
     # Join the two sequences and return them
     seq1 = ''.join(seq1)
     seq2 = ''.join(seq2)
+
     return seq1, seq2
 
 
-def match_pairs(align):
+def get_pairs(align):
     """=============================================================================================
     This function accepts an alignment and returns a dictionary of the pairs that are matched.
 
@@ -53,19 +54,25 @@ def match_pairs(align):
     seq1_count = 0
     seq2_count = 0
     pairs = {}
+
+    # Iterate through each column in the alignment
     for i in range(len(align[0])):
         seq1_char = align[0][i]
         seq2_char = align[1][i]
+
+        # If there is a gap, increment the count of the other sequence
         if seq1_char == '.':
             seq2_count += 1
             continue
         if seq2_char == '.':
             seq1_count += 1
             continue
+
+        # If there is a match, add the pair to the dict
         pairs[f'{seq1_char}{seq1_count}'] = f'{seq2_char}{seq2_count}'
         seq1_count += 1
         seq2_count += 1
-    print(pairs)
+
     return pairs
 
 
@@ -79,51 +86,48 @@ def compute_score(aligns, beg, end):
     return float: PSC between the two alignments
     ============================================================================================="""
 
+    # Get alignments from files and get their respective pairs
     align1 = aligns[list(aligns.keys())[0]]
     align2 = aligns[list(aligns.keys())[1]]
+    align1_pairs = get_pairs(align1)
+    align2_pairs = get_pairs(align2)
 
-    # End of comparison is either specified or the length of the shortest sequence
+    # If no end is specified, use the length of the first alignment
     if end == 0:
-        end = min(len(align1[0]), len(align2[0]))
+        end = len(align1[0])
 
-    count1 = 0
-    count2 = 0
-    for i in range(beg, end):
-        ref_pair = (align1[0][i], align1[1][i])
-        test_pair = (align2[0][i], align2[1][i])
-        print(ref_pair[0], count1, test_pair[0], count2)
-        if ref_pair[0] == '.' and test_pair[0] == '.':
-            count1 += 1
-            count2 += 1
+    # Compare pairs between the two alignments
+    shared_pairs = 0
+    seq_sim = 0
+    comparison_length = 0
+    for key, value in align1_pairs.items():
+        if int(key[1:]) < beg or int(key[1:]) > end:  # Check if pair is in the comparison region
             continue
-        if '.' in ref_pair[0] or '.' in test_pair[0]:
-            if '.' in ref_pair:
-                count1 += 1
-            if '.' in test_pair:
-                count2 += 1
-        elif ref_pair[0] != '.' and test_pair[0] != '.':
-            count1 += 1
-            count2 += 1
-    print(count1)
+        comparison_length += 1
+        if key[0] == value[0]:  # First index is the character
+            seq_sim += 1
+        if key in align2_pairs:  # Check if same pair is in the other alignment
+            if align2_pairs[key] == value:
+                shared_pairs += 1
 
+    # PSC is shared_pairs / length of comparison
+    psc = round(shared_pairs / len(align1_pairs), 4)
+    sim = round(seq_sim / len(align1_pairs), 4)
+    logger.info('PCS: %s   ref_length: %s   comparison_length: %s   comparison_region: %s-%s   similarity: %s',
+                psc, len(align1[0]), comparison_length, beg, end, sim)
 
-    # PSC is shared_cols / length of comparison
-    #psc = round(shared_cols / length, 4)
-    #sim = round(similarity / length, 4)
-    #logger.info('PCS: %s   ref_length: %s   comparison_length: %s   comparison_region: %s-%s   similarity: %s',
-                #psc, len(align1[0]), length, beg, end, sim)
-    #return psc
+    return psc
 
 
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', default='ref0.msf', help='First alignment')
-    parser.add_argument('-align2', default='peba0.msf', help='Second alignment')
-    parser.add_argument('-id1', default='Q00X80', help='Sequence ID for first sequence')
-    parser.add_argument('-id2', default='Q8L936', help='Sequence ID for second sequence')
-    parser.add_argument('-beg', default=0, help='Beginning of alignment')
-    parser.add_argument('-end', default=0, help='End of alignment')
+    parser.add_argument('-align1', type=str, default='ref0.msf', help='First alignment')
+    parser.add_argument('-align2', type=str, default='peba0.msf', help='Second alignment')
+    parser.add_argument('-id1', type=str, default='Q00X80', help='Sequence ID for first sequence')
+    parser.add_argument('-id2', type=str, default='Q8L936', help='Sequence ID for second sequence')
+    parser.add_argument('-beg', type=int, default=0, help='Beginning of alignment')
+    parser.add_argument('-end', type=int, default=0, help='End of alignment')
     args = parser.parse_args()
 
     # Parse aligns and store in a dict - {align1: (seq1, seq2), align2: (seq1, seq2)}
@@ -137,23 +141,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-"""=============================================================================================
-    # Compare columns in specified range
-    shared_cols = 0
-    length = 0
-    similarity = 0
-    for i in range(beg, end):
-
-        # Define pairs of residues in each alignment
-        pair1 = (align1[0][i], align1[1][i])
-        pair2 = (align2[0][i], align2[1][i])
-        if '.' in pair1:  # Skip columns with gaps in reference alignment
-            continue
-        if pair1[0] == pair1[1]:  # Increment similarity if residues are identical
-            similarity += 1
-        if pair1 == pair2:
-            shared_cols += 1
-        length += 1  # Increment length of comparison
-    ============================================================================================="""
