@@ -9,6 +9,7 @@ import os
 import argparse
 import torch
 import numpy as np
+import blosum as bl
 from transformers import T5EncoderModel, T5Tokenizer
 from utility import parse_fasta, write_align
 from embed_seqs import prot_t5xl_embed
@@ -28,6 +29,8 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
+    matrix = bl.BLOSUM(45)
+
     # Initialize scoring and traceback matrix based on sequence lengths
     row_length = len(seq1)+1
     col_length = len(seq2)+1
@@ -36,9 +39,11 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
 
     # Score matrix by moving through each index
     gap = False
-    for i in range(len(seq1)):
+    for i, char in enumerate(seq1):
+        seq1_char = char  # Character in 1st sequence
         seq1_vec = vecs1[i]  # Corresponding amino acid vector in 1st sequence
-        for j in range(len(seq2)):
+        for j, char in enumerate(seq2):
+            seq2_char = char  # Character in 2nd sequence
 
             # Preceding scoring matrix values
             diagonal = score_m[i][j]
@@ -51,8 +56,12 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             cos_sim = 10*(cos_sim)
 
             # Scores at BOS and EOS are inflated, weight them differently
-            if [i, j] == [0, 0] or [i, j] == [len(seq1)-1, len(seq2)-1]:
-                cos_sim /= 5
+            # if [i, j] == [0, 0] or [i, j] == [len(seq1)-1, len(seq2)-1]:
+                # cos_sim /= 5
+
+            # Use BLOSUM scoring for first 5 residues
+            if i < 5 or j < 5:
+                cos_sim = matrix[f'{seq1_char}{seq2_char}']
 
             # Add to scoring matrix values via scoring method
             diagonal += cos_sim

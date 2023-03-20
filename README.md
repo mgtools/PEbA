@@ -46,7 +46,7 @@ of the output is shown below:
 PRA: 55.06   ref_length: 690   comparison_length: 356   comparison_region: 0-690   similarity: 14.61
 
 
-PRA is a float between 0 and 1, 0 representing no shared residue pairs between two alignments, and 1 representing
+PRA is a percentage between 0-100, 0 representing no shared residue pairs between two alignments, and 100 representing
 all residue pairs are found in both alignments. The ref_length is the length of the reference alignment, and the
 comparison_length is the number of residue pairs being compared (gaps are not counted). The comparison_region is
 the region of the alignment being compared, for example if an alignment starts at character 100 in the reference,

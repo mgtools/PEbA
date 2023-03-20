@@ -437,7 +437,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=3, help='MSA sample size')
+    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
     parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
