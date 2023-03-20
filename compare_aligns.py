@@ -254,7 +254,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
 def compare_aligns(path):
     """=============================================================================================
     This function takes a directory and compares the two alignment methods to the reference
-    alignment using t_coffee's aln_compare function. The output is stored in a text file.
+    alignment using compute_pra.py The output is stored in a text file.
 
     :param path: directory where alignments exist
     ============================================================================================="""
@@ -286,7 +286,7 @@ def compare_aligns(path):
         method2_aligns = sorted(method2_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
         ref_aligns = sorted(ref_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
 
-        # Call t_coffee to compare global and peba aligns to refs
+        # Call compute_pra.py to compare global and peba aligns to refs
         for i, ref_align in enumerate(ref_aligns):
             method1_align = method1_aligns[i]
             method2_align = method2_aligns[i]
@@ -295,9 +295,9 @@ def compare_aligns(path):
             method1_name = method1_align.split('/')[-1].strip('.msf')
             method2_name = method2_align.split('/')[-1].strip('.msf')
             print(f'Comparing {method1_name} and {method2_name} to {ref_align}')
-            os.system(f't_coffee -other_pg aln_compare -al1 {method1_align} -al2 {ref_align} > '
+            os.system(f'python compute_pra.py -align1 {method1_align} -align2 {ref_align} > '
                       f'{path}/{folder}/method1_{method1_name}_compare.txt')
-            os.system(f't_coffee -other_pg aln_compare -al1 {method2_align} -al2 {ref_align} > '
+            os.system(f'python compute_pra.py -align1 {method2_align} -align2 {ref_align} > '
                       f'{path}/{folder}/method2_{method2_name}_compare.txt')
 
 
@@ -323,26 +323,24 @@ def parse_compare(path):
         method1_compares = sorted(method1_compares, key=lambda x: int(x.split('_')[3]))
         method2_compares = sorted(method2_compares, key=lambda x: int(x.split('_')[3]))
 
-        # For both compare files, store their third line in a csv (this line contains TCS)
-        method1_lines = []
-        method2_lines = []
+        # For both compare files, join only numerical values to lists
+        method1_vals = []
+        method2_vals = []
         for i, compare in enumerate(method1_compares):
             with open(compare, 'r', encoding='utf8') as file1:
-                lines = file1.readlines()
-                third_line = lines[2].split()
-                third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                method1_lines.append(third_line)
+                vals = file1.readline().split()
+                method1_vals.append(f"{', '.join(vals[1::2])}\n")
                 os.remove(compare)
             with open(method2_compares[i], 'r', encoding='utf8') as file2:
-                lines = file2.readlines()
-                third_line = lines[2].split()
-                third_line = f'{", ".join(third_line[0:4])}, {third_line[-1].strip("]")}\n'  # Columns used not important
-                method2_lines.append(third_line)
+                vals = file2.readline().split()
+                method2_vals.append(f"{', '.join(vals[1::2])}\n")
                 os.remove(method2_compares[i])
+
+        # Write the comma separated values to a csv
         with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:
-            for i, line in enumerate(method1_lines):
-                file3.write(line)
-                file3.write(method2_lines[i])
+            for i, val in enumerate(method1_vals):
+                file3.write(val)
+                file3.write(method2_vals[i])
 
 
 def graph_compare(path, methods):
@@ -365,9 +363,9 @@ def graph_compare(path, methods):
             for i, line in enumerate(file):
                 line = line.split(',')
                 if i == 0 or i % 2 == 0:
-                    method1_sim.append(float(line[3]))
+                    method1_sim.append(float(line[0]))
                 if i % 2 != 0:
-                    method2_sim.append(float(line[3]))
+                    method2_sim.append(float(line[0]))
 
     # Average the similarity scores to put on the graph
     m1_avg = round(sum(method1_sim)/len(method1_sim), 1)
@@ -402,11 +400,11 @@ def graph_compare(path, methods):
     ax = fig.add_subplot()
     method1_scores = []
     method2_scores = []
-    for i, tcs in enumerate(method2_sim):  # tcs = total column score
-        if tcs < method1_sim[i]:  # Make method1 tcs the x value if greater than method2 tcs
-            method1_scores.append([method1_sim[i], tcs])
+    for i, pra in enumerate(method2_sim):  # tcs = total column score
+        if pra < method1_sim[i]:  # Make method1 tcs the x value if greater than method2 tcs
+            method1_scores.append([method1_sim[i], pra])
         else:  # Make method2 tcs the x value if greater than method1 tcs
-            method2_scores.append([tcs, method1_sim[i]])
+            method2_scores.append([pra, method1_sim[i]])
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignment (Avg={m1_avg}) vs. {titles[1]} Alignment (Avg={m2_avg})')
@@ -421,7 +419,7 @@ def main():
     This function calls parse_ref_folder to get lists of all the msf and tfa fasta files in the
     reference directory of interest. It then calls parse_align_files to parse each tfa file and msf
     file, while also aligning each pariwise comparison of fasta sequences. These alignments are
-    compared using t_coffee's 'aln_compare' function and the results are parsed and graphed.
+    compared using compute_pra.py and the results are parsed and graphed.
 
     Listed below are the current supported methods for comparison. You can put either method for
     -method1 and -method2, the only major difference is how the results are presented in the
@@ -439,7 +437,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
+    parser.add_argument('-sample', type=int, default=3, help='MSA sample size')
     parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
@@ -478,7 +476,7 @@ def main():
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample)
 
-    # Compare alignments using t_coffee and graph results
+    # Compare alignments to get PRA and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)

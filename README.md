@@ -37,17 +37,17 @@ BAliBASE alignments are structure based benchmarks used to compare new methods o
 The references of most interest include RV11, sequences with <20% identity, and RV12, sequences with 20-40% 
 identity, but other references with higher % identity are also used for comparison.
 
-t_coffee's "aln_compare" function is used to compare the performance between BLOSUM and PEbA alignments to the
-reference alignments. An example of aln_compare output:
+The 'Percentage Shared Residues' (PSR) metric, inspired by t-coffee's TCS metric, is used to compare the performance 
+between BLOSUM and PEbA alignments to the reference alignments. compute_pra.py computes this metric between two
+alignments, the first being the reference alignment, and the second being the alignment being compared. An example
+of the output is shown below:
 
-*****************************************************
-seq1       seq2          Sim        ALL           Tot  
-PEbA_2        2           7.9    78.9 [100.0]   [  152]
 
-As explained in their documentation (https://tcoffee.org/Projects/tcoffee/documentation/index.html) seq1 is the 
-alignment being compared; seq2 is the number of sequences in the alignment; Sim is the average identity of sequences 
-found in the first alignment (seq1); ALL is the fraction of columns in the first alignment that are found identically 
-aligned in the second (100.0 meaning the percentage of columns being used in the comparison); and Tot is the number of 
-paired residues contained in the first alignment. A higher score in the 4th column, under ALL, would indicate a more 
-similar alignment to the one being compared. In this example, the 78.9% of columns in the PEbA alignment were found 
-identically aligned in the reference BAliBASE alignment, both pairwise alignments of two short protein sequences.
+PRA: 55.06   ref_length: 690   comparison_length: 356   comparison_region: 0-690   similarity: 14.61
+
+
+PRA is a float between 0 and 1, 0 representing no shared residue pairs between two alignments, and 1 representing
+all residue pairs are found in both alignments. The ref_length is the length of the reference alignment, and the
+comparison_length is the number of residue pairs being compared (gaps are not counted). The comparison_region is
+the region of the alignment being compared, for example if an alignment starts at character 100 in the reference,
+the comparison_region would be 100-690. The similarity is the percentage of identical residues between the two sequences.
