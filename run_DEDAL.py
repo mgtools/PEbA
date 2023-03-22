@@ -4,7 +4,6 @@ Test script for DEDAL model. Place dedal folder in the same directory as this sc
 Ben Iovino  02/21/23   VecAligns
 ================================================================================================"""
 
-import os
 import argparse
 import logging
 import tensorflow as tf
@@ -31,9 +30,6 @@ def dedal(model, seq1, seq2):
     output = infer.expand(
         [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
     output = infer.postprocess(output, len(seq1), len(seq2))
-    print(output)
-    with open('dedal_align_out.txt', 'w', encoding='utf8') as f:
-        f.write(str(output))
     alignment = infer.Alignment(seq1, seq2, *output)
     logging.info('DEDAL postprocessing complete')
     return alignment
@@ -68,54 +64,6 @@ def parse_align(file):
     return tseq1, tseq2
 
 
-def match_seq(seq, tseq):
-    """=============================================================================================
-    This function adds any missing characters from an original protein sequence to the truncated 
-    sequence so that they can be accurately compared.
-
-    :param seq: original protein sequence
-    :param trunc_seq: list with beginning position, truncated sequence, and ending position
-    return: list with update beginning position, full sequence, and update ending position
-    ============================================================================================="""
-
-    beg, end = tseq[0], tseq[2]
-    beg_chars = seq[:beg]  # Characters before truncated sequence
-    end_chars = seq[end+1:]  # Characters after truncated sequence
-    tseq[1] = beg_chars + tseq[1] + end_chars
-
-    return tseq
-
-
-def pad_seq(seq1, seq2):
-    """=============================================================================================
-    This function adds gaps to the beginning and end of either sequence so their lengths are equal.
-
-    :param seq1: list with beginning position, full first sequence, and ending position
-    :param seq2: list with beginning position, full second sequence, and ending position
-    return: padded sequences
-    ============================================================================================="""
-
-    # Pad the beginning of the shorter sequence
-    fseq1, fseq2 = seq1[1], seq2[1]
-    beg1, beg2 = seq1[0], seq2[0]
-    if beg1 < beg2:
-        pad = beg2 - beg1  # Number of gaps to add
-        fseq1 = '.' * pad + fseq1
-    elif beg2 < beg1:
-        pad = beg1 - beg2
-        fseq2 = '.' * pad + fseq2
-
-    # Pad the end of the shorter sequence
-    if len(fseq1) < len(fseq2):
-        pad = len(fseq2) - len(fseq1)
-        fseq1 += '.' * pad
-    elif len(fseq2) < len(fseq1):
-        pad = len(fseq1) - len(fseq2)
-        fseq2 += '.' * pad
-
-    return fseq1, fseq2
-
-
 def main():
     """=============================================================================================
     Run the DEDAL model to get a pairwise alignment between two proteins.
@@ -141,10 +89,8 @@ def main():
 
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
-    tseq1 = match_seq(seq1, tseq1)
-    tseq2 = match_seq(seq2, tseq2)
-    fseq1, fseq2 = pad_seq(tseq1, tseq2)
-    write_align(fseq1, fseq2, id1, id2, 'DEDAL', 'None', 'None', args.file1)
+    write_align(tseq1[1], tseq2[1], id1, id2, tseq1[0], tseq1[2],
+                 'DEDAL', 'None', 'None', args.file1)
     #os.remove('dedal_output.txt')
 
 

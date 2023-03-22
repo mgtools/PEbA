@@ -43,11 +43,15 @@ alignments, the first being the reference alignment, and the second being the al
 of the output is shown below:
 
 
-PRA: 55.06   ref_length: 690   comparison_length: 356   comparison_region: 0-690   similarity: 14.61
+PRA: 55.06   ref_length: 690   comparison_length: 356   similarity: 14.61
 
 
 PRA is a percentage between 0-100, 0 representing no shared residue pairs between two alignments, and 100 representing
 all residue pairs are found in both alignments. The ref_length is the length of the reference alignment, and the
-comparison_length is the number of residue pairs being compared (gaps are not counted). The comparison_region is
-the region of the alignment being compared, for example if an alignment starts at character 100 in the reference,
-the comparison_region would be 100-690. The similarity is the percentage of identical residues between the two sequences.
+comparison_length is the number of residue pairs being compared (gaps are not counted). The similarity is the percentage
+of identical residues between the two sequences that are matched together. The PRA metric is calculated by dividing
+the number of shared residue pairs by the length of the comparison, and then multiplying by 100.
+
+It is worth noting for analysis that not all alignments span the entire length of both sequences, so the PRA metric is 
+relative to  the length of the sequences being compared, i.e. comparison_length. In the example comparison above, the 
+entire length of the two sequences are being compared, but there are surely smaller regions with 100% PRA.

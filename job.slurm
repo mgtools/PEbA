@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #SBATCH -J align
+#SBATCH -A general
 #SBATCH -p general
 #SBATCH -o filename_%j.txt
 #SBATCH -e filename_%j.err

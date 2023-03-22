@@ -194,7 +194,7 @@ def main():
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, f'{args.encoder}_Sim',
+    write_align(align1, align2, id1, id2, 0, 0, f'{args.encoder}_Sim',
                 args.gopen, args.gext, args.file1)
 
 
