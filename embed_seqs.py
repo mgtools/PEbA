@@ -135,7 +135,7 @@ def main():
 
 
     # Set an encoder and process each fasta file
-    encoder = 'dedal'
+    encoder = 'prott5'
 
     # ProtT5_XL_UniRef50
     if encoder == 'prott5':

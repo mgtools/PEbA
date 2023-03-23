@@ -8,7 +8,7 @@ import os
 from Bio import SeqIO
 
 
-def write_align(seq1, seq2, id1, id2, beg, end, method, gopen, gext, path):
+def write_align(seq1, seq2, id1, id2, method, gopen, gext, path):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
     in MSF format, with some extra information about the alignment parameters.
@@ -56,7 +56,7 @@ def write_align(seq1, seq2, id1, id2, beg, end, method, gopen, gext, path):
     # Write to a new line for every index in the split list i.e. every 55 characters
     with open(f'{path}/alignment_{count}.msf', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF: {length}  Region: {beg}-{end}  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n')
+        file.write(f'   MSF: {length}  Type: P  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n')
         file.write(f' Name: {id1} oo  Len:  {length}\n')
         file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200

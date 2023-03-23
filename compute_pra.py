@@ -1,7 +1,7 @@
 """================================================================================================
 This script compares two different alignments in msf format and calculates the 'percentage residues
 aligned' (PRA) between them. The PRA is the number of residues that are aligned to the same position
-in both alignments divided by the total number of residues in the first alignment.
+in both alignments divided by the total number of residues in the reference (first) alignment.
 
 Ben Iovino  03/9/23  VecAligns
 ================================================================================================"""
@@ -101,7 +101,8 @@ def get_pairs(align, beg1, beg2):
 
 def compute_score(aligns):
     """=============================================================================================
-    This function accepts two alignments and returns the PRA between them.
+    This function accepts two alignments and returns the PRA between them. PRA and other metrics
+    are logged to stdout.
 
     :param aligns: dict containing two alignments
     return float: PRA between the two alignments
@@ -121,26 +122,21 @@ def compute_score(aligns):
     align1_pairs = get_pairs(align1, beg1, beg2)
 
     # Find the beginning characters of test align and find pairs
-    beg1 = int(align1[0].replace('.', '').find(align2[0].replace('.', '')))
-    beg2 = int(align1[1].replace('.', '').find(align2[1].replace('.', '')))
-    if beg1 == -1:
-        beg1 = 0
-    if beg2 == -1:
-        beg2 = 0
-    align2_pairs = get_pairs(align2, beg1, beg2)
+    beg3 = int(align1[0].replace('.', '').find(align2[0].replace('.', '')))
+    beg4 = int(align1[1].replace('.', '').find(align2[1].replace('.', '')))
+    if beg3 == -1:
+        beg4 = 0
+    if beg3 == -1:
+        beg4 = 0
+    align2_pairs = get_pairs(align2, beg3, beg4)
 
-    # Beginning character of comparison is the max beginning position
-    beg = max(int(align1[2]), int(align2[2]))
+    # Beginning of comparison is the max beg position of the two aligns
+    beg = max(beg1, beg3)
 
-    # If end character is 0 for both, set it to the length of ref alignment
-    if (int(align1[3]) and int(align2[3])) == 0:
-        end = len(align1[0])
-    if int(align1[3]) == 0:
-        if int(align2[3]) > 0:
-            end = int(align2[3])
-    if int(align2[3]) == 0:
-        if int(align1[3]) > 0:
-            end = int(align1[3])
+    # End of comparison is the min end position of the two aligns
+    end1 = list(align1_pairs.keys())[-1]
+    end2 = list(align2_pairs.keys())[-1]
+    end = min(int(end1[1:]), int(end2[1:]))
 
     # Compare pairs between the two alignments
     shared_pairs = 0
@@ -156,7 +152,7 @@ def compute_score(aligns):
             if align2_pairs[key] == value:
                 shared_pairs += 1
 
-    # PRA is shared_pairs / length of comparison
+    # PRA is shared_pairs / number of pairs in first align
     pra = round(shared_pairs / len(align1_pairs)*100, 2)
     sim = round(seq_sim / len(align1_pairs)*100, 2)
     logger.info('PRA: %s   ref_length: %s   comparison_length: %s   similarity: %s',
@@ -166,6 +162,11 @@ def compute_score(aligns):
 
 
 def main():
+    """=============================================================================================
+    This function takes two alignments, the first being the reference, and the second being the
+    alignment to be compared to the reference. It calls parse_align() to extract the sequences
+    and relevant info from the alignments and then calls compute_score() to get the PRA.
+    ============================================================================================="""
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-align1', type=str, default='ref1.msf', help='First alignment')

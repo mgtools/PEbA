@@ -141,7 +141,7 @@ def write_align(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
 
-def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder):
+def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, matrix, gopen, gext, encoder):
     """=============================================================================================
     This function accepts a list of args and runs PEbA on two sequences. Args explained in main().
     ============================================================================================="""
@@ -150,6 +150,7 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gopen, gext, encoder):
             f'-file2 {bb_dir}/{ref_align}/{seq2} '
             f'-embed1 embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
             f'-embed2 embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+            f'-matrix {matrix} '
             f'-gopen {gopen} '
             f'-gext {gext} '
             f'-encoder {encoder}')
@@ -237,7 +238,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
 
             for method, pars in methods.items():  #pylint: disable=W0612
                 if pars[0] == 'PEbA':
-                    run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, pars[3], pars[4], pars[5])
+                    run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, pars[2], pars[3], pars[4], pars[5])
                 if pars[0] == 'matrix':
                     run_matrix(bb_dir, ref_align, seq1, seq2, pars[3], pars[4], pars[1], pars[2])
                 if pars[0] == 'dedal':
@@ -295,9 +296,9 @@ def compare_aligns(path):
             method1_name = method1_align.split('/')[-1].strip('.msf')
             method2_name = method2_align.split('/')[-1].strip('.msf')
             print(f'Comparing {method1_name} and {method2_name} to {ref_align}')
-            os.system(f'python compute_pra.py -align1 {method1_align} -align2 {ref_align} > '
+            os.system(f'python compute_pra.py -align1 {ref_align} -align2 {method1_align} > '
                       f'{path}/{folder}/method1_{method1_name}_compare.txt')
-            os.system(f'python compute_pra.py -align1 {method2_align} -align2 {ref_align} > '
+            os.system(f'python compute_pra.py -align1 {ref_align} -align2 {method2_align} > '
                       f'{path}/{folder}/method2_{method2_name}_compare.txt')
 
 
@@ -330,11 +331,11 @@ def parse_compare(path):
             with open(compare, 'r', encoding='utf8') as file1:
                 vals = file1.readline().split()
                 method1_vals.append(f"{', '.join(vals[1::2])}\n")
-                os.remove(compare)
+                #os.remove(compare)
             with open(method2_compares[i], 'r', encoding='utf8') as file2:
                 vals = file2.readline().split()
                 method2_vals.append(f"{', '.join(vals[1::2])}\n")
-                os.remove(method2_compares[i])
+                #os.remove(method2_compares[i])
 
         # Write the comma separated values to a csv
         with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:

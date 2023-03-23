@@ -15,7 +15,7 @@ from utility import parse_fasta, write_align
 from embed_seqs import prot_t5xl_embed
 
 
-def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
+def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -23,13 +23,13 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
 
     :param seq1: first sequence
     :param seq2: second sequence
+    :param vecs1: first sequence's amino acid vectors
+    :param vecs2: second sequence's amino acid vectors
     :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
-
-    matrix = bl.BLOSUM(45)
 
     # Initialize scoring and traceback matrix based on sequence lengths
     row_length = len(seq1)+1
@@ -55,13 +55,10 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
             cos_sim = 10*(cos_sim)
 
-            # Scores at BOS and EOS are inflated, weight them differently
-            # if [i, j] == [0, 0] or [i, j] == [len(seq1)-1, len(seq2)-1]:
-                # cos_sim /= 5
-
-            # Use BLOSUM scoring for first 5 residues
+            # First few residues have very high cosine similarity scores to other beg residues
+            # Use BLOSUM scores for these residues instead
             if i < 5 or j < 5:
-                cos_sim = matrix[f'{seq1_char}{seq2_char}']
+                cos_sim = subs_matrix[f'{seq1_char}{seq2_char}']
 
             # Add to scoring matrix values via scoring method
             diagonal += cos_sim
@@ -160,6 +157,7 @@ def main():
     parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
     parser.add_argument('-embed1', type=str, default='./test1.txt', help='Name of first embedding')
     parser.add_argument('-embed2', type=str, default='./test2.txt', help='Name of second embedding')
+    parser.add_argument('-matrix', type=int, default=45, help='log odds score of BLOSUM matrix')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
@@ -189,13 +187,15 @@ def main():
         vecs1 = np.loadtxt(args.embed1)
         vecs2 = np.loadtxt(args.embed2)
 
+    # Intialize scoring matrix, used for first couple of rows and columns
+    subs_matrix = bl.BLOSUM(args.matrix)
+
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, args.gopen, args.gext)
+    score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, subs_matrix, args.gopen, args.gext)
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, 0, 0, f'{args.encoder}_Sim',
-                args.gopen, args.gext, args.file1)
+    write_align(align1, align2, id1, id2, f'{args.encoder}_Sim', args.gopen, args.gext, args.file1)
 
 
 if __name__ == '__main__':
