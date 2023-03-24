@@ -6,6 +6,7 @@ Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
 import argparse
+import pickle
 import numpy as np
 import blosum as bl
 from utility import parse_fasta, write_align, parse_matrix
@@ -30,6 +31,9 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
     col_length = len(seq2)+1
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
+
+    # Keeping track of scores from matching residues
+    scores = []
 
     # Score matrix by moving through each index
     gap = False
@@ -58,6 +62,7 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
             # Assign value to traceback matrix and update gap status
             score = max(diagonal, horizontal, vertical)
             if score == diagonal:
+                scores.append(matrix_score)
                 trace_m[i+1][j+1] = 0
                 gap = False
             if score == horizontal:
@@ -70,7 +75,7 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
             # Assign max value to scoring matrix
             score_m[i+1][j+1] = max(score, 0)
 
-    return score_m, trace_m
+    return score_m, trace_m, scores
 
 
 def traceback(score_m, trace_m, seq1, seq2):
@@ -143,7 +148,7 @@ def main():
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-matrix', type=str, default='blosum', help='substitution matrix to use')
-    parser.add_argument('-score', type=int, default=62, help='log odds score of subsitution matrix')
+    parser.add_argument('-score', type=int, default=45, help='log odds score of subsitution matrix')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -157,7 +162,9 @@ def main():
         matrix = parse_matrix('PFASUM60.txt')
 
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m = local_align(seq1, seq2, matrix, args.gopen, args.gext)
+    score_m, trace_m, scores = local_align(seq1, seq2, matrix, args.gopen, args.gext)
+    with open("blosum_scores", "wb") as fp:
+        pickle.dump(scores, fp)
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)

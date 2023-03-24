@@ -7,6 +7,7 @@ Ben Iovino  01/23/23   VecAligns
 
 import os
 import argparse
+import pickle
 import torch
 import numpy as np
 import blosum as bl
@@ -36,6 +37,9 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
     col_length = len(seq2)+1
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
+
+    # Keeping track of scores from matching residues
+    scores = []
 
     # Score matrix by moving through each index
     gap = False
@@ -72,6 +76,7 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Assign value to traceback matrix and update gap status
             score = max(diagonal, horizontal, vertical)
             if score == diagonal:
+                scores.append(cos_sim)
                 trace_m[i+1][j+1] = 0
                 gap = False
             if score == horizontal:
@@ -84,7 +89,7 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Assign max value to scoring matrix
             score_m[i+1][j+1] = max(score, 0)
 
-    return score_m, trace_m
+    return score_m, trace_m, scores
 
 
 def traceback(score_m, trace_m, seq1, seq2):
@@ -191,7 +196,9 @@ def main():
     subs_matrix = bl.BLOSUM(args.matrix)
 
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, subs_matrix, args.gopen, args.gext)
+    score_m, trace_m, scores = local_align(seq1, seq2, vecs1, vecs2, subs_matrix, args.gopen, args.gext)
+    with open("peba_scores", "wb") as fp:
+        pickle.dump(scores, fp)
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)

@@ -170,7 +170,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-align1', type=str, default='ref1.msf', help='First alignment')
-    parser.add_argument('-align2', type=str, default='peba1.msf', help='Second alignment')
+    parser.add_argument('-align2', type=str, default='blosum1.msf', help='Second alignment')
     args = parser.parse_args()
 
     # Parse aligns and store in a dict - {align: (seq1, seq2, beg, end)}
