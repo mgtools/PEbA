@@ -331,11 +331,11 @@ def parse_compare(path):
             with open(compare, 'r', encoding='utf8') as file1:
                 vals = file1.readline().split()
                 method1_vals.append(f"{', '.join(vals[1::2])}\n")
-                #os.remove(compare)
+                os.remove(compare)
             with open(method2_compares[i], 'r', encoding='utf8') as file2:
                 vals = file2.readline().split()
                 method2_vals.append(f"{', '.join(vals[1::2])}\n")
-                #os.remove(method2_compares[i])
+                os.remove(method2_compares[i])
 
         # Write the comma separated values to a csv
         with open(f'{path}/{folder}/compare.csv', 'w', encoding='utf8') as file3:

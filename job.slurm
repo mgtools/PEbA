@@ -13,4 +13,4 @@
 #SBATCH --mem=4G
 
 
-srun python /N/slate/biovino/VecAligns/compare_aligns.py -path 'BAliBASE_R1-5/bb3_release/RV11' -sample 50 -method1 'PEbA' -matrix1 'blosum' -value1 45 -gext1 -0.5 -encoder1 'ProtT5' -method2 'matrix' -matrix2 'blosum' -value2 45 -gext2 -0.5
+srun python /N/slate/biovino/VecAligns/compare_aligns.py -path 'BAliBASE_R1-5/bb3_release/RV11' -sample 50 -method1 'PEbA' -matrix1 'blosum' -value1 45 -encoder1 'ProtT5' -method2 'matrix' -matrix2 'blosum' -value2 45

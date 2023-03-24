@@ -89,8 +89,7 @@ def main():
 
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
-    write_align(tseq1[1], tseq2[1], id1, id2, tseq1[0], tseq1[2],
-                 'DEDAL', 'None', 'None', args.file1)
+    write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL', 'None', 'None', args.file1)
     #os.remove('dedal_output.txt')
 
 
