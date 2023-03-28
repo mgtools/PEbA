@@ -15,6 +15,57 @@ from time import strftime
 from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
+import tensorflow as tf
+from dedal import infer  #pylint: disable=E0401
+from utility import parse_fasta, write_align
+
+
+def dedal(model, seq1, seq2):
+    """=============================================================================================
+    Runs the DEDAL model to get a pairwise alignment between two proteins.
+
+    :param model: DEDAL model
+    :param seq1: First protein sequence
+    :param seq2: Second protein sequence
+    :return: Alignment object
+    ============================================================================================="""
+
+    inputs = infer.preprocess(seq1, seq2)
+    align_out = model(inputs)
+    output = infer.expand(
+        [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
+    output = infer.postprocess(output, len(seq1), len(seq2))
+    alignment = infer.Alignment(seq1, seq2, *output)
+    return alignment
+
+
+def parse_align(file):
+    """=============================================================================================
+    This function gathers the truncated sequences and their beggining and ending indices from the
+    alignment file.
+
+    :param file: alignment file
+    return: truncated sequences and their positions
+    ============================================================================================="""
+
+    # Gather beginning position, truncated sequence, and ending position
+    tseq1 = [0, '', 0]
+    tseq2 = [0, '', 0]
+    with open(file, 'r', encoding='utf8') as f:
+        count = 0
+        for line in f:
+            split_line = line.split()
+            if count == 0:  # First line contains first sequence
+                tseq1[0] = int(split_line[0])
+                tseq1[1] = split_line[1].replace('-', '.')
+                tseq1[2] = int(split_line[2])
+            if count == 2:  # Third line contains second sequence
+                tseq2[0] = int(split_line[0])
+                tseq2[1] = split_line[1].replace('-', '.')
+                tseq2[2] = int(split_line[2])
+            count += 1
+
+    return tseq1, tseq2
 
 
 def parse_ref_folder(path):
@@ -41,7 +92,7 @@ def parse_ref_folder(path):
     return msf_files, fasta_files
 
 
-def parse_fasta(filename, bb_dir):
+def parse_fasta_ca(filename, bb_dir):
     """=============================================================================================
     This function accepts a fasta file with multiple sequences in each one and writes each sequence
     to its own file in the corresponding folder.
@@ -98,7 +149,7 @@ def parse_msf(filename, id1, id2):
     return align1, align2
 
 
-def write_align(seq1, seq2, id1, id2, path):
+def write_align_ca(seq1, seq2, id1, id2, path):
     """=============================================================================================
     This function accepts two sequences after gaps have been introduced and writes them to a file
     in MSF format, with some extra information about the alignment parameters.
@@ -178,20 +229,28 @@ def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
     os.system(f"python local_MATRIX.py {args}")
 
 
-def dedal_run(bb_dir, ref_align, seq1, seq2):
+def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
     """=============================================================================================
     This function accepts a list of args and runs dedal on two sequences. Args explained in main().
     ============================================================================================="""
 
-    args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-            f'-file2 {bb_dir}/{ref_align}/{seq2}')
-
     print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-    os.system(f"python run_DEDAL.py {args}")
+    
+    seq1, id1 = parse_fasta(f'{bb_dir}/{ref_align}/{seq1}')
+    seq2, id2 = parse_fasta(f'{bb_dir}/{ref_align}/{seq2}')
+
+    alignment = dedal(dedal_model, seq1, seq2)
+    with open('dedal_output.txt', 'w', encoding='utf8') as f:
+        f.write(str(alignment))
+
+    # Parse alignment file, match to original sequences, and write to msf file
+    tseq1, tseq2 = parse_align('dedal_output.txt')
+    write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL', 'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
+    os.remove('dedal_output.txt')
 
 
-def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
+def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model):
     """=============================================================================================
     This function accepts lists of two sets of files and a directory to place them in where they
     are parsed correspondingly. As they are parsed, they are also aligned using two different
@@ -207,7 +266,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
     # Parse each fasta file, store names of each for subsequent msf parsing
     seqs = []
     for file in fasta_files:
-        new_seqs = parse_fasta(file, bb_dir)
+        new_seqs = parse_fasta_ca(file, bb_dir)
         seqs.append(new_seqs)  # Store in nested list to access only relevant fa files for each msf
 
     # Each MSF files corresponds to a set of fasta files
@@ -242,13 +301,13 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
                 if pars[0] == 'matrix':
                     run_matrix(bb_dir, ref_align, seq1, seq2, pars[3], pars[4], pars[1], pars[2])
                 if pars[0] == 'dedal':
-                    dedal_run(bb_dir, ref_align, seq1, seq2)
+                    dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model)
 
             # Grab pairwise alignment from reference MSA
             seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
             align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
             file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
-            write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
+            write_align_ca(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
             file_count += 1
 
 
@@ -401,16 +460,16 @@ def graph_compare(path, methods):
     ax = fig.add_subplot()
     method1_scores = []
     method2_scores = []
-    for i, pra in enumerate(method2_sim):  # tcs = total column score
-        if pra < method1_sim[i]:  # Make method1 tcs the x value if greater than method2 tcs
+    for i, pra in enumerate(method2_sim):  # pra = percent residues aligned
+        if pra < method1_sim[i]:  # Make method1 prca the x value if greater than method2 pra
             method1_scores.append([method1_sim[i], pra])
-        else:  # Make method2 tcs the x value if greater than method1 tcs
+        else:  # Make method2 pra the x value if greater than method1 pra
             method2_scores.append([pra, method1_sim[i]])
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignment (Avg={m1_avg}) vs. {titles[1]} Alignment (Avg={m2_avg})')
-    ax.set_xlabel(f'TCS {titles[1]}')
-    ax.set_ylabel(f'TCS {titles[0]}')
+    ax.set_xlabel(f'PRA {titles[1]}')
+    ax.set_ylabel(f'PRA {titles[0]}')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 
@@ -468,6 +527,12 @@ def main():
     bb_dir = f'bb_data{bb_ct}/{ref_dir}'
     os.makedirs(bb_dir)
 
+    # Load DEDAL if necessary
+    if args.method1 == 'dedal' or args.method2 == 'dedal':
+        dedal_model = tf.saved_model.load('dedal_3')
+    else:
+        dedal_model = 'n'
+
     # Parse reference folder of interest
     print(f'{strftime("%H:%M:%S")} Parsing and computing alignments...\n', file=sys.stdout)
     msf_files, fasta_files = parse_ref_folder(args.path)
@@ -475,7 +540,7 @@ def main():
     # Sort each list of files to ensure they match up for msf parsing
     msf_files.sort()
     fasta_files.sort()
-    parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample)
+    parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
 
     # Compare alignments to get PRA and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
