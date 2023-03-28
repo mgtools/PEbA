@@ -188,7 +188,7 @@ def dedal_run(bb_dir, ref_align, seq1, seq2):
 
     print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-    os.system(f"python local_DEDAL.py {args}")
+    os.system(f"python run_DEDAL.py {args}")
 
 
 def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp):
@@ -445,7 +445,7 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='dedal', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')

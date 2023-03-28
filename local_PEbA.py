@@ -9,6 +9,7 @@ import os
 import argparse
 import pickle
 import torch
+import math
 import numpy as np
 import blosum as bl
 from transformers import T5EncoderModel, T5Tokenizer
@@ -57,11 +58,11 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Score pair of residues based off cosine similarity
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-            cos_sim = 10*(cos_sim)
+            cos_sim = (math.sqrt(abs(cos_sim))*15)-4
 
             # First few residues have very high cosine similarity scores to other beg residues
             # Use BLOSUM scores for these residues instead
-            if i < 5 or j < 5:
+            if i < 3 or j < 3:
                 cos_sim = subs_matrix[f'{seq1_char}{seq2_char}']
 
             # Add to scoring matrix values via scoring method

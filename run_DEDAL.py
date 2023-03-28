@@ -4,6 +4,7 @@ Test script for DEDAL model. Place dedal folder in the same directory as this sc
 Ben Iovino  02/21/23   VecAligns
 ================================================================================================"""
 
+import os
 import argparse
 import logging
 import tensorflow as tf
@@ -90,7 +91,7 @@ def main():
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
     write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL', 'None', 'None', args.file1)
-    #os.remove('dedal_output.txt')
+    os.remove('dedal_output.txt')
 
 
 if __name__ == '__main__':
