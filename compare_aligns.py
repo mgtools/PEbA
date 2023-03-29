@@ -247,7 +247,6 @@ def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
     write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL', 'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
-    os.remove('dedal_output.txt')
 
 
 def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model):
@@ -468,8 +467,8 @@ def graph_compare(path, methods):
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignment (Avg={m1_avg}) vs. {titles[1]} Alignment (Avg={m2_avg})')
-    ax.set_xlabel(f'PRA {titles[1]}')
-    ax.set_ylabel(f'PRA {titles[0]}')
+    ax.set_xlabel(f'PRA {titles[1]} (%)')
+    ax.set_ylabel(f'PRA {titles[0]} (%)')
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
 
@@ -504,7 +503,7 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='dedal', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
@@ -541,11 +540,11 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
-
     # Compare alignments to get PRA and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)
+    bb_dir = 'bb_data/RV11'
     graph_compare(bb_dir, methods)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
