@@ -16,7 +16,7 @@ from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 import tensorflow as tf
-from dedal import infer  #pylint: disable=E0401
+#from dedal import infer  #pylint: disable=E0401
 from utility import parse_fasta, write_align
 
 
@@ -197,10 +197,15 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, matrix, gopen, gext, encode
     This function accepts a list of args and runs PEbA on two sequences. Args explained in main().
     ============================================================================================="""
 
+    if encoder == 'ProtT5':
+        embed = 'prot_t5_embed'
+    if encoder == 'ESM2':
+        embed = 'esm2_t36_embed'
+
     args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
             f'-file2 {bb_dir}/{ref_align}/{seq2} '
-            f'-embed1 embed/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
-            f'-embed2 embed/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+            f'-embed1 {embed}/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+            f'-embed2 {embed}/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
             f'-matrix {matrix} '
             f'-gopen {gopen} '
             f'-gext {gext} '
@@ -503,12 +508,12 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext2', type=float, default=-1, help='Gap ext score')
-    parser.add_argument('-encoder2', type=str, default='ProtT5', help='Model used for embeddings')
+    parser.add_argument('-encoder2', type=str, default='ESM2', help='Model used for embeddings')
     args = parser.parse_args()
 
     # Places methods and their arguments into dict for easy access and readability
@@ -540,11 +545,11 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
+
     # Compare alignments to get PRA and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir)
     parse_compare(bb_dir)
-    bb_dir = 'bb_data/RV11'
     graph_compare(bb_dir, methods)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
