@@ -7,9 +7,7 @@ Ben Iovino  01/23/23   VecAligns
 
 import os
 import argparse
-import pickle
 import torch
-import math
 import numpy as np
 import blosum as bl
 from transformers import T5EncoderModel, T5Tokenizer
@@ -17,7 +15,7 @@ from utility import parse_fasta, write_align
 from embed_seqs import prot_t5xl_embed
 
 
-def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
+def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, residues, gopen, gext):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -28,6 +26,7 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
     :param vecs1: first sequence's amino acid vectors
     :param vecs2: second sequence's amino acid vectors
     :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
+    :param residues: number of initial residues to score with BLOSUM matrix
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
     return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
@@ -38,9 +37,6 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
     col_length = len(seq2)+1
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
-
-    # Keeping track of scores from matching residues
-    scores = []
 
     # Score matrix by moving through each index
     gap = False
@@ -58,11 +54,11 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Score pair of residues based off cosine similarity
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
             cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-            cos_sim = (math.sqrt(abs(cos_sim))*15)-4
+            cos_sim *= 10
 
             # First few residues have very high cosine similarity scores to other beg residues
             # Use BLOSUM scores for these residues instead
-            if i < 3 or j < 3:
+            if i < residues or j < residues:
                 cos_sim = subs_matrix[f'{seq1_char}{seq2_char}']
 
             # Add to scoring matrix values via scoring method
@@ -77,7 +73,6 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Assign value to traceback matrix and update gap status
             score = max(diagonal, horizontal, vertical)
             if score == diagonal:
-                scores.append(cos_sim)
                 trace_m[i+1][j+1] = 0
                 gap = False
             if score == horizontal:
@@ -90,7 +85,7 @@ def local_align(seq1, seq2, vecs1, vecs2, subs_matrix, gopen, gext):
             # Assign max value to scoring matrix
             score_m[i+1][j+1] = max(score, 0)
 
-    return score_m, trace_m, scores
+    return score_m, trace_m
 
 
 def traceback(score_m, trace_m, seq1, seq2):
@@ -164,6 +159,7 @@ def main():
     parser.add_argument('-embed1', type=str, default='./test1.txt', help='Name of first embedding')
     parser.add_argument('-embed2', type=str, default='./test2.txt', help='Name of second embedding')
     parser.add_argument('-matrix', type=int, default=45, help='log odds score of BLOSUM matrix')
+    parser.add_argument('-residues', type=int, default=3, help='Number of residues to score with BLOSUM')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
@@ -197,9 +193,7 @@ def main():
     subs_matrix = bl.BLOSUM(args.matrix)
 
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m, scores = local_align(seq1, seq2, vecs1, vecs2, subs_matrix, args.gopen, args.gext)
-    with open("peba_scores", "wb") as fp:
-        pickle.dump(scores, fp)
+    score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, subs_matrix, args.residues, args.gopen, args.gext)
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
