@@ -2,8 +2,8 @@
 This script takes multiple sequence alignments (MSAs) from BAliBASE and parses each one to get each
 pairwise (PW) alignment. It takes the FASTA sequences from these MSAs and aligns them using
 specified methods. The results from these methods are compared to the reference alignment using
-t-coffee to get a similarity score. A scatterplot is then generated to show the difference between
-the similarity score of the two specified methods.
+compute_pra.py to get a similarity score. A scatterplot is then generated to show the difference
+between the similarity score of the two specified methods.
 
 Ben Iovino  03/07/23   VecAligns
 ================================================================================================"""
@@ -286,11 +286,10 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model
                 if seq != sequences[loop_count]:  # Don't want to align a sequence to itself
                     pairwise_aligns.append([seq, sequences[loop_count]])
                 loop_count+=1
-
-        # Set a sample size for the PW aligns - sometimes there are 1000+ pairs
-        sample_size = samp
-        if len(pairwise_aligns) > sample_size:
-            pairwise_aligns = sample(pairwise_aligns, sample_size)
+        
+        # Set a sample size for the PW aligns for testing purposes
+        if len(pairwise_aligns) > samp:
+            pairwise_aligns = sample(pairwise_aligns, samp)
 
         # For the selected pairs, align them using local programs
         file_count = 0
@@ -490,7 +489,7 @@ def main():
     final scatterplot (method1 goes on the y-axis and method2 goes on the x-axis).
 
     If using pre-embedded sequences, you can use the -encoder to specify which encoder was used.
-    Place them into the VecAligns/ folder and name the folder 'embed'.
+    Place them into the VecAligns/ folder and name the folder 'x_embed'.
 
     PEbA with ProtT5 encodings: -compare1 PEbA -encoder ProtT5
     PEbA with ESM2 encodings: -compare1 PEbA -encoder ESM2
@@ -508,7 +507,7 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')

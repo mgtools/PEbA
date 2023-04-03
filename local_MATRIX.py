@@ -1,12 +1,11 @@
 """================================================================================================
 This script takes two protein sequences of varying length and finds the highest scoring local
-alignment between the two.
+alignment between the two using a substitution matrix.
 
 Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
 import argparse
-import pickle
 import numpy as np
 import blosum as bl
 from utility import parse_fasta, write_align, parse_matrix
@@ -31,9 +30,6 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
     col_length = len(seq2)+1
     score_m = np.full((row_length, col_length), 0)
     trace_m = np.full((row_length, col_length), 0)
-
-    # Keeping track of scores from matching residues
-    scores = []
 
     # Score matrix by moving through each index
     gap = False
@@ -62,7 +58,6 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
             # Assign value to traceback matrix and update gap status
             score = max(diagonal, horizontal, vertical)
             if score == diagonal:
-                scores.append(matrix_score)
                 trace_m[i+1][j+1] = 0
                 gap = False
             if score == horizontal:
@@ -75,7 +70,7 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
             # Assign max value to scoring matrix
             score_m[i+1][j+1] = max(score, 0)
 
-    return score_m, trace_m, scores
+    return score_m, trace_m
 
 
 def traceback(score_m, trace_m, seq1, seq2):
@@ -92,6 +87,11 @@ def traceback(score_m, trace_m, seq1, seq2):
 
     # Find index of highest score in scoring matrix, start traceback at this matrix
     high_score_ind = np.unravel_index(np.argmax(score_m, axis=None), score_m.shape)
+
+    # Write highest score to file
+    high_score = score_m[high_score_ind[0], high_score_ind[1]]
+    with open('blosum_alignment_scores.txt', 'a', encoding='utf-8') as file:
+        file.write(f'{high_score}\n')
 
     # Reverse strings and convert to lists so gaps can be inserted
     rev_seq1 = list(seq1[::-1])
@@ -137,7 +137,7 @@ def traceback(score_m, trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes the BLOSUM62 matrix and two protein sequences, calls SW_align() to get
+    This function initializes two protein sequences and a scoring matrix, calls SW_align() to get
     the scoring and traceback matrix from SW alignment, calls traceback() to get the local
     alignment, and then write_align() to write the alignment to a file in MSF format.
     ============================================================================================="""
@@ -162,9 +162,7 @@ def main():
         matrix = parse_matrix('PFASUM60.txt')
 
     # Call local_align() to get scoring and traceback matrix
-    score_m, trace_m, scores = local_align(seq1, seq2, matrix, args.gopen, args.gext)
-    with open("blosum_scores", "wb") as fp:
-        pickle.dump(scores, fp)
+    score_m, trace_m = local_align(seq1, seq2, matrix, args.gopen, args.gext)
 
     # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)

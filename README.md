@@ -39,14 +39,14 @@ The -encoder argument is used to specify the model used and written to the outpu
 # Comparing PEbA to Reference Alignments
 **************************************************************************************************************
 
-To determine if PEbA alignments produce more accurate alignments than those with, subsitution matrices, both 
+To determine if PEbA alignments produce more accurate alignments than those with subsitution matrices, both 
 types of alignments are compared to reference alignments from BAliBASE 4 (https://www.lbgi.fr/balibase/).
 BAliBASE alignments are structure based benchmarks used to compare new methods of alignment, such as this one. 
 The references of most interest include RV11, sequences with <20% identity, and RV12, sequences with 20-40% 
 identity, but other references with higher % identity are also used for comparison.
 
-The 'Percentage Shared Residues' (PSR) metric, inspired by t-coffee's TCS metric, is used to compare the performance 
-between BLOSUM and PEbA alignments to the reference alignments. compute_pra.py computes this metric between two
+The 'Percentage Residues Aligned' (PRA) metric, inspired by t-coffee's TCS metric, is used to compare the performance 
+between BLOSUM and PEbA alignments to the reference alignments. This percentage indicates how many residue pairs are shared between two alignments. compute_pra.py computes this metric between two
 alignments, the first being the reference alignment, and the second being the alignment being compared. An example
 of the output is shown below:
 
