@@ -24,28 +24,45 @@ def read_csv(filename):
     return data
 
 
-def parse_data(data):
+def parse_data(data, parse):
     """=============================================================================================
     This function accepts a list of lists and parses for relevant info.
 
     :param data: list of lists
+    :param parse: output to be parsed
     :return: list of lists
     ============================================================================================="""
 
     count = 0
     for line in data:
+
+        # Even lines are from method 1
         if count == 0 or count % 2 == 0:
             for key, value in COMPARE_DICT_M1.items():
-                if float(line[3]) <= key:
-                    value[0] += float(line[0])/100
-                    value[1] += 1
-                    break
+                if parse == 'id':
+                    if float(line[3]) <= key:
+                        value[0] += float(line[0])/100
+                        value[1] += 1
+                        break
+                elif parse == 'len':
+                    if float(line[1]) <= key:
+                        value[0] += float(line[0])/100
+                        value[1] += 1
+                        break
+
+        # Odd lines are from method 2
         else:
             for key, value in COMPARE_DICT_M2.items():
-                if float(line[3]) <= key:
-                    value[0] += float(line[0])/100
-                    value[1] += 1
-                    break
+                if parse == 'id':
+                    if float(line[3]) <= key:
+                        value[0] += float(line[0])/100
+                        value[1] += 1
+                        break
+                elif parse == 'len':
+                    if float(line[1]) <= key:
+                        value[0] += float(line[0])/100
+                        value[1] += 1
+                        break
         count += 1
 
 
@@ -90,8 +107,8 @@ def main():
 
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-path', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run7')
-    parser.add_argument('-type', type=str, default='len')
+    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run5')
+    parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
 
     # Store values from csv
@@ -99,20 +116,20 @@ def main():
     global COMPARE_DICT_M2  #pylint: disable=W0601
 
     # Identity buckets
-    if args.type == 'id':
+    if args.t == 'id':
         COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
                      59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
         COMPARE_DICT_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
                      59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
 
     # Length buckets
-    elif args.type == 'len':
+    elif args.t == 'len':
         COMPARE_DICT_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
         COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
 
     # Directory structure -> set/run/ref/msa/compare.csv
     # Want to read every single csv
-    path = args.path
+    path = args.p
     #for run in os.listdir(path):  #pylint: disable=R1702
     for ref in os.listdir(f'{path}'):
         for msa in os.listdir(f'{path}/{ref}'):
@@ -122,7 +139,7 @@ def main():
 
                         # Read csv and parse
                         data = read_csv(f'{path}/{ref}/{msa}/{file}')
-                        parse_data(data)
+                        parse_data(data, args.t)
 
     # Find average for each key
     avg_dict()
