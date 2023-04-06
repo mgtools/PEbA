@@ -8,12 +8,6 @@ using traditional sequence alignment algorithms. The cosine similarity scores ar
 matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share low character
 identity (<20-35%), referred to as the "twilight zone" of protein sequence alignment.
 
-It has been observed that embeddings of residues in the beginning of sequences have abnormally high cosine 
-similarity to each other. This may be due to the encoder focusing too much on the position of these residues in
-the sequence as opposed to their overall context. This issue is addressed by using BLOSUM scoring for the first
-few residues in each sequence. The number of residues to use BLOSUM scoring for can be specified by the -residues
-argument, with a default of 3, in case different embeddings are found to show different behavior.
-
 PEbA is implemented in local_PEbA.py, where it uses the Smith-Waterman 'local' algorithm to align two sequences.
 The script for substitution matrix based alignments are in local_MATRIX.py, which currently supports all BLOSUM 
 matrices and PFASUM60 for testing purposes.
@@ -26,8 +20,6 @@ been embedded and saved as a numpy array:
     -file2 <file2.fa>   : Path to second sequence fasta file
     -embed1 <file1.txt> : Path to first sequence embedding file
     -embed2 <file2.txt> : Path to second sequence embedding file
-    -matrix <int>       : Log-odds score of BLOSUM matrix to use
-    -residues <int>     : Number of initial residues to use BLOSUM scoring
     -gopen <int/float>  : Gap opening penalty
     -gext <int/float>   : Gap extension penalty
     -encoder <str>      : Encoder used to generate embeddings
@@ -60,4 +52,5 @@ representing all residue pairs are found in both alignments. The PRA metric is c
 number of shared residue pairs between the reference and test alignment by the number of pairs in the reference
 alignment, and then multiplying by 100. The ref_length is the length of the reference alignment, and the
 comparison_length is the number of residue pairs being compared (gaps are not counted). The similarity is
-the percentage of identical residues between the two sequences that are matched together.
+the percentage of identical residues between the two sequences that are matched together i.e. if a pair
+has the same two residues, it is a match.
