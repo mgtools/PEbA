@@ -16,7 +16,7 @@ from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 import tensorflow as tf
-#from dedal import infer  #pylint: disable=E0401
+from dedal import infer  #pylint: disable=E0401
 from utility import parse_fasta, write_align
 
 
@@ -192,7 +192,7 @@ def write_align_ca(seq1, seq2, id1, id2, path):
             file.write(f'{id2}      {seq2_split[i]}\n\n')
 
 
-def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, matrix, gopen, gext, encoder):
+def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gext, encoder):
     """=============================================================================================
     This function accepts a list of args and runs PEbA on two sequences. Args explained in main().
     ============================================================================================="""
@@ -206,8 +206,6 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, matrix, gopen, gext, encode
             f'-file2 {bb_dir}/{ref_align}/{seq2} '
             f'-embed1 {embed}/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
             f'-embed2 {embed}/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
-            f'-matrix {matrix} '
-            f'-gopen {gopen} '
             f'-gext {gext} '
             f'-encoder {encoder}')
 
@@ -241,17 +239,18 @@ def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
 
     print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-    
+
     seq1, id1 = parse_fasta(f'{bb_dir}/{ref_align}/{seq1}')
     seq2, id2 = parse_fasta(f'{bb_dir}/{ref_align}/{seq2}')
 
     alignment = dedal(dedal_model, seq1, seq2)
-    with open('dedal_output.txt', 'w', encoding='utf8') as f:
-        f.write(str(alignment))
+    with open('dedal_output.txt', 'w', encoding='utf8') as file:
+        file.write(str(alignment))
 
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
-    write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL', 'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
+    write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL',
+                 'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
 
 
 def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model):
@@ -300,7 +299,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model
 
             for method, pars in methods.items():  #pylint: disable=W0612
                 if pars[0] == 'PEbA':
-                    run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, pars[2], pars[3], pars[4], pars[5])
+                    run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, pars[4], pars[5])
                 if pars[0] == 'matrix':
                     run_matrix(bb_dir, ref_align, seq1, seq2, pars[3], pars[4], pars[1], pars[2])
                 if pars[0] == 'dedal':
@@ -507,7 +506,7 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='dedal', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
