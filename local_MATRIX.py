@@ -88,11 +88,6 @@ def traceback(score_m, trace_m, seq1, seq2):
     # Find index of highest score in scoring matrix, start traceback at this matrix
     high_score_ind = np.unravel_index(np.argmax(score_m, axis=None), score_m.shape)
 
-    # Write highest score to file
-    high_score = score_m[high_score_ind[0], high_score_ind[1]]
-    with open('blosum_alignment_scores.txt', 'a', encoding='utf-8') as file:
-        file.write(f'{high_score}\n')
-
     # Reverse strings and convert to lists so gaps can be inserted
     rev_seq1 = list(seq1[::-1])
     rev_seq2 = list(seq2[::-1])

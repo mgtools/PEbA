@@ -33,6 +33,7 @@ def parse_data(data, parse):
     :return: list of lists
     ============================================================================================="""
 
+    avg_align = 0
     count = 0
     for line in data:
 
@@ -63,7 +64,11 @@ def parse_data(data, parse):
                         value[0] += float(line[0])/100
                         value[1] += 1
                         break
+
+        avg_align += float(line[1])
         count += 1
+
+    return avg_align, count
 
 
 def avg_dict():
@@ -76,12 +81,12 @@ def avg_dict():
 
     # Dicts are global
     for key, value in COMPARE_DICT_M1.items():
-        if value[1] != 0: # Make sure there are values to average
+        if value[1] > 10: # Want at least 10 alignments in this range before we average
             COMPARE_DICT_M1[key] = value[0]/value[1]*100
         else:
             COMPARE_DICT_M1[key] = 0
     for key, value in COMPARE_DICT_M2.items():
-        if value[1] != 0:
+        if value[1] > 10:
             COMPARE_DICT_M2[key] = value[0]/value[1]*100
         else:
             COMPARE_DICT_M2[key] = 0
@@ -107,7 +112,7 @@ def main():
 
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run5')
+    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run9')
     parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
 
@@ -129,6 +134,7 @@ def main():
 
     # Directory structure -> set/run/ref/msa/compare.csv
     # Want to read every single csv
+    avg_align, count = 0, 0
     path = args.p
     #for run in os.listdir(path):  #pylint: disable=R1702
     for ref in os.listdir(f'{path}'):
@@ -139,7 +145,12 @@ def main():
 
                         # Read csv and parse
                         data = read_csv(f'{path}/{ref}/{msa}/{file}')
-                        parse_data(data, args.t)
+                        a, b = parse_data(data, args.t)
+                        avg_align += a
+                        count += b
+
+    #print(COMPARE_DICT_M1)
+    #print(COMPARE_DICT_M2)
 
     # Find average for each key
     avg_dict()
