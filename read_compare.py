@@ -35,6 +35,9 @@ def parse_data(data, parse):
 
     avg_align = 0
     count = 0
+    zeros = 0
+    zeros2 = 0
+    in_zero = False
     for line in data:
 
         # Even lines are from method 1
@@ -42,6 +45,9 @@ def parse_data(data, parse):
             for key, value in COMPARE_DICT_M1.items():
                 if parse == 'id':
                     if float(line[3]) <= key:
+                        if float(line[0]) == 0:
+                            in_zero = True
+                            zeros += 1
                         value[0] += float(line[0])/100
                         value[1] += 1
                         break
@@ -56,6 +62,10 @@ def parse_data(data, parse):
             for key, value in COMPARE_DICT_M2.items():
                 if parse == 'id':
                     if float(line[3]) <= key:
+                        if in_zero is True:
+                            if float(line[0])>0:
+                                zeros2 += 1
+                        in_zero = False
                         value[0] += float(line[0])/100
                         value[1] += 1
                         break
@@ -68,6 +78,7 @@ def parse_data(data, parse):
         avg_align += float(line[1])
         count += 1
 
+    print(zeros, zeros2)
     return avg_align, count
 
 
@@ -112,8 +123,8 @@ def main():
 
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run9')
-    parser.add_argument('-t', type=str, default='len')
+    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run7')
+    parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
     # Store values from csv
@@ -140,6 +151,7 @@ def main():
     for ref in os.listdir(f'{path}'):
         for msa in os.listdir(f'{path}/{ref}'):
             if msa.startswith('B'):
+                print(msa)
                 for file in os.listdir(f'{path}/{ref}/{msa}'):
                     if file.endswith('csv'):
 

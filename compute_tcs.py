@@ -1,6 +1,6 @@
 """================================================================================================
-This script compares two different alignments in msf format and calculates the 'percentage residues
-aligned' (PRA) between them. The PRA is the number of residues that are aligned to the same position
+This script compares two different alignments in msf format and calculates the 'total column score'
+(TCS) between them. The TCS is the number of residues that are aligned to the same position
 in both alignments divided by the total number of residues in the reference (first) alignment.
 
 Ben Iovino  03/9/23  VecAligns
@@ -10,7 +10,7 @@ import argparse
 import logging
 import sys
 
-logger = logging.getLogger('compute_pra')
+logger = logging.getLogger('compute_tcs')
 logger.setLevel(logging.INFO)
 ch = logging.StreamHandler(stream=sys.stdout)
 formatter = logging.Formatter('%(message)s')
@@ -101,11 +101,11 @@ def get_pairs(align, beg1, beg2):
 
 def compute_score(aligns):
     """=============================================================================================
-    This function accepts two alignments and returns the PRA between them. PRA and other metrics
+    This function accepts two alignments and returns the TCS between them. TCS and other metrics
     are logged to stdout.
 
     :param aligns: dict containing two alignments
-    return float: PRA between the two alignments
+    return float: TCS between the two alignments
     ============================================================================================="""
 
     # Get alignments from files and get their respective pairs
@@ -152,20 +152,20 @@ def compute_score(aligns):
             if align2_pairs[key] == value:
                 shared_pairs += 1
 
-    # PRA is shared_pairs / number of pairs in first align
-    pra = round(shared_pairs / len(align1_pairs)*100, 2)
+    # TCS is shared_pairs / number of pairs in first align
+    tcs = round(shared_pairs / len(align1_pairs)*100, 2)
     sim = round(seq_sim / len(align1_pairs)*100, 2)
-    logger.info('PRA: %s   ref_length: %s   comparison_length: %s   similarity: %s',
-                pra, len(align1[0]), comparison_length, sim)
+    logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+                tcs, len(align1[0]), comparison_length, sim)
 
-    return pra
+    return tcs
 
 
 def main():
     """=============================================================================================
     This function takes two alignments, the first being the reference, and the second being the
     alignment to be compared to the reference. It calls parse_align() to extract the sequences
-    and relevant info from the alignments and then calls compute_score() to get the PRA.
+    and relevant info from the alignments and then calls compute_score() to get the TCS.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
@@ -178,7 +178,7 @@ def main():
     aligns[args.align1] = parse_align(args.align1)
     aligns[args.align2] = parse_align(args.align2)
 
-    # Compute PRA
+    # Compute TCS
     compute_score(aligns)
 
 
