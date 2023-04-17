@@ -2,7 +2,7 @@
 This script takes multiple sequence alignments (MSAs) from BAliBASE and parses each one to get each
 pairwise (PW) alignment. It takes the FASTA sequences from these MSAs and aligns them using
 specified methods. The results from these methods are compared to the reference alignment using
-compute_tcs.py to get a similarity score. A scatterplot is then generated to show the difference
+compute_score.py to get a similarity score. A scatterplot is then generated to show the difference
 between the similarity score of the two specified methods.
 
 Ben Iovino  03/07/23   VecAligns
@@ -314,12 +314,13 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model
             file_count += 1
 
 
-def compare_aligns(path):
+def compare_aligns(path, score):
     """=============================================================================================
     This function takes a directory and compares the two alignment methods to the reference
-    alignment using compute_tcs.py The output is stored in a text file.
+    alignment using compute_score.py The output is stored in a text file.
 
     :param path: directory where alignments exist
+    :param score: score to use for alignment comparison
     ============================================================================================="""
 
     folders = os.listdir(path)
@@ -349,7 +350,7 @@ def compare_aligns(path):
         method2_aligns = sorted(method2_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
         ref_aligns = sorted(ref_aligns, key=lambda x: int(x.split('_')[2].strip('.msf')))
 
-        # Call compute_tcs.py to compare global and peba aligns to refs
+        # Call compute_score.py to test alignments to reference alignment
         for i, ref_align in enumerate(ref_aligns):
             method1_align = method1_aligns[i]
             method2_align = method2_aligns[i]
@@ -358,9 +359,9 @@ def compare_aligns(path):
             method1_name = method1_align.split('/')[-1].strip('.msf')
             method2_name = method2_align.split('/')[-1].strip('.msf')
             print(f'Comparing {method1_name} and {method2_name} to {ref_align}')
-            os.system(f'python compute_tcs.py -align1 {ref_align} -align2 {method1_align} > '
+            os.system(f'python compute_score.py -align1 {ref_align} -align2 {method1_align} -score {score} > '
                       f'{path}/{folder}/method1_{method1_name}_compare.txt')
-            os.system(f'python compute_tcs.py -align1 {ref_align} -align2 {method2_align} > '
+            os.system(f'python compute_score.py -align1 {ref_align} -align2 {method2_align} -score {score} > '
                       f'{path}/{folder}/method2_{method2_name}_compare.txt')
 
 
@@ -406,7 +407,7 @@ def parse_compare(path):
                 file3.write(method2_vals[i])
 
 
-def graph_compare(path, methods):
+def graph_compare(path, methods, score):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
     the two methods compared the reference alignment and the second graphs the sim scores against
@@ -415,6 +416,7 @@ def graph_compare(path, methods):
 
     :param path: directory where compare.csv files exist
     :param methods: dict of methods used and their parameters
+    :param score: score used for alignment comparison
     ============================================================================================="""
 
     # Get the similarity scores from the compare files
@@ -463,16 +465,16 @@ def graph_compare(path, methods):
     ax = fig.add_subplot()
     method1_scores = []
     method2_scores = []
-    for i, tcs in enumerate(method2_sim):  # tcs = total column score
-        if tcs < method1_sim[i]:  # Make method1 prca the x value if greater than method2 tcs
-            method1_scores.append([method1_sim[i], tcs])
+    for i, cs in enumerate(method2_sim):  # cs = comparison score
+        if cs < method1_sim[i]:  # Make method1 prca the x value if greater than method2 tcs
+            method1_scores.append([method1_sim[i], cs])
         else:  # Make method2 tcs the x value if greater than method1 tcs
-            method2_scores.append([tcs, method1_sim[i]])
+            method2_scores.append([cs, method1_sim[i]])
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignments vs. {titles[1]} Alignments in {path.split("/")[-1]}')
-    ax.set_xlabel(f'TCS {titles[1]} (%)')
-    ax.set_ylabel(f'TCS {titles[0]} (%)')
+    ax.set_xlabel(f'{score.upper()} {titles[1]} (%)')
+    ax.set_ylabel(f'{score.upper()} {titles[0]} (%)')
     ax.legend([f'{titles[1]} Avg: {m2_avg}', f'{titles[0]} Avg: {m1_avg}'])
     plt.plot([0, 100], [0, 100], color='black')
     plt.savefig(f'{path}/comparison.png')
@@ -508,12 +510,13 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
-    parser.add_argument('-value2', type=int, default=45, help='Sub matrix value')
+    parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext2', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder2', type=str, default='ESM2', help='Model used for embeddings')
+    parser.add_argument('-score', type=str, default='tcs', help='Comparison score')
     args = parser.parse_args()
 
     # Places methods and their arguments into dict for easy access and readability
@@ -546,14 +549,13 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
-
-    # Compare alignments to get TCS and graph results
-    print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
-    compare_aligns(bb_dir)
-    parse_compare(bb_dir)
     '''
-    bb_dir = 'bb_data0/RV911'
-    graph_compare(bb_dir, methods)
+    bb_dir = 'bb_data0/RV11'
+    # Compare alignments to get comparison score and graph results
+    print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
+    compare_aligns(bb_dir, args.score)
+    parse_compare(bb_dir)
+    graph_compare(bb_dir, methods, args.score)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

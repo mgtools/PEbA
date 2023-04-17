@@ -53,3 +53,31 @@ alignment, and then multiplying by 100. The ref_length is the length of the refe
 comparison_length is the number of residue pairs being compared (gaps are not counted). The similarity is
 the percentage of identical residues between the two sequences that are matched together i.e. if a pair
 has the same two residues, it is a match.
+
+The F1 score can also be calculated to compare the performance of the alignments, but TCS is the default.
+
+**************************************************************************************************************
+# Methods Compared
+**************************************************************************************************************
+
+From each BAliBASE benchmark MSA, we extracted each pairwise alignment. We took each pair and generated
+alignments using PEbA with ProtT5 embeddings, PEbA with ESM2 embeddings, BLOSUM, and DEDAL. All testing was
+done with compare_aligns.py, which takes in a directory of reference alignments, two different methods to
+compare (PEbA and BLOSUM for example), and then calculates the TCS or F1 score between each test alignment
+to the reference alignment. A plot of the results is made that shows the distribution of TCS/F1 scores. 
+
+**************************************************************************************************************
+# Using ProtT5, ESM2, and DEDAL
+**************************************************************************************************************
+
+The following guide notebook was used for working with ProtT5:
+https://github.com/agemagician/ProtTrans/blob/master/Embedding/PyTorch/Advanced/ProtT5-XL-UniRef50.ipynb
+We adapted this code and used it to embed sequences in embed_seqs.py.
+
+The readme for ESM2 can be found here, which contains instructions for using the model:
+https://github.com/facebookresearch/esm
+We adapted their code and used it to embed sequences in embed_seqs.py.
+
+The readme for DEDAL can be found here, which contains instructions for using the model:
+https://github.com/google-research/google-research/tree/master/dedal
+We adapted their code and used it to run their model in run_DEDAL.py.

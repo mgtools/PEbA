@@ -93,11 +93,6 @@ def traceback(score_m, trace_m, seq1, seq2):
     # Find index of highest score in scoring matrix, start traceback at this matrix
     high_score_ind = np.unravel_index(np.argmax(score_m, axis=None), score_m.shape)
 
-    # Write highest score to file
-    high_score = score_m[high_score_ind[0], high_score_ind[1]]
-    with open('peba_alignment_scores.txt', 'a', encoding='utf-8') as file:
-        file.write(f'{high_score}\n')
-
     # Reverse strings and convert to lists so gaps can be inserted
     rev_seq1 = list(seq1[::-1])
     rev_seq2 = list(seq2[::-1])
@@ -153,8 +148,8 @@ def main():
     parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
     parser.add_argument('-embed1', type=str, default='./test1.txt', help='Name of first embedding')
     parser.add_argument('-embed2', type=str, default='./test2.txt', help='Name of second embedding')
-    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-gopen', type=float, default=0, help='Penalty for opening a gap')
+    parser.add_argument('-gext', type=float, default=-0.1, help='Penalty for extending a gap')
     parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
     args = parser.parse_args()
 

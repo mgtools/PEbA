@@ -99,13 +99,13 @@ def get_pairs(align, beg1, beg2):
     return pairs
 
 
-def compute_score(aligns):
+def compute_score(aligns, score):
     """=============================================================================================
-    This function accepts two alignments and returns the TCS between them. TCS and other metrics
-    are logged to stdout.
+    This function accepts two alignments and returns either the TCS or F1 score between them. The
+    score and other information is logged to stdout.
 
     :param aligns: dict containing two alignments
-    return float: TCS between the two alignments
+    :param score: tcs or f1
     ============================================================================================="""
 
     # Get alignments from files and get their respective pairs
@@ -153,12 +153,25 @@ def compute_score(aligns):
                 shared_pairs += 1
 
     # TCS is shared_pairs / number of pairs in first align
-    tcs = round(shared_pairs / len(align1_pairs)*100, 2)
-    sim = round(seq_sim / len(align1_pairs)*100, 2)
-    logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+    if score == 'tcs':
+        tcs = round(shared_pairs / len(align1_pairs)*100, 2)
+        sim = round(seq_sim / len(align1_pairs)*100, 2)
+        logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
                 tcs, len(align1[0]), comparison_length, sim)
 
-    return tcs
+    # F1 is 2 * (precision*recall) / (precision + recall)
+    elif score == 'f1':
+        precision = shared_pairs / (shared_pairs + len(align2_pairs) - shared_pairs)
+        recall = shared_pairs / (shared_pairs + len(align1_pairs) - shared_pairs)
+
+        # Check if F1 is zero, can't divide by zero
+        if precision == 0 and recall == 0:
+            f1 = 0
+        else:
+            f1 = 2 * (precision * recall) / (precision + recall)*100
+        sim = round(seq_sim / len(align1_pairs)*100, 2)
+        logger.info('F1: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+                f1, len(align1[0]), comparison_length, sim)
 
 
 def main():
@@ -170,7 +183,8 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-align1', type=str, default='ref1.msf', help='First alignment')
-    parser.add_argument('-align2', type=str, default='blosum1.msf', help='Second alignment')
+    parser.add_argument('-align2', type=str, default='peba1.msf', help='Second alignment')
+    parser.add_argument('-score', type=str, default='tcs', help='Comparison score (tcs or f1)')
     args = parser.parse_args()
 
     # Parse aligns and store in a dict - {align: (seq1, seq2, beg, end)}
@@ -178,8 +192,8 @@ def main():
     aligns[args.align1] = parse_align(args.align1)
     aligns[args.align2] = parse_align(args.align2)
 
-    # Compute TCS
-    compute_score(aligns)
+    # Compute score
+    compute_score(aligns, args.score)
 
 
 if __name__ == '__main__':
