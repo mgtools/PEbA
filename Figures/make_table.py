@@ -88,6 +88,19 @@ def parse_data(data, parse):
     return avg_align, count
 
 
+def add_dict():
+    """=============================================================================================
+    This function adds values from one dict to another.
+    ============================================================================================="""
+
+    for key, value in COMPARE_DICT_M1.items():
+        COMPARE_DICT_ALL_M1[key][0] += value[0]
+        COMPARE_DICT_ALL_M1[key][1] += value[1]
+    for key, value in COMPARE_DICT_M2.items():
+        COMPARE_DICT_ALL_M2[key][0] += value[0]
+        COMPARE_DICT_ALL_M2[key][1] += value[1]
+
+
 def avg_dict():
     """=============================================================================================
     This function takes a dictionary with a list of values and returns a dictionary with the average
@@ -156,20 +169,38 @@ def build_table():
     table1.columns = refs
     table2.columns = refs
 
-    print(table1)
-    print()
-    print(table2)
+    # Save to csv
+    #table1.to_csv('Figures/table1.csv')
+    #table2.to_csv('Figures/table2.csv')
 
-    # Get values and indices to graph
-    vals1 = [value for value in table1.iloc[:, 0].values if value != 0]
-    vals2 = [value for value in table2.iloc[:, 0].values if value != 0]
 
-    indices1 = table1.index[0:len(vals1)]
-    indices2 = table2.index[0:len(vals2)]
+def build_graph():
+    """=============================================================================================
+    This function takes global dictionaries and builds a graph with the results.
+    ============================================================================================="""
 
-    # Plot values against each other
-    plt.hist(vals1, indices1)
-    plt.hist(vals2, indices2)
+    # Average dictionary
+    for key, value in COMPARE_DICT_ALL_M1.items():
+        if value[1] > 10:
+            COMPARE_DICT_ALL_M1[key] = value[0]/value[1]*100
+        else:
+            COMPARE_DICT_ALL_M1[key] = 0
+    for key, value in COMPARE_DICT_ALL_M2.items():
+        if value[1] > 10:
+            COMPARE_DICT_ALL_M2[key] = value[0]/value[1]*100
+        else:
+            COMPARE_DICT_ALL_M2[key] = 0
+
+    # Build graph
+    x = [key for key in COMPARE_DICT_ALL_M1.keys() if COMPARE_DICT_ALL_M1[key] != 0]
+    y1 = [val for val in COMPARE_DICT_ALL_M1.values() if val != 0]
+    y2 = [val for val in COMPARE_DICT_ALL_M2.values() if val != 0]
+    plt.plot(x, y1, label='PEbA')
+    plt.plot(x, y2, label='BLOSUM')
+    plt.xlabel('Percent Identity')
+    plt.ylabel('Average TCS')
+    plt.legend()
+    plt.grid()
     plt.show()
 
 
@@ -180,15 +211,18 @@ def main():
     finds the average of each bucket and builds a dataframe with the results.
     ============================================================================================="""
 
-    # Arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM')
     parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
-    # Store values from csv
+    # Values for each run
     global COMPARE_DICT_M1  #pylint: disable=W0601
     global COMPARE_DICT_M2  #pylint: disable=W0601
+
+    # Values across all runs
+    global COMPARE_DICT_ALL_M1  #pylint: disable=W0601
+    global COMPARE_DICT_ALL_M2  #pylint: disable=W0601
 
     # Directory structure -> set/run/ref/msa/compare.csv
     # Want to read every single csv
@@ -201,17 +235,25 @@ def main():
         runs.append(args.p+'/'+run)
     runs.sort()
 
+    # Initialize dicts for all runs
+    if args.t == 'id':
+        COMPARE_DICT_ALL_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+        COMPARE_DICT_ALL_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+    elif args.t == 'len':
+        COMPARE_DICT_ALL_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+        COMPARE_DICT_ALL_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+
     for run in runs:  #pylint: disable=R1702
         for ref in os.listdir(f'{run}'):
 
-            # Identity buckets
+            # Initialize dicts for each run
             if args.t == 'id':
                 COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
                      59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
                 COMPARE_DICT_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
                      59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-
-            # Length buckets
             elif args.t == 'len':
                 COMPARE_DICT_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
                 COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
@@ -228,11 +270,19 @@ def main():
                             avg_align += a
                             count += b
 
+        # Add values from run dict to all runs dict
+        add_dict()
+
         # Find average for each key
         avg_dict()
 
-    # Build table
+        count += 1
+
+    # Build table with averaged dictionaries
     build_table()
+
+    # Graph average TCS vs id/len range
+    build_graph()
 
 if __name__ == "__main__":
     main()
