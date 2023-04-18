@@ -1,5 +1,9 @@
 """================================================================================================
-This script reads csv files containing results from compute_pra and parses for relevant info.
+This script reads csv files and builds tables with the results. The directories that are read
+in this script are a result from compare_aligns.py. A set of runs comes from using two methods,
+i.e. PEbA and BLOSUM, on each BAliBASE reference used in this project, of which there are five.
+The resulting tables have a column for reach run and a row for each range of values, for either
+pairwise identity or alignment length.
 
 Ben Iovino  04/05/23   VecAligns
 ================================================================================================"""
@@ -8,6 +12,8 @@ import csv
 import os
 import pickle
 import argparse
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def read_csv(filename):
@@ -78,7 +84,7 @@ def parse_data(data, parse):
         avg_align += float(line[1])
         count += 1
 
-    print(zeros, zeros2)
+    #print(zeros, zeros2)
     return avg_align, count
 
 
@@ -102,28 +108,81 @@ def avg_dict():
         else:
             COMPARE_DICT_M2[key] = 0
 
-    # Print results
-    print(f'M1: {COMPARE_DICT_M1}')
-    print()
-    print(f'M2: {COMPARE_DICT_M2}')
+    # Count number of pkl files
+    count = 0
+    for file in os.listdir('Figures'):
+        if file.endswith('.pkl'):
+            count += 1
 
     # Save to pickle
-    with open('compare_dict_m1.pkl', 'wb') as file:
+    with open(f'Figures/compare_dict_m1_{count}.pkl', 'wb') as file:
         pickle.dump(COMPARE_DICT_M1, file)
-    with open('compare_dict_m2.pkl', 'wb') as file:
+    with open(f'Figures/compare_dict_m2_{count}.pkl', 'wb') as file:
         pickle.dump(COMPARE_DICT_M2, file)
+
+
+def build_table():
+    """=============================================================================================
+    This function reads pickle files and builds a table with the results.
+
+    :return: Pandas dataframe
+    ============================================================================================="""
+
+    # Read pickle files
+    pfiles = []
+    for file in os.listdir('Figures'):
+        if file.endswith('.pkl'):
+            pfiles.append(file)
+
+    # Sort files so that they are added to dict sequentially
+    pfiles.sort()
+
+    # Build dict
+    dicts = {}
+    for file in pfiles:
+        with open(f'Figures/{file}', 'rb') as f:
+            dicts[file] = pickle.load(f)
+        os.remove(f'Figures/{file}')
+
+    # Build table
+    table = pd.DataFrame(dicts)
+
+    # Split table into two
+    table1 = table.iloc[:, :len(table.columns)//2]
+    table2 = table.iloc[:, len(table.columns)//2:]
+
+    # Rename columns
+    refs = ['RV11', 'RV12', 'RV911', 'RV912', 'RV913']
+    table1.columns = refs
+    table2.columns = refs
+
+    print(table1)
+    print()
+    print(table2)
+
+    # Get values and indices to graph
+    vals1 = [value for value in table1.iloc[:, 0].values if value != 0]
+    vals2 = [value for value in table2.iloc[:, 0].values if value != 0]
+
+    indices1 = table1.index[0:len(vals1)]
+    indices2 = table2.index[0:len(vals2)]
+
+    # Plot values against each other
+    plt.hist(vals1, indices1)
+    plt.hist(vals2, indices2)
+    plt.show()
 
 
 def main():
     """=============================================================================================
     This function initializes global dictionaries where values from csv files are stored in buckets.
     It then reads every csv file in the directory structure and parses for info of interest. It then
-    finds the average of each bucket and prints the results.
+    finds the average of each bucket and builds a dataframe with the results.
     ============================================================================================="""
 
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM/run7')
+    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM')
     parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
@@ -131,42 +190,49 @@ def main():
     global COMPARE_DICT_M1  #pylint: disable=W0601
     global COMPARE_DICT_M2  #pylint: disable=W0601
 
-    # Identity buckets
-    if args.t == 'id':
-        COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-        COMPARE_DICT_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-
-    # Length buckets
-    elif args.t == 'len':
-        COMPARE_DICT_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-        COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-
     # Directory structure -> set/run/ref/msa/compare.csv
     # Want to read every single csv
     avg_align, count = 0, 0
     path = args.p
-    #for run in os.listdir(path):  #pylint: disable=R1702
-    for ref in os.listdir(f'{path}'):
-        for msa in os.listdir(f'{path}/{ref}'):
-            if msa.startswith('B'):
-                print(msa)
-                for file in os.listdir(f'{path}/{ref}/{msa}'):
-                    if file.endswith('csv'):
 
-                        # Read csv and parse
-                        data = read_csv(f'{path}/{ref}/{msa}/{file}')
-                        a, b = parse_data(data, args.t)
-                        avg_align += a
-                        count += b
+    # Sort runs so dictionaries are built sequentially
+    runs = []
+    for run in os.listdir(path):
+        runs.append(args.p+'/'+run)
+    runs.sort()
 
-    #print(COMPARE_DICT_M1)
-    #print(COMPARE_DICT_M2)
+    for run in runs:  #pylint: disable=R1702
+        for ref in os.listdir(f'{run}'):
 
-    # Find average for each key
-    avg_dict()
+            # Identity buckets
+            if args.t == 'id':
+                COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+                COMPARE_DICT_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
 
+            # Length buckets
+            elif args.t == 'len':
+                COMPARE_DICT_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+                COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+
+            for msa in os.listdir(f'{run}/{ref}'):
+                if msa.startswith('B'):
+                    #print(msa)
+                    for file in os.listdir(f'{run}/{ref}/{msa}'):
+                        if file.endswith('csv'):
+
+                            # Read csv and parse
+                            data = read_csv(f'{run}/{ref}/{msa}/{file}')
+                            a, b = parse_data(data, args.t)
+                            avg_align += a
+                            count += b
+
+        # Find average for each key
+        avg_dict()
+
+    # Build table
+    build_table()
 
 if __name__ == "__main__":
     main()
