@@ -54,17 +54,25 @@ comparison_length is the number of residue pairs being compared (gaps are not co
 the percentage of identical residues between the two sequences that are matched together i.e. if a pair
 has the same two residues, it is a match.
 
-The F1 score can also be calculated to compare the performance of the alignments, but TCS is the default.
+The F1 score can also be calculated to compare alignments, but TCS is the default.
 
 **************************************************************************************************************
 # Methods Compared
 **************************************************************************************************************
 
-From each BAliBASE benchmark MSA, we extracted each pairwise alignment. We took each pair and generated
+From each BAliBASE benchmark MSA we extracted each pairwise alignment. We took each pair and generated
 alignments using PEbA with ProtT5 embeddings, PEbA with ESM2 embeddings, BLOSUM, and DEDAL. All testing was
 done with compare_aligns.py, which takes in a directory of reference alignments, two different methods to
 compare (PEbA and BLOSUM for example), and then calculates the TCS or F1 score between each test alignment
-to the reference alignment. A plot of the results is made that shows the distribution of TCS/F1 scores. 
+to the reference alignment. A plot of the results is made that shows the distribution of TCS/F1 scores.
+
+**************************************************************************************************************
+# Requirements
+**************************************************************************************************************
+
+This project was developed using python 3.10.6. Necessary requirements for running PEbA can be installed from
+base_requirements.txt. Requirements for reproducing the results of this project can be installed from
+all_requirements.txt.
 
 **************************************************************************************************************
 # Using ProtT5, ESM2, and DEDAL
@@ -81,3 +89,10 @@ We adapted their code and used it to embed sequences in embed_seqs.py.
 The readme for DEDAL can be found here, which contains instructions for using the model:
 https://github.com/google-research/google-research/tree/master/dedal
 We adapted their code and used it to run their model in run_DEDAL.py.
+
+**************************************************************************************************************
+# Tables and Figures
+**************************************************************************************************************
+
+The 'Figures' folder contains several scripts used to generate the figures and tables in the paper that don't
+include the graphs comparing PEbA to other methods made from compare_aligns.py.
