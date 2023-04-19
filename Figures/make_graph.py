@@ -13,6 +13,7 @@ import os
 import pickle
 import argparse
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def read_csv(filename):
@@ -87,6 +88,19 @@ def parse_data(data, parse):
     return avg_align, count
 
 
+def add_dict():
+    """=============================================================================================
+    This function adds values from one dict to another.
+    ============================================================================================="""
+
+    for key, value in COMPARE_DICT_M1.items():
+        COMPARE_DICT_ALL_M1[key][0] += value[0]
+        COMPARE_DICT_ALL_M1[key][1] += value[1]
+    for key, value in COMPARE_DICT_M2.items():
+        COMPARE_DICT_ALL_M2[key][0] += value[0]
+        COMPARE_DICT_ALL_M2[key][1] += value[1]
+
+
 def avg_dict():
     """=============================================================================================
     This function takes a dictionary with a list of values and returns a dictionary with the average
@@ -155,13 +169,40 @@ def build_table():
     table1.columns = refs
     table2.columns = refs
 
-    print(table1)
-    print()
-    print(table2)
-
     # Save to csv
     #table1.to_csv('Figures/table1.csv')
     #table2.to_csv('Figures/table2.csv')
+
+
+def build_graph():
+    """=============================================================================================
+    This function takes global dictionaries and builds a graph with the results.
+    ============================================================================================="""
+
+    # Average dictionary
+    for key, value in COMPARE_DICT_ALL_M1.items():
+        if value[1] > 10:
+            COMPARE_DICT_ALL_M1[key] = value[0]/value[1]*100
+        else:
+            COMPARE_DICT_ALL_M1[key] = 0
+    for key, value in COMPARE_DICT_ALL_M2.items():
+        if value[1] > 10:
+            COMPARE_DICT_ALL_M2[key] = value[0]/value[1]*100
+        else:
+            COMPARE_DICT_ALL_M2[key] = 0
+
+    # Build graph
+    x = [key for key in COMPARE_DICT_ALL_M1.keys() if COMPARE_DICT_ALL_M1[key] != 0]
+    y1 = [val for val in COMPARE_DICT_ALL_M1.values() if val != 0]
+    y2 = [val for val in COMPARE_DICT_ALL_M2.values() if val != 0]
+    print(x, y1, y2)
+    plt.plot(x, y1, label='PEbA')
+    plt.plot(x, y2, label='BLOSUM62')
+    plt.xlabel('Pairwise Identity')
+    plt.ylabel('Average TCS')
+    plt.legend()
+    plt.grid()
+    plt.show()
 
 
 def main():
@@ -180,15 +221,31 @@ def main():
     global COMPARE_DICT_M1  #pylint: disable=W0601
     global COMPARE_DICT_M2  #pylint: disable=W0601
 
-    # Sort runs so dictionaries are built sequentially
-    runs = []
-    for run in os.listdir(args.p):
-        runs.append(args.p+'/'+run)
-    runs.sort()
+    # Values across all runs
+    global COMPARE_DICT_ALL_M1  #pylint: disable=W0601
+    global COMPARE_DICT_ALL_M2  #pylint: disable=W0601
 
     # Directory structure -> set/run/ref/msa/compare.csv
     # Want to read every single csv
     avg_align, count = 0, 0
+    path = args.p
+
+    # Sort runs so dictionaries are built sequentially
+    runs = []
+    for run in os.listdir(path):
+        runs.append(args.p+'/'+run)
+    runs.sort()
+
+    # Initialize dicts for all runs
+    if args.t == 'id':
+        COMPARE_DICT_ALL_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+        COMPARE_DICT_ALL_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+    elif args.t == 'len':
+        COMPARE_DICT_ALL_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+        COMPARE_DICT_ALL_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+
     for run in runs:  #pylint: disable=R1702
         for ref in os.listdir(f'{run}'):
 
@@ -204,6 +261,7 @@ def main():
 
             for msa in os.listdir(f'{run}/{ref}'):
                 if msa.startswith('B'):
+                    #print(msa)
                     for file in os.listdir(f'{run}/{ref}/{msa}'):
                         if file.endswith('csv'):
 
@@ -213,12 +271,19 @@ def main():
                             avg_align += a
                             count += b
 
+        # Add values from run dict to all runs dict
+        add_dict()
+
         # Find average for each key
         avg_dict()
+
+        count += 1
 
     # Build table with averaged dictionaries
     build_table()
 
+    # Graph average TCS vs id/len range
+    build_graph()
 
 if __name__ == "__main__":
     main()

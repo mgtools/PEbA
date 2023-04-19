@@ -158,7 +158,7 @@ def main():
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
-    parser.add_argument('-score', type=int, default=45, help='log odds score of subsitution matrix')
+    parser.add_argument('-score', type=int, default=62, help='log odds score of subsitution matrix')
     args = parser.parse_args()
 
     # Load fasta files and ids

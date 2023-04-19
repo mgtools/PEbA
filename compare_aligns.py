@@ -523,7 +523,6 @@ def main():
     methods = {'method1': [args.method1, args.matrix1, args.value1, args.gopen1, args.gext1, args.encoder1],
                'method2': [args.method2, args.matrix2, args.value2, args.gopen2, args.gext2, args.encoder2]}
 
-    '''
     # Get directory of reference alignments i.e. 'RV11'
     ref_dir = args.path.rsplit('/', maxsplit=1)[-1]
 
@@ -549,8 +548,7 @@ def main():
     msf_files.sort()
     fasta_files.sort()
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
-    '''
-    bb_dir = 'bb_data0/RV11'
+
     # Compare alignments to get comparison score and graph results
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir, args.score)
