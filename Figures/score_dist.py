@@ -1,190 +1,109 @@
 """================================================================================================
-This script aligns two protein sequences using either PEbA or BLOSUM and plots the distribution
-of scores for the alignments. Place two fasta files and their embeddings to output a graph.
+This script aligns takes residue pairs from alignments, determines their cosine similarity and 
+substitution score, and plots the distribution of scores against each other.
 
-Ben Iovino  04/18/23   VecAligns
+Ben Iovino  04/20/23   VecAligns
 ================================================================================================"""
 
-import sys
 import os
-import argparse
-import blosum as bl
-import matplotlib.pyplot as plt
-import numpy as np
+import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.pardir, 'VecAligns')))
-from utility import parse_fasta
+from compare_aligns import parse_ref_folder, parse_fasta_ca, parse_msf, write_align_ca
+from compute_score import parse_align
 
 
-def peba_align(seq1, seq2, vecs1, vecs2, gopen, gext):
+def parse_aligns(msf_files, fasta_files, bb_dir):
     """=============================================================================================
-    This function accepts two sequences, creates a matrix corresponding to their lengths, and
-    calculates the score of the alignments for each index. A second matrix is scored so that the
-    best alignment can be tracebacked.
+    This function accepts lists of two sets of files and a directory to place them in where they
+    are parsed correspondingly.
 
-    :param seq1: first sequence
-    :param seq2: second sequence
-    :param vecs1: first sequence's amino acid vectors
-    :param vecs2: second sequence's amino acid vectors
-    :param gopen: gap penalty for opening a new gap
-    :param gext: gap penalty for extending a gap
-    return: list of scores from matching pairs
+    :param msf_files: list of msf files
+    :param fasta_files: list of fasta files
+    :param bb_dir: directory to place files in
     ============================================================================================="""
 
-    # Initialize scoring and traceback matrix based on sequence lengths
-    row_length = len(seq1)+1
-    col_length = len(seq2)+1
-    score_m = np.full((row_length, col_length), 0)
-    trace_m = np.full((row_length, col_length), 0)
+    # Parse each fasta file, store names of each for subsequent msf parsing
+    seqs = []
+    for file in fasta_files:
+        new_seqs = parse_fasta_ca(file, bb_dir)
+        seqs.append(new_seqs)  # Store in nested list to access only relevant fa files for each msf
 
-    # List of scores from matching pairs
-    scores = []
+    # Each MSF files corresponds to a set of fasta files
+    for i, file in enumerate(msf_files):
+        ref_align = file.rsplit('/', maxsplit=1)[-1].strip('.msf')  # Get name of ref alignment
 
-    # Score matrix by moving through each index
-    gap = False
-    for i in range(len(seq1)):
-        seq1_vec = vecs1[i]  # Corresponding amino acid vector in 1st sequence
-        for j in range(len(seq2)):
+        # Get all pairwise alignments from the fasta files correpsonding to the MSF file
+        sequences = seqs[i]
+        pairwise_aligns = []
+        for i, seq in enumerate(sequences):
+            loop_count = i  # Keep track of number of loops so no repeats occur
+            while loop_count != len(sequences):
+                if seq != sequences[loop_count]:  # Don't want to align a sequence to itself
+                    pairwise_aligns.append([seq, sequences[loop_count]])
+                loop_count+=1
 
-            # Preceding scoring matrix values
-            diagonal = score_m[i][j]
-            horizontal = score_m[i+1][j]
-            vertical = score_m[i][j+1]
-
-            # Score pair of residues based off cosine similarity
-            seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
-            cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
-            cos_sim *= 10
-
-            # Add to scoring matrix values via scoring method
-            diagonal += cos_sim
-            if gap is False:  # Apply gap open penalty if there is no gap
-                horizontal += gopen
-                vertical += gopen
-            if gap is True:  # Apply gap extension penalty if there is a gap
-                horizontal += gext
-                vertical += gext
-
-            # Assign value to traceback matrix and update gap status
-            score = max(diagonal, horizontal, vertical)
-            if score == diagonal:
-                scores.append(cos_sim)
-                trace_m[i+1][j+1] = 0
-                gap = False
-            if score == horizontal:
-                trace_m[i+1][j+1] = -1
-                gap = True
-            if score == vertical:
-                trace_m[i+1][j+1] = 1
-                gap = True
-
-            # Assign max value to scoring matrix
-            score_m[i+1][j+1] = max(score, 0)
-
-    return scores
+        # For the selected pairs, take the pairwise alignment from the reference MSA
+        file_count = 0
+        for pair in pairwise_aligns:
+            seq1 = pair[0]
+            seq2 = pair[1]
+            seq1, seq2 = seq1.split('.')[0], seq2.split('.')[0]  # Remove fa
+            align1, align2 = parse_msf(file, seq1, seq2)  # Gather pairwise alignment
+            file_path = f'{bb_dir}/{ref_align}/{ref_align}_{file_count}'
+            write_align_ca(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
+            file_count += 1
 
 
-def matrix_align(seq1, seq2, subs_matrix, gopen, gext):
+def return_pairs(bb_dir):
     """=============================================================================================
-    This function accepts two sequences, creates a matrix corresponding to their lengths, and
-    calculates the score of the alignments for each index. A second matrix is scored so that the
-    best alignment can be tracebacked.
+    This function takes a directory of pairwise alignments and returns a list of residue pairs from
+    the first pairwise alignment in each MSA.
 
-    :param seq1: first sequence
-    :param seq2: second sequence
-    :param subs_matrix: substitution scoring matrix (i.e. BLOSUM62)
-    :param gopen: gap penalty for opening a new gap
-    :param gext: gap penalty for extending a gap
-    return: list of scores from matching pairs
+    :param bb_dir: directory of pairwise alignments
+    :return: list of residue pairs
     ============================================================================================="""
 
-    # Initialize scoring and traceback matrix based on sequence lengths
-    row_length = len(seq1)+1
-    col_length = len(seq2)+1
-    score_m = np.full((row_length, col_length), 0)
-    trace_m = np.full((row_length, col_length), 0)
+    # Get to first pairwise alignment from each MSA
+    for direc in os.listdir(bb_dir):
+        for file in os.listdir(f'{bb_dir}/{direc}'):
+            if file.endswith('msf'):
+                seq1, seq2, id1, id2 = parse_align(f'{bb_dir}/{direc}/{file}')
 
-    # List of scores from matching pairs
-    scores = []
-
-    # Score matrix by moving through each index
-    gap = False
-    for i, char in enumerate(seq1):
-        seq1_char = char  # Character in 1st sequence
-        for j, char in enumerate(seq2):
-            seq2_char = char  # Character in 2nd sequence
-
-            # Preceding scoring matrix values
-            diagonal = score_m[i][j]
-            horizontal = score_m[i+1][j]
-            vertical = score_m[i][j+1]
-
-            # Score pair of residues based off BLOSUM matrix
-            matrix_score = subs_matrix[f'{seq1_char}{seq2_char}']
-
-            # Add to matrix values via scoring method
-            diagonal += matrix_score
-            if gap is False:  # Apply gap open penalty if there is no gap
-                horizontal += gopen
-                vertical += gopen
-            if gap is True:  # Apply gap extension penalty if there is a gap
-                horizontal += gext
-                vertical += gext
-
-            # Assign value to traceback matrix and update gap status
-            score = max(diagonal, horizontal, vertical)
-            if score == diagonal:
-                scores.append(matrix_score)
-                trace_m[i+1][j+1] = 0
-                gap = False
-            if score == horizontal:
-                trace_m[i+1][j+1] = -1
-                gap = True
-            if score == vertical:
-                trace_m[i+1][j+1] = 1
-                gap = True
-
-            # Assign max value to scoring matrix
-            score_m[i+1][j+1] = max(score, 0)
-
-    return scores
+                # Get residue pairs - residues aligned to other residues
+                pairs = []
+                for i, res in enumerate(seq1):
+                    if res != '.' and seq2[i] != '.':  # If aligned
+                            pairs.append([res, seq2[i]])
+                print(pairs)
+                sys.exit()
 
 def main():
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
-    parser.add_argument('-embed1', type=str, default='./test1.txt', help='Name of first embedding')
-    parser.add_argument('-embed2', type=str, default='./test2.txt', help='Name of second embedding')
-    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
-    parser.add_argument('-score', type=int, default=62, help='log odds score of subsitution matrix')
-    args = parser.parse_args()
+    # Read reference alignments from file
+    path = 'BAliBASE_R1-5/bb3_release/RV11'
 
-    # Load fasta files and ids
-    seq1, id1 = parse_fasta(args.file1)  #pylint: disable=W0612
-    seq2, id2 = parse_fasta(args.file2)  #pylint: disable=W0612
+    # Get directory of reference alignments i.e. 'RV11'
+    ref_dir = path.rsplit('/', maxsplit=1)[-1]
 
-    # Load embedding files
-    vecs1 = np.loadtxt(args.embed1)
-    vecs2 = np.loadtxt(args.embed2)
+    # Create unique directory for results, this allows for parallel runs of the script i.e. 'bb_data0'
+    bb_ct = 0
+    for direc in os.listdir():
+        if direc.startswith('bb_data'):
+            bb_ct += 1
+    bb_dir = f'bb_data{bb_ct}/{ref_dir}'
+    os.makedirs(bb_dir)
 
-    # Load substitution matrix
-    matrix = bl.BLOSUM(args.score)
+    # Parse ref folder
+    msf_files, fasta_files = parse_ref_folder(path)
 
-    # Call align functions to get scores
-    peba_scores = peba_align(seq1, seq2, vecs1, vecs2, args.gopen, args.gext)
-    blosum_scores = matrix_align(seq1, seq2, matrix, args.gopen, args.gext)
+    # Sort each list of files to ensure they match up for msf parsing
+    msf_files.sort()
+    fasta_files.sort()
+    parse_aligns(msf_files, fasta_files, bb_dir)
 
-    # Plot histogram of scores
-    plt.hist(peba_scores, bins=10, alpha=0.5, label='Cosine Similarity')
-    plt.hist(blosum_scores, bins=10, alpha=0.5, label=f'BLOSUM{args.score}')
-    plt.legend(loc='upper right')
-    plt.title("Scores of Matching Pairs")
-    plt.xlabel("Score")
-    plt.ylabel("Frequency")
-    plt.show()
+    # Get first 100 residue pairs from first PW align in each MSA
+    return_pairs(bb_dir)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -24,7 +24,7 @@ def parse_align(filename):
     as the character positions that the alignment begins and ends at.
 
     :param filename: name of file
-    return: seq1, seq2 - aligned sequences; beg, end - beginning and end chars of aligns
+    return seq1, seq2, id1, id2: sequences and names of sequences
     ============================================================================================="""
 
     seq1 = []
@@ -46,22 +46,21 @@ def parse_align(filename):
                 count += 1
                 continue
 
-            # Line 5 contains align info, get beginning and end chars of alig (if specified)
-            if i == 4:
-                try:
-                    beg = line.split()[3].split('-')[0]
-                    end = line.split()[3].split('-')[1]
-                except IndexError:
-                    beg = 0
-                    end = 0
-            if line.startswith('//'):  # Alignment starts after '//'
+            # Get names of sequences
+            if i == 6:
+                id1 = line.split()[1]
+            if i == 7:
+                id2 = line.split()[1]
+
+            # Alignment starts after '//'
+            if line.startswith('//'):
                 in_align = True
 
     # Join the two sequences and return them
     seq1 = ''.join(seq1)
     seq2 = ''.join(seq2)
 
-    return seq1, seq2, beg, end
+    return seq1, seq2, id1, id2
 
 
 def get_pairs(align, beg1, beg2):
@@ -183,7 +182,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-align1', type=str, default='ref1.msf', help='First alignment')
-    parser.add_argument('-align2', type=str, default='peba1.msf', help='Second alignment')
+    parser.add_argument('-align2', type=str, default='ref2.msf', help='Second alignment')
     parser.add_argument('-score', type=str, default='tcs', help='Comparison score (tcs or f1)')
     args = parser.parse_args()
 
