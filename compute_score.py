@@ -140,11 +140,9 @@ def compute_score(aligns, score):
     # Compare pairs between the two alignments
     shared_pairs = 0
     seq_sim = 0
-    comparison_length = 0
     for key, value in align1_pairs.items():
         if int(key[1:]) < beg or int(key[1:]) > end:  # Check if pair is in the comparison region
             continue
-        comparison_length += 1
         if key[0] == value[0]:  # First index is the character
             seq_sim += 1
         if key in align2_pairs:  # Check if same pair is in the other alignment
@@ -153,10 +151,7 @@ def compute_score(aligns, score):
 
     # TCS is shared_pairs / number of pairs in first align
     if score == 'tcs':
-        tcs = round(shared_pairs / len(align1_pairs)*100, 2)
-        sim = round(seq_sim / len(align1_pairs)*100, 2)
-        logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
-                tcs, len(align1[0]), comparison_length, sim)
+        sc = round(shared_pairs / len(align1_pairs)*100, 2)
 
     # F1 is 2 * (precision*recall) / (precision + recall)
     elif score == 'f1':
@@ -165,12 +160,14 @@ def compute_score(aligns, score):
 
         # Check if F1 is zero, can't divide by zero
         if precision == 0 and recall == 0:
-            f1 = 0
+            sc = 0
         else:
-            f1 = 2 * (precision * recall) / (precision + recall)*100
-        sim = round(seq_sim / len(align1_pairs)*100, 2)
-        logger.info('F1: %s   ref_length: %s   comparison_length: %s   similarity: %s',
-                f1, len(align1[0]), comparison_length, sim)
+            sc = 2 * (precision * recall) / (precision + recall)*100
+
+    # Report the score and other info
+    sim = round(seq_sim / len(align1_pairs)*100, 2)
+    logger.info('%s: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+            score.upper(), sc, len(align1[0]), len(align1_pairs), sim)
 
 
 def main():
