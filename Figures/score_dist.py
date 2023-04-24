@@ -100,7 +100,7 @@ def return_pairs(bb_dir):
 
                 # Add pairs and ids and dict
                 pairs_dict[file] = [pairs, id1, id2]
-            
+
     return pairs_dict
 
 

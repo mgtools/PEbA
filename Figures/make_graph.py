@@ -213,7 +213,7 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/gen3/PEBA-BLOSUM')
+    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/PEBA-BLOSUM')
     parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
