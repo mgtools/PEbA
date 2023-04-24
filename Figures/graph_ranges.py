@@ -13,6 +13,24 @@ import argparse
 import matplotlib.pyplot as plt
 
 
+def initialize_dict(parse):
+    """=============================================================================================
+    This function accepts a type of information to be parsed and returns a dictionary with
+    corresponding keys.
+
+    :param parse: information of interest i.e. pairwise identity or alignment length
+    :return: two dicts
+    ============================================================================================="""
+
+    if parse == 'id':
+        dct = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
+             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
+    elif parse == 'len':
+        dct = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+
+    return dct
+
+
 def read_csv(filename):
     """=============================================================================================
     This function accepts a csv filename and returns a list of lists with each line being a list.
@@ -37,14 +55,8 @@ def parse_data(data, parse):
     ============================================================================================="""
 
     # Initialize dict based on type of info to be parsed
-    if parse == 'id':
-        dict_m1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-        dict_m2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-    elif parse == 'len':
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+    dict_m1 = initialize_dict(parse)
+    dict_m2 = initialize_dict(parse)
 
     count = 0
     for line in data:
@@ -91,14 +103,8 @@ def parse_run(run, parse):
     ============================================================================================="""
 
     # Initialize dict based on type of info to be parsed
-    if parse == 'id':
-        dict_m1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-        dict_m2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-    elif parse == 'len':
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+    dict_m1 = initialize_dict(parse)
+    dict_m2 = initialize_dict(parse)
 
     # Initialize dictionary
     data = {}
@@ -124,51 +130,119 @@ def parse_run(run, parse):
     return dict_m1, dict_m2
 
 
+def avg_dict(dct):
+    """=============================================================================================
+    This function takes a dictionary with a list of values and returns a dictionary with the average
+    of the values.
+
+    :return: dict
+    ============================================================================================="""
+
+    # Dicts are global
+    for key, value in dct.items():
+        if value[1] > 10: # Want at least 10 alignments in this range before we average
+            dct[key] = value[0]/value[1]*100
+        else:
+            dct[key] = 0
+
+
+def build_graph(dict_m1, dict_m2, dict_m3, ref, parse):
+    """=============================================================================================
+    This function takes a set of dictionaries and graphs them.
+
+    :param dict_m1: dictionary of method 1
+    :param dict_m2: dictionary of method 2
+    :param dict_m3: dictionary of method 3
+    :param ref: reference alignments
+    :param parse: information of interest
+    ============================================================================================="""
+
+    # Vars for graph title
+    if ref == '1':
+        ref = 'RV11/12'
+    elif ref == '9':
+        ref = 'RV911/912/913'
+    if parse == 'id':
+        parse = 'Pairwise Identity'
+    elif parse == 'len':
+        parse = 'Alignment Length'
+
+    # Ignore keys with 0 values
+    x = [key for key in dict_m1.keys() if dict_m1[key] != 0]
+    y1 = [val for val in dict_m1.values() if val != 0]
+    y2 = [val for val in dict_m2.values() if val != 0]
+
+    # When making alignment length plot for references 911/912/913, have to include all values
+    # because the TCS values are 0 for lengths in last bucket
+    y3 = [val for val in dict_m3.values()]
+
+    # Plot
+    plt.plot(x, y1, label='PEbA')
+    plt.plot(x, y2, label='BLOSUM62')
+    plt.plot(x, y3, label='DEDAL')
+    plt.xlabel(f'{parse}')
+    plt.ylabel('Average TCS')
+    plt.title(f'Average TCS vs {parse} in {ref}')
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+
 def main():
     """=============================================================================================
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/PEBA-BLOSUM')
-    parser.add_argument('-r', type=str, default='1')
-    parser.add_argument('-t', type=str, default='id')
+    parser.add_argument('-p1', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/PEBA-BLOSUM')
+    parser.add_argument('-p2', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/PEBA-DEDAL')
+    parser.add_argument('-r', type=str, default='9')
+    parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
 
     # Initialize dict based on type of info to be parsed
-    if args.t == 'id':
-        dict_m1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-        dict_m2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-    elif args.t == 'len':
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-        dict_m1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+    dict_m1 = initialize_dict(args.t)
+    dict_m2 = initialize_dict(args.t)
+    dict_m3 = initialize_dict(args.t)
 
     # Run directories
-    runs = sorted(os.listdir(args.p))
+    runs = sorted(os.listdir(args.p1))
     if args.r == '1':  # '1' stands for references 11 and 12
         runs = runs[:2]
     elif args.r == '9':  # '9' stands for references 911, 912, and 913
         runs = runs[2:]
 
-    # Parse csvs in each run
+    # Parse csv's in each run
     for run in runs:
-        dict2_m1, dict2_m2 = parse_run(f'{args.p}/{run}', args.t)
+        dict2_m1, dict2_m2 = parse_run(f'{args.p1}/{run}', args.t)
 
         # Add to running total
         for key, value in dict_m1.items():
             value[0] += dict2_m1[key][0]
             value[1] += dict2_m1[key][1]
-
         for key, value in dict_m2.items():
             value[0] += dict2_m2[key][0]
             value[1] += dict2_m2[key][1]
 
-    # Print results
-    print(dict_m1)
-    print(dict_m2)
+    # Same as above but for DEDAL
+    runs = sorted(os.listdir(args.p2))
+    if args.r == '1':
+        runs = runs[:2]
+    elif args.r == '9':
+        runs = runs[2:]
+
+    # Parse csv's in each run
+    for run in runs:
+        dict2_m1, dict2_m2 = parse_run(f'{args.p2}/{run}', args.t)
+        for key, value in dict_m3.items():
+            value[0] += dict2_m2[key][0]
+            value[1] += dict2_m2[key][1]
+
+    # Average values and build graph
+    for dct in [dict_m1, dict_m2, dict_m3]:
+        avg_dict(dct)
+        print(dct)
+    build_graph(dict_m1, dict_m2, dict_m3, args.r, args.t)
 
 
 if __name__ == '__main__':
     main()
-
