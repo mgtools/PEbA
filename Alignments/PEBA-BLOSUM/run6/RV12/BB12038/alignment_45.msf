@@ -1,0 +1,154 @@
+PileUp
+
+
+
+   MSF: 2333  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1znc_A     oo  Len:  2333
+ Name: PTPZ_HUMAN oo  Len:  2333
+
+//
+
+
+
+1znc_A          .......... .......... .......... .......WCY EV.QAVPVK. 
+PTPZ_HUMAN      MRILKRFLAC IQLLCVCRLD WANGYYRQQR KLVEEIGWSY T.G.ALNQKN 
+
+1znc_A          WGGN...CQK DRQSPINIV. ..TTKAKVD. KKLGRFFFSY DKKQTW...T 
+PTPZ_HUMAN      WGKKYPTCNS PKQSPINI.D EDLTQVNVNL KKL.KF.QGW DKTSL.ENTF 
+
+1znc_A          VQNNGHSVMM LLENKASISG GG.LPAPYQA KQLHLHWSDL P...YKGSEH 
+PTPZ_HUMAN      IHNTGKTVEI NLTNDYRVSG G.VSEMVFKA SKITFHWGKC .NMSSDGSEH 
+
+1znc_A          SLDGEHFAME MHIVHE...K EKTSRNVKEA QDPEDEIAVL AFLVEAGQVN 
+PTPZ_HUMAN      SLEGQKFPLE MQI.Y.CFDA DRFS.SFEEA VKGKGKLRAL SILFEVG.TE 
+
+1znc_A          EGFQP...LV EALSNIPKP. .EMSTTMAES .SLLDLLPKK LHY..FRYLG 
+PTPZ_HUMAN      ENLD.FKAII DGVESVSR.F G.KQAALDP. FILLNLLPNS TD.KYYIYNG 
+
+1znc_A          SLTTPTCDEK VVWTVFREPI QLHREQILAF SKLYY..DKE QTVSMKDN.. 
+PTPZ_HUMAN      SLTSPPCTDT VDWIVFKDTV SISESQLAVF CEVL.TMQQS GYVMLMD.YL 
+
+1znc_A          ...VRPLQQL GQRTVIKS.. .......... .......... .......... 
+PTPZ_HUMAN      QNNFREQQYK FSRQVFSSYT GKEEIHEAVC SSEPENVQAD PENYTSLLVT 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      WERPRVVYDT MIEKFAVLYQ QLDGEDQTKH EFLTDGYQDL GAILNNLLPN 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      MSYVLQIVAI CTNGLYGKYS DQLIVDMPTD NPELDLFPEL IGTEEIIKEE 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EEGKDIEEGA IVNPGRDSAT NQIRKKEPQI STTTHYNRIG TKYNEAKTNR 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SPTRGSEFSG KGDVPNTSLN STSQPVTKLA TEKDISLTSQ TVTELPPHTV 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EGTSASLNDG SKTVLRSPHM NLSGTAESLN TVSITEYEEE SLLTSFKLDT 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      GAEDSSGSSP ATSAIPFISE NISQGYIFSS ENPETITYDV LIPESARNAS 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EDSTSSGSEE SLKDPSMEGN VWFPSSTDIT AQPDVGSGRE SFLQTNYTEI 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      RVDESEKTTK SFSAGPVMSQ GPSVTDLEMP HYSTFAYFPT EVTPHAFTPS 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SRQQDLVSTV NVVYSQTTQP VYNGETPLQP SYSSEVFPLV TPLLLDNQIL 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      NTTPAASSSD SALHATPVFP SVDVSFESIL SSYDGAPLLP FSSASFSSEL 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FRHLHTVSQI LPQVTSATES DKVPLHASLP VAGGDLLLEP SLAQYSDVLS 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      TTHAASETLE FGSESGVLYK TLMFSQVEPP SSDAMMHARS SGPEPSYALS 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      DNEGSQHIFT VSYSSAIPVH DSVGVTYQGS LFSGPSHIPI PKSSLITPTA 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SLLQPTHALS GDGEWSGASS DSEFLLPDTD GLTALNISSP VSVAEFTYTT 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SVFGDDNKAL SKSEIIYGNE TELQIPSFNE MVYPSESTVM PNMYDNVNKL 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      NASLQETSVS ISSTKGMFPG SLAHTTTKVF DHEISQVPEN NFSVQPTHTV 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SQASGDTSLK PVLSANSEPA SSDPASSEML SPSTQLLFYE TSASFSTEVL 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      LQPSFQASDV DTLLKTVLPA VPSDPILVET PKVDKISSTM LHLIVSNSAS 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SENMLHSTSV PVFDVSPTSH MHSASLQGLT ISYASEKYEP VLLKSESSHQ 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      VVPSLYSNDE LFQTANLEIN QAHPPKGRHV FATPVLSIDE PLNTLINKLI 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      HSDEILTSTK SSVTGKVFAG IPTVASDTFV STDHSVPIGN GHVAITAVSP 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      HRDGSVTSTK LLFPSKATSE LSHSAKSDAG LVGGGEDGDT DDDGDDDDDR 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      DSDGLSIHKC MSCSSYRESQ EKVMNDSDTH ENSLMDQNNP ISYSLSENSE 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EDNRVTSVSS DSQTGMDRSP GKSPSANGLS QKHNDGKEEN DIQTGSALLP 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      LSPESKAWAV LTSDEESGSG QGTSDSLNEN ETSTDFSFAD TNEKDADGIL 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      AAGDSEITPG FPQSPTSSVT SENSEVFHVS EAEASNSSHE SRIGLAEGLE 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SEKKAVIPLV IVSALTFICL VVLVGILIYW RKCFQTAHFY LEDSTSPRVI 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      STPPTPIFPI SDDVGAIPIK HFPKHVADLH ASSGFTEEFE TLKEFYQEVQ 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SCTVDLGITA DSSNHPDNKH KNRYINIVAY DHSRVKLAQL AEKDGKLTDY 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      INANYVDGYN RPKAYIAAQG PLKSTAEDFW RMIWEHNVEV IVMITNLVEK 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      GRRKCDQYWP ADGSEEYGNF LVTQKSVQVL AYYTVRNFTL RNTKIKKGSQ 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      KGRPSGRVVT QYHYTQWPDM GVPEYSLPVL TFVRKAAYAK RHAVGPVVVH 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      CSAGVGRTGT YIVLDSMLQQ IQHEGTVNIF GFLKHIRSQR NYLVQTEEQY 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      VFIHDTLVEA ILSKETEVLD SHIHAYVNAL LIPGPAGKTK LEKQFQLLSQ 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SNIQQSDYSA ALKQCNREKN RTSSIIPVER SRVGISSLSG EGTDYINASY 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      IMGYYQSNEF IITQHPLLHT IKDFWRMIWD HNAQLVVMIP DGQNMAEDEF 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      VYWPNKDEPI NCESFKVTLM AEEHKCLSNE EKLIIQDFIL EATQDDYVLE 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      VRHFQCPKWP NPDSPISKTF ELISVIKEEA ANRDGPMIVH DEHGGVTAGT 
+
+1znc_A          .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FCALTTLMHQ LEKENSVDVY QVAKMINLMR PGVFADIEQY QFLYKVILSL 
+
+1znc_A          .......... .......... .......... ...
+PTPZ_HUMAN      VSTRQEENPS TSLDSNGAAL PDGNIAESLE SLV
+

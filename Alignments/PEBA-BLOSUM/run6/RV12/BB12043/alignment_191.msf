@@ -1,0 +1,49 @@
+PileUp
+
+
+
+   MSF: 590  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bio_     oo  Len:  590
+ Name: TPA_MOUSE oo  Len:  590
+
+//
+
+
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      MKRELLCVLL LCGLAFPLPD QGIHGRFRRG ARSYRATCRD EPTQTTYQQH 
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      QSWLRPMLRS SRVEYCRCNS GLVQCHSVPV RSCSEPRCFN GGTCQQALYF 
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      SDFVCQCPDG FVGKRCDIDT RATCFEEQGI TYRGTWSTAE SGAECINWNS 
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      SVLSLKPYNA RRPNAIKLGL GNHNYCRNPD RDLKPWCYVF KAGKYTTEFC 
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      STPACPKGKS EDCYVGKGVT YRGTHSLTTS QASCLPWNSI VLMGKSYTAW 
+
+1bio_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      RTNSQALGLG RHNYCRNPDG DARPWCHVMK DRKLTWEYCD MSPCSTCGLR 
+
+1bio_          ........IL GGREAEAHAR PYMASVQ..L NG......AH LCGGVLVAEQ 
+TPA_MOUSE      QYKRPQFRIK GGLYTDITSH PWQAPI.FVK N.KRSPGERF LCGGVLISS. 
+
+1bio_          .WVLSAAHCL E.DG.....K VQVLLGAHSL SQP..EPSKR L...YDVLRA 
+TPA_MOUSE      CWVLSAAHCF .LE.RFPPNH LKVVLGR.TY .R.VV.PGEE .EQTFEIEK. 
+
+1bio_          ..VPHPDSQP ...DTIDHDL LLLQLSEKAT L......... GPAVRPLPQR 
+TPA_MOUSE      YIV.H.E.E. FDDDTYDNDI ALLQLRSQSK .QCAQESSSV GTACLPDPNL 
+
+1bio_          VDRVAPG.TL .CDVAGWGIV NHAGRRP... DSLQHVL.LP .VLDRATCNR 
+TPA_MOUSE      .QL.PD.WT. ECELSGYG.. KHEASSPFFS DRLKEA.HV. RLYPSSRCTS 
+
+1bio_          HHD...GAIT ERLMCAE... .....SNRRD SCKGDSGGPL VCG.....GV 
+TPA_MOUSE      QH.LFNKTVT NNMLCA.GDT RSGGNQDLHD ACQGDSGGPL VC.MINKQMT 
+
+1bio_          LEGVVTSGS. .RVCGNRK.P GIYTRVASYA A.WIDSVLA.
+TPA_MOUSE      LTGIISWG.L G..CGQKDVP GVYTKVTNYL .DWIHDNMKQ
+

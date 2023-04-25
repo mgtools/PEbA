@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 200  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ycs_B oo  Len:  200
+ Name: 1ihv_A oo  Len:  200
+
+//
+
+
+
+1ycs_B      PLALLLDSSL EGEFDLVQRI IYEVDDPSLP NDEGITALHN AVCAGHTEIV 
+1ihv_A      .......... .......... .......... .......... .......... 
+
+1ycs_B      KFLVQFGVNV NAADSDGWTP LHCAASCNNV QVCKFLVESG AAVFAMTYSD 
+1ihv_A      .......... .......... .......... .......... .......... 
+
+1ycs_B      MQTAADKCEE MEEGYTQCSQ FLYGVQEKMG IMNKGVIYAL .WDY.EPQN. 
+1ihv_A      .......... .......... .........M IQNFRVYYR. D.S.RDPV.W 
+
+1ycs_B      DDELPMKE.. ..GDCMTIIH REDEDEIEWW WARLNDKEGY VPRNLLGLYP
+1ihv_A      K.G.PAK.LL WKGEGAVVIQ .DNSD.IKVV PRRKAKIIRD ..........
+

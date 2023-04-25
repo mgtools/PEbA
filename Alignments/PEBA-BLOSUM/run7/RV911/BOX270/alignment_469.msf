@@ -1,0 +1,106 @@
+PileUp
+
+
+
+   MSF: 1522  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q4IQV0 oo  Len:  1522
+ Name: A0CW91 oo  Len:  1522
+
+//
+
+
+
+Q4IQV0      MTESSPRAVR FQGSEDDGRP DKVRGHRLET PIESNGDPHA TERHDELGNL 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      IGYGATGHTG SLTSLAPGTV INGVSKAQRG PNTGDDGTAY TPNGSWPQRP 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      LGPARTPSNT YNPATSRKPA HPPATPSFTE SIRSSSKTRP RNESRFRAQE 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      RAYVQKLRQD YSGGYFTSYS NLNGNDSDSE GETPSSEGPY DDRFDQETIM 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      FYGNDTLQPT DEDLKDPENR ERLEWHGMLE AVLTGDVVRQ EKKRLIGSAD 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      QQAGKSAHKT ELWLGIRSKV CGRHIPVQRR MLEESRSTLD RTLDEIINFQ 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      IKGESEAGKP PYEQVKDMVA KIQMCENLYP SWAALATEHK AADSATFKES 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      HDAIISWYNT NEMINTELNI LKKWVGNEEL DFTRTKQRSP AVNGINNDET 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      SFLDRLMKED GLQSLYNDDN GNLEKGMLAP ISTVISKAKD TLIRNSEAFR 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      KRHLPPYLEE LLTLISFPSR LIEEITRLRL AYARRVKESA QQNPLMQDQM 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      ISQFQLLLKF AIRIKIECTS IANPEPGWDL PPCIDESFDQ VVLEALKYYF 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      KMLNWKLSGN KNTFKEAELL FQEWDFANEI GSHLQRGHIE VAEQFSSLTF 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      KALHRLSQTF EKELQAKPKE TATEMSKRYK ACLDSVRVRQ RMLQRFTRML 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      NDNYEHASDY SISFPPETMQ KFYDQLVASG HFQVDTRLLE QDNIYVIASP 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      ELRERLEDIQ AMMAITSKDQ FPDELGEQYL LILRPEDPLN WFGETIEVPL 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      RDLNIDLKRG HIRLCASSPQ TLHNARRAFI ENVDMHVDLV QEARSNIQKV 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      NSRLTEIRRV AYKLSNNFMD SVEIIRKQAR GKDCQELIQT CFVFATEFGQ 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      RSLLYMDSNR RQMNNLKLTK LALDWVSFIC DDCVASDRKT FRWAVLALEL 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      AMGMTRGRHI LALGEGEYAK LRSKVAGCMS LLISHFDVMG ARSNLAAQAE 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      KERIEALVGQ FRKLDKNRMM NDEEASRCVT EQRMSELERV DEYRCEKIAE 
+A0CW91      .......... .......... .......... .......... .......... 
+
+Q4IQV0      RQGVGRVLEG NNEVDRSLAY LSSSATNVTM RWQQGQFVGG GTFGNVYAAM 
+A0CW91      .......... .M.QSEPDQI MEKSPKGRFI RFNE.QI.GK GTYKTVYRGY 
+
+Q4IQV0      NL.DTGHL.M AVKEIRLQDP KLIPQV...A EQIREEMGVL EVLDHPNVVS 
+A0CW91      D.EESGC.EI AWNVIHL.D. QL.PQ.QEER KRISEELSIL NNIKHPNIIS 
+
+Q4IQV0      Y...YGIEVH RDRVYIFMEF CSGGSLANLL EHG..RIED. ..EQVIMVYA 
+A0CW91      FINAW.VSKN KSEVIFITEI VHGGSL.K.. KH.LRKIQ.R PRLKILKHWC 
+
+Q4IQV0      LQLLEGLVYL HESG.....I AHRDIKP.EN ILLDH..NGI IKYVDFGAAK 
+A0CW91      REILKGLEYL H.S.IVPYPV IHRDIK.CDN IFIN.THNNQ VRIGDFGLA. 
+
+Q4IQV0      WIARQGRTLA GDVQPSL.PN RSMTGTPM.Y MSPEVIKGEN PGKP..GAVD 
+A0CW91      .I.K....LK ...Q.S.DFT QSVLGTP.EF MAPEIYE.E. ..K.YGPSVD 
+
+Q4IQV0      IWSLGCVILE MATG.RRPWA QLDN.EWAI. ..MYNI.AQG NP.PQLPPS. 
+A0CW91      IYAFGMTCLE MAT.QKRPY. E.E.CT.A.P NQIYQ.KVM. N.R.IKPKSL 
+
+Q4IQV0      DQLSPQGL.D FLK.RCFTRD PRNRSSAVEL LQHDWITSIR S.QVVEPATP 
+A0CW91      DLIQNQDLKD FI.LKCLE.D QEKRPTATEL L.ND.....K .F.LQEQ... 
+
+Q4IQV0      SDTSSSAQST PTVG....SI SSKLGGSDGF Y......... .......... 
+A0CW91      ED.DH..QHV .VI.LEEEQS EQNLQ.SDAL KYNPVFREQL DFNNSILVQL 
+
+Q4IQV0      .......... .......... .......... .......... .......... 
+A0CW91      NDGDEMHIKI TFVDQSAYNQ EFQEFTKLIV QKYSDLQDNQ QFVQFQEQII 
+
+Q4IQV0      .......... .......... .......... .......... .......... 
+A0CW91      KFGGVEKVLW VKPSEESKKI MKTQFLQSLE SFQQTISPLL QDVDINEWEL 
+
+Q4IQV0      .......... .......... ..
+A0CW91      IEQQLLVQFQ QQRKQIKSKQ PI
+

@@ -1,0 +1,52 @@
+PileUp
+
+
+
+   MSF: 630  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fq3_A     oo  Len:  630
+ Name: FA12_CAVPO oo  Len:  630
+
+//
+
+
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      GRLLLGSLLV SLESALSAPP PWKAPKERRH RAEEFTVGLT VTGEPCYFPF 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      QYNRQLYHHC IHKGRPGPRP WCATTPNFDQ DQQWAYCLEP KKVKDHCSKH 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      NPCQRGGICV NTLSSPHCLC PDHLTGKHCQ REKCFEPQLH RFFHENEIWF 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      RTGPAGVAKC HCKGPDAHCK QMHSQECQTN PCLNGGRCLE VEGHHLCDCP 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      MGYTGPFCDL DTTASCYEGR GVSYRGMART TVSGAKCQRW ASEATYRNMT 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      AEQALRRGLG HHTFCRNPDN DTRPWCFVWM GNRLSWEYCD LAQCQYPPQP 
+
+1fq3_A          .......... .......... .......... .......... .......... 
+FA12_CAVPO      TATPHDRFEH PKLPSSRLSI LQTPQPTTQN QALANELPET SSLLCGQRLR 
+
+1fq3_A          ........II GGHEAKPHSR PYMAY.LMIW DSLKR.CGGF LIQDD.FVLT 
+FA12_CAVPO      KRLSSLSRIV GGLVALPGAH PYIA.ALY.W GS.N.FCSGS LIAP.CWVLT 
+
+1fq3_A          AAHCW..... .GSSINVTLG A..HNIKEQE PTQQFIPVKR PIP..HPAYN 
+FA12_CAVPO      AAHC.LQNRP APEELKVVLG QDRHN.QSCE HCQT.LAV.H SY.RLHEAFS 
+
+1fq3_A          PKNFSNDIML LQLERKAKR. TR.AV..... .QPLRLPSNK AQV...KPGQ 
+FA12_CAVPO      PSSYLNDLAL LRLQKSAD.G S.CA.QLSPY VQTVCLPSGP AP.PSESETT 
+
+1fq3_A          TCSVAGWGQT A..PLGKHSH TLQEVKMTVQ .EDRKCESL. RH.YYDST.. 
+FA12_CAVPO      CCEVAGWGHQ .FEGAEEYSS FLQEAQVPL. ISSERCSS.P E.VHGDA.FL 
+
+1fq3_A          .IELCVGP.. EIKTSF..KG DSGGPLVCKV .........A QGIVSYGRNN 
+FA12_CAVPO      SGMLCAG.FL EGGTD.ACQG DSGGPLVCE. DEAAEHRLIL RGIVSWG.S. 
+
+1fq3_A          GMP..RAC.. ...TKVSSFV HWIKKTMKRY
+FA12_CAVPO      GC.GDRN.KP GVYTDVASYL TWIQKHTAS.
+

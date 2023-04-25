@@ -1,0 +1,103 @@
+PileUp
+
+
+
+   MSF: 1473  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q4D1T8 oo  Len:  1473
+ Name: Q1DTE0 oo  Len:  1473
+
+//
+
+
+
+Q4D1T8      MFQTANSSTP KLSFEKRVIG TSLRLHRDVH TGTNEDCIRS SSNNFLLVSH 
+Q1DTE0      .......... .......... .......... .......... .......... 
+
+Q4D1T8      SFNSPQLSST IRSTHSGGLE VLTADPPLLL DFSVSSASVR RRKQSRPFLG 
+Q1DTE0      .......... .......... .......... .......... .......... 
+
+Q4D1T8      SNDDFGVEDD NVVVEARESN SSLNGSRTSD ACPGPTVSTP VEVEPLPTSS 
+Q1DTE0      .......... .......... .......... .......... .......... 
+
+Q4D1T8      VTRFYTSSPE KRHKSLSKKE RGREVNGSGK KSALRRRTGS VPCVTHNNVT 
+Q1DTE0      .......... .......... .......... .......... .......... 
+
+Q4D1T8      RSRDSEGKGP MHVSLAHKAL IGKGSFGVVF QAMDRD.TNH IIAVKEISFS 
+Q1DTE0      ..MADEGALA NHYQVLEE.L .GSGSFGVVY KAIEK.ATGE IVAIKHIDLE 
+
+Q4D1T8      AGSESKALKA VRKELALLKL LD.HPHIVRC LGEECEDSC. .....LR.IY 
+Q1DTE0      S.SDDDI.QE IQQEISVLAT C.ASPYVTQ. Y.KT...S.F LRGHKL.WIV 
+
+Q4D1T8      MEYVSGGSIS .SVLRTFGPF HEKQASIYTR QMLE.GLEYL HSKNI.MHRD 
+Q1DTE0      MEYLGGGSC. LDLL.KPGPF NEAHIAIICH QLL.LGLDYL HHEG.KIHRD 
+
+Q4D1T8      LKGD.NLLVD PNGTLKISDF GTAKDLLDP. .NASTALAGT AYFMAPEVIL 
+Q1DTE0      IKA.ANVLLS QTGKVKLADF GVAAQLTN.I KSQRNTLVGT PFWMAPEVI. 
+
+Q4D1T8      .SQGVGLPSD VWSVGCCVIE MLTGSPPFSG VKNQYSMMMR VAETEG.ELF 
+Q1DTE0      QQAGYDFKAD IWSLGITAME MINGEPPHAS ..T.HPM..K VLFLI.PKA. 
+
+Q4D1T8      ..PEMIPKGH GLSSG.AKSF LRRCLQ.RDP L.KRATAKEL LD.DPWIVHT 
+Q1DTE0      PAPR..LEGN KYSA.HFRDF IAQCL.IKDP .DRRPTAKEL L.R.....H. 
+
+Q4D1T8      PEVKGSTHCS SRSSNGAFPC GRCGEEGTEE G.SPLS.HVR QEQTLEKDSP 
+Q1DTE0      ...K...FI. .R...GAV.. .K.....TEP .LQEL.I.QR RQEW.E..A. 
+
+Q4D1T8      VGAANSGSTL SR.SQKR..A STNVQ..... .......... .......... 
+Q1DTE0      T...K.G..V S.DNVK.YYA ESLYGATPET RAVAGANSQN RNTITRSDDD 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      DGWVFDTVKP GTIASAKNTQ KRLRAATHSL EDLDEVAETM DHLDVTEPTP 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      ERKPVRNSTV RRTSVLERTS SIRRSTSKRK SSGAKQPLGV DLTFGNSPST 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      VRQFRRLSDR EDCENEIPGT IPGMDETHAP KTLFSPEPQS KEAAIGRRMY 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      SCGVGLACQE ALANTWDQDK REAISRLAEA WSELEMVDPE GLYQIVKASY 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      EKLQVDPKTA GALSKPAPIE SPQRPKLMLA QNNPHLKSHK RRQSAQLAAE 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      QSSYLGNLKL PGQSVPGMEH TKQLADVLYG RWSEAVDPYF YHSFGILEIS 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      GAFHWAALSG RHEATFRLVG PMDDLWSPEP SRGKPPLLDP ELENEGQQRQ 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      RVSRPNAAAR HSKRLTLNFP ITTPPVSSDP ASPSTHIMSP LASSSTFPSP 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      GRSLTATPAL NEPVDEGYMF LTALAAQERK VLELREELQK AEAELVSLKK 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      QWAMGEKGRR RTEIVHHAEV MKPLKTPADE PTANGIDPER AAPSDLTKVA 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      LQTRMSRELD RRNTLRQLTQ QYPTGNGSIS SGRPRTVFQS SRHVRTLSLL 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      SPNGLEPLSL GTTTSSSRNP QLVRGSSHPR SATLPSLDRD DPKNAEGAIS 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      TARIKMQDER NLWRRSLPMT QDGTAETLMR TGKQMASDFK DGLWTFLEDI 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      RQATVGEEGI NATESRSMYA AHRSSSRPSR RTGMDATASR EQSVGSSTAA 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      RPATSKKIPE ARASISKQED VSFWSEFGID PPEKPKASYS SSKNKGGKQN 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      AKESNLLDVD DNWDVWDTPQ PKTHTPSSSS STFPSSRRDP SPSTGASSPR 
+
+Q4D1T8      .......... .......... .......... .......... .......... 
+Q1DTE0      TSASFADLKT IEIENGTDSA PSDSIPWPAL TKLRPSNLTR TASSLMAEWE 
+
+Q4D1T8      .......... .......... ...
+Q1DTE0      RSLSPSPCPS PSNEAEYKDL KND
+

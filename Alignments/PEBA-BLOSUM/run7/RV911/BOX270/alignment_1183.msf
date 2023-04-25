@@ -1,0 +1,175 @@
+PileUp
+
+
+
+   MSF: 2658  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q8J230 oo  Len:  2658
+ Name: Q54XJ4 oo  Len:  2658
+
+//
+
+
+
+Q8J230      MSAATPTSPG FPLTMGTGVM AAHFAAPSSN AGSPRSRPTT PLSAGLTPSG 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      PTYDDLGRWD DADVASWLNA ARLGHYASIF AEHDIRGSVI LDVDQAALKE 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      MGITMVKDRV RISAAIKLLN KRCADSAVAR RPSVVSISPL LPLASHPLYA 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      HEGEIEYLQH DHTADPSADG SGSNFGLNSM GMRRGQMRPP PLTLKQSTSR 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      GMPGYASPAG SINQSQGFGL SAARGLTPGA ARGSVWNTAS SSSATSKPGT 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      PDGALHRKVN SIGGVAAPLA VGASSSLSSS RHPYGHAVHS NRPSTATGAS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      GYSNVPASQS LRSNHTSSSP TATSFGSNIN AASARPSTAT GAQSYTTNVP 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      GTSSARDGYS PLTPISESNS LGNTPTTPSG IQQQQQSAGY AVGRGPFASS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      QRYAASSVPS QQQPSSGHTL RHVDSGEGYN LAGYQNPNPP TLEDLKRRTI 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      KFISEEDNTT RIVNVSDCRD AYDVMARVLK KFGKPPSGNS YTPTADQGPT 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      GDELGATETW GIFATSADGQ NTKALSDNEL LAICHAPQPH DPLRERGLTL 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      RRIPNHLPGE DARKVPVRSG RNKLEAFFGE RMPVAQMQPA GPGSGVNADE 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      EDAGSVTISG KKMKRASTVS IMSGLGVGPF SSSSHNTGAG HTHGSTRAEG 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      KLLSKKESKH MSPPPVTSKP SKIRNFFGQR PPSELINTNL ADFFPSTDSK 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      ALQRTARRSI YGRASASTRS KRNSTWSFVA DPDAPPLPNK GSMDGHPTPL 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      ERSSISIRER GTTPVIQIGY DSRSEDDHQS NARRTSSGTH SHLHPSLTGP 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      PTLPPVVSRD SLDEWSRDLK AVGSPVTEEN AMFQSSRHGH ASGSQQHHAA 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      MKHYPSHASG YADRPSISRR ASGESARSRR SLASQVRHGL SAARERNADT 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      ASLLTVDEIT QEVENRRESI SLAGAGGGWV VDEDGVPIPI PGSSSPFSSS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      AAASTRPSSG ISSSYVHNGH LEHDDSEGHS DEEANQSSDL EEATRTRKAR 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      GVPSKAASIR TVASKRASSV LQAPGDESDR HLGDPMAVAR STTSRASSVS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q8J230      ELRRSVHDHG DPSDGESGSD FTDSDLDSDG SETDEDEQAN DVYLPSAKPA 
+Q54XJ4      .......... .......... .......... ..MSQPSLLN QLNNIVDKES 
+
+Q8J230      PIKWHKGALI GAGSFGNVFL .GMNAKTGLL MAVKQVELP. SGDSHLDQRK 
+Q54XJ4      CGDYLLIDII GKGGFGVVY. KGLHKTKGYF SAIKKIKI.M K.KKKL.QSE 
+
+Q8J230      KGMLEALE.R EIKLLKS.LE HENIVQYLDS FADDSHL.NI FLEYVPGGSI 
+Q54XJ4      S.QIS.L.MA EINLLK.VLS HHNIVRYYEH IPSSSH.SYI VMEFIENGSL 
+
+Q8J230      V.ALLRNYGA FEEPLVRNFV RQILNGLSFL HNRGIMHRDI KGANILVDNK 
+Q54XJ4      .EKIIKRHGL LPESLVTVYI AQVLNGLEYL HRQGVIHRDI KAANLLISTD 
+
+Q8J230      GGIKISDFGI SKKVESDLVL ATNKGGAGGG .GAGGAAHRP SLQGSVFWMA 
+Q54XJ4      GSIKLADFG. ...V...... AT.K..VSD. L.SS.DNPDD TFAGTPYWMA 
+
+Q8J230      PEVVKQTSY. .TIKADIWSL GCLVVEMISG TH.PWAELNQ MQALFQIGMG 
+Q54XJ4      PEVI.QMQ.G ISTACDVWSL GCTIIELLTG T.PPYFGLAP AAALYKIVQ. 
+
+Q8J230      .RKPSLPDE. ISN.ECRDFL E.KTFEL.DY .NNRPSADEL LNHAFMG..T 
+Q54XJ4      EDHPPIPP.G IS.AALKDFL .LNCFK.KD. ENIRSSAKQL LHHPWV.KSV 
+
+Q8J230      EMTFPPSSGA DGSGGG.DDD .AGGSGDAG. .DGDASTMGM TNDA.ETGTT 
+Q54XJ4      QIRNPETQ.A P.KNA.RQE. IL..SYNA.Q LQ.D...I.I .QD.NNSNIT 
+
+Q8J230      RETRETKDGK RPTRSKSTRR LEREKRHKEA AAAA...... .AAATALDTG 
+Q54XJ4      R.PRSSAVVQ PPSPSQLVPP LTN.M.NISS SND.NNNNNN NS..SA.TNN 
+
+Q8J230      TPNTPTSHTA AAAAAAAAAS ASASASASPA VASTSP...A PGDAETGSPT 
+Q54XJ4      SPNI.SSTTT KNNSSTTNNN .N.NKLTSPS LSS.S.LLPI P.ATST.STV 
+
+Q8J230      NG..KSAVPP AGSTG..GTP ESI.LTVSIA TARGNSTSTA LSAADAAFSE 
+Q54XJ4      N.QNKAS.PT LNSS.WSAVP .S.N.KISQ. TV..NS.... I...DKS.SL 
+
+Q8J230      EADS...... .......... .......... .......... .......... 
+Q54XJ4      NKINNGSGQH VQIASPRKLS AGQKQSIQPN IIAAAATTTT TTTTTTTTNA 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      ATNTTTTTTP SSTNTGSNVT SPVVSAISTP PPIPTTPLSP MMKSQEQLNQ 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      EKEKINLHLR KFSEKESDDE FDNIVLPNST ICLQKLQPIL SHKPPIQLQR 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      QQSFNANNNI SNSNSNNNNN NNNNNNNNNN NNNNNNNSNN NNSSNNSNNN 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      SNSNSINSSN SHKLKLLKFN KFTEKDNEDD ETDLVFDQKV SDTSRFKVRN 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      QKKDWDDEFD NFGSSGDESE SSTATTNAAI NSNIAKKILP SNRIIRYSSS 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      GQLKQQQQQL LLQQQQQQQQ QHLQQPLSPS EMKLKVKETS EEWDTEFEES 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      FDTISWSEAD NQRTINIQDK YREQVVKTIV EFILQLKPNQ PNDVLIDTCQ 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      KLTDLFQTYP DERKLLISNG EGGVYFRLPI ITILEILEDN CCCNSDTPSD 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      VITTTYHHNN NSDTFSEDFS NVELVINLLK LLNQSIIKEK DIQETICLMN 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      GISIITKLAT KQFDELIREE VSKFVLQLCS YSTYSLNMFI TGSRGCKVLV 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      DLLDSDYFNG FTLIHNSLDA ISLIFKMNTA SPKTALCHLF AKTALMYRIS 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      YLLNQIFNSS DKSATSKSQQ FQQKQIQQQQ QLLLQQQQQQ QQQQQLLPSS 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      SSPNLKFPVL SKSSSVKNLS KDQFDKVLAY SVKAADILLF FSTGDSLVKE 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      EMSQSNVIKY IVNVLDEIYT WKTIGNNIRS FLLKILKVIK NLSMDPNVRS 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      RLDDAGVIPP LINYLKKHGG IDKITEIHNQ ALHSLYYLLL LDRSRQEKAL 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      KSSILEPLLT IIEERGPLKE LALPILFDLV RSCNNRSLLW KCNTIDKLLD 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      LIEDRNWFAD AIESISTWAT LESKLVFEKL NSGGTISPLT STSTSTSTSK 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      SSPSSSSSSS SSSLSTSTST SSSSLQLPTS SSSTSFENHN IPLRLIGILN 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      INHIKHPSFQ KSIIPLFNLI NGSQQLLKSL INEGLVNSLV ECLRVDSSPV 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q54XJ4      SKITLLKITA SIVQSPSLLL VDKEQTNSLY QILNEISKQD ESEIVKKIAE 
+
+Q8J230      ........
+Q54XJ4      NLVLELNK
+

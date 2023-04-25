@@ -1,0 +1,151 @@
+PileUp
+
+
+
+   MSF: 2278  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: O55092 oo  Len:  2278
+ Name: Q4IQV0 oo  Len:  2278
+
+//
+
+
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      MTESSPRAVR FQGSEDDGRP DKVRGHRLET PIESNGDPHA TERHDELGNL 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      IGYGATGHTG SLTSLAPGTV INGVSKAQRG PNTGDDGTAY TPNGSWPQRP 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      LGPARTPSNT YNPATSRKPA HPPATPSFTE SIRSSSKTRP RNESRFRAQE 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      RAYVQKLRQD YSGGYFTSYS NLNGNDSDSE GETPSSEGPY DDRFDQETIM 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      FYGNDTLQPT DEDLKDPENR ERLEWHGMLE AVLTGDVVRQ EKKRLIGSAD 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      QQAGKSAHKT ELWLGIRSKV CGRHIPVQRR MLEESRSTLD RTLDEIINFQ 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      IKGESEAGKP PYEQVKDMVA KIQMCENLYP SWAALATEHK AADSATFKES 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      HDAIISWYNT NEMINTELNI LKKWVGNEEL DFTRTKQRSP AVNGINNDET 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      SFLDRLMKED GLQSLYNDDN GNLEKGMLAP ISTVISKAKD TLIRNSEAFR 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      KRHLPPYLEE LLTLISFPSR LIEEITRLRL AYARRVKESA QQNPLMQDQM 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      ISQFQLLLKF AIRIKIECTS IANPEPGWDL PPCIDESFDQ VVLEALKYYF 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      KMLNWKLSGN KNTFKEAELL FQEWDFANEI GSHLQRGHIE VAEQFSSLTF 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      KALHRLSQTF EKELQAKPKE TATEMSKRYK ACLDSVRVRQ RMLQRFTRML 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      NDNYEHASDY SISFPPETMQ KFYDQLVASG HFQVDTRLLE QDNIYVIASP 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      ELRERLEDIQ AMMAITSKDQ FPDELGEQYL LILRPEDPLN WFGETIEVPL 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      RDLNIDLKRG HIRLCASSPQ TLHNARRAFI ENVDMHVDLV QEARSNIQKV 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      NSRLTEIRRV AYKLSNNFMD SVEIIRKQAR GKDCQELIQT CFVFATEFGQ 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      RSLLYMDSNR RQMNNLKLTK LALDWVSFIC DDCVASDRKT FRWAVLALEL 
+
+O55092      .......... .......... .......... .......... .......... 
+Q4IQV0      AMGMTRGRHI LALGEGEYAK LRSKVAGCMS LLISHFDVMG ARSNLAAQAE 
+
+O55092      .......... .......... .......... .......... ........MS 
+Q4IQV0      KERIEALVGQ FRKLDKNRMM NDEEASRCVT EQRMSELERV DEYRCEKIAE 
+
+O55092      FFNFRKIFKL GSEKKKKQYE HVKRDLNP.E EFWETIGELG DGAFGKVYKA 
+Q4IQV0      RQGVGRVLEG NNEVDRSLAY LSSSATN.VT MRWQQGQFVG GGTFGNVYAA 
+
+O55092      QNK.ETNVLA AAKVID.TKS EEELEDYMVE I......DIL AS.CDHPNIV 
+Q4IQV0      MN.LDTGHLM AVKEI.RLQ. DPKLIPQVAE .QIREEMGVL E.VLDHPNVV 
+
+O55092      KLLDAFYYE. .....NNLWI LIEFCAGGAV DAV.MLELER PLTESQIQVV 
+Q4IQV0      ....S.YY.G IEVHRDRVYI FMEFCSGGSL .A.NLLEHGR .IED.E.QVI 
+
+O55092      CK....QTLE ALN.YLHDNK .IIHRDLKAG .NILFTLDG. ..DIKLADFG 
+Q4IQV0      M.VYALQLLE GL.VYLHES. GIAHRDIKP. ENIL..LD.H NGIIKYVDFG 
+
+O55092      VSAKN..... TRTI....QR ....RDSFIG TPYWMAPEVV MC.ETSKDRP 
+Q4IQV0      .AAK.WIARQ GRTLAGDVQ. PSLPNRSMTG TPMYMSPEVI K.GE.NPGKP 
+
+O55092      YDYKADVWSL GITLIEMAEI EPPHHELNP. .MRVLLKIAK SEPPTLAQPS 
+Q4IQV0      .G.AVDIWSL GCVILEMATG RRPWAQLD.N EWAIMYNIAQ GNPPQL.PPS 
+
+O55092      R...WSSNFK DFLKKCLEKN VDARW...TT SQLLQHPFVT IDSNKPIREL 
+Q4IQV0      .DQL.SPQGL DFLKRCFT.R .DPR.NRSSA VELLQHDW.. ITS...IR.. 
+
+O55092      IAEAKAEVTE EVEDGKEEDD DEEIENSLPI PTNKRASSDL SIASSEEDKL 
+Q4IQV0      .SQ....V.. .VEPATPSDT SSSA.QSTP. TVGS.ISSKL GGSDGFY... 
+
+O55092      SQNACILESV SEKTEHNASG DKFSTKVLNE KPCPGEPENA VELVGGAVAV 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      LPDRATELPE SGREEKRPKL DRLPDTEDQE MADINSVSEG EEDHAVTSET 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      NIEHNLKPEK ERDQEKQPVL ENKLVKSEDT TIQTVDLVSQ ETGEKEVDIH 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      ILDSEVVHAV EDTHEKLRKD DTTQKDVISD TSSVGERDEE IGAVPKTAES 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      SAEGAQGDGG KETDEGAQIL ISKATEGPKA SGTEEAPPVT EITETNDTDQ 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      KLVENTHEKQ LPISSETTLD TSEGLGASEG REVTESGSTE EVEVEGAVSE 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      TDEEDVQSET RGAPMAVTQM DTEKNETPHE APAQVEVQVP VPPQPSEPPP 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      APIPSININS EAAENKGEMG ASLNTETILL PESESQKEND TDSGTGSTAD 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      NSSIDLNLSI SSFLSKTKDN GSISLQETRR QKKTLKKTRK FIVDGVEVSV 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      TTSKIVTDSD SKTEELRFLR RQELRELRFL QKEEQRAQQQ LNGKLQQQRE 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      QIFRRFEQEM MSKKRQYDQE IENLEKQQKQ TIERLEQEHT NRLRDEAKRI 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      KGEQEKELSK FQNILKNRKK EVLNEVEKAP KDLRKELMKR RKEELAQSQH 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      VQEQDFVQKQ QQELDGSLKK IIQQQKAELA NIERECLNNK QQLMRAREAA 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      IWELEERHLQ EKHQLLKQQL KDQYFMQRHQ LLKRHEKETE QMQRYNQRLI 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      EELKNRQTQE RARLPKIQRS EAKTRMAMFK KSLRINSTAT PDQDRDKIKQ 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      FSAQEEKRQK NERMAQHQKH ENQMRDLQLQ CEANVRELHQ LQNEKCHLLV 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      EHETQKLKEL DEEHSQELKE WREKLRPRKK TLEEEFARKL QEQEVFFKMT 
+Q4IQV0      .......... .......... .......... .......... .......... 
+
+O55092      GESECLNPST QSRISKFYPI PSLHSTGS
+Q4IQV0      .......... .......... ........
+

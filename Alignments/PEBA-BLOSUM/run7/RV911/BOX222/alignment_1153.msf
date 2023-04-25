@@ -1,0 +1,109 @@
+PileUp
+
+
+
+   MSF: 1600  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q6YXC1 oo  Len:  1600
+ Name: Q6CEM1 oo  Len:  1600
+
+//
+
+
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      MDLQVVSHIC AFYLFHHLCT SGNAMYTHEN NSVPELSLDR DSVQTNAQSP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      TSNGSSSKIH VLNDILTSPA ILPSVILKQE CSRSQSPEGY ALQRSIKQLP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      PVPSYRVPQF DEATSQPVGS SHLQHMRQSR HECEGHWEAN NNCANLNDAP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      NRTTPITTTT PTARIGDHET TSSSPPLTAR SSVVHSRIAS LIHTPQVIEG 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      WSITTPSEAD TPEVYSSPHF PLDSLTEHLR LYSNNTTTAT MDHVADSHHA 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      ADLSAEQQLE LQLPPAIQDL LYQPHNATMA QRTFIIALLW QKWPQFRASP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      VAGEEVVLFK KGLLDNFASA VGIIGDDVEA EFNVLPPDQD FMPPDQLDQT 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      DICDPHTMRL KPGFTGDDFD TVPVRFYSLL DEWRLLDTDS PVIKRFYIAD 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      PPRLELYPPE FTLAQLRQKR TLDWESGDRQ SRLPTIQVSE IELSRLNQEI 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      SDQLDIRGDL RVYATSEALD GPVDLATFKR MQKVRLQSPY TTDKLTPNLI 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      ISAKEARGYI EDSLTAGPTM GTTGLSNLGN TCYMNSALQC LVHVPEVVEY 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      FLSGYYESEI NKDNPIGKNG DVALAFAELV RRVYLDKSST YAPRQFKSIV 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      GEYGPQFAGY GQQDSQEFLA YLLDSLHEDL NRILQKPATT KPELDPERAG 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      DPLEVARVAV ESWDVHRLRN DSPILDLFTG MYKSTVVCPV SQQASITFDP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      FSDLTLPLPV DDSWSKDFIF VPYDTSQQPC IIPIELKKHS RFQELRQLVA 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      SKAGENVNPE SLMFSEVYMS QFFRHISRDE TSSVSELIPG NDTVVVYETG 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      LSADEMWSYH HDLEPAKFIV PVFNRLEYTD TEEQPLSSYA RRNSQFLSIP 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      FFITVTDGEA RDFSLVTNLI YKRYFQLCRS VEEWAVLEEL AFDVNYVTPR 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      TNDIPLGGLS MLNADRIFPM SSRLDASESS EPDVIEIDAS LNTPDKEDVK 
+
+Q6YXC1      .......... .MARTARLLA AEDPPPPPAA AAERPRPAAA GSGLRSLSSA 
+Q6CEM1      MEDENEGDQA EVETAAEEAA EEDVTEPPVV A.EEP..AA. ...IESV... 
+
+Q6YXC1      ASGLWDRLSV LGAGVSKLEK ALGDHFPEGA RYFGLENFGN TCYCNSVLQA 
+Q6CEM1      ...V.D...I .....S..D. ...D...E.A .Y...KS... .......L.. 
+
+Q6YXC1      LYHCIPFREQ LLEYYATYKN TEDSEDNLLT CLADLFSQIT L.AKKRTGVL 
+Q6CEM1      V.E.....ST .....GS.SV TP.SESN... C.....SELP .DAVD.SGAT 
+
+Q6YXC1      APKRFVQRVR KQNELF.RSY M.HQDAHEFW NFLVNDIIDI LEE..DCRTA 
+Q6CEM1      AVVA.APSVD GHASL.P.SP .P.APSH.F. .V.THT.... .E.GIVC.DW 
+
+Q6YXC1      NSSPETTPEE VSNG.AANAL ANGARERPLV TLVHRTFQGI LTNETKCLMC 
+Q6CEM1      QG..DTAAKY LHD.Y..DSL A......... T....SLE.. .T...K.V.. 
+
+Q6YXC1      DTITAKD.ET FF...DLSID VEQNSSLTSC LKS.FFSTEI LNGEDK.FFC 
+Q6CEM1      DP...K.LEA V.RAA.RADK SNQGIDLSEC LD.LFSASEV LSDDD.LWYC 
+
+Q6YXC1      DK.CSSLQEA HKRMKIKKAP HVLVIHLKRF KYVEQLSRHK ...KLSYRVV 
+Q6CEM1      P.VCKDFRQA TKKIELWKCP EILVIHLKRF S..S..SRN. FRDKISEVVH 
+
+Q6YXC1      YPLEL..... .KLG.SMSED ADCEYSLFAV VVHVGSS..P NHGHYVSQ.. 
+Q6CEM1      FPIE.GLDLT ERVGEAKASD SPLIYDLIGV DNHMGG.LG. G.GHYTA.FA 
+
+Q6YXC1      ...IKSHGNW LSFDDDTVQI SEESTLQTFY GSSREHC..G GNTD.HGYIL 
+Q6CEM1      KNFVD..GKW YHYND.S... S...V.SPI. .S..EN.QL. .VT.ANAYLL 
+
+Q6YXC1      FYERLGGKS. .......... .......... .......... .......... 
+Q6CEM1      FYKRRIPTAS GDATDTKTHE ILRDLVAKRG ENDLSVYSSF VASVEGKLVG 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      GSSSNTRSSG GSGGGSTSSA SSYSSGSSSG PFGSSSSSVA PRLKFRGNMV 
+
+Q6YXC1      .......... .......... .......... .......... .......... 
+Q6CEM1      VSPESPLGNP PAYPGSGSVL GPSPQSSADA TEPPSSVGGI PWEAASLTLS 
+
+Q6YXC1      .......... .......... .......... .......... ..........
+Q6CEM1      SSDEEDNMAS DLPTPGDSDM HSSVYSEPKV VDTEEGREEK DDEVIIIDDI
+

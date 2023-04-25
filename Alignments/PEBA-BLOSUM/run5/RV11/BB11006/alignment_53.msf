@@ -1,0 +1,34 @@
+PileUp
+
+
+
+   MSF: 343  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bbt_aa oo  Len:  343
+ Name: 1al2_ac oo  Len:  343
+
+//
+
+
+
+1bbt_aa      .......... .......... .......... .......... .......... 
+1al2_ac      EACGYSDRVL QLTLGNSTIT TQEAANSVVA YGRWPEYLRD SEANPVDQPT 
+
+1bbt_aa      .......... .......... .......... .......... .......... 
+1al2_ac      EPDVAACRFY TLDTVSWTKE SRGWWWKLPD ALRDMGLFGQ NMYYHYLGRS 
+
+1bbt_aa      .......... .......... .......... .......... ..TTSAGESA 
+1al2_ac      GYTVHVQCNA SKFHQGALGV FAVPEMCLAG DSNTTTMHTS YQNANPGEKG 
+
+1bbt_aa      DPVTTTVENY GGETQIQRRQ HTDVSFIMDR F...VK.... VTPQNQINIL 
+1al2_ac      GTFTGTFTPD NNQTSPARRF CP.VDYLLGN .GTLL.GNAF VFPHQIINLR 
+
+1bbt_aa      DLMQVPSH.. TLVGGLLRAS TYYF.SDLEI AVKHEGDLTW VPNGAPEKAL 
+1al2_ac      ....TNN.CA TLV..L..P. .YV.NS.L.. SI....D.SM V......K.. 
+
+1bbt_aa      DNTTNP..TA YH..KAPLTR LALPYTAPHR VLATVYNG.E CRTLPTSFNY 
+1al2_ac      HN..N.WGIA I.LPLAPLN. F.ASESSPE. IPITL.T.I. A.PMCCEFN. 
+
+1bbt_aa      GAIKATRVTE LLYRMKRAET YCPRPLLAIH PTEARHKQKI VAP
+1al2_ac      G.LR..NIT. LP.RLQ.... .......... .......... ...
+

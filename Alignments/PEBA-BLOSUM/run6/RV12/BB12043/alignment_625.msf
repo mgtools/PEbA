@@ -1,0 +1,55 @@
+PileUp
+
+
+
+   MSF: 676  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fxy_A     oo  Len:  676
+ Name: HGFA_HUMAN oo  Len:  676
+
+//
+
+
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      MGRWAWVPSP WPPPGLGPFL LLLLLLLLLP RGFQPQPGGN RTESPEPNAT 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPAIPTILV TSVTSETPAT SAPEAEGPQS GGLPPPPRAV PSSSSPQAQA 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LTEDGRPCRF PFRYGGRMLH ACTSEGSAHR KWCATTHNYD RDRAWGYCVE 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPPPGGPAA LDPCASGPCL NGGSCSNTQD PQSYHCSCPR AFTGKDCGTE 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      KCFDETRYEY LEGGDRWARV RQGHVEQCEC FGGRTWCEGT RHTACLSSPC 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LNGGTCHLIV ATGTTVCACP PGFAGRLCNI EPDERCFLGN GTGYRGVAST 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      SASGLSCLAW NSDLLYQELH VDSVGAAALL GLGPHAYCRN PDNDERPWCY 
+
+1fxy_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      VVKDSALSWE YCRLEACESL TRVQLSPDLL ATLPEPASPG RQACGRRHKK 
+
+1fxy_A          .......IVG GYNCKDGEVP WQ..ALLINE ENEGFCGGTI LSEFYILTAA 
+HGFA_HUMAN      RTFLRPRIIG GSSSLPGSHP W.LAAIYIGD ...SFCAGSL VHTCWVVSAA 
+
+1fxy_A          HCLYQKRF.. ....KVRVGD RNTEQEEGGE AVHEVEV.VI KHNR....FT 
+HGFA_HUMAN      HC.FSHS.PP RDSVSVVLGQ HFFNRTTDVT QTFGIE.KYI PYT.LYSVFN 
+
+1fxy_A          KETYDFDIAV LRLKTP.... ITFRMNVAPA SLPTAPPATG ....TKCLIS 
+HGFA_HUMAN      ..PSDHDLVL IRLKKKGDRC ATRSQFVQPI CLPE.PGST. FPAGHKCQIA 
+
+1fxy_A          GWGNTA.SSG ADYPDEL.QC LDAPVLSQAK CEASYPG... ..KITSNMFC 
+HGFA_HUMAN      GWGHL.DENV SGYSSSLREA L.VPLVADHK C.SS.P.EVY GADISPNMLC 
+
+1fxy_A          V.FLEG..KD SCQGDSGGPV VC..NG..QL QGVVSWGDGC Q..KNKPGVY 
+HGFA_HUMAN      AGYFD.CKSD ACQGDSGGPL ACEKNGVAYL YGIISWGDGC .GRLHKPGVY 
+
+1fxy_A          TKVY.NYVKW IKNTIAANS. ......
+HGFA_HUMAN      TRV.ANYVDW I.NDRIRPPR RLVAPS
+

@@ -1,0 +1,94 @@
+PileUp
+
+
+
+   MSF: 1321  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q9W6E1 oo  Len:  1321
+ Name: Q9GLF5 oo  Len:  1321
+
+//
+
+
+
+Q9W6E1      MVHVMGDAGC WLLLGLTLLP IAVLGSQDDG KVIHISRVQH QAVRVGLGEP 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VALPCLFLLH PSASLGPNEP PDPPRVKWSK VRSASGQRED VPILVAKDNV 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VKVVKAYEGR VSLPGYARDR YNGTLLLRAA RASIAGLYRC EVVAGIDDEQ 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DLLPLEVMGV VFHYRPAGAR YALTFAAARR ACMDNSAVIA SPQHLQAAFE 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DGYDNCDAGW LADQSVRYPI TLSRPGCYGD RNSLPGVRSY GQREPGELYD 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VYCYARELQG KVFYATAPGR FTLSGARRHC RGRGAALATT GQLYLAWREG 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      LDQCDPGWLA DGSVRYPILA PRRKCGGEAP GVRTLYRFPN RTGFPLPASK 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      FDAYCYKGDA AGAPDSSAEQ RELEPLGSDN VLVEHEDMAT SGDSPRAGVL 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PQLGAAGPDG AEDEQLRLAS SVTAAWRGDI PGGSSMASAS SPSSSVRPLE 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DEALNAVDPA LRGSPRELFG TSPAPALREF PDPTEPLFTL HPQTQSPAQE 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VTSLPPAAPA LGTVPIVAAE TPGTPKQSSY AGLNGRYFQL QQQSRDPSVV 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      QDPTVAGDHT VAEDPVGTVT QAPILALEVK GAAANAVETW CITRPSAESP 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      HRGGPYPLSN EVEEEVGHKL LAPSTIPVPP SRRDLPQWSP PTAPHGPGGP 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      TRTSLPSSPP TLMAPGDTSH HQDVSTGEAQ PRGDSPQPPA DVIEDFSGDV 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      APKEDDSPIP PWPPLPPAPL VAEGPRTAAQ PSSDSSGALG DGSLERQRKA 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VTFVLPPVGL PGSPSPTALS SPHPQSRLSP TVPQGALKMG AEPTHEHLDV 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      GTGPWDEAAI TSVAPDVPSA PPTDSKVTPG LGSEWPSEGS GRVGDGPTAA 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PQHPNPSAPG LEGEEYPPHP LDPQQPPSPG EEYTSGEAKS DPPPSTATHS 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PAPPDTHGPS PTAPHPWVPE GPEAPSAGPL FELTTPGGAG GALLLDADSG 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      SGEEPVLEER ELLV.WAD.. .......TSN SSQHAPADPC QTNPCLHGGT 
+Q9GLF5      .......... ..M.GWI.RD RRSPSSMEIR ELHNRDVINR GAFKSRQKRT 
+
+Q9W6E1      CHANGSICGC SCAPGFTGEN CEID.IDDCL SS....PCQN GGTCIDEVNA 
+Q9GLF5      QTLITSKCGE NPSPFFLARS ..I.AI..AM G.IRFI.VM. ..VMI..YSG 
+
+Q9W6E1      FVCLCLPSYS G....SRCEK DTEG.CDHNW H..KFQGHCY RYFSRRRSWE 
+Q9GLF5      MI.INLL.FN .QEAPSPLKE SYCGPCPKNW .IC.YRNSCY QFSNESKTWL 
+
+Q9W6E1      DAERDCRRRA .GHLTSIHSQ EEHGFINSFG HENTWIGLND RIV..EQDFQ 
+Q9GLF5      QSQASCRSQ. NSSLLKIYSR EDQDFFKLV. KSYHWMGLV. QI.PTNRSWQ 
+
+Q9W6E1      WTDNTG.LQY ENWRENQP.D NFFAG..GED CVVLVSHEIG KW.NDVPCNY 
+Q9GLF5      WEDGS.IL.. .S..PNQ.I. TMVE.MQNGS CAVYGSSFKG Y.TEN.CLTL 
+
+Q9W6E1      NLPYICKKG. TVLCGPPPEV ENAFLVGKKK ERYSIHSSVR YQCEEGFTQR 
+Q9GLF5      NT.YICMK.R TV........ .......... .......... .......... 
+
+Q9W6E1      HIPTIRCHSN GKWDRPKLLC TKPRRSHRAR RHHRHRHSHP HHQHHHHKPR 
+Q9GLF5      .......... .......... .......... .......... .......... 
+
+Q9W6E1      KERRKHRKHL RLDWMEEGHY F
+Q9GLF5      .......... .......... .
+

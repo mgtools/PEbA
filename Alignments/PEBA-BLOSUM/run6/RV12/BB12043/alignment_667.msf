@@ -1,0 +1,55 @@
+PileUp
+
+
+
+   MSF: 682  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1rfn_A     oo  Len:  682
+ Name: HGFA_HUMAN oo  Len:  682
+
+//
+
+
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      MGRWAWVPSP WPPPGLGPFL LLLLLLLLLP RGFQPQPGGN RTESPEPNAT 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPAIPTILV TSVTSETPAT SAPEAEGPQS GGLPPPPRAV PSSSSPQAQA 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LTEDGRPCRF PFRYGGRMLH ACTSEGSAHR KWCATTHNYD RDRAWGYCVE 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPPPGGPAA LDPCASGPCL NGGSCSNTQD PQSYHCSCPR AFTGKDCGTE 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      KCFDETRYEY LEGGDRWARV RQGHVEQCEC FGGRTWCEGT RHTACLSSPC 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LNGGTCHLIV ATGTTVCACP PGFAGRLCNI EPDERCFLGN GTGYRGVAST 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      SASGLSCLAW NSDLLYQELH VDSVGAAALL GLGPHAYCRN PDNDERPWCY 
+
+1rfn_A          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      VVKDSALSWE YCRLEACESL TRVQLSPDLL ATLPEPASPG RQACGRRHKK 
+
+1rfn_A          .......VVG GEDAKPGQFP WQVVLN..GK VDAFCGGSIV NEK.WIVTAA 
+HGFA_HUMAN      RTFLRPRIIG GSSSLPGSHP WLAAI.YI.. GDSFCAGSLV HT.CWVVSAA 
+
+1rfn_A          HCVEG..... .VKITVVAGE HNIEETEHTE QKRNVIRIIP HHN.YNIN.. 
+HGFA_HUMAN      HCFS.HSPPR D.SVSVVLGQ HFFNRTTDVT QTFGIEKYIP YT.LYSV.FN 
+
+1rfn_A          KYNHDIALLE LDEPL..... VLNSYVTPIC IADKEY...T FL.KF.GSGY 
+HGFA_HUMAN      PSDHDLVLIR LKKK.GDRCA TRSQFVQPIC LP..E.PGST F.PA.GHKCQ 
+
+1rfn_A          VSGWGRVFHK GR.....SAL VLQYLRVPLV D.RATCLRST KFTIYNN... 
+HGFA_HUMAN      IAGWGHLD.E N.VSGYSSSL R.EAL.VPLV .ADHKC.SSP E..VYG.ADI 
+
+1rfn_A          ...MFCAGHE ....GGDSCQ GDSGGPH.VT EVEGTSFLTG IISWGEE.CA 
+HGFA_HUMAN      SPNMLCAGY. FDCKS.DACQ GDSGGP.LAC EKNGVAYLYG IISWGD.GCG 
+
+1rfn_A          K.GKYGIYTK VSRYVNWIKE KTKLT..... ..
+HGFA_HUMAN      RLHKPGVYTR VANYVDWIND RIRPPRRLVA PS
+

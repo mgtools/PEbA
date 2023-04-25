@@ -1,0 +1,94 @@
+PileUp
+
+
+
+   MSF: 1323  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q9W6E1 oo  Len:  1323
+ Name: Q60654 oo  Len:  1323
+
+//
+
+
+
+Q9W6E1      MVHVMGDAGC WLLLGLTLLP IAVLGSQDDG KVIHISRVQH QAVRVGLGEP 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VALPCLFLLH PSASLGPNEP PDPPRVKWSK VRSASGQRED VPILVAKDNV 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VKVVKAYEGR VSLPGYARDR YNGTLLLRAA RASIAGLYRC EVVAGIDDEQ 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DLLPLEVMGV VFHYRPAGAR YALTFAAARR ACMDNSAVIA SPQHLQAAFE 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DGYDNCDAGW LADQSVRYPI TLSRPGCYGD RNSLPGVRSY GQREPGELYD 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VYCYARELQG KVFYATAPGR FTLSGARRHC RGRGAALATT GQLYLAWREG 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      LDQCDPGWLA DGSVRYPILA PRRKCGGEAP GVRTLYRFPN RTGFPLPASK 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      FDAYCYKGDA AGAPDSSAEQ RELEPLGSDN VLVEHEDMAT SGDSPRAGVL 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PQLGAAGPDG AEDEQLRLAS SVTAAWRGDI PGGSSMASAS SPSSSVRPLE 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      DEALNAVDPA LRGSPRELFG TSPAPALREF PDPTEPLFTL HPQTQSPAQE 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VTSLPPAAPA LGTVPIVAAE TPGTPKQSSY AGLNGRYFQL QQQSRDPSVV 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      QDPTVAGDHT VAEDPVGTVT QAPILALEVK GAAANAVETW CITRPSAESP 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      HRGGPYPLSN EVEEEVGHKL LAPSTIPVPP SRRDLPQWSP PTAPHGPGGP 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      TRTSLPSSPP TLMAPGDTSH HQDVSTGEAQ PRGDSPQPPA DVIEDFSGDV 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      APKEDDSPIP PWPPLPPAPL VAEGPRTAAQ PSSDSSGALG DGSLERQRKA 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      VTFVLPPVGL PGSPSPTALS SPHPQSRLSP TVPQGALKMG AEPTHEHLDV 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      GTGPWDEAAI TSVAPDVPSA PPTDSKVTPG LGSEWPSEGS GRVGDGPTAA 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PQHPNPSAPG LEGEEYPPHP LDPQQPPSPG EEYTSGEAKS DPPPSTATHS 
+Q60654      .......... .......... .......... .......... .........M 
+
+Q9W6E1      PAPPDTHGPS PTAPHPWVPE GPEAPSAGPL FELTTPGGAG GALLLDADSG 
+Q60654      .SEQEVTY.S TVRFHESSRL QKLVRTE.EP QRPREACYRE YSVPWKLIVI 
+
+Q9W6E1      SGEEPVLEER ELLVWADTSN SSQHAPADPC ...QTNPCLH GGTCHANGSI 
+Q60654      ACGI.LCFLL LVTVALLAIT IFQHSQQKH. ELQETLNC.H DN.CSPTQSD 
+
+Q9W6E1      CGCSCAPG.. FTGENCEIDI .DDCLSSPCQ NGGTC.IDEV NAFVC.LCLP 
+Q60654      V..NLKD.EL LRNKSIECRP GNDLLESLSR DQNR.WYSET KTFS.D.S.S 
+
+Q9W6E1      SYSGS...RC .....EKDTE GCDHNWHK.F QG.HCYRYFS RR..RSWEDA 
+Q60654      QHTG.VHER. PISKAEGKGR GFEKYWF.CY .GIKCY.YFN M.DRKTWSGC 
+
+Q9W6E1      ERDCRR.RAG H..LTSIHSQ EEHG.FINSF GH..ENTWIG LND..RIVEQ 
+Q60654      KQTCQ.I.SS .LSLLKIDNE DEL.KFLQNL A.PSDISWIG LS.YDNK.KK 
+
+Q9W6E1      DFQWTDNTGL QYENWRE.NQ P.DNFFAGGE DCVVLVSHEI GKW.NDVPCN 
+Q60654      DWVWIDN.G. P..S.K.L.A .LNTTKYNIR D.G.L.CMSL SK.TR.LD.N 
+
+Q9W6E1      Y.NLPYICKK GTVLCGPPPE VENAFLVGKK K.ERYSIHSS VRYQCEEGFT 
+Q60654      .GD....CDK .SYIC..... I..C...GKR .LDKFPH... .......... 
+
+Q9W6E1      QRHIPTIRCH SNGKWDRPKL LCTKPRRSHR ARRHHRHRHS HPHHQHHHHK 
+Q60654      .......... .......... .......... .......... .......... 
+
+Q9W6E1      PRKERRKHRK HLRLDWMEEG HYF
+Q60654      .......... .......... ...
+

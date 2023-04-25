@@ -1,0 +1,37 @@
+PileUp
+
+
+
+   MSF: 375  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1jqp_A oo  Len:  375
+ Name: 1aim_  oo  Len:  375
+
+//
+
+
+
+1jqp_A      DTPANCTYPD LLGTWVFQVG PRHPRSHINC SVMEPTEEKV VIHLKKLDTA 
+1aim_       .......... .......... .......... .......... .......... 
+
+1jqp_A      YDEVGNSGYF TLIYNQGFEI VLNDYKWFAF FKYEVKGSRA ISYCHETMTG 
+1aim_       .......... .......... .......... .......... .......... 
+
+1jqp_A      WVHDVLGRNW ACFVGKKMLS LPESWDWRNV RGINFVSPVR NQESCGSCYS 
+1aim_       .......... .......... APAAVDWR.A RGA..VTAVK DQGQCGSCWA 
+
+1jqp_A      FASLGMLEAR IRILTNNSQT PILSPQE.VV SCSPY.AQGC DGGFPYLIAG 
+1aim_       FSAIGNVEC. QWFLAGHPLT NLSE.Q.MLV SCDK.TDSGC SGG...LM.N 
+
+1jqp_A      KYAQDFG..V VEENCFPYTA TDAP.CKPK. ....ENCLRY YSSEYY.YVG 
+1aim_       N.A..F.EWI VQE.AV.YTE .DS.Y..P.Y AGISPPC.T. .TSGH.T.VG 
+
+1jqp_A      GF.YG.GCNE ALMKLELVKH ........GP MAVAFEVHDD ...FLHYHSG 
+1aim_       A.TI.TGHVE LPQD.E.AQ. IAAWLAVNGP VAVA..V.D. ASSWMTYTGG 
+
+1jqp_A      IYHHPFNP.. FELTNHAVLL VGYGKDPVTG LDYWIVKNSW G.SQWGESGY 
+1aim_       VM..T.S.CV SELDH.GVLL VGY..N.VP. ..YWIIKNSW .TTQWGEEGY 
+
+1jqp_A      FRIRRGTDEC AIESIAMAAI PIPKL
+1aim_       IRIAKGSNQC LVKEEASSAV .VG..
+

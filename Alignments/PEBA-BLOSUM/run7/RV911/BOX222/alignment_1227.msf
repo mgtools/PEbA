@@ -1,0 +1,151 @@
+PileUp
+
+
+
+   MSF: 2273  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q01GD2 oo  Len:  2273
+ Name: O60139 oo  Len:  2273
+
+//
+
+
+
+Q01GD2      MSGRQKKQTV EEQQAALKQR EAAQARLVAA QQAAAAAAAV AGKRGDDGGH 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ALTKDELQDM LKEFAPGLEF DSAVEDVLLE IVDDFVDTVL DHSLMLAKHR 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      GSEEIEPKDV LMHLERQRFD STRRRGWTCT RIAWPPCADP SPRPQRRKMR 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      PRSKLSSPPS APRKRVVTPR APENVTQSCN LEARKVYKIH ETHALVDHTS 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      SSFNSMFGIP LLMGNFLPLS GQTSVPSSTC TSKRASPAPI SLAAFTKAAH 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      SIFGSMCTKN SALNSVSVSL VSLTTIFSGN PFTTPYTRSR SLVRQSSLIH 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      RRIHRDRMRP LAPTRGRPRS TARVPSVASR ANPAAGLAHR YTRACCAPTI 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ASPRALPSPN DAPLSVDRAR ARSTIFAAPP HLVTRVVVVG SLAMTQARPS 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      DGSEPASDLA RARAIARDRV DGQSLTSGER VAIVPKAWFD AFSRACSAME 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ASAEAMEAPM MSTIDVTSLL GDDAMTMTTS AVSEVDAALR PGLREGEDFE 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      IVRASAMEAF ERWYGHAEGS RSIYRTCVER NGRLVVDVYG IVVRAKLGEA 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      PDEVTRRLEL PKGSEARELV LACKAAFEEL REVDEDDIRV SDYLFQNRGE 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      VLTNLPKKSL EDFHLLPDQE VLVETKADDR WPDDGNSVIA LPAVSDDDSM 
+O60139      .........M DSSKIYDFLK SAPFHPSMVI CYSLERYFED VSLAYKLYSM 
+
+Q01GD2      DHTKLGCDVS LTPKNDVSTC ADAAM.VGTR GKAGLSNLGN TCFMNSALQC 
+O60139      .LRSLKLDPH FM.ELANPKK VDSSLSYENY QPIGLTNLGN TCYMNCVLQC 
+
+Q01GD2      LSHSSL..LT DYF.LSDKYE GD....INTD NPIGMGGELA KEYANLIGAL 
+O60139      L.FAC.KDLT .I.PML.QGR G.LLQNINTK NPLGTGGKIT SAFFSLLQSV 
+
+Q01GD2      W..RDGALTV TPRKFK.HS. LARFAPQFSG .YMQQDAQEL LA.FLLDG.L 
+O60139      .LLNHGQRSI SPRNF.LE.I VQSLNRDFS. IDGQCDAQEF L.NFFLD.KL 
+
+Q01GD2      HEDLNRV..K RKPYVEERDA DG....RTDE DVAH....ES WEAHLARNDS 
+O60139      HEDLNS.NAS RSP.IAPLTE D.QLSAREEL PLSHFSHIE. WNLHLRSNKS 
+
+Q01GD2      CIVDTFQ.GQ YR..STLVCP .SCSNKSVKF DPFMYLSIPV PSVGERVIKV 
+O60139      IVVNNF.VGQ L.CSRT.QC. MTCGRTSTTF ......A.PF TS.....L.A 
+
+Q01GD2      TLISYGDEIS AVTYALKLPK LG.ELATLFS ALCEVADVDT ..MDER..LV 
+O60139      ..IPI.DD.. .VSH.V.V.S L.QECLLKFS AP.EL..LQ. GH.DG.WH.. 
+
+Q01GD2      LCEVYNHRLE KTLSNMTMPL SDIR.ERDTI FAHRLPVLND DEVSETIDTV 
+O60139      .CPVCK..VQ RSAKKVIM.I SKL.PE.... Y...L.I... ......IQ.I 
+
+Q01GD2      LVQRKHQNAS QNKTPYSHAS PLATSTLVRF GF.PWIVPVT VPKGKKPGAE 
+O60139      ..QR...... .....FK... .I..S..V.M G.R....... ..K.K..... 
+
+Q01GD2      QARRIESIVE KYSAKYARTI AMEQ.PSSPS .ASGDGSFDS AP...VHRTT 
+O60139      ....IDT..P .L......GL SLQ.IPSKM. LVP.P.SFQS G.IGYI..PS 
+
+Q01GD2      ND.GDLRAFK LRYTNKS.AS ASFHDYG.SG DPATD.SHEM SYIV....GT 
+O60139      N.Y.NLFAFI CHY.GQ.LEN .G.H.Y.IS. D.VL.FNNEW CHI.DDSIVR 
+
+Q01GD2      TMHCVAIDWS PKALSHSYD. .........D ELFEQDVDEH VSVKENALDR 
+O60139      TVGGI.TD.L REDFSSSY.I LFYKRSSLLE E.FE.DKCPK MTLKRNVK.. 
+
+Q01GD2      TSMQGMPLSA CLEAFIQEEP LGEDDMWYCK QCKEHVPALK KLDLWRMPPI 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      LVMHLKRFSY SRIYRDKIDT LVHFPLNDLD MSPYVLANTS SGPAPVYDLY 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      AVVNHFGGMG GGHYTAYTRH AEEGTWHLYD DSRCTPVEST AALNNKAAYV 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      VFYKRRDVPT RHAMSRHGSI CNLEEMSQDT KMDCTYINIV RLCSSFAQPS 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      PRSSLAVASF DSCAMSTTRD DSPSTASTSP LTFDVIAVDG RARATSLKLP 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      HHDCLTPMFM PVGTQGSVKG LTSAQLEDIG CQVILGNTYH LGNRPGPEIL 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      RKAGGLHGFM NWRRAMLTDS GGFQMVSLLD LADITEEGVT FQSPIDGKPM 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      LLTPERSIEI QNDIGADIIM ALDDVVSSVT ADRARFEEAT HRTTRWIDRC 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      INAHQRPHDQ CLFGIVQGGL DLELRDLSLE GLLARGDALP GMAVGGLAGG 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ESKEDFVRVV SHCTAKLPAH KPRYVMGVGY PLDLVICTAL GADMYDCVYP 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      TRTARFGTAL VPEGVLRLKN AACANDHRPI DETCDCLTCK TYTRADLHEI 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ATREPRAAQL LTIHNLRYQM RLCAAMHRSI IEQRFADFVR DFIKKQFPDD 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      AAPDWYRPPD ASHPPSPHSS PRMGTGASKI ASSVAPAATK RALPRAGAAT 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      VAPYVPDAVD VDRNVRAPVE RSGGKDVKLT EMMSKLTVRA EDVSAVEFGY 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ASTTSRAKKR IDRAAETLMK PMVLLDALAR HRASGFEASA VSDIARERPR 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      VSERVLQETM ENFRAHVFEE VEDERWPGRK ARVGRWESTV SIARVSVAVA 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      EATMPSQSGI RVERIPGSPR AILWLEREPV NSMTLEFWRA LSNAFDALER 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      DETVCATAES ALMRDGLKRA VFTAGNDVTE LYAPRTTRKR YREFWLTQTK 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      FLARLLKSRL ATVCAIRGAC PAGGCVVALC CDYRVQTTEG TLGLNEVALG 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      ISVPKYWAEL FLDRCNDRVK GESLLQRGVL IRPAEALGIG LIDEVVGEGA 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      LMASASSVMD RYLKVPPGAR ATTKQTIRSE FSARWESYAE EEVKGGWKML 
+O60139      .......... .......... .......... .......... .......... 
+
+Q01GD2      NNPHIVKALG GVLMKLSGGK AKL
+O60139      .......... .......... ...
+

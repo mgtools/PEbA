@@ -1,0 +1,49 @@
+PileUp
+
+
+
+   MSF: 585  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ton_     oo  Len:  585
+ Name: TPA_MOUSE oo  Len:  585
+
+//
+
+
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      MKRELLCVLL LCGLAFPLPD QGIHGRFRRG ARSYRATCRD EPTQTTYQQH 
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      QSWLRPMLRS SRVEYCRCNS GLVQCHSVPV RSCSEPRCFN GGTCQQALYF 
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      SDFVCQCPDG FVGKRCDIDT RATCFEEQGI TYRGTWSTAE SGAECINWNS 
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      SVLSLKPYNA RRPNAIKLGL GNHNYCRNPD RDLKPWCYVF KAGKYTTEFC 
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      STPACPKGKS EDCYVGKGVT YRGTHSLTTS QASCLPWNSI VLMGKSYTAW 
+
+1ton_          .......... .......... .......... .......... .......... 
+TPA_MOUSE      RTNSQALGLG RHNYCRNPDG DARPWCHVMK DRKLTWEYCD MSPCSTCGLR 
+
+1ton_          ........IV GGYKCEKNSQ PWQVAV.IN. .........E YLCGGVLIDP 
+TPA_MOUSE      QYKRPQFRIK GGLYTDITSH PWQ.A.PI.F VKNKRSPGER FLCGGVLISS 
+
+1ton_          SWVITAAHCY S......NNY QVLLGRNNLF KD..EPAQRR LVRQSFRH.P 
+TPA_MOUSE      CWVLSAAHCF .LERFPPNHL KVVLGRTY.. R.VV.PGEEE ...QTFE.IE 
+
+1ton_          DYIVHDHS.. .....NDLML LHLSEPADI. ....TGGVKV IDLPTKEPKV 
+TPA_MOUSE      KYIVHEE.FD DDTYDNDIAL LQLRSQSK.Q CAQESSSVGT ACLPDPNLQL 
+
+1ton_          G...STCL.A SGWGST.NPS EM.VVSHDLQ C.VNIHLLSN EKCIETYKDN 
+TPA_MOUSE      .PDWTEC.EL SGYGK.HEAS S.PFFSDRLK .EAHVRLYPS SRCTSQHLFN 
+
+1ton_          ..VTDVMLCA GEMG...... ..KDTCAGDS GGPLICD... ..GVLQGITS 
+TPA_MOUSE      KTVTNNMLCA GDT.RSGGNQ DLHDACQGDS GGPLVC.MIN KQMTLTGIIS 
+
+1ton_          GGATPCAKKT P..AIYAKLI KFTSWIKKV. MKENP
+TPA_MOUSE      .WGLGCGQKD .VPGVYTKVT NYLDWIHD.N MKQ..
+

@@ -1,0 +1,43 @@
+PileUp
+
+
+
+   MSF: 489  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: yhx8_yeast oo  Len:  489
+ Name: cat8_yeast oo  Len:  489
+
+//
+
+
+
+yhx8_yeast      ...TSWVRED GSFKSIDRSL LDRFIAAYFK HNHRLFPMID KI....AFLN 
+cat8_yeast      EKPANDQDDE LLSLTEIKEL LHLFFKFWS. .NQ.V.PILN N.DHFLIYFN 
+
+yhx8_yeast      DA.....ATI TDFERLY.DN KNY.PDSF.V F.KVYM.IMA IGCTTLQRAG 
+cat8_yeast      N.FVEVVKHL ST.ENL.ETN .N.TTKS.TV .TTNH.EIFA LKLLMMLQMG 
+
+yhx8_yeast      MVSQD.EECL SEHLAFLAMK KF........ .......RSV IILQDIE... 
+cat8_yeast      LLVK.IK..M .EKIKY.TVP K.NPKAKYAR LMAYYHQLSL IIPKNP.YFL 
+
+yhx8_yeast      .....TVRCL LLLGIYSFFE P..KGSSSWT ISGII....M RLTIGLGLNR 
+cat8_yeast      NMSTTSLPSL QLLSLASFYY .LNVGDIS.A IYGV.RGRIV SMAQQLRLHR 
+
+yhx8_yeast      EL.....TAK KLKSMSALEA EARYRVFWSA YCFERLV.CT SLGRISGIDD 
+cat8_yeast      C.PSAVLSVH SNPVLQKFEQ SERRLLFWAI Y.Y..V.D.V .FA..S.LQ. 
+
+yhx8_yeast      .EDITVPLPR ALYVDERDDL EMTKLMISLR KMGGRIYKQV HSVSAGRQKL 
+cat8_yeast      L.G..VP..R .L.L..KD.F D.....I... ECA..L.P.I .S.DV..E.Y 
+
+yhx8_yeast      TIEQKQEIIS GLRKELDEIY SRESERRKLK KS.QMDQV.E R.ENNSTTNV 
+cat8_yeast      ..K.DQ.L.S .MENE..K.. A.D..K.KAK K.IQL.Q.GQ .V.SSFSLQI 
+
+yhx8_yeast      ISFHSSEIWL AMRYSQLQIL LYRPSALMPK PPIDSLSTLG EF........ 
+cat8_yeast      IRFA.K.I.L G.NI..LDSI .FK.RGMMD. ...ERI.T.S EVALVHENAL 
+
+yhx8_yeast      .......... .......... .......... .......... .......... 
+cat8_yeast      DNWRNQLPEM YYFQITVNGT VNLDEIRATN QRNTETKFDK KDIILFEKKI 
+
+yhx8_yeast      .......... .......... .......... .........
+cat8_yeast      LLLFYFLAKS MIHLPVIATK PLPKNVDNAT KKKQSMFNN
+

@@ -172,7 +172,7 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='/home/ben/Desktop/PEbA_Data/Runs/PEBA-BLOSUM')
+    parser.add_argument('-p', type=str, default='Alignments/PEBA-BLOSUM')
     parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
 
@@ -192,8 +192,6 @@ def main():
     for run in runs:  #pylint: disable=R1702
         for ref in os.listdir(f'{run}'):
 
-            print(ref)
-
             # Initialize dicts for each run
             if args.t == 'id':
                 COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
@@ -205,7 +203,6 @@ def main():
                 COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
 
             for msa in os.listdir(f'{run}/{ref}'):
-                print(msa)
                 if msa.startswith('B'):
                     for file in os.listdir(f'{run}/{ref}/{msa}'):
                         if file.endswith('csv'):

@@ -1,0 +1,46 @@
+PileUp
+
+
+
+   MSF: 517  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bio_      oo  Len:  517
+ Name: TMS2_MOUSE oo  Len:  517
+
+//
+
+
+
+1bio_           .......... .......... .......... .......... .......... 
+TMS2_MOUSE      MALNSGSPPG IGPCYENHGY QSEHICPPRP PVAPNGYNLY PAQYYPSPVP 
+
+1bio_           .......... .......... .......... .......... .......... 
+TMS2_MOUSE      QYAPRITTQA STSVIHTHPK SSGAPCTSKS KKSLCLALAL GTVLTGAAVA 
+
+1bio_           .......... .......... .......... .......... .......... 
+TMS2_MOUSE      AVLLWRFWDS NCSTSEMECG SSGTCISSSL WCDGVAHCPN GEDENRCVRL 
+
+1bio_           .......... .......... .......... .......... .......... 
+TMS2_MOUSE      YGQSFILQVY SSQRKAWYPV CQDDWSESYG RAACKDMGYK NNFYSSQGIP 
+
+1bio_           .......... .......... .......... .......... .......... 
+TMS2_MOUSE      DQSGATSFMK LNVSSGNVDL YKKLYHSDSC SSRMVVSLRC IECGVRSVKR 
+
+1bio_           ...ILGGREA EAH.ARPYMA SVQLNGAHLC GGV.LVAEQW VLSAAHCLED 
+TMS2_MOUSE      QSRIVGGLNA SP.GDWPWQV SLHVQGVHVC GG.SIITPEW IVTAAHCVEE 
+
+1bio_           G.....KVQV LLGAHSLSQP EP.....SKR LYDVL.RAVP HPDSQPDTI. 
+TMS2_MOUSE      .PLSGPRYWT A.FAGILRQ. S.LMFYGSRH ..QV.EKVIS HPNYDSKT.K 
+
+1bio_           DHDLLLLQLS EK.ATLGPAV R..PLPQRVD ..RVAPGTLC DVA....... 
+TMS2_MOUSE      NNDI...ALM K.LQT..PLA .FNDLVKPV. CL.PNPGMML DL.DQECWIS 
+
+1bio_           GWGIVNHAGR RPDSLQHVLL PVLDR.ATCN RHHD...GAI TERLMCAE.. 
+TMS2_MOUSE      GWGATYEKGK TSDVLNAAMV PLIE.PSKCN SKY.IYNNLI TPAMICA.GF 
+
+1bio_           .SNRR.DSCK GDSGGPLVCG ...GV..LEG VVTSGSRVCG NRKPGIYT.R 
+TMS2_MOUSE      LQGS.VDSCQ GDSGGPLVT. LKNGIWWLIG DTSWGSGCAK ALRPGVY.GN 
+
+1bio_           VASYAA.WID SVLA...
+TMS2_MOUSE      VTVFT.DWIY QQMRANS
+

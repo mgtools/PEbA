@@ -1,0 +1,118 @@
+PileUp
+
+
+
+   MSF: 1712  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q03497 oo  Len:  1712
+ Name: P38692 oo  Len:  1712
+
+//
+
+
+
+Q03497      MSNDPSAVSE LPDKDSLDNG ISNDNERAMG GNGDGGDGLR LPRTTGTLNV 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      NALQKGTNAA HEAGGYKSMD PAKNAETTND DDNNVVSLDD PIQFTRVSSS 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      SVISGMSSSM SPHSNIDETK SLEAVTPNIN TSNITPDHSA DNTFSTINAS 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      ESDHQFNDTL LSKLSLTDST ETIENNATVK HQQPVASSTV NSNKSSTDIR 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      RATPVSTPVI SKPSMTTTPR QINSASHSLS NPKHKQHKPK VKPSKPEAKS 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      KPVSVKKSFP SKNPLKNSSP PKKQTEKSYY SSSSKKRKSG SNSGTLRMKD 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      VFTSFVQNIK RNSQDDKRAS SSSNNSSSSS ITTALRISTP YNAKHIHHVG 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      VDSKTGEYTG LPEEWEKLLT SSGISKREQQ QNMQAVMDIV KFYQDVTETN 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      GEDKMFKTFN TTTGLPGSPQ VSTPPANSFN KFPPSTSDSH NYGSRTGTPM 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      SNHVMSPTLN TDSSSANGKF IPSRPAPKPP SSASASAPII KSPVMNSAAN 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      VSPLKQTHAP TTPNRTSPNR SSISRNATLK KEEQPLPPIP PTKSKTSPII 
+P38692      .......... .......... .......... .......... .......... 
+
+Q03497      STAHTPQQVA QSPKAPAQET VTTPTSKPAQ ARSLSKELNE KKREERERRK 
+P38692      .......... .......... .......... .......... ......MTTK 
+
+Q03497      KQLYAKLNEI CSDGDPSTKY ANLVKIGQGA SGGVYTAYEI G.TNVSVAIK 
+P38692      PQN.SKQGLA EGEMDVSSLF KRTEVIGRGK FGVVYKGYNV .KTGRVYAIK 
+
+Q03497      QMNLEKQPKK ELII....NE IL..VMKGSK HPNIVNFIDS YVLKG.DLWV 
+P38692      VLNLDSD.SD E.V.EDVQRE I.QFLASLKQ ISNITRYYGS Y.LKDTSLWI 
+
+Q03497      IMEYMEGGSL TDVVTHCILT EG.QIGAVCR ETLS.GLEFL HSKGVLHRDI 
+P38692      IMEHCAGGSL RSLLRPGKID E.KYIGVIMR ELL.VALKCI HKDNVIHRDI 
+
+Q03497      KSD.NILLSM .EGDIKLTDF GFCAQINELN LKRTTMVGTP YWMAPEVVSR 
+P38692      KA.ANVLIT. NEGNVKLCDF GVAAQVNQTS LRRQTMAGTP YWMAPEVIM. 
+
+Q03497      KEYGP..... KVDIWSLGIM IIEMIEGEPP YLNETPLRAL YLIATNGTPK 
+P38692      .E.G.VYYDT KVDIWSLGIT TYEIATGNPP YCDVEALRAM QLIIKSKPPR 
+
+Q03497      LKEPENLSSS LKKFLD..WC LCVEPEDRAS ATELLHDEYI TEIAEANSSL 
+P38692      L.EDRSYSTS LKEFI.AL.C LDEDPKERLS ADDLLK.S.. KF.IRAHK.. 
+
+Q03497      APLVKLARLK KVAENMD.AD ED....NDDD NDNEHINKTN NCDDNNDSKE 
+P38692      A..TPTS.I. .LKE.L.IS. R.YLLFRDK. NKNKY.KIEG SIPENEPSKP 
+
+Q03497      TV.....NLD VTEDDKQK.. .......... .......... .......... 
+P38692      S.EAPKPSQN GGGDEAQKSI ASNDNEIKRV NEGDVEMKWD FDSLSSSDYI 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      IENNINLDAL AEDNNEWATA QHDLFNYAYP DEDSYYFDPT SHNTRPFVYQ 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      GTTIGKGYPG TIAQNSTLNA PVTNNYTNSK YPSKMVAGTT NTSGTHTAGP 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      MTSSKRLESK APKQLLELFE DNEIITAEND VNTEAPKISK SISSLNAGNS 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      SRDDFIPSIS NEVNGNINNN KMRPHLPPLS SGNNYYSQST PALPLLQTKF 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      NKTSKGPPTS GLTTAPTSIE IEIPEELPNS ALPTPASADP VLIPSTKARS 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      STVTAGTPSS SSSIQYKSPS NVPRRLTVSN NRPEHCPSTI TNQKLGSAVA 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      SNSGISSTPN NSNNYNNNTD SENSRGSSGS NTANSTQMGI TNPGNVTKLS 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      THKASSPSRP LFGVGTSPNR KPAGSPTQNI GHNSTHTNLA PPPTMKPMAN 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      SKDNKDILLQ PLNSIPSSST LNTISGNSSN NLTSSNYFSN EKEGSRVNGD 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      FKRNNPNLKL QMPLPTPVVR NKLLDPNTAT SQNNNGMPGS AGISTNENIN 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      QFGFNTSSAS NIPVSMTPIS EKHIDFGGKI KRSQSISNRK NSSASEHPLN 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      ILGSSVSGNV SGIGNNNVGS NNNSGPNNSV PLSANTGNTT IKANSTTIAT 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      SSSAAASTTA PISQQTIPSG TQFNHILSSA ATAANSVNSL GFGMCPPPQS 
+
+Q03497      .......... .......... .......... .......... .......... 
+P38692      LQMEMFLDLE SFLPGKQRRV DRKPQVLKEL ENLLQMFEEG LPCIEHALKE 
+
+Q03497      .......... ..
+P38692      QLISTPIKDN EH
+

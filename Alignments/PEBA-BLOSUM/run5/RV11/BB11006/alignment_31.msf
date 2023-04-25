@@ -1,0 +1,34 @@
+PileUp
+
+
+
+   MSF: 327  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1b35_C  oo  Len:  327
+ Name: 1bbt_aa oo  Len:  327
+
+//
+
+
+
+1b35_C       SKPTVQGKIG ECKLRGQGRM ANFDGMDMSH KMALSSTNEI ETNEGLAGTS 
+1bbt_aa      .......... .......... .......... .......... .......... 
+
+1b35_C       LDVMDLSRVL SIPNYWDRFT WKTSDVINTV LWDNYVSPF. KVKPY.SATI 
+1bbt_aa      .......... .....T.TSA GESADPVTTT V.ENYGGE.T QIQR.RQHT. 
+
+1b35_C       .....TDRFR ..CTHMGKVA NAFTYWRGSM VYTFKFVKTQ YHSGRLRISF 
+1bbt_aa      DVSFIMDRF. VKVTPQNQI. NILDLM...Q VPSH....TL V.GG.L.L.. 
+
+1b35_C       IPYYYNTTIS TG..TPDVSR TQKIVVDLRT STAVSFTVPY I.GSR.PWLY 
+1bbt_aa      .....RA..S T.YY...FS. .D.L..EI.. ..AVK....H .EGD.LTWV. 
+
+1b35_C       ...CIRPESS WLSKDNTDGA LMYNCVSGIV RVEVLNQLVA AQNVFSEIDV 
+1bbt_aa      PNGA..PEK. ..ALDNTTNP TAYHKAP.LT RLALP.Y.TA P.H...R..V 
+
+1b35_C       ICEVNGGPDL EFA.GPTCPR Y.VPYAGDFT LADTRKIEAE RTQEYSNNED 
+1bbt_aa      LATV...... .Y.NGE.C.R .TLP.TS.FN YG.A..IKAT RVTELLYRMK 
+
+1b35_C       .......... .......... .......
+1bbt_aa      RAETYCPRPL LAIHPTEARH KQKIVAP
+

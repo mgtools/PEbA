@@ -1,0 +1,97 @@
+PileUp
+
+
+
+   MSF: 1400  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q25199 oo  Len:  1400
+ Name: Q7T221 oo  Len:  1400
+
+//
+
+
+
+Q25199      MENYFGLYLV FMLAFFKVSN SCDNGWLEYK AFCYLFQNKT LKAKSWRDAS 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      LSCQAFDGHL LSIEDQAENF FILNILKDSR MQKDNYWIGL NDASNNREFR 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      WSDDKTPQFF NWLPKKPNNV ESEENCVEAN SMGWNDNKCG ATNGFICKIR 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      KEYNDFCEDG WLNYKNYCYF FQNQNEQFDG SNWTDSYLSC RFKGGNLLSV 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      EDQEENSFIT SVLEKYSTFF WIGLNYLMSY KRFVWSDNSN WNPKILIENT 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      LHPSNDFSMK IARCVVINAL SWNIQNCKKK NGYICKVKRE NNTNCSKYWF 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      QYGMNCY.YF QNTNNTI..R RSWSW...AY I.SCLEKG.. GNLLS.IEDK 
+Q7T221      MKVENK.A.T QQTPDT.NDK KS.S.CNKSF .PS.LAT.CW GILL.LI... 
+
+Q25199      AENAFILNIL KN.YS.SSTD ....NYWIGL TDDW.YNSWF LW.SDNTY.I 
+Q7T221      V....VL... R.FY.FS.T. VLEKRI.ANL TEE.T.Q..M L.KKKNE.EL 
+
+Q25199      QYSKFKTLLD TEIEMCVIMT KLYWETEN.. ...CYLSHRF ICKVKRATNE 
+Q7T221      ETEK.KNL.T EQIQQ.M.MT P..W.IE.LN VSRAQWSIDA YCP.KENNNR 
+
+Q25199      Y....CAEGW TSYRI..YCY F.IY...SIE FDWF....KS F.SSCQNI.. 
+Q7T221      .KCKPCQAGW LDVE.SS.CY .AV.NDAKRE .EW.KTWEEA .RENCTR.KI 
+
+Q25199      GGNLLS.IEN QEENRF.IEN DL....IKDN DKYWIGLNKI WNDYLKKNK. 
+Q7T221      S.DLP.VVIN EEEKK.TV.S E.KSWK.YEN KGYWIGL.RV .ED....G.I 
+
+Q25199      RFEWS.DNTY ..TQF.FNWI TNQPDNNNGI ESCVEMNYNG WSDKECKVLN 
+Q7T221      .WKW.LDGR. NLTN.S.SWI N.Q.LPSDG. HCAVSVQNEG FKSVRCDEKN 
+
+Q25199      GFICKTKKVF LDYVNRSEEL YLTQGFIFGT LNVLKKEYTI SFNLKPMNYS 
+Q7T221      RLICK.KKA. LS.V...... .......... .......... .......... 
+
+Q25199      KGIKNVFQLI SSNNSREYNE KVLGIWFHED GSGRLVIYAA VNGNNSYSVK 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      TDPLILSQWS NIKIYQWLLG SKYWFAVDIN GVNIHRVENF LVSHFNEIKI 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      YTSNLWDDAH NGSISDLLIV NGKAKYIVKT NYIPLVKGKI IAQIPKLSKE 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      YLVSFDFKPM AFGIGLHNII YITAGAPLFK YGSETLSIWL DEEDKGRIKI 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      VALINEKKSF YYHPIQLIRW SNIEVCQSLN GFFNVFTIRI NGLVVFSMLN 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      NQTMDFINVK IYASNIWDKV QNGTIKNFFI VNDISNLEVE SSDVLVKDKT 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      LVIFAAILAP VLVVLVAVIF VVTVLRIRKK KSIKLNPDCI EYQMGCDEIT 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      PDEWEIFPEY ITLDKKIGEG AFGTVFIARL SSSVIFKRKK MKLKSHQSSV 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      ISSHDMSDNT FRVAAKLVKD YADSSELSDF AEEIKLMKEI GYHKNIVNLI 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      GCSTLKKPLC LIVEYMEHGD LLNFLRKIRS KFCALKIDGK SSVNFLYTQG 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      YQQSLKTTAT TTKTEFCSGV MPNNIPLEEN GVITPDDLLS FAWQVASGME 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      FLSCSKLVHR DLAARNILVG AGKNVKISDF GLTRKINDEL NYMSKKKRRL 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      PVKWMSVEAI FDQLFTSFSD VWAYGVVLFE IVTLGGTPYP AISNRELLPL 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      LKSGYRMDKP ENCSEAMYSI MLQCWNEDPL QRPTFATLRE CFDKVICQGD 
+Q7T221      .......... .......... .......... .......... .......... 
+
+Q25199      CYLNFDFDEN TASSFLSYET DNDDDNTMED TVFLKPFHVK STEDLKKTLR
+Q7T221      .......... .......... .......... .......... ..........
+

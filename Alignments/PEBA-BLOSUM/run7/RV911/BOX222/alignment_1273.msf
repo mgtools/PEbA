@@ -1,0 +1,100 @@
+PileUp
+
+
+
+   MSF: 1434  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q1RTH0 oo  Len:  1434
+ Name: Q23LE3 oo  Len:  1434
+
+//
+
+
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      MSQQSQKTSQ DQQRDLLIDE AQKAHKLIIQ SDQKFRKQLD IKICYLISRN 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      WFNQWCEYVG YLEVIADLEP ESEKFALIKP NRLINEEFIS QQADQTLNIS 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      LFKFDEKIVQ ESKFLNILLK QDQNLNTFKI VDEETWKFFS SRYPGGFEIS 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      RPVFHYQHRI IQNVQLLQPE IVVYNDELVQ KIGQLSDLQL KNGQNPLNFK 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      RCQLPSFYTL SQLKDLMKRQ FNVDKVRVWR FDASQKKEEI QLQTGKQVKQ 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      KQYQIRAREL VEQQIGGHLV LQDIIKNHYC LIIELPIRGN FQLIQSSQSQ 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      IANGKFQGVC EYCTKILELS VRCVCKQVAY CSQNCKYKDQ DFHSHTCDVA 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      ADSESDEEMN SLPLEISGKA GLKNIGNTCY LAAALQNIYI TSEFSQKFTM 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      NEINSTPNKK CKLLQKFSKL LKEMTMLNEE SIEPWSFKTQ LGQINQMFSG 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      NYQHDAAEFI TCLFDAINEE CQKDNIEGAK QDINLSKPDQ FWSYCVKQGY 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      NKALIESFLG LYESSIECPE CQNTSLSYDP FTILSLPIKQ KPIVKQIMVN 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      LIKENIALDV IHTKTSYTTG KTTILDLILF VCQENQIEYK NNIVVCTYNG 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      ESIQQAYIKS EQLQKNVEDL ETELEGKNKS LLFYEVSYDL STFDPLKHKL 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      IKMDYSRMGK TQIGIMQVDE KTTFSAPRVI IVERQQNMSS IYKQIFSGLS 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      EIYPEAYQLV KDSFAEYKEI QLETEQDNEQ QNTKSTSLND LEEQRKKEDA 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      KWNGASNTKD QIDQKQQIQQ QNNGSSSNQK QSPPKQQQQQ IQQNQISIND 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      GWGDFEIPTI LPKKQNQQQK STQKQQTNQK NEQQLTQPTQ NQQLPKQPEK 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      KQQPQALQAQ QSQTSSQALT QASSNSIQSA QSTASNDGGW GWDSEIYVAP 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      KKAAPTPVQQ KPQVLPSAAK QVNQQQGKSD EDDFTQVTQH KKGKNSKQNN 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      KEVVQEQNTL SKTQNLNQQN NSKNNQNKAS ENQKQNNNNN GNFANQNGQS 
+
+Q1RTH0      .......... .......... .......... .......... .......... 
+Q23LE3      NQKTILNGQQ QAKPQSKQQQ QQNIVNPFAT WGDEDQPRNI TEPEQEKKSL 
+
+Q1RTH0      .......... .......... ...MSPWFLC KFLVLLNLNQ KPRI..RTLF 
+Q23LE3      TSSKQLIEKQ QQQSEIKVEN QNQQEE.STS NQNLAVNQNN KPN.KSKTV. 
+
+Q1RTH0      VPESVQNVFW SALLHRGSMD YVKTHLDLNY EE.QNCSAQK LLEAIGCSDC 
+Q23LE3      I.Q.KED.F. S........E LL.TKL..PF S.V.NIKSKK S.RIGGVFKC 
+
+Q1RTH0      CIAHRVFSGI LRSDVMCMAC G......... FTSTTYDP.. .CVDISLDLE 
+Q23LE3      YFC.....G. .K..QNCQNC .TLPFENQRT FSQLLQN.YR DLLELELFWQ 
+
+Q1RTH0      PNQG..GSTK MAAAASNPSC TGEADSSQNF G.ISTLMG.C LDRFTRAEKL 
+Q23LE3      KEQ.PP.KTL YKSIIDQNQA NSQA.KKQNL .P.N.LQ.YC LEEFSQKEQL 
+
+Q1RTH0      GSNQKFFCQQ CKV.KQETLK QMSIRKLPLV SCFH..IKRF EHSS.RKKMS 
+Q23LE3      SKENAWYCSK CQ.KQQQAFK KLSIKYAP.N NLI.IQIKRF KTN.IQDG.S 
+
+Q1RTH0      RKVDRYL... QFP.FSLDMS PYLSSSILR. SRFG..NRIF PFDGDEP.DA 
+Q23LE3      KE.KNY.QQV IFPEYGFSLQ SYADTQVS.P S.I.PSSK.F ..NGDI.V.Y 
+
+Q1RTH0      SNDLCSEFE. LFAVVTHSGK LDAGHYVTYL RLSNQWYKC. .DDSWVTQ.V 
+Q23LE3      ..DL...Y.G ..LII.HEGT TENGHYIAQC KYDKIWYS.F DDDN.IS.IV 
+
+Q1RTH0      DENI...VRA AQGYMMFYVQ KMLYYKATDK SVAS
+Q23LE3      .ES.EKVLNN KNAYILFYRL RK........ ....
+
