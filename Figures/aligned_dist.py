@@ -6,9 +6,9 @@ Ben Iovino  04/20/23   VecAligns
 ================================================================================================"""
 
 import os
-import regex as re
 import shutil
 import sys
+import regex as re
 import blosum as bl
 import matplotlib.pyplot as plt
 import numpy as np
@@ -260,7 +260,6 @@ def main():
     # Get first 100 residue pairs from first PW align in each MSA
     pairs = return_pairs(bb_dir)
 
-    print(len(pairs.keys()))
     # For each set of pairs, get cosine similarities and substitution scores
     embed_path = f'prot_t5_embed/{ref_dir}'
     sims, subs = get_scores(pairs, 62, embed_path)
