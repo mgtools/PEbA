@@ -6,6 +6,7 @@ Ben Iovino  04/20/23   VecAligns
 ================================================================================================"""
 
 import blosum as bl
+import matplotlib.pyplot as plt
 import numpy as np
 import os
 import shutil
@@ -14,7 +15,7 @@ from Bio import SeqIO
 from random import sample
 sys.path.append(os.path.abspath(os.path.join(os.path.pardir, 'VecAligns')))
 from compare_aligns import parse_ref_folder
-from aligned_dist import parse_aligns, graph_scores
+from aligned_dist import parse_aligns
 
 
 def get_fastas(path):
@@ -44,7 +45,7 @@ def get_fastas(path):
                     seq_id = seq.id
 
                 # Take random sample of residues from sequence
-                sample_indices = sample(range(len(sequence)), 10)
+                sample_indices = sample(range(len(sequence)), 4)
                 sample_chars = [sequence[i]+str(i) for i in sample_indices]
                 fastas[direc].append((sample_chars, seq_id))
 
@@ -148,41 +149,68 @@ def cos_scores(embeds):
     return scores
 
 
+def graph_scores(cos, sub):
+    """=============================================================================================
+    This function takes two lists of values and plots their distributions on a histogram.
+
+    :param cos: list of cosine similarity values
+    :param scores2: list of substitution scores
+    ============================================================================================="""
+
+    plt.hist(cos, bins=10, alpha=0.5, label='Cosine Similarity')
+    plt.hist(sub, bins=10, alpha=0.5, label='BLOSUM62')
+    plt.legend(loc='upper right')
+    plt.title('Cosine Similarity vs. BLOSUM62 Scores for Random Residues')
+    plt.xlabel('Score')
+    plt.ylabel('Frequency')
+    plt.show()
+
+
 def main():
     """=============================================================================================
     ============================================================================================="""
 
-    # Read reference alignments from file
-    path = 'BAliBASE_R1-5/bb3_release/RV913'
-    ref_dir = path.rsplit('/', maxsplit=1)[-1]
+    paths = ['BAliBASE_R1-5/bb3_release/RV11', 'BAliBASE_R1-5/bb3_release/RV12',
+             'BAliBASE_R1-5/bb3_release/RV911', 'BAliBASE_R1-5/bb3_release/RV912',
+             'BAliBASE_R1-5/bb3_release/RV913']
 
-    # Create directory for storing parsed alignments
-    bb_dir = f'bb_data/{ref_dir}'
-    os.makedirs(bb_dir)
+    bl_scores = []
+    sim_scores = []
 
-    # Parse ref folder
-    msf_files, fasta_files = parse_ref_folder(path)
+    for path in paths:
+        ref_dir = path.rsplit('/', maxsplit=1)[-1]
 
-    # Sort each list of files to ensure they match up for msf parsing
-    msf_files.sort()
-    fasta_files.sort()
-    parse_aligns(msf_files, fasta_files, bb_dir)
+        # Create directory for storing parsed alignments
+        bb_dir = f'bb_data/{ref_dir}'
+        os.makedirs(bb_dir)
 
-    # Read in sequences from parsed alignments
-    fastas = get_fastas(bb_dir)
+        # Parse ref folder
+        msf_files, fasta_files = parse_ref_folder(path)
 
-    # Get corresponding embeddings for each set of residues
-    ref_dir = path.rsplit('/', maxsplit=1)[-1]
-    embeds = get_embeds(ref_dir, fastas)
+        # Sort each list of files to ensure they match up for msf parsing
+        msf_files.sort()
+        fasta_files.sort()
+        parse_aligns(msf_files, fasta_files, bb_dir)
 
-    # For each set of sequences, get substitution scores and cosine similarities
-    blosum = bl.BLOSUM(62)
-    bl_scores = blosum_scores(fastas, blosum)
-    sim_scores = cos_scores(embeds)
+        # Read in sequences from parsed alignments
+        fastas = get_fastas(bb_dir)
+
+        # Get corresponding embeddings for each set of residues
+        ref_dir = path.rsplit('/', maxsplit=1)[-1]
+        embeds = get_embeds(ref_dir, fastas)
+
+        # For each set of sequences, get substitution scores and cosine similarities
+        blosum = bl.BLOSUM(62)
+        bl_scores.append(blosum_scores(fastas, blosum))
+        sim_scores.append(cos_scores(embeds))
+        shutil.rmtree(bb_dir)
+
+    # Combine lists of scores
+    bl_scores = [item for sublist in bl_scores for item in sublist]
+    sim_scores = [item for sublist in sim_scores for item in sublist]
 
     # Graph scores
-    graph_scores(sim_scores, bl_scores, ref_dir)
-    shutil.rmtree(bb_dir)
+    graph_scores(sim_scores, bl_scores)
     os.rmdir('bb_data')
 
 

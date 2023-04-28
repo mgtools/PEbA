@@ -12,6 +12,7 @@ import regex as re
 import blosum as bl
 import matplotlib.pyplot as plt
 import numpy as np
+from random import sample
 sys.path.append(os.path.abspath(os.path.join(os.path.pardir, 'VecAligns')))
 from compare_aligns import parse_ref_folder, parse_fasta_ca, parse_msf, write_align_ca
 from compute_score import parse_align
@@ -85,6 +86,8 @@ def return_pairs(bb_dir):
                 pairs = []
                 seq1_count, seq2_count = 0, 0
                 for i, res in enumerate(seq1):
+
+                    # Check for aligned pairs
                     if res != '.' and seq2[i] != '.':
                         pairs.append([res+str(seq1_count), seq2[i]+str(seq2_count)])
 
@@ -94,9 +97,12 @@ def return_pairs(bb_dir):
                     if seq2[i] != '.':
                         seq2_count += 1
 
-                # If there are more than 100 pairs, only take the first 100
+                # Remove first five pairs from list due to abnormally high similarity scores
+                pairs = pairs[4:]
+
+                # Take a random sample of 100 pairs from list (if eligible)
                 if len(pairs) > 100:
-                    pairs = pairs[:100]
+                    pairs = sample(pairs, 100)
 
                 # Add pairs and ids and dict
                 pairs_dict[file] = [pairs, id1, id2]
@@ -215,19 +221,18 @@ def get_scores(pairs, matrix, path):
     return sims, subs
 
 
-def graph_scores(scores1, scores2, ref):
+def graph_scores(cos, sub):
     """=============================================================================================
     This function takes two lists of values and plots their distributions on a histogram.
 
-    :param scores1: first list of values
-    :param scores2: second list of values
-    :param ref: benchmark reference
+    :param cos: list of cosine similarity values
+    :param scores2: list of substitution scores
     ============================================================================================="""
 
-    plt.hist(scores1, bins=10, alpha=0.5, label='Cosine Similarity')
-    plt.hist(scores2, bins=10, alpha=0.5, label='BLOSUM62')
+    plt.hist(cos, bins=10, alpha=0.5, label='Cosine Similarity')
+    plt.hist(sub, bins=10, alpha=0.5, label='BLOSUM62')
     plt.legend(loc='upper right')
-    plt.title(f'Cosine Similarity vs. BLOSUM62 Scores in {ref}')
+    plt.title('Cosine Similarity vs. BLOSUM62 Scores for Aligned Residues')
     plt.xlabel('Score')
     plt.ylabel('Frequency')
     plt.show()
@@ -241,32 +246,44 @@ def main():
     the scores.
     ============================================================================================="""
 
-    # Read reference alignments from file
-    path = 'BAliBASE_R1-5/bb3_release/RV913'
-    ref_dir = path.rsplit('/', maxsplit=1)[-1]
+    paths = ['BAliBASE_R1-5/bb3_release/RV11', 'BAliBASE_R1-5/bb3_release/RV12',
+             'BAliBASE_R1-5/bb3_release/RV911', 'BAliBASE_R1-5/bb3_release/RV912',
+             'BAliBASE_R1-5/bb3_release/RV913']
 
-    # Create directory for storing parsed alignments
-    bb_dir = f'bb_data/{ref_dir}'
-    os.makedirs(bb_dir)
+    bl_scores = []
+    sim_scores = []
 
-    # Parse ref folder
-    msf_files, fasta_files = parse_ref_folder(path)
+    for path in paths:
+        ref_dir = path.rsplit('/', maxsplit=1)[-1]
 
-    # Sort each list of files to ensure they match up for msf parsing
-    msf_files.sort()
-    fasta_files.sort()
-    parse_aligns(msf_files, fasta_files, bb_dir)
+        # Create directory for storing parsed alignments
+        bb_dir = f'bb_data/{ref_dir}'
+        os.makedirs(bb_dir)
 
-    # Get first 100 residue pairs from first PW align in each MSA
-    pairs = return_pairs(bb_dir)
+        # Parse ref folder
+        msf_files, fasta_files = parse_ref_folder(path)
 
-    # For each set of pairs, get cosine similarities and substitution scores
-    embed_path = f'prot_t5_embed/{ref_dir}'
-    sims, subs = get_scores(pairs, 62, embed_path)
+        # Sort each list of files to ensure they match up for msf parsing
+        msf_files.sort()
+        fasta_files.sort()
+        parse_aligns(msf_files, fasta_files, bb_dir)
+
+        # Get first 100 residue pairs from first PW align in each MSA
+        pairs = return_pairs(bb_dir)
+
+        # For each set of pairs, get cosine similarities and substitution scores
+        embed_path = f'prot_t5_embed/{ref_dir}'
+        sims, subs = get_scores(pairs, 62, embed_path)
+        bl_scores.append(subs)
+        sim_scores.append(sims)
+        shutil.rmtree(bb_dir)
+
+    # Combine lists of scores
+    bl_scores = [item for sublist in bl_scores for item in sublist]
+    sim_scores = [item for sublist in sim_scores for item in sublist]
 
     # Graph cosine similarities and substitution scores
-    graph_scores(sims, subs, ref_dir)
-    shutil.rmtree(bb_dir)
+    graph_scores(sim_scores, bl_scores)
     os.rmdir('bb_data')
 
 
