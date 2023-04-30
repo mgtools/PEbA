@@ -16,7 +16,7 @@ from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 import tensorflow as tf
-from utility import parse_fasta, write_align
+from utility import parse_fasta, write_msf
 
 
 def dedal(model, seq1, seq2):
@@ -250,7 +250,7 @@ def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
 
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
-    write_align(tseq1[1], tseq2[1], id1, id2, 'DEDAL',
+    write_msf(tseq1[1], tseq2[1], id1, id2, 'DEDAL',
                  'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
 
 

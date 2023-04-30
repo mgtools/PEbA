@@ -8,7 +8,7 @@ Ben Iovino  01/23/23   VecAligns
 import argparse
 import numpy as np
 import blosum as bl
-from utility import parse_fasta, write_align, parse_matrix
+from utility import parse_fasta, write_msf, parse_matrix, write_fasta
 
 
 def local_align(seq1, seq2, subs_matrix, gopen, gext):
@@ -134,16 +134,17 @@ def main():
     """=============================================================================================
     This function initializes two protein sequences and a scoring matrix, calls SW_align() to get
     the scoring and traceback matrix from SW alignment, calls traceback() to get the local
-    alignment, and then write_align() to write the alignment to a file in MSF format.
+    alignment, and then writes the alignment to a file in the desired format.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
+    parser.add_argument('-file1', type=str, help='Name of first fasta file')
+    parser.add_argument('-file2', type=str, help='Name of second fasta file')
     parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-matrix', type=str, default='blosum', help='substitution matrix to use')
-    parser.add_argument('-score', type=int, default=45, help='log odds score of subsitution matrix')
+    parser.add_argument('-matrix', type=str, default='blosum', help='Substitution matrix to use')
+    parser.add_argument('-score', type=int, default=45, help='Log odds score of subsitution matrix')
+    parser.add_argument('-output', type=str, default='msf', help='Output format')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -156,13 +157,16 @@ def main():
     if args.matrix == 'pfasum':
         matrix = parse_matrix('PFASUM60.txt')
 
-    # Call local_align() to get scoring and traceback matrix
+    # Align and traceback
     score_m, trace_m = local_align(seq1, seq2, matrix, args.gopen, args.gext)
-
-    # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, args.matrix+str(args.score),
+
+    # Write align based on desired output format
+    if args.output == 'msf':
+        write_msf(align1, align2, id1, id2, args.matrix+str(args.score),
                 args.gopen, args.gext, args.file1)
+    if args.output == 'fa':
+        write_fasta(align1, align2, id1, id2, args.file1)
 
 
 if __name__ == '__main__':

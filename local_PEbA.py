@@ -10,7 +10,7 @@ import argparse
 import torch
 import numpy as np
 from transformers import T5EncoderModel, T5Tokenizer
-from utility import parse_fasta, write_align
+from utility import parse_fasta, write_msf, write_fasta
 from embed_seqs import prot_t5xl_embed
 
 
@@ -140,17 +140,18 @@ def main():
     This function initializes two protein sequences, calls an embedding function if embeddings are
     not provided, calls local_align() to obtain the scoring and traceback matrix from 
     SW alignment (with vector similarity in the scoring system), calls traceback() to get the local 
-    alignment, and then write_align() to write the alignment to a file in MSF format.
+    alignment, and then writes the alignment to a file the desired format.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, default='./test1.fa', help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, default='./test2.fa', help='Name of second fasta file')
-    parser.add_argument('-embed1', type=str, default='n', help='Name of first embedding')
-    parser.add_argument('-embed2', type=str, default='n', help='Name of second embedding')
-    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-encoder', type=str, default='ProtT5', help='Encoder to use')
+    parser.add_argument('-f1', '--file1', type=str, help='First fasta file')
+    parser.add_argument('-f2', '--file2', type=str, help='Second fasta file')
+    parser.add_argument('-e1', '--embed1', type=str, default='n', help='First embedding file')
+    parser.add_argument('-e2', '--embed2', type=str, default='n', help='Second embedding file')
+    parser.add_argument('-go', '--gopen', type=float, default=-11, help='Gap open penalty')
+    parser.add_argument('-ge', '--gext', type=float, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-e', '--encoder', type=str, default='ProtT5', help='Encoder used')
+    parser.add_argument('-o', '--output', type=str, default='msf', help='Output format')
     args = parser.parse_args()
 
     # Load fasta files and ids
@@ -177,12 +178,15 @@ def main():
         vecs1 = np.loadtxt(args.embed1)
         vecs2 = np.loadtxt(args.embed2)
 
-    # Call local_align() to get scoring and traceback matrix
+    # Align and traceback
     score_m, trace_m = local_align(seq1, seq2, vecs1, vecs2, args.gopen, args.gext)
-
-    # Get highest scoring local alignment between seq1 and seq2 and write to file
     align1, align2 = traceback(score_m, trace_m, seq1, seq2)
-    write_align(align1, align2, id1, id2, f'{args.encoder}_Sim', args.gopen, args.gext, args.file1)
+
+    # Write align based on desired output format
+    if args.output == 'msf':
+        write_msf(align1, align2, id1, id2, f'{args.encoder}_Sim', args.gopen, args.gext, args.file1)
+    if args.output == 'fa':
+        write_fasta(align1, align2, id1, id2, args.file1)
 
 
 if __name__ == '__main__':
