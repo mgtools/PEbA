@@ -367,7 +367,7 @@ def compare_aligns(path, score):
 
 def parse_compare(path):
     """=============================================================================================
-    This function takes a directory and compares the two alignment methods to the reference.
+    This function takes a directory and extracts values from csv files created by compare_aligns().
 
     :param path: directory where alignments exist
     ============================================================================================="""
@@ -427,14 +427,17 @@ def graph_compare(path, methods, score):
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for i, line in enumerate(file):
                 line = line.split(',')
-                if i == 0 or i % 2 == 0:
-                    method1_sim.append(float(line[0]))
-                if i % 2 != 0:
-                    method2_sim.append(float(line[0]))
 
-    # Average the similarity scores to put on the graph
-    m1_avg = round(sum(method1_sim)/len(method1_sim), 1)
-    m2_avg = round(sum(method2_sim)/len(method2_sim), 1)
+                # Dividing by 100 after the fact because we changed TCS from percent to decimal
+                # as we were writing the paper
+                if i == 0 or i % 2 == 0:
+                    method1_sim.append(float(line[0])/100)
+                if i % 2 != 0:
+                    method2_sim.append(float(line[0])/100)
+
+    # Average the similarity scores to put on the graph, rounding to same decimals as in paper
+    m1_avg = round(sum(method1_sim)/len(method1_sim), 3)
+    m2_avg = round(sum(method2_sim)/len(method2_sim), 3)
 
     # Get names and parameters of methods used for titles of graph
     titles = []
@@ -456,7 +459,7 @@ def graph_compare(path, methods, score):
     ax.set_title(f'Difference in {titles[0]} (Avg={m1_avg}) vs. {titles[1]} (Avg={m2_avg})')
     ax.set_xlabel('Alignment Number')
     ax.set_ylabel('Similarity Difference')
-    ax.set_ylim(-20, 80)
+    ax.set_ylim(-0.2, 0.8)
     ax.axhline(0, color='black')
     plt.savefig(f'{path}/differences.png')
 
@@ -473,10 +476,10 @@ def graph_compare(path, methods, score):
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignments vs. {titles[1]} Alignments in {path.split("/")[-1]}')
-    ax.set_xlabel(f'{score.upper()} {titles[1]} (%)')
-    ax.set_ylabel(f'{score.upper()} {titles[0]} (%)')
+    ax.set_xlabel(f'{score.upper()} {titles[1]}')
+    ax.set_ylabel(f'{score.upper()} {titles[0]}')
     ax.legend([f'{titles[1]} Avg: {m2_avg}', f'{titles[0]} Avg: {m1_avg}'])
-    plt.plot([0, 100], [0, 100], color='black')
+    plt.plot([0, 1], [0, 1], color='black')
     plt.savefig(f'{path}/comparison.png')
 
 
@@ -504,13 +507,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
     parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
-    parser.add_argument('-method1', type=str, default='matrix', help='First method for comparison')
+    parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')

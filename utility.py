@@ -73,6 +73,10 @@ def write_fasta(seq1, seq2, id1, id2, path):
     :param path: directory to write alignment to
     ============================================================================================="""
 
+    # Replace '.' characters with '-' characters
+    seq1 = seq1.replace('.', '-')
+    seq2 = seq2.replace('.', '-')
+
     # Split sequences every 50 characters
     seq1_split = [seq1[i:i+50] for i in range(0, len(seq1), 50)]
     seq2_split = [seq2[i:i+50] for i in range(0, len(seq2), 50)]

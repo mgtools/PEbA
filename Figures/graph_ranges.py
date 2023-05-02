@@ -141,7 +141,7 @@ def avg_dict(dct):
     # Dicts are global
     for key, value in dct.items():
         if value[1] > 10: # Want at least 10 alignments in this range before we average
-            dct[key] = value[0]/value[1]*100
+            dct[key] = value[0]/value[1]
         else:
             dct[key] = 0
 
@@ -174,15 +174,15 @@ def build_graph(dict_m1, dict_m2, dict_m3, ref, parse):
 
     # When making alignment length plot for references 911/912/913, have to include all values
     # because the TCS values are 0 for lengths in last bucket
-    y3 = [val for val in dict_m3.values()]
+    y3 = [val for val in dict_m3.values() if val != 0]
 
     # Plot
     plt.plot(x, y1, label='PEbA')
     plt.plot(x, y2, label='BLOSUM62')
     plt.plot(x, y3, label='DEDAL')
     plt.xlabel(f'{parse}')
-    plt.ylabel('Average TCS')
-    plt.title(f'Average TCS vs {parse} in {ref}')
+    plt.ylabel('Average TC Score')
+    plt.title(f'Average TC Score vs {parse} in {ref}')
     plt.legend()
     plt.grid()
     plt.show()
@@ -196,7 +196,7 @@ def main():
     parser.add_argument('-p1', type=str, default='Alignments/PEBA-BLOSUM')
     parser.add_argument('-p2', type=str, default='Alignments/PEBA-DEDAL')
     parser.add_argument('-r', type=str, default='9')
-    parser.add_argument('-t', type=str, default='len')
+    parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
     # Initialize dict based on type of info to be parsed
