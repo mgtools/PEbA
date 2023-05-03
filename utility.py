@@ -4,7 +4,6 @@ This script contains utility functions to be imported into other scripts.
 Ben Iovino  01/27/23   VecAligns
 ================================================================================================"""
 
-import os
 from Bio import SeqIO
 
 
@@ -24,7 +23,6 @@ def write_msf(seq1, seq2, id1, id2, method, gopen, gext, path):
     ============================================================================================="""
 
     # Add space every 10 characters
-    length = len(seq1)
     seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
     seq1 = ' '.join(seq1)
     seq2 = [seq2[i:i+10] for i in range(0, len(seq2), 10)]
@@ -41,24 +39,22 @@ def write_msf(seq1, seq2, id1, id2, method, gopen, gext, path):
         else:
             id1 = id1 + ' ' * (len(id2) - len(id1))
 
-    # Get directory path to write to
-    path = os.path.dirname(os.path.realpath(path))
+    # Put alignment in string format
+    length = len(seq1)
+    alignment = 'PileUp\n\n\n\n'
+    alignment += f'   MSF: {length}  Type: P  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n'
+    alignment += f' Name: {id1} oo  Len:  {length}\n'
+    alignment += f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n'
+    for i in range(len(seq1_split)): # pylint: disable=C0200
+        alignment += f'{id1}      {seq1_split[i]}\n'
+        alignment += f'{id2}      {seq2_split[i]}\n\n'
 
-    # Keep track of number of alignments in directory to name them
-    count = 0
-    for file in os.listdir(path):
-        if file.startswith('alignment'):
-            count += 1
-
-    # Write to a new line for every index in the split list i.e. every 55 characters
-    with open(f'{path}/alignment_{count}.msf', 'w', encoding='utf8') as file:
-        file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF: {length}  Type: P  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n')
-        file.write(f' Name: {id1} oo  Len:  {length}\n')
-        file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
-        for i in range(len(seq1_split)):  # pylint: disable=C0200
-            file.write(f'{id1}      {seq1_split[i]}\n')
-            file.write(f'{id2}      {seq2_split[i]}\n\n')
+    # If no path is determined then print to console, otherwise write to file
+    if path == 'n':
+        print(alignment)
+    else:
+        with open(path, 'w', encoding='utf8') as file:
+            file.write(alignment)
 
 
 def write_fasta(seq1, seq2, id1, id2, path):
@@ -81,23 +77,20 @@ def write_fasta(seq1, seq2, id1, id2, path):
     seq1_split = [seq1[i:i+50] for i in range(0, len(seq1), 50)]
     seq2_split = [seq2[i:i+50] for i in range(0, len(seq2), 50)]
 
-    # Get directory path to write to
-    path = os.path.dirname(os.path.realpath(path))
+    # Put alignment in string format
+    alignment = f'>{id1}\n'
+    for i in range(len(seq1_split)):  # pylint: disable=C0200
+        alignment += f'{seq1_split[i]}\n'
+    alignment += f'>{id2}\n'
+    for i in range(len(seq2_split)):  # pylint: disable=C0200
+        alignment += f'{seq2_split[i]}\n'
 
-    # Keep track of number of alignments in directory to name them
-    count = 0
-    for file in os.listdir(path):
-        if file.startswith('alignment'):
-            count += 1
-
-    # Write to a new line for every index in the split list i.e. every 55 characters
-    with open(f'{path}/alignment_{count}.fa', 'w', encoding='utf8') as file:
-        file.write(f'>{id1}\n')
-        for i in range(len(seq1_split)):  # pylint: disable=C0200
-            file.write(f'{seq1_split[i]}\n')
-        file.write(f'>{id2}\n')
-        for i in range(len(seq2_split)):  # pylint: disable=C0200
-            file.write(f'{seq2_split[i]}\n')
+    # If no path is determined then print to console, otherwise write to file
+    if path == 'n':
+        print(alignment)
+    else:
+        with open(path, 'w', encoding='utf8') as file:
+            file.write(alignment)
 
 
 def parse_fasta(filename):

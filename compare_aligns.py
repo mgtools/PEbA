@@ -203,12 +203,19 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gext, encoder):
     if encoder == 'ESM2':
         embed = 'esm2_t36_embed'
 
-    args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-            f'-file2 {bb_dir}/{ref_align}/{seq2} '
-            f'-embed1 {embed}/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
-            f'-embed2 {embed}/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
-            f'-gext {gext} '
-            f'-encoder {encoder}')
+    # Keep track of number of alignments in directory to name them
+    count = 0
+    for file in os.listdir(f'{bb_dir}/{ref_align}'):
+        if file.startswith('alignment'):
+            count += 1
+
+    args = (f'--file1 {bb_dir}/{ref_align}/{seq1} '
+            f'--file2 {bb_dir}/{ref_align}/{seq2} '
+            f'--embed1 {embed}/{ref_dir}/{ref_align}/{seq1.split(".")[0]}.txt '
+            f'--embed2 {embed}/{ref_dir}/{ref_align}/{seq2.split(".")[0]}.txt '
+            f'--gext {gext} '
+            f'--encoder {encoder} '
+            f'--savefile {bb_dir}/{ref_align}/alignment_{count}.msf')
 
     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
@@ -221,12 +228,19 @@ def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
     two sequences. Args explained in main().
     ============================================================================================="""
 
-    args = (f'-file1 {bb_dir}/{ref_align}/{seq1} '
-            f'-file2 {bb_dir}/{ref_align}/{seq2} '
-            f'-gopen {gopen} '
-            f'-gext {gext} '
-            f'-matrix {matrix} '
-            f'-score {value}')
+    # Keep track of number of alignments in directory to name them
+    count = 0
+    for file in os.listdir(f'{bb_dir}/{ref_align}'):
+        if file.startswith('alignment'):
+            count += 1
+    
+    args = (f'--file1 {bb_dir}/{ref_align}/{seq1} '
+            f'--file2 {bb_dir}/{ref_align}/{seq2} '
+            f'--gopen {gopen} '
+            f'--gext {gext} '
+            f'--matrix {matrix} '
+            f'--score {value} '
+            f'--savefile {bb_dir}/{ref_align}/alignment_{count}.msf')
 
     print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
@@ -248,10 +262,16 @@ def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
     with open('dedal_output.txt', 'w', encoding='utf8') as file:
         file.write(str(alignment))
 
+    # Keep track of number of alignments in directory to name them
+    count = 0
+    for file in os.listdir(f'{bb_dir}/{ref_align}'):
+        if file.startswith('alignment'):
+            count += 1
+
     # Parse alignment file, match to original sequences, and write to msf file
     tseq1, tseq2 = parse_align('dedal_output.txt')
     write_msf(tseq1[1], tseq2[1], id1, id2, 'DEDAL',
-                 'None', 'None', f'{bb_dir}/{ref_align}/{seq1}')
+                 'None', 'None', f'alignment_{count}.msf')
 
 
 def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model):
@@ -449,20 +469,6 @@ def graph_compare(path, methods, score):
         if pars[0] == 'dedal':
             titles.append('DEDAL')
 
-    # Graph the difference between similarity scores for each alignment
-    fig = plt.figure()
-    ax = fig.add_subplot()
-    sim_diff = []
-    for i, mat_sim in enumerate(method1_sim):
-        sim_diff.append(mat_sim-method2_sim[i])
-    ax.scatter(list(range(1, len(sim_diff) + 1)), sim_diff)
-    ax.set_title(f'Difference in {titles[0]} (Avg={m1_avg}) vs. {titles[1]} (Avg={m2_avg})')
-    ax.set_xlabel('Alignment Number')
-    ax.set_ylabel('Similarity Difference')
-    ax.set_ylim(-0.2, 0.8)
-    ax.axhline(0, color='black')
-    plt.savefig(f'{path}/differences.png')
-
     # Graph the similarity scores against each other, better score on either side of diag line
     fig = plt.figure()
     ax = fig.add_subplot()
@@ -506,14 +512,14 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
+    parser.add_argument('-sample', type=int, default=2, help='MSA sample size')
     parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')

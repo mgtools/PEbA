@@ -174,12 +174,12 @@ def build_graph(dict_m1, dict_m2, dict_m3, ref, parse):
 
     # When making alignment length plot for references 911/912/913, have to include all values
     # because the TCS values are 0 for lengths in last bucket
-    y3 = [val for val in dict_m3.values() if val != 0]
+    y3 = [val for val in dict_m3.values()] #if val != 0]
 
-    # Plot
-    plt.plot(x, y1, label='PEbA')
-    plt.plot(x, y2, label='BLOSUM62')
-    plt.plot(x, y3, label='DEDAL')
+    # Plot line graph with data points
+    plt.plot(x, y1, label='PEbA', marker='o')
+    plt.plot(x, y2, label='BLOSUM62', marker='o')
+    plt.plot(x, y3, label='DEDAL', marker='o')
     plt.xlabel(f'{parse}')
     plt.ylabel('Average TC Score')
     plt.title(f'Average TC Score vs {parse} in {ref}')
@@ -196,7 +196,7 @@ def main():
     parser.add_argument('-p1', type=str, default='Alignments/PEBA-BLOSUM')
     parser.add_argument('-p2', type=str, default='Alignments/PEBA-DEDAL')
     parser.add_argument('-r', type=str, default='9')
-    parser.add_argument('-t', type=str, default='id')
+    parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
 
     # Initialize dict based on type of info to be parsed

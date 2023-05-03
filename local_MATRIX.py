@@ -138,13 +138,14 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-file1', type=str, help='Name of first fasta file')
-    parser.add_argument('-file2', type=str, help='Name of second fasta file')
-    parser.add_argument('-gopen', type=float, default=-11, help='Penalty for opening a gap')
-    parser.add_argument('-gext', type=float, default=-1, help='Penalty for extending a gap')
-    parser.add_argument('-matrix', type=str, default='blosum', help='Substitution matrix to use')
-    parser.add_argument('-score', type=int, default=45, help='Log odds score of subsitution matrix')
-    parser.add_argument('-output', type=str, default='msf', help='Output format')
+    parser.add_argument('-f1', '--file1', type=str, help='Name of first fasta file')
+    parser.add_argument('-f2', '--file2', type=str, help='Name of second fasta file')
+    parser.add_argument('-go', '--gopen', type=float, default=-11, help='Penalty for opening a gap')
+    parser.add_argument('-ge', '--gext', type=float, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-m', '--matrix', type=str, default='blosum', help='Substitution matrix to use')
+    parser.add_argument('-s', '--score', type=int, default=45, help='Log odds score of subsitution matrix')
+    parser.add_argument('-o', '--output', type=str, default='msf', help='Output format')
+    parser.add_argument('-sf', '--savefile', type=str, default='n', help='File to save alignment')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -164,9 +165,9 @@ def main():
     # Write align based on desired output format
     if args.output == 'msf':
         write_msf(align1, align2, id1, id2, args.matrix+str(args.score),
-                args.gopen, args.gext, args.file1)
+                args.gopen, args.gext, args.savefile)
     if args.output == 'fa':
-        write_fasta(align1, align2, id1, id2, args.file1)
+        write_fasta(align1, align2, id1, id2, args.savefile)
 
 
 if __name__ == '__main__':

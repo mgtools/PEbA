@@ -24,6 +24,7 @@ been embedded and saved as a numpy array:
     -gext <int/float>   : Gap extension penalty
     -encoder <str>      : Encoder used to generate embeddings
     -output <str>       : Desired output format, either 'msf' or 'fa'
+    -savefile <str>     : Path to save alignment file, prints to console if not specified
 
 Embeddings from any model can be used as long as the embeddings are a 1D array the same length as the sequence.
 The -encoder argument is used to specify the model used and written to the output .msf file for reference.

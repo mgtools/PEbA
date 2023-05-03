@@ -152,6 +152,7 @@ def main():
     parser.add_argument('-ge', '--gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-e', '--encoder', type=str, default='ProtT5', help='Encoder used')
     parser.add_argument('-o', '--output', type=str, default='msf', help='Output format')
+    parser.add_argument('-s', '--savefile', type=str, default='n', help='File to save alignment')
     args = parser.parse_args()
 
     # Load fasta files and ids
@@ -184,9 +185,10 @@ def main():
 
     # Write align based on desired output format
     if args.output == 'msf':
-        write_msf(align1, align2, id1, id2, f'{args.encoder}_Sim', args.gopen, args.gext, args.file1)
+        write_msf(align1, align2, id1, id2, f'{args.encoder}_Sim',
+                   args.gopen, args.gext, args.savefile)
     if args.output == 'fa':
-        write_fasta(align1, align2, id1, id2, args.file1)
+        write_fasta(align1, align2, id1, id2, args.savefile)
 
 
 if __name__ == '__main__':
