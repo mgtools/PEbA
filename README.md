@@ -111,7 +111,7 @@ pairs being compared (gaps are not counted). The similarity is the percentage of
 F1 score can also be calculated to compare alignments, but TC score is the default.
 
 **************************************************************************************************************
-# Methods Compared
+# Data and Methods Compared
 **************************************************************************************************************
 
 From each BAliBASE benchmark MSA we extracted each pairwise alignment. We took each pair and generated
@@ -143,3 +143,9 @@ We adapted their code and used it to run their model in run_DEDAL.py.
 The 'Alignments' folder contains all of the pairwise alignments used for analysis. The 'Figures' folder
 contains several scripts used to generate the figures and tables in the paper, not including the graphs
 comparing PEbA to other methods made from compare_aligns.py.
+
+**************************************************************************************************************
+# License
+**************************************************************************************************************
+
+Licensed under the Academic Free License version 3.0. 
