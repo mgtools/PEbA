@@ -151,7 +151,7 @@ def compute_score(aligns, score):
 
     # TCS is shared_pairs / number of pairs in first align
     if score == 'tcs':
-        sc = round(shared_pairs / len(align1_pairs)*100, 2)
+        sc = round(shared_pairs / len(align1_pairs), 3)
 
     # F1 is 2 * (precision*recall) / (precision + recall)
     elif score == 'f1':
@@ -162,7 +162,7 @@ def compute_score(aligns, score):
         if precision == 0 and recall == 0:
             sc = 0
         else:
-            sc = 2 * (precision * recall) / (precision + recall)*100
+            sc = 2 * (precision * recall) / (precision + recall)
 
     # Report the score and other info
     sim = round(seq_sim / len(align1_pairs)*100, 2)

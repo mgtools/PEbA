@@ -1,5 +1,5 @@
 """================================================================================================
-This script takes two protein sequences of varying length and finds the highest scoring local
+This script takes two protein sequences of any length and finds the highest scoring local
 alignment between the two using the cosine similarity between embedded amino acids.
 
 Ben Iovino  01/23/23   VecAligns
@@ -14,7 +14,7 @@ from utility import parse_fasta, write_msf, write_fasta
 from embed_seqs import prot_t5xl_embed
 
 
-def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
+def local_align(seq1: str, seq2: str, vecs1: list, vecs2:list, gopen: float, gext: float):
     """=============================================================================================
     This function accepts two sequences, creates a matrix corresponding to their lengths, and
     calculates the score of the alignments for each index. A second matrix is scored so that the
@@ -26,7 +26,7 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
     :param vecs2: second sequence's amino acid vectors
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
-    return: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
+    :return list: scoring and traceback matrices of optimal scores for the SW-alignment of sequences
     ============================================================================================="""
 
     # Initialize scoring and traceback matrix based on sequence lengths
@@ -78,7 +78,7 @@ def local_align(seq1, seq2, vecs1, vecs2, gopen, gext):
     return score_m, trace_m
 
 
-def traceback(score_m, trace_m, seq1, seq2):
+def traceback(score_m: list, trace_m: list, seq1: str, seq2: str):
     """=============================================================================================
     This function accepts a scoring and a traceback matrix and two sequences and returns the highest
     scoring local alignment between the two sequences.
@@ -137,10 +137,10 @@ def traceback(score_m, trace_m, seq1, seq2):
 
 def main():
     """=============================================================================================
-    This function initializes two protein sequences, calls an embedding function if embeddings are
-    not provided, calls local_align() to obtain the scoring and traceback matrix from 
-    SW alignment (with vector similarity in the scoring system), calls traceback() to get the local 
-    alignment, and then writes the alignment to a file the desired format.
+    Main initializes two protein sequences, embeds them if embeddings are not provided, calls
+    local_align() to obtain the scoring and traceback matrix from local alignment (with cosine
+    similarity as the scoring method), calls traceback() to get the highest scoring local alignment,
+    and then writes the alignment in the desired format to either the console or to a specified file.
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
@@ -149,7 +149,7 @@ def main():
     parser.add_argument('-e1', '--embed1', type=str, default='n', help='First embedding file')
     parser.add_argument('-e2', '--embed2', type=str, default='n', help='Second embedding file')
     parser.add_argument('-go', '--gopen', type=float, default=-11, help='Gap open penalty')
-    parser.add_argument('-ge', '--gext', type=float, default=-1, help='Penalty for extending a gap')
+    parser.add_argument('-ge', '--gext', type=float, default=-1, help='Gap extension penalty')
     parser.add_argument('-e', '--encoder', type=str, default='ProtT5', help='Encoder used')
     parser.add_argument('-o', '--output', type=str, default='msf', help='Output format')
     parser.add_argument('-s', '--savefile', type=str, default='n', help='File to save alignment')

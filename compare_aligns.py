@@ -219,7 +219,7 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gext, encoder):
 
     print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-    os.system(f"python local_PEbA.py {args}")
+    os.system(f"python peba.py {args}")
 
 
 def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
@@ -447,13 +447,10 @@ def graph_compare(path, methods, score):
         with open(f'{path}/{folder}/compare.csv', 'r', encoding='utf8') as file:
             for i, line in enumerate(file):
                 line = line.split(',')
-
-                # Dividing by 100 after the fact because we changed TCS from percent to decimal
-                # as we were writing the paper
                 if i == 0 or i % 2 == 0:
-                    method1_sim.append(float(line[0])/100)
+                    method1_sim.append(float(line[0]))
                 if i % 2 != 0:
-                    method2_sim.append(float(line[0])/100)
+                    method2_sim.append(float(line[0]))
 
     # Average the similarity scores to put on the graph, rounding to same decimals as in paper
     m1_avg = round(sum(method1_sim)/len(method1_sim), 3)
