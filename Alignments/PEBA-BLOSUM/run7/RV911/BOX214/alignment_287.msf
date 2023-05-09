@@ -1,0 +1,142 @@
+PileUp
+
+
+
+   MSF: 2147  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q90636 oo  Len:  2147
+ Name: P07898 oo  Len:  2147
+
+//
+
+
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      MTTLLLVFVC LQAITTAASA ELSDSSDGLE VKIPEQSPLR VVLGSSLNIP 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      CYFNIPEEED TNALLTPRIK WSKLSNGTEI VLLVATGGKI RLNAEYREVI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SLPNYPAIPT DATLEIKALR SNHTGIYRCE VMYGIEDRQD TIEVLVKGVV 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      FHYRAISTRY TLNFERAKQA CIQNSAVIAT PEQLQAAYED GYEQCDAGWL 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      ADQTVRYPIH LPRERCYGDK DEFPGVRTYG VRETDETYDV YCYAEQMQGK 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      VFYATSPEKF TFQEAFDKCH SLGARLATTG ELYLAWKDGM DMCSAGWLAD 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      RSVRYPISRA RPNCGGNLVG VRTVYLNPAN QTGYPHPSSR YDAICYSGDD 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      FEALVPGLFT DEVGTELGSA FTIQTVTQTE VELPLPRNVT EEEARGSIAT 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      LEPMEITATA TELYEAFTVL PDLFATSVTV ETASPREENV TREEITGIWA 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      VPEEVTTSVS GTAFTTGMAE VSSVEEAIAV TATPGLESAS PFTIEDHLVQ 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      VTAAPDVALL PRQPISPTGV VFHYRAATSR YAFSFIQAQQ ACLENNAVIA 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      TPEQLQAAYE AGFDQCDAGW LRDQTVRYPI VNPRSNCVGD KESSPGVRSY 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      GMRPASETYD VYCYIDRLKG EVFFATQPEQ FTFQEAQLYC ESQNATLASA 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      GQLHAAWKQG LDRCYPGWLA DGSLRYPIVS PRPACGGDAP GVRTIYQHHN 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      QTGFPDPLSR HHAFCFRALP SVVEEGVTSL FEEEVMVTQL IPGVEGIPSG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      EETTVETELS SEPENQTAQG TEVFPTDVSL LSARPSAFPP ATVIPEETST 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      NASIPEVSGE FPESGEHPTS GEPSASGAPD TSGEPTSVGF ELSGEQSGIG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      ESGLPSVDLQ SSGFVPGESG LPSGDVSGLP SGIVDISGLP SAEEEVTVSV 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SRIPEVSGMP SGAESSGLHS GFSGEISGTE LISGLPSGEE SGLASGFPTI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SLVDSTLVEV VTAAPGRQEE GKGSIGVSGE EELSGFPSAE WDSSGARGLP 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SGAETSGEQS GVPELSGEHS GVPGLSGEAF EVPELSGEHS GVTELSGEHS 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      GLPELSGEPF GVPELSGFPS GLDISGEPSG APEVSGPVDV SGLTSGVDGS 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      GEVSGVTFIS TSLQEVTTPS VAEAEAKEIL EISGLPSGET SGMVSGSLDV 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SGQPSGHIGF GGSASGVLEM SGFPGGAVES SGEASGVEVT SGLASGEESG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      LTSGFPTVSL VDTTLVEVVT QTSVAQEVGE GPSGMIEISG FLSGDRGVSG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      EGSGAVQSSG LPSGTGDFSG EPSGIPYFSG DISGATDLSG QPSAVTDISG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      EDSGLPEVTL VTSDLVEVVT RPTVSQELGG ETAVTFPYVF GPSGEGSASG 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      DLSGGASAEG GIETSTAYEI SGESSAFPET SIETSTDQEI SGEASAYPEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SVETSTHLET SGETSAYPEI STETSTIQEV SGETSAFPEI STETSTIQEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SGETSAFPEI RIETSTFQEI SGETSAFPEI RIETSTSQEA RGETSAFPEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      TIEASTVHET SGETSAFPEI SIETSTVHET SGETSAFPEI SIETSTVHEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SGESSAFPEI RIETSTSQEA RGETSAFPEI TIEASTIQEI SGETSAFPEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SIETSTVREI SGETSAFPEI RIETSTSQEA RGETSALPEI TIETSTVHET 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SGEASAFPEI SIETSTRQEA RSEASAYPEV SIEASTTQEV SGESSAFPEI 
+
+Q90636      .......... .......... .......... .......... .......... 
+P07898      SVETSTSQEA RGETSAFPEI GIETSTAHEG SGETPGLPAV STDTAATSLA 
+
+Q90636      .......... .......MPL FLSFSPRSLR EVLAKKSAPP APLCPQPDPS 
+P07898      SGEPSGAPEK ETPDTTSHLI TGVSGETSVP DAVISTSAPD VELAQEPRNT 
+
+Q90636      LLLSLHAAG. AVPHLY..DA TEEKERLSPS PP.REATTRE GD.EERQSQR 
+P07898      EETQLEIE.P STPAA.SGQE TETAAVLD.N P.HLPATATA A.LHPA.SQE 
+
+Q90636      GSGCSELR.Q NRRRVLCVAL SAVPCMLV.. LALVAVIVLQ RP.SCSPRPP 
+P07898      .A.VDAL.GP TT..EDTDEC HSSPC.L.NG .A.TCVDGID S.FKCLCLPS 
+
+Q90636      FSH..VCPN. .......AWV GFQGKCYY.. FSDTESDWNS SREHCHRLG. 
+P07898      YG.GDLCE.I DLANCEEGWI KFQGHCY.RH FEERE.TWMD AESRCREH.Q 
+
+Q90636      ASLATLDTKE EMEFMLQYQR PAD.RWIGLH R...AEGDEH WTWADGSAFT 
+P07898      AHLSSIITPE EQEFV.N.SH AQDYQWIGLS .DRAVEN.DF .RWSDGHSL. 
+
+Q90636      NRPVFELRGG .GRC...AYL NGDGISSALC HSEK..FWV. ...CSR..AD 
+P07898      ...QFENWR. PNQ.PDNFFF AGEDCVVMIW HEQ.GE.W.N DVPCN.YH.L 
+
+Q90636      SYVRWRKGTN PQ........ .......... .......... .......... 
+P07898      PF.TCKKGTV ACGDPPVVEN ARTFGRKKDR YEINSLVRYQ CDHGYIQRHV 
+
+Q90636      .......... .......... .......... .......... .......
+P07898      PTIRCQPNGH WEEPRISCTN PSSYQRRLYK RSPRSRLRPG VVHRPTH
+

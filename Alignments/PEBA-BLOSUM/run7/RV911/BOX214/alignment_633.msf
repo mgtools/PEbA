@@ -1,0 +1,142 @@
+PileUp
+
+
+
+   MSF: 2143  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: P07898 oo  Len:  2143
+ Name: Q91Y84 oo  Len:  2143
+
+//
+
+
+
+P07898      MTTLLLVFVC LQAITTAASA ELSDSSDGLE VKIPEQSPLR VVLGSSLNIP 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      CYFNIPEEED TNALLTPRIK WSKLSNGTEI VLLVATGGKI RLNAEYREVI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SLPNYPAIPT DATLEIKALR SNHTGIYRCE VMYGIEDRQD TIEVLVKGVV 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      FHYRAISTRY TLNFERAKQA CIQNSAVIAT PEQLQAAYED GYEQCDAGWL 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      ADQTVRYPIH LPRERCYGDK DEFPGVRTYG VRETDETYDV YCYAEQMQGK 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      VFYATSPEKF TFQEAFDKCH SLGARLATTG ELYLAWKDGM DMCSAGWLAD 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      RSVRYPISRA RPNCGGNLVG VRTVYLNPAN QTGYPHPSSR YDAICYSGDD 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      FEALVPGLFT DEVGTELGSA FTIQTVTQTE VELPLPRNVT EEEARGSIAT 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      LEPMEITATA TELYEAFTVL PDLFATSVTV ETASPREENV TREEITGIWA 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      VPEEVTTSVS GTAFTTGMAE VSSVEEAIAV TATPGLESAS PFTIEDHLVQ 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      VTAAPDVALL PRQPISPTGV VFHYRAATSR YAFSFIQAQQ ACLENNAVIA 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      TPEQLQAAYE AGFDQCDAGW LRDQTVRYPI VNPRSNCVGD KESSPGVRSY 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      GMRPASETYD VYCYIDRLKG EVFFATQPEQ FTFQEAQLYC ESQNATLASA 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      GQLHAAWKQG LDRCYPGWLA DGSLRYPIVS PRPACGGDAP GVRTIYQHHN 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      QTGFPDPLSR HHAFCFRALP SVVEEGVTSL FEEEVMVTQL IPGVEGIPSG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      EETTVETELS SEPENQTAQG TEVFPTDVSL LSARPSAFPP ATVIPEETST 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      NASIPEVSGE FPESGEHPTS GEPSASGAPD TSGEPTSVGF ELSGEQSGIG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      ESGLPSVDLQ SSGFVPGESG LPSGDVSGLP SGIVDISGLP SAEEEVTVSV 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SRIPEVSGMP SGAESSGLHS GFSGEISGTE LISGLPSGEE SGLASGFPTI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SLVDSTLVEV VTAAPGRQEE GKGSIGVSGE EELSGFPSAE WDSSGARGLP 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SGAETSGEQS GVPELSGEHS GVPGLSGEAF EVPELSGEHS GVTELSGEHS 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      GLPELSGEPF GVPELSGFPS GLDISGEPSG APEVSGPVDV SGLTSGVDGS 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      GEVSGVTFIS TSLQEVTTPS VAEAEAKEIL EISGLPSGET SGMVSGSLDV 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SGQPSGHIGF GGSASGVLEM SGFPGGAVES SGEASGVEVT SGLASGEESG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      LTSGFPTVSL VDTTLVEVVT QTSVAQEVGE GPSGMIEISG FLSGDRGVSG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      EGSGAVQSSG LPSGTGDFSG EPSGIPYFSG DISGATDLSG QPSAVTDISG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      EDSGLPEVTL VTSDLVEVVT RPTVSQELGG ETAVTFPYVF GPSGEGSASG 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      DLSGGASAEG GIETSTAYEI SGESSAFPET SIETSTDQEI SGEASAYPEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SVETSTHLET SGETSAYPEI STETSTIQEV SGETSAFPEI STETSTIQEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SGETSAFPEI RIETSTFQEI SGETSAFPEI RIETSTSQEA RGETSAFPEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      TIEASTVHET SGETSAFPEI SIETSTVHET SGETSAFPEI SIETSTVHEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SGESSAFPEI RIETSTSQEA RGETSAFPEI TIEASTIQEI SGETSAFPEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SIETSTVREI SGETSAFPEI RIETSTSQEA RGETSALPEI TIETSTVHET 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SGEASAFPEI SIETSTRQEA RSEASAYPEV SIEASTTQEV SGESSAFPEI 
+Q91Y84      .......... .......... .......... .......... .......... 
+
+P07898      SVETSTSQEA RGETSAFPEI GIETSTAHEG SGETPGLPAV STDTAATSLA 
+Q91Y84      .......... .......... .......... .........M TKDYQDFQHL 
+
+P07898      SGEPSGAPEK ETPDTTSHLI TG..VSGETS VPDAVISTSA PD....VELA 
+Q91Y84      DNDNDHHQLR RGPPPTPRLL Q.RLCSG..S R.LLLLSSSL S.ILLLVVVC 
+
+P07898      Q..EPRNTEE TQLEIEPSTP AASGQETETA AVLDNPHLPA TATAALHPAS 
+Q91Y84      .VI...TSQN SQLR.EDLLA LRQNFSNLTV STEDQVKALS TQGSSVGRKM 
+
+P07898      QEAVDALGPT TEDTDECHSS P.CLNGATC. .VDGIDSFKC L.CLPSYGGD 
+Q91Y84      KLVESKLEKQ QKDLTEDHSS .LLLH.VK.Q LVSDVRSLSC .Q.MAAFRGN 
+
+P07898      L.CEIDLANC EE.GWIKFQG HCYR.HFEER ETWMDAESRC RE.HQAHLSS 
+Q91Y84      .GSE.R.TCC P.INWVEYEG SCY.WFSSSV RPWTEADKYC Q.LENAHLVV 
+
+P07898      IITP.EEQEF VNSHAQDYQ. WIGLSDRAVE NDF..RWSDG H....SLQFE 
+Q91Y84      VTS.RDEQNF LQRHMGPLNT WIGLTD...Q NG.PWKWVDG .TDYET.GFQ 
+
+P07898      NWRPNQPDNF FF.....AGE DCVVMIWHE. ..QGEWNDVP CNYHLPFTCK 
+Q91Y84      NWRPEQPDNW Y.GHGLGGGE DCA....H.F TTDGRWND.. .D..V...CR 
+
+P07898      KG..TVACGD PPVVENARTF GRKKDRYEIN SLVRYQCDHG YIQRHVPTIR 
+Q91Y84      R.PYRWVC.E T.KLDKAN.. .......... .......... .......... 
+
+P07898      CQPNGHWEEP RISCTNPSSY QRRLYKRSPR SRLRPGVVHR PTH
+Q91Y84      .......... .......... .......... .......... ...
+

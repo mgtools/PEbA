@@ -1,0 +1,154 @@
+PileUp
+
+
+
+   MSF: 2346  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CAH_ANASP  oo  Len:  2346
+ Name: PTPZ_HUMAN oo  Len:  2346
+
+//
+
+
+
+CAH_ANASP       ...MSSTLYR RQLLKLLGMS VLGTSFSSCV TSPARAKTVN WGYIGKVGPE 
+PTPZ_HUMAN      MRILKRFLAC IQLLCVCRLD W.ANGY.YRQ QR.KLVEEIG WSYTGALNQK 
+
+CAH_ANASP       HWGELSPDFA LCQIGR.KQT PIDLQIADVK DVHSSSQD.. ..LLVTNYQP 
+PTPZ_HUMAN      NWGK.K..YP TCN.S.PKQS PIN..I.D.E DL.T..Q.VN VNLKKLKFQ. 
+
+CAH_ANASP       ....TAL... HLINNGKTVQ VNYQPGSYLK Y....AHQKF ELLQFHFHH. 
+PTPZ_HUMAN      GWDKTSLENT FIHNTGKTVE INLT.NDYRV .SGGVSEMVF KASKITFH.W 
+
+CAH_ANASP       ........FS EHRVDGKL.. .YDMELHLVH ..RSKSGDLA VMGIFL..QA 
+PTPZ_HUMAN      GKCNMSSDGS EHSLEGQ.KF PLEMQIYCFD ADRFSSFEEA VKGKG.KLRA 
+
+CAH_ANASP       G...AFNP.. TLQIIWDATP QN.QGTDKRI EDINIDASQ. .......FLP 
+PTPZ_HUMAN      .LSILFE.VG TEENL.DFKA I.IDGVES.V SRFGKQAA.L DPFILLNLLP 
+
+CAH_ANASP       .AQHRFFTYS GSLTTPPCSE NVL.WCVMAT PIEASPAQIA K.FSQMFP.Q 
+PTPZ_HUMAN      NSTDKYYIYN GSLTSPPCTD TV.DWIVFKD TVSISESQLA .VFCEVLTMQ 
+
+CAH_ANASP       NARPVQPLN. DRLVIEAI.. .......... .......... .......... 
+PTPZ_HUMAN      QSGYVM.L.M DYLQNNFREQ QYKFSRQVFS SYTGKEEIHE AVCSSEPENV 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      QADPENYTSL LVTWERPRVV YDTMIEKFAV LYQQLDGEDQ TKHEFLTDGY 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      QDLGAILNNL LPNMSYVLQI VAICTNGLYG KYSDQLIVDM PTDNPELDLF 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      PELIGTEEII KEEEEGKDIE EGAIVNPGRD SATNQIRKKE PQISTTTHYN 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      RIGTKYNEAK TNRSPTRGSE FSGKGDVPNT SLNSTSQPVT KLATEKDISL 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      TSQTVTELPP HTVEGTSASL NDGSKTVLRS PHMNLSGTAE SLNTVSITEY 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EEESLLTSFK LDTGAEDSSG SSPATSAIPF ISENISQGYI FSSENPETIT 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      YDVLIPESAR NASEDSTSSG SEESLKDPSM EGNVWFPSST DITAQPDVGS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      GRESFLQTNY TEIRVDESEK TTKSFSAGPV MSQGPSVTDL EMPHYSTFAY 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FPTEVTPHAF TPSSRQQDLV STVNVVYSQT TQPVYNGETP LQPSYSSEVF 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      PLVTPLLLDN QILNTTPAAS SSDSALHATP VFPSVDVSFE SILSSYDGAP 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      LLPFSSASFS SELFRHLHTV SQILPQVTSA TESDKVPLHA SLPVAGGDLL 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      LEPSLAQYSD VLSTTHAASE TLEFGSESGV LYKTLMFSQV EPPSSDAMMH 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      ARSSGPEPSY ALSDNEGSQH IFTVSYSSAI PVHDSVGVTY QGSLFSGPSH 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      IPIPKSSLIT PTASLLQPTH ALSGDGEWSG ASSDSEFLLP DTDGLTALNI 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SSPVSVAEFT YTTSVFGDDN KALSKSEIIY GNETELQIPS FNEMVYPSES 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      TVMPNMYDNV NKLNASLQET SVSISSTKGM FPGSLAHTTT KVFDHEISQV 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      PENNFSVQPT HTVSQASGDT SLKPVLSANS EPASSDPASS EMLSPSTQLL 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FYETSASFST EVLLQPSFQA SDVDTLLKTV LPAVPSDPIL VETPKVDKIS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      STMLHLIVSN SASSENMLHS TSVPVFDVSP TSHMHSASLQ GLTISYASEK 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      YEPVLLKSES SHQVVPSLYS NDELFQTANL EINQAHPPKG RHVFATPVLS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      IDEPLNTLIN KLIHSDEILT STKSSVTGKV FAGIPTVASD TFVSTDHSVP 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      IGNGHVAITA VSPHRDGSVT STKLLFPSKA TSELSHSAKS DAGLVGGGED 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      GDTDDDGDDD DDRDSDGLSI HKCMSCSSYR ESQEKVMNDS DTHENSLMDQ 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      NNPISYSLSE NSEEDNRVTS VSSDSQTGMD RSPGKSPSAN GLSQKHNDGK 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EENDIQTGSA LLPLSPESKA WAVLTSDEES GSGQGTSDSL NENETSTDFS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FADTNEKDAD GILAAGDSEI TPGFPQSPTS SVTSENSEVF HVSEAEASNS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SHESRIGLAE GLESEKKAVI PLVIVSALTF ICLVVLVGIL IYWRKCFQTA 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      HFYLEDSTSP RVISTPPTPI FPISDDVGAI PIKHFPKHVA DLHASSGFTE 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      EFETLKEFYQ EVQSCTVDLG ITADSSNHPD NKHKNRYINI VAYDHSRVKL 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      AQLAEKDGKL TDYINANYVD GYNRPKAYIA AQGPLKSTAE DFWRMIWEHN 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      VEVIVMITNL VEKGRRKCDQ YWPADGSEEY GNFLVTQKSV QVLAYYTVRN 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FTLRNTKIKK GSQKGRPSGR VVTQYHYTQW PDMGVPEYSL PVLTFVRKAA 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      YAKRHAVGPV VVHCSAGVGR TGTYIVLDSM LQQIQHEGTV NIFGFLKHIR 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      SQRNYLVQTE EQYVFIHDTL VEAILSKETE VLDSHIHAYV NALLIPGPAG 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      KTKLEKQFQL LSQSNIQQSD YSAALKQCNR EKNRTSSIIP VERSRVGISS 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      LSGEGTDYIN ASYIMGYYQS NEFIITQHPL LHTIKDFWRM IWDHNAQLVV 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      MIPDGQNMAE DEFVYWPNKD EPINCESFKV TLMAEEHKCL SNEEKLIIQD 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      FILEATQDDY VLEVRHFQCP KWPNPDSPIS KTFELISVIK EEAANRDGPM 
+
+CAH_ANASP       .......... .......... .......... .......... .......... 
+PTPZ_HUMAN      IVHDEHGGVT AGTFCALTTL MHQLEKENSV DVYQVAKMIN LMRPGVFADI 
+
+CAH_ANASP       .......... .......... .......... .......... ......
+PTPZ_HUMAN      EQYQFLYKVI LSLVSTRQEE NPSTSLDSNG AALPDGNIAE SLESLV
+

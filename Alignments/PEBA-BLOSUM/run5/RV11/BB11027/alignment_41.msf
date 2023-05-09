@@ -1,0 +1,43 @@
+PileUp
+
+
+
+   MSF: 491  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 4tmk_A oo  Len:  491
+ Name: 1bif_  oo  Len:  491
+
+//
+
+
+
+4tmk_A      .......... .......... .......... .......... .......... 
+1bif_       CPTLIVMVGL PARGKTYISK KLTRYLNFIG VPTREFNVGQ YRRDMVKTYK 
+
+4tmk_A      .......... .......... .......... .......... .......... 
+1bif_       SFEFFLPDNE EGLKIRKQCA LAALNDVRKF LSEEGGHVAV FDATNTTRER 
+
+4tmk_A      .......... .......... .......... .......... .......... 
+1bif_       RAMIFNFGEQ NGYKTFFVES ICVDPEVIAA NIVQVKLGSP DYVNRDSDEA 
+
+4tmk_A      .......... .......... .......... .......... .......... 
+1bif_       TEDFMRRIEC YENSYESLDE EQDRDLSYIK IMDVGQSYVV NRVADHIQSR 
+
+4tmk_A      .......... .......... .......RSK YIVIEGLEG. AGKTT.ARNV 
+1bif_       IVYYLMNIHV TPRSIYLCRH GESELNLKGR IGGDPGLS.P RGRE.FSKHL 
+
+4tmk_A      VVET..LEQL GIRDMV..FT REPGGTQLAE KLRSLLLDIK SVGDEVITDK 
+1bif_       A.Q.FISDQ. NIKDL.KVFT .....SQM.. K.RT....I. ....Q..T.. 
+
+4tmk_A      AEVLMFYAAR VQLVETVIKP ALANGTWVIG DRH.DLSTQA YQGGGRGIDQ 
+1bif_       AEAL...S.. VPY.EQ.FK. .VLN.E..I. DA.GVCEEMT YE...E.IQD 
+
+4tmk_A      HML...ATLR DAV....... .LGDFRPDLT LYLDVTPEVG LKRARARGEL 
+1bif_       HY.PLEFALR DQ.DKYRYRY PKGESYEDLV QR..LEPVI. MELERQENVL 
+
+4tmk_A      DRIE.....Q ESFD..FFNR TRARYLELAA ..QDKSIHTI DATQPLEAV. 
+1bif_       V.I.CHQAVM RCL.LAYF.L DKAAE.ELP. YLK.CPLHTV LKLTPVAY.G 
+
+4tmk_A      ..MDAIRTTV THWVKEL... .......... .......... .
+1bif_       CKVESIFLNV AA.VNTHRDR PQNVDISRPS EEALVTVPAH Q
+

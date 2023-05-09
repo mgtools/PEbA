@@ -1,0 +1,139 @@
+PileUp
+
+
+
+   MSF: 2068  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: O60139 oo  Len:  2068
+ Name: Q243K4 oo  Len:  2068
+
+//
+
+
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      MNQSDSKHYR NSVISSQLMR KSYLQTTPLA SSRRQEDALS VISGQSSQRM 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      RSTGNQKFLN TNVSVRRSQL FDASKYVCEE LDAEQIIQLR EVFNRWDQDQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      SGTLAPNELK LALMQYEKNI SQTQINQLLG VVDIEEKGEI DFENFISIYK 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      REVILKFINI MYSQYDIKKQ GYITVQDLTQ FTERKLKKKE NEETLIKIIQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      TVGNGQQITK SQFTAGCLKT IKFMGRKNQK QNKSKTKQKN QDDKPKNKGF 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      NSEVLVQQAY EGFQLLEASD IYLEEISEKV VYVIDMGWFQ DWIEYVGMPA 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      LYENEDPRSQ PYFGKSRPRD QNGALCKDKA QNFHKYPSTM KESVYYGKVL 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      VSNFNEDQTR IVDEEMWKWF KTQYPDLVEI PRAQLVVDTY LEYAIELINV 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      WFGILDQSTV INFKELNKKE NHDHYDFYRL QFAKCLNFEL FVDLMIRFYL 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      HKKFGNEDNR DKLKFRIWKL DQTLHIQTTI NILNSELKEE TFRVKGQVFT 
+
+O60139      .......... .......... ...MDSSKIY DFLKSAPFHP SMVICYSLER 
+Q243K4      ESLSKNCKAK QFTKSHYKYL IEVVDKDKDW .ILKQHPIKA IGGLCSKLEG 
+
+O60139      Y......... FEDV..SLAY KLYSMLR..S LKLDPHFMEL AN.....PKK 
+Q243K4      .KLRGICEWC QDD.KHLVVQ CLYECM.YKD KKFHSHICEL A.FDSDSDEE 
+
+O60139      VDSSL.SYEN YQPIGLTNLG NTCYMNCV.L QCLFA....C KDLTIPMLQG 
+Q243K4      LDKN.EVKTN YET.GLVNLG NTCYMNS.GL QCIFATKNIC .EF.FMKNQY 
+
+O60139      RGLLQNINTK NPLGTGG.KI TSAFF.SLLQ SVLLNHGQRS ISPRN.FLEI 
+Q243K4      KEFLKK.DDD NLDNIS.QKL ISKF.AKLIK EVK.SKKRES IEPW.AFK.I 
+
+O60139      VQSLNRD.FS ID....GQCD AQEFLNF.FL DKLHED.LN. SNASRSPI.. 
+Q243K4      L..FGS.YYY I.FKGFSQHD SQEFIQ.NLL ENFNE.LL.V P.AIQDE.EE 
+
+O60139      APLTEDQL.S AREELPLSHF SHI....... ........EW NL.HLRSN.K 
+Q243K4      EE.EDDE.DD G.EKIE.NFL SE.NKFQKRF QKNPNLSEEE N.QALTL.IK 
+
+O60139      SIVVNNFV.. .......GQL C.SRTQCMTC GRTSTTFA.P FTSLAIPIDD 
+Q243K4      NLLSSSY.SK IFSESFLGLL .KSKLSCTKC GKSSSSF.DL FSSLAIPI.. 
+
+O60139      VSHVVSLQEC LLKFSAPELL QGHD.GWHCP VCKVQRSAKK VIMISKLPEY 
+Q243K4      AD.....KK. ..K....EVT .AN.V.FYIP Y.NIQEEIKQ V.KFS.LPT. 
+
+O60139      LIIQIQRFKI SVMGRKKIDT PLGLSLQIPS KMLV.PPSFQ SGIGY..... 
+Q243K4      ...E.S..KI TVQ.....E. .F.LE.KVAG .LL.ETPN.Q N.IN.RLMFA 
+
+O60139      .IPSNYNLFA FICHYGQLEN G...HY.ISD VLFNNEWCHI DDSIVRT.VG 
+Q243K4      II.SNENVKQ ...EF.FIKN .CTKK.AIE. MI.K.E.CN. QTN..K.FVA 
+
+O60139      GIT.DLREDF SSSYI.LFYK RSSL.....L EEFEDKCPKM TLKRNVK... 
+Q243K4      .V.YQLPNE. ...Y.D.FYD IDT.NRIISI N.FK.KIVAQ QDGKHQNLVV 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      INIPRIIVID TQEIVADIYL KISDMLSPIL PDASKFVNDL IETLEDESNE 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      QTLKKLNDKL QFQILINSQM QRRKKQHDIC IFCQSTTCKS CPLPFLIDKQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      FIQFTQNYNK GDLSFSVLFQ TEEIAKQVPQ FQFNSGEQNK SDANNPTLIE 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      CLQLYLEKEI LDEDNKWDCD ICNQKQIASK EVTIYYGPRY LVFQIKRFKD 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      NSKGEKVKNC VQVNYSEFED FTDYIYKINP TVNTQQKAEN NSRLVYRLYG 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      VVIHIGQIDQ GHYTSYTFQN NRWTHYNDDL IKTVKAEELS ELIINIQVNI 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      SPARDTKIIG QRALIWASNF QKMDNELFLD NFDMSPICAI GTPQSKSETP 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      VHNYRYPVKI NLQYNPMQIK FDLFCILSQK SQIQKQSELP VRRANNDYGF 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      ENDEVLSQPK YKVIKFNSSR DIQQGSIRDC KNQKEIFTDF LIDIIQKKKV 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      SENFVSKTIP VEKTFVRINY LKNKEKEVKT VEDIVGCSTI STVNQSCNEK 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      SQVVNPQKKQ KEKIKKANLS KSISKTTITD TSKNSQSYKK RSSISNSSKC 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      ALPSARSMSK KGGNTPSKNN SMSERKSNKK NYQTIIRTKS PSHKLVNNSS 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      SSCCSCCKSH ASPLSSSEKN MVLPSEGGQS SVYHSISQRA QSVNSKKSNQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      RSSFNIHFDL SSEWNHKSSI LSQSGQNRTS EYLQKKFQQI FERKQEKIQI 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      KQIQHADKAM RNELYGMFSR QSRDMRQKKL QELSMFEQMQ KQLIQTVDPE 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      KIQKVQEIVR QSIEKYSLQK QTEKEEQEQK ENQKKELIKK IKEYDQKVKQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      NNYLVSERKS KSRENSQKKD IQYKPWGIDQ RKFDSKPAEV NKVKIVKKDQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      IDLKVLFSKN ETVNQLLKQI KNEQKKKQSE DQQVQPKKNQ HSQSSNDIRQ 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      EKKIDANEFN KKMEERLQKI IEEKKNKANE LKVKKQDLNH KLSKIEQVRK 
+
+O60139      .......... .......... .......... .......... .......... 
+Q243K4      ESISKCRKVP FKPTQEQIEK AFNNIQEENQ QNLSNQQNQE IQKNQNIQVK 
+
+O60139      .......... ........
+Q243K4      INNEPNTKSK MCICVQNF
+

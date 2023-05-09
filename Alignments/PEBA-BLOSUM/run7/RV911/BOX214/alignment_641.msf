@@ -1,0 +1,142 @@
+PileUp
+
+
+
+   MSF: 2128  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: P07898 oo  Len:  2128
+ Name: P27814 oo  Len:  2128
+
+//
+
+
+
+P07898      MTTLLLVFVC LQAITTAASA ELSDSSDGLE VKIPEQSPLR VVLGSSLNIP 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      CYFNIPEEED TNALLTPRIK WSKLSNGTEI VLLVATGGKI RLNAEYREVI 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      SLPNYPAIPT DATLEIKALR SNHTGIYRCE VMYGIEDRQD TIEVLVKGVV 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      FHYRAISTRY TLNFERAKQA CIQNSAVIAT PEQLQAAYED GYEQCDAGWL 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      ADQTVRYPIH LPRERCYGDK DEFPGVRTYG VRETDETYDV YCYAEQMQGK 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      VFYATSPEKF TFQEAFDKCH SLGARLATTG ELYLAWKDGM DMCSAGWLAD 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      RSVRYPISRA RPNCGGNLVG VRTVYLNPAN QTGYPHPSSR YDAICYSGDD 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      FEALVPGLFT DEVGTELGSA FTIQTVTQTE VELPLPRNVT EEEARGSIAT 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      LEPMEITATA TELYEAFTVL PDLFATSVTV ETASPREENV TREEITGIWA 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      VPEEVTTSVS GTAFTTGMAE VSSVEEAIAV TATPGLESAS PFTIEDHLVQ 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      VTAAPDVALL PRQPISPTGV VFHYRAATSR YAFSFIQAQQ ACLENNAVIA 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      TPEQLQAAYE AGFDQCDAGW LRDQTVRYPI VNPRSNCVGD KESSPGVRSY 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      GMRPASETYD VYCYIDRLKG EVFFATQPEQ FTFQEAQLYC ESQNATLASA 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      GQLHAAWKQG LDRCYPGWLA DGSLRYPIVS PRPACGGDAP GVRTIYQHHN 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      QTGFPDPLSR HHAFCFRALP SVVEEGVTSL FEEEVMVTQL IPGVEGIPSG 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      EETTVETELS SEPENQTAQG TEVFPTDVSL LSARPSAFPP ATVIPEETST 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      NASIPEVSGE FPESGEHPTS GEPSASGAPD TSGEPTSVGF ELSGEQSGIG 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      ESGLPSVDLQ SSGFVPGESG LPSGDVSGLP SGIVDISGLP SAEEEVTVSV 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      SRIPEVSGMP SGAESSGLHS GFSGEISGTE LISGLPSGEE SGLASGFPTI 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      SLVDSTLVEV VTAAPGRQEE GKGSIGVSGE EELSGFPSAE WDSSGARGLP 
+P27814      .......... .......... .......... .......... ........MD 
+
+P07898      SGAETSGEQS G.VPELSGEH SGVPGLSGEA FEVPELSGEH SGVTELSGEH 
+P27814      TASIYLGLKP .P.RTLGAWH ESPPSLPPDA CRCPR.S..H R.LA.LK... 
+
+P07898      SGLPELSGEP FGVPELSGFP SGLDISGEPS GAPEVSGPVD VSGLTSGVD. 
+P27814      ..L.SCAG.. L.I..L..L. ..V.LT.... ....L...I. .G.M.S.V.L 
+
+P07898      GSGEVSGVTF ISTSLQEVTT PSVAEAEAKE ..ILEISG.. LPSG.ETSGM 
+P27814      ....VR.V.L V....QK... PS..R.E.K. CCVF.IQ.EN L.N.KTTDCS 
+
+P07898      VSGSLDVSGQ PSG.HIGFGG SASGVLEMSG FP.GGAVESS GEASGVEVTS 
+P27814      VN..LECP.Q .D.W.L.L.. HRD...K.C. F.H...V.S. .Q...V...S 
+
+P07898      GLASG.EESG L..TSGF.PT VSLVDTTLVE VVTQTSVAQE VGEG.PSGMI 
+P27814      N..T.WE.EG .QADCG.R.K .G..ATLLL. I..Q.D..QE ..E.L..... 
+
+P07898      EISGFLSGDR GVSGEGSGAV QSSGLPSGTG DFSGEPSGIP YFSGDISGAT 
+P27814      RF...L.... .L..D.S..I KE........ KYN...S... FW...I.G.. 
+
+P07898      DLSGQPSAVT DISGEDSGLP EVTLVTSDLV EV.VTRP.TV SQELGGETAV 
+P27814      .L..R..... .F........ ..TL.P.DM. N.W..K.W.I N...G..T.. 
+
+P07898      TFPYVFGPSG EGSASGDLSG GASAEGG.IE TSTAY.EISG ESSAFPETSI 
+P27814      TF......N. ..S...DV.. .LKITG.VTE NGSC.ASILG DKVT.PE.SC 
+
+P07898      ETSTDQE.IS GEASAYPEIS VETSTHLETS GETSAYPEIS TETSTIQEVS 
+P27814      .ASDNR.WI. ..C....Q.K .ELN.H.ET. ......P..S ND.S...... 
+
+P07898      GETSAFPEIS TETSTIQEIS GETSAFPEIR IETSTFQEIS GETSAFPEIR 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      IETSTSQEAR GETSAFPEIT IEASTVHETS GETSAFPEIS IETSTVHETS 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      GETSAFPEIS IETSTVHEIS GESSAFPEIR IETSTSQEAR GETSAFPEIT 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      IEASTIQEIS GETSAFPEIS IETSTVREIS GETSAFPEIR IETSTSQEAR 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      GETSALPEIT IETSTVHETS GEASAFPEIS IETSTRQEAR SEASAYPEVS 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      IEASTTQEVS GESSAFPEIS VETSTSQEAR GETSAFPEIG IETSTAHEGS 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      GETPGLPAVS TDTAATSLAS GEPSGAPEKE TPDTTSHLIT GVSGETSVPD 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      AVISTSAPDV ELAQEPRNTE ETQLEIEPST PAASGQETET AAVLDNPHLP 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      ATATAALHPA SQEAVDALGP TTEDTDECHS SPCLNGATCV DGIDSFKCLC 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      LPSYGGDLCE IDLANCEEGW IKFQGHCYRH FEERETWMDA ESRCREHQAH 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      LSSIITPEEQ EFVNSHAQDY QWIGLSDRAV ENDFRWSDGH SLQFENWRPN 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      QPDNFFFAGE DCVVMIWHEQ GEWNDVPCNY HLPFTCKKGT VACGDPPVVE 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      NARTFGRKKD RYEINSLVRY QCDHGYIQRH VPTIRCQPNG HWEEPRISCT 
+P27814      .......... .......... .......... .......... .......... 
+
+P07898      NPSSYQRRLY KRSPRSRLRP GVVHRPTH
+P27814      .......... .......... ........
+

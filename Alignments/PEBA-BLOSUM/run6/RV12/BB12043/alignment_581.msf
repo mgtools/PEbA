@@ -1,0 +1,55 @@
+PileUp
+
+
+
+   MSF: 683  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bru_P     oo  Len:  683
+ Name: HGFA_HUMAN oo  Len:  683
+
+//
+
+
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      MGRWAWVPSP WPPPGLGPFL LLLLLLLLLP RGFQPQPGGN RTESPEPNAT 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPAIPTILV TSVTSETPAT SAPEAEGPQS GGLPPPPRAV PSSSSPQAQA 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LTEDGRPCRF PFRYGGRMLH ACTSEGSAHR KWCATTHNYD RDRAWGYCVE 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      ATPPPGGPAA LDPCASGPCL NGGSCSNTQD PQSYHCSCPR AFTGKDCGTE 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      KCFDETRYEY LEGGDRWARV RQGHVEQCEC FGGRTWCEGT RHTACLSSPC 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      LNGGTCHLIV ATGTTVCACP PGFAGRLCNI EPDERCFLGN GTGYRGVAST 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      SASGLSCLAW NSDLLYQELH VDSVGAAALL GLGPHAYCRN PDNDERPWCY 
+
+1bru_P          .......... .......... .......... .......... .......... 
+HGFA_HUMAN      VVKDSALSWE YCRLEACESL TRVQLSPDLL ATLPEPASPG RQACGRRHKK 
+
+1bru_P          .......VVG GEDARPNSW. PWQVSLQYD. .QWRHTCGGT LVDQSWVLTA 
+HGFA_HUMAN      RTFLRPRIIG GSSSLPGS.H PWLAAI.Y.I GD.S.FCAGS LVHTCWVVSA 
+
+1bru_P          AHCISSS... .RTYVVLGRH SLSTNEPG.. .SLAVKVSKL VV.HQDWNS. 
+HGFA_HUMAN      AHCFSHSPPR DSVSVVLGQH FF..NRT.TD VTQTFGIEKY I.PYTLYSVF 
+
+1bru_P          NQLGNDIALL KLASPV.... SLTDKI.QLG ....CLPAAG TILPNNYV.C 
+HGFA_HUMAN      NPSDHDLVLI RLKKK.GDRC A.T.R.SQF. VQPICLPEPG STFPAGH.KC 
+
+1bru_P          YVTGWGRLQT NG....ASPD ILQQGQL.LV VDYATCSKW. ..WGSTVKTN 
+HGFA_HUMAN      QIAGWGHLDE N.VSGYSSS. L.REALVPLV ADHK.CSS.P EVYGADISPN 
+
+1bru_P          MICAGG..DG ..ISSCNGDS GGPLN.CQAN GQ..WQVHGI VSFGSLGCY. 
+HGFA_HUMAN      MLCAG.YFD. CKSDACQGDS GGPL.ACEKN G.VA.YLYGI ISWGD.GC.G 
+
+1bru_P          .YHKPSVFTR VSNYIDWINS V.IANN.... ...
+HGFA_HUMAN      RLHKPGVYTR VANYVDWIND .RIRPPRRLV APS
+

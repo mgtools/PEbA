@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 282  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  282
+ Name: FKBX_PSEFL oo  Len:  282
+
+//
+
+
+
+1fd9_A          TDKDKLSYSI GADLGKNFKN QGIDVNPEAM AKGMQDAMSG AQLALTEQQM 
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+
+1fd9_A          KDVLNKFQKD LMAKRTAEFN KKADENKVKG EAFLTENKNK PGVVVLPSGL 
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+
+1fd9_A          QYKVINSGNG VKPGKSDTVT VEYTG.RLID GTVFDSTE.K TGKPATFQVS 
+FKBX_PSEFL      .MTDQVL.AE QRIGQNTEVT LHFA.LRLEN GDTVDST.FD .KAPATFKVG 
+
+1fd9_A          QVIPGWTEAL QLMPAGSTWE IYVPSGLAYG PRSVG.GP.. IGPNETLIFK 
+FKBX_PSEFL      D...G...NL .L.P.G..FE ....A..A.. ...L.FG.FK AGDKRTL..Q 
+
+1fd9_A          IHLISVKKS. .......... .......... .......... .......... 
+FKBX_PSEFL      I.LPENAFGQ PNPQNVQIIP RSQFQNMDLS EGLLVIFNDA ANTELPGVVK 
+
+1fd9_A          .......... .......... .......... ..
+FKBX_PSEFL      AFDDAQVTID FNHPLAGKTL TFDVEIIDVK AL
+

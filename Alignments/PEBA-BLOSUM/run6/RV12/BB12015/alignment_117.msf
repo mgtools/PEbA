@@ -1,0 +1,43 @@
+PileUp
+
+
+
+   MSF: 452  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FKBX_PSEFL oo  Len:  452
+ Name: FKB4_YEAST oo  Len:  452
+
+//
+
+
+
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+FKB4_YEAST      MSDMLPLATY SLNVEPYSPT PALNFKIPVT IRITMAAIDP EPFDDDKKPS 
+
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+FKB4_YEAST      TLRIIKRNPE LTRGEYYNQD NNDGLEEDES ESEQEADVPK RSVKSKKGKA 
+
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+FKB4_YEAST      VEQSESEDSE DENEIDDEFE ECVLLTLSPK GQYQQALDIT IAPEEDVQFV 
+
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+FKB4_YEAST      VTGSYTISLT GNYVKHPFDN SSDSDEDEED YYSDEESSNG EEEEEEEEED 
+
+FKBX_PSEFL      .......... .......... .......... .......... .......... 
+FKB4_YEAST      DEELSSGDDD LDDLVDASDI ESRLDELVKK DEKKKNNKKD SKRKHEEDEE 
+
+FKBX_PSEFL      .......... .......... .......... .......... .MTDQVLAEQ 
+FKB4_YEAST      ESAKPAEKKQ TTKKDKKAEK VKDSEESKPK PKTKLLEGGI IIEDRVTGKG 
+
+FKBX_PSEFL      RI..GQNTEV TLHFALRLEN GDTVDSTFDK A.....PATF KVGDGNLLPG 
+FKB4_YEAST      P.HAKKGTRV GMRYVGKLKN GK.V...FDK .NTKGKPFVF KLGQGEVIKG 
+
+FKBX_PSEFL      FEAALFGFKA GDKRTLQILP ENAFGQPN.P QNVQIIPRSQ FQNMDLSE.. 
+FKB4_YEAST      WDIGVAGMAV GGERRI.VIP ..A...P.YA YGKQALPGIP .ANSELT.FD 
+
+FKBX_PSEFL      .GLLVIFNDA ANTELPGVVK AFDDAQVTID FNHPLAGKTL TFDVEIIDVK 
+FKB4_YEAST      VKL.VSMK.. .......... .......... .......... .......... 
+
+FKBX_PSEFL      AL
+FKB4_YEAST      ..
+

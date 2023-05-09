@@ -1,0 +1,43 @@
+PileUp
+
+
+
+   MSF: 486  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1b2i_A     oo  Len:  486
+ Name: KRM1_HUMAN oo  Len:  486
+
+//
+
+
+
+1b2i_A          .......... .......... .......... ...CMHGSGE NYDGKI...S 
+KRM1_HUMAN      MAPPAARLAL LSAAALTLAA RPAPSPGLGP GPECFTANGA DYRGT.QNWT 
+
+1b2i_A          KTMSGL.ECQ AWDSQSP.HA HG.YI.PSKF PNKNL....K KNYCRNPDR. 
+KRM1_HUMAN      ALQGG.KPCL FWN.ET.FQ. H.PY.NTLKY PNGE.GGLGE HNYCRNPD.G 
+
+1b2i_A          ELRPWCFTTD PNKR....WE LCDIPRCT.. .......... .......... 
+KRM1_HUMAN      DVSPWCYVAE .HE.DGVYWK YCEIPACQMP GNLGCYKDHG NPPPLTGTSK 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      TSNKLTIQTC ISFCRSQRFK FAGMESGYAC FCGNNPDYWK YGEAASTECN 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      SVCFGDHTQP CGGDGRIILF DTLVGACGGN YSAMSSVVYS PDFPDTYATG 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      RVCYWTIRVP GASHIHFSFP LFDIRDSADM VELLDGYTHR VLARFHGRSR 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      PPLSFNVSLD FVILYFFSDR INQAQGFAVL YQAVKEELPQ ERPAVNQTVA 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      EVITEQANLS VSAARSSKVL YVITTSPSHP PQTVPGSNSW APPMGAGSHR 
+
+1b2i_A          .......... .......... .......... .......... .......... 
+KRM1_HUMAN      VEGWTVYGLA TLLILTVTAI VAKILLHVTF KSHRVPASGD LRDCHQPGTS 
+
+1b2i_A          .......... .......... .......... ......
+KRM1_HUMAN      GEIWSIFYKP STSISIFKKK LKGQSQQDDR NPLVSD
+

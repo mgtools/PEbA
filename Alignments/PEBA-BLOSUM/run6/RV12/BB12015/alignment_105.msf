@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 176  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FKBX_ECOLI oo  Len:  176
+ Name: 1pbk_      oo  Len:  176
+
+//
+
+
+
+FKBX_ECOLI      .......... .SESVQSNSA VLVHF...TL KLDDGTTA.E STRNN..... 
+1pbk_           PKYTKSVLKK GDKTNFPKKG DVVH.CWYTG TLQDGTV.FD .T.N.IQTSA 
+
+FKBX_ECOLI      .....GKPAL .FRLGDASLS .EGLEQH.LL GLKVGDKTTF SLEPDAAFGV 
+1pbk_           KKKKNAKPL. SFKVGVGKV. IRGWDE.ALL TMSKGEKARL EIEPE..W.. 
+
+FKBX_ECOLI      PSPDLIQYFS RREFMDAGEP EIGAIMLFTA MDGSEMPGVI REINGDSITV 
+1pbk_           .A.....Y.G KK.....GQP .......... .D.A...... K.I..P.... 
+
+FKBX_ECOLI      DFNHPLAGQT VHFDIEVLEI DPALEA
+1pbk_           ....P..NAK LTFEVELVDI D.....
+

@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 300  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  300
+ Name: SLYD_TREPA oo  Len:  300
+
+//
+
+
+
+1fd9_A          TDKDKLSYSI GADLGKNFKN QGIDVNPEAM AKGMQDAMSG AQLALTEQQM 
+SLYD_TREPA      .......... .......... .......... .......... .......... 
+
+1fd9_A          KDVLNKFQKD LMAKRTAEFN KKADENKVKG EAFLTENKNK PGVVVLPSGL 
+SLYD_TREPA      .......... .......... .......... .......... .......... 
+
+1fd9_A          QYKVINSGNG VKP.GKSDTV TVEYTGRL.I DGTV...FDS TEKTGKP..A 
+SLYD_TREPA      .......... MK.IANECVV NIEYTLR.D. D.T.GEIIDS SDVMGA.LEY 
+
+1fd9_A          TFQVSQVIPG WTEALQLMP. ..AGSTWEIY VPSG.LAYGP RS........ 
+SLYD_TREPA      VQGHGMIIPG .LETA.LI.N REEGEEFSVT IPP.VGAYG. E.VQEDLRMT 
+
+1fd9_A          VGGPI...GP NETLIFKIHL ISVKKS.... .......... .......... 
+SLYD_TREPA      VGRD.QFP.P NVPIEVGMRF DAGSGGDSRP VTVTDVQGET IIVDGNHPLA 
+
+1fd9_A          .......... .......... .......... .......... ..........
+SLYD_TREPA      GKTLHFEVAV RSVREATDDD LAALLFREST SGGGCGSGAG GCGSCGAGCH
+

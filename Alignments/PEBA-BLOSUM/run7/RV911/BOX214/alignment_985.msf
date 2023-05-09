@@ -1,0 +1,160 @@
+PileUp
+
+
+
+   MSF: 2417  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q60654 oo  Len:  2417
+ Name: Q4SQB4 oo  Len:  2417
+
+//
+
+
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      MDRRPILLLQ LLGFAALLTF ADCQCQPGWR EYEDRCYLFS SDLKTWLEAN 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      AYCLEQNSNL MSIQDVHERL WVRTQIGAEI FWIGLNDRVT EGVWEWSDGT 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      PYVEYLSFWM LGQPDDWGEE PGEDCGQVVG YNNGHWNDDN CNNKRKYICK 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      HINPNPGPQC DLTNGWSQFG SSCYKLKADT RKSWSEARHD CVKDGGDLVS 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VLSPQEEQYI TATLDPSFFD VWIGFSTLKC NKISCQVQAG NSQFAWSDAQ 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      SSSYLNWAAH EPTVDAQSGS CAAIVKDESD EFGKWRSHVC RYERPYMCKR 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      PLNTICPAGW LSFSGSCYWL VSNVQLLTTW HQAHTKCSDM GAHLLIFNSQ 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      EEQFFINGKL PDFHQVDIPD IWIGLSDKDQ DGHFRWVDKT EVKFSNYGPG 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      WPRNTANVWD CGQIFTGNYD GLWETTNCFK SLGYICEMTG GQNPNPTTTP 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      DSHCDPGYLL YGDFCYKFVT ESVSNWNDAE AQCQRDQAHL ASFHSEEELS 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      FITAHLPAAA WIGLNDIASE DHFVYTDGTP ADFLPWAPNQ PDNWQNNEDC 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VQIRGMDHHE AGKLNDDFCS STKEFICKKA KGQGPPPQPP TSGPGWNTKC 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      GFWTSDPYND YCYLFNYLSM RTWAEARADC TNQGGDLVSI TDPFEQAFIQ 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      GVIQHSPTGI SLWMGGHDSV TEGGWEWMDG SPFRYIRWAA GNPDDFYGED 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      CLSIYINGGY WNDDNCEYKR GYICKRRGNT PEPPPPHDGY MTAVVCQDTS 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      AVLHCPEGSV INIQSAFYGR RNADICPQLE GSTGSCTVEG VLPGYRKMCD 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      NHQFCFAYAH AEDDPCPEVS KYLEIVYSCE QKVCLHGLGV EDGNITDSQL 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      SASSSAGTNT PDKARLNGNS CWMPSGTPAS SWIQVNLNQI RKVTGIVIQG 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      CPQSDFWITK FKLQHSTDGV TWTDYTADGA FFPGSKDRNT PDTQLLGTPV 
+
+Q60654      .......... .......... .......... .......... MSEQEVTYST 
+Q4SQB4      SAQYIRVLPL ESSGQTGLRF DVLGCSPDCK QPHGHSKNQR CCRTTVT.KT 
+
+Q60654      VRFHESSRLQ KLVRTEEPQR PREACYREYS VPWKLIVIAC GILCFLL.LV 
+Q4SQB4      LRFHRR.R.H .LC..QQ.AR .LQLCQRQND VS.Q..T... ....WV.S.V 
+
+Q60654      TVALLAITIF QHSQQ.KHEL QETLNCHDNC SPTQ...SDV NLKDELL..R 
+Q4SQB4      TSPL.ALLYF QHLP.L.F.V R.LLRVH..C .PARCAHSDY VVFGTT.EYR 
+
+Q60654      NKSI...... .......... ..ECRPG... ..NDLLESLS RDQNRW.... 
+Q4SQB4      GDS.STCAAA IHAGVVLDER GGDCTL.LKT AGKDFY.AGS T.RNG.ITSR 
+
+Q60654      .....YSETK TFSDSSQHTG VHERP.ISKA EGKG....RG FEKYWFC.YG 
+Q4SQB4      QYDGSYAVSY TFADG.ER.. .ACR.WFTRG TWS.PPELRC SGPDWY.EFG 
+
+Q60654      IKCYYF.NMD RKTWS..GCK QTCQISS... ..LSLLKIDN EDELKF..LQ 
+Q4SQB4      DFCYK.PFRD KKTW.FYA.R ETCR.S.LGA DLVSIMSMTE QSWLE.SYLY 
+
+Q60654      NLAPSDISWI GLSYDN...K KKDWVWIDNG P....SKLAL NTTKYNI... 
+Q4SQB4      .MATSDV.WT GMN.D.LTVS .GFFTWSNEH .MVTFTYWAP GTPKNH.NGF 
+
+Q60654      .RDGLCMSLS KT.RLDNGDC DKSYICICGK RLDKFPH... .......... 
+Q4SQB4      SED.CVEMLH QTGHWNDVSC SELNTFIC.K M.PK.AHYPL PSVKPTVYGC 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      PQGWDAYEYS CYWTEETART WSDAKQFCKE QDGALVHIGD LYEQAHFTVV 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      LSGKTGFWWI GLRAHGGQTG GVDYIWDNGQ PLTYTHWDKE QPDTGDGSCV 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      AMAADKIGGF WDDKQCSEKF YFFCEKSRPD ITPPTKAPTL PPSVGCADGW 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      TAMPHFRNCY KFFHNVDWSQ RKSWGAANED CMTRGANLVS IHNQEEEDFL 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      SMYSKGSSKW IGLRNNPTDG GYTWSDGTPL SHTNWAPGEP NNHDGREDCV 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      EMVTSANGSF SFWNDLNCDA HQDWICMIAK GKNPVLPPEP PSPVPAPECG 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      SNPGWRKSNN VCYYYNDTDD VNFHEALGRC RDEKALLASI HDSDEQAYIN 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      SMVHLFRWVD GSPVSYTHWG SGEPNNANGE EQCVQMNRHQ GKNTADLSVI 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      PSTDHRPRLL QACGTTPTVA EPQVTSVRSS PGTTTPTLHP HSPGRETVPK 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VYFQNSSLYY DSKGTSTSSS KGKNFLSLQV GCVSRTSASC SKGRKVISKP 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      TGPMQGAGAE GRAETWLLST TPTRTVSHPP DDPRSGRPVL SIPCLSFADF 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VSSYLRDLML PTWIGLSDLL AENQYAWSDG VSPVLYTNWN EKEPNNAGGT 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VRMLQRSSDM RPVHEHCVAM AHNHLVTGKW NDDACHKAHS FVCSRMKCEQ 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      TLQQKRLWHH PCAPPTSSVP TPASSIAPPP PTKSPCPDGY VSWYHNCYKL 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VEQPATWEAA QAACVQEGGN LASVDMSYDQ AFLAGVVLNG KDTWIGLRRE 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VENGSYTWTD GWPVFFTQWG PGEPSNINGE GCVAMHGGAA FHGTWNDTKC 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      DLTKPYICKI SSGKTHTHWP HLDCDKRKLK ERNSECFCRL AESPPPTPAP 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      GNGMCFPLWV PYGRYCYLVV NTQQGFSWPD SRHYCLSIRG ELASFHSRAE 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      VEFVRNLNHT KYHNLWIGLT RDSNREHRFT LSRTHVARAP TSVALRRQLV 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      PRCSWLGLDG RDVSGLPQLG AGRAQQRLPP WQRRGGELRG DVPRRALERQ 
+
+Q60654      .......... .......... .......... .......... .......... 
+Q4SQB4      QLPAEERLRV PTPPVPHHRR QRKPSFSHRG SRGPQQRRGG GRRHRRGPAG 
+
+Q60654      .......... .......
+Q4SQB4      FCPGRWTVVL PPESPGT
+

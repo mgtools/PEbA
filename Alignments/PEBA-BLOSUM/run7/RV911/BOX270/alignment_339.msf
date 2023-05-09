@@ -1,0 +1,154 @@
+PileUp
+
+
+
+   MSF: 2304  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q8J230 oo  Len:  2304
+ Name: Q55GC2 oo  Len:  2304
+
+//
+
+
+
+Q8J230      MSAATPTSPG FPLTMGTGVM AAHFAAPSSN AGSPRSRPTT PLSAGLTPSG 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      PTYDDLGRWD DADVASWLNA ARLGHYASIF AEHDIRGSVI LDVDQAALKE 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      MGITMVKDRV RISAAIKLLN KRCADSAVAR RPSVVSISPL LPLASHPLYA 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      HEGEIEYLQH DHTADPSADG SGSNFGLNSM GMRRGQMRPP PLTLKQSTSR 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      GMPGYASPAG SINQSQGFGL SAARGLTPGA ARGSVWNTAS SSSATSKPGT 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      PDGALHRKVN SIGGVAAPLA VGASSSLSSS RHPYGHAVHS NRPSTATGAS 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      GYSNVPASQS LRSNHTSSSP TATSFGSNIN AASARPSTAT GAQSYTTNVP 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      GTSSARDGYS PLTPISESNS LGNTPTTPSG IQQQQQSAGY AVGRGPFASS 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      QRYAASSVPS QQQPSSGHTL RHVDSGEGYN LAGYQNPNPP TLEDLKRRTI 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      KFISEEDNTT RIVNVSDCRD AYDVMARVLK KFGKPPSGNS YTPTADQGPT 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      GDELGATETW GIFATSADGQ NTKALSDNEL LAICHAPQPH DPLRERGLTL 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      RRIPNHLPGE DARKVPVRSG RNKLEAFFGE RMPVAQMQPA GPGSGVNADE 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      EDAGSVTISG KKMKRASTVS IMSGLGVGPF SSSSHNTGAG HTHGSTRAEG 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      KLLSKKESKH MSPPPVTSKP SKIRNFFGQR PPSELINTNL ADFFPSTDSK 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      ALQRTARRSI YGRASASTRS KRNSTWSFVA DPDAPPLPNK GSMDGHPTPL 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      ERSSISIRER GTTPVIQIGY DSRSEDDHQS NARRTSSGTH SHLHPSLTGP 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      PTLPPVVSRD SLDEWSRDLK AVGSPVTEEN AMFQSSRHGH ASGSQQHHAA 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      MKHYPSHASG YADRPSISRR ASGESARSRR SLASQVRHGL SAARERNADT 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      ASLLTVDEIT QEVENRRESI SLAGAGGGWV VDEDGVPIPI PGSSSPFSSS 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      AAASTRPSSG ISSSYVHNGH LEHDDSEGHS DEEANQSSDL EEATRTRKAR 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      GVPSKAASIR TVASKRASSV LQAPGDESDR HLGDPMAVAR STTSRASSVS 
+Q55GC2      .......... .......... .......... .......... .......... 
+
+Q8J230      ELRRSVHDHG DPSDGESGSD FTDSDLDSDG SETDEDEQAN D..VYLP.SA 
+Q55GC2      .......... .......... .......... .......MAN .IAALEPFVG 
+
+Q8J230      KPAPIK.WHK GALIGAGSFG NVFL.GMNAK TGLLMAVKQV ELPSGDSHLD 
+Q55GC2      KEDPVELFEL IEEIAEGSFG TVY.KGKHLP TGNIMAVK.I .I.A....LD 
+
+Q8J230      QRKKGMLEAL E..REIKLLK SLEHENIVQY LDSFADDSHL NIFLEYVPGG 
+Q55GC2      E.DE.TFEDL .VV.EIDILN RCNHNNIVKY YGSWVKGDEL FIAMECCGGG 
+
+Q8J230      SIVALLRN.Y G.AFEEPLV. RNF.....VR QILNGLSFLH NRGIMHRDIK 
+Q55GC2      SIT...E.IY .QELNIPL.N ES.QIAYVCR ETLKGLEYLH HTNVIHRDLK 
+
+Q8J230      GANILVDNKG GIKISDFGIS KKVESDLVLA TNKGGAGGGG AGGAAHRP.S 
+Q55GC2      GANILLTESG DVKLADFG.. ..V.S....G L....LD... K..SSKR.NT 
+
+Q8J230      LQGSVFWMAP EVVKQTSY.. ...TIKADIW SLGCLVVEMI SGTHPW..AE 
+Q55GC2      FIGTPYWMAP EVIENRS.NP VPYDTKADIW SLGITLIELA E.AEP.PLSE 
+
+Q8J230      LNQMQALFQI G.MGRKPSL. ...PDEISNE CRDFLEKTFE L.DY.NNRPS 
+Q55GC2      IHPMKVLFQI .PY.RDPP.K LKNQENYSKD FINFIQSCLQ .KD.PNQRKT 
+
+Q8J230      ADELLNHAFM GTEMTFPPSS G......... .....ADG.. SGGGDDDAGG 
+Q55GC2      ATELLKHPFV .TN.T.KEKA .VLTDLITKY RKFRAAE.LE EG.GDEDEDS 
+
+Q8J230      SG.....DAG DGDASTMG.. .MTNDAETGT TR....ETRE TKDG..KRPT 
+Q55GC2      S.EQEGMDSD DKDSDLK.KS VGTSDRKS.T L.IANGSTSS LSP.PAS.PS 
+
+Q8J230      RSKSTR.... ....RLEREK RHKEAAAAAA AAT.ALDTGT PNTPTSHTAA 
+Q55GC2      QRKST.GQNL QLPQIIEQQS SSSSSSSSSS LSSQSLQPQA VNKSTDRLSA 
+
+Q8J230      AAA.AAAAAS A.....SASA SASPAVASTS PAPGDAETGS PTNGKSAVPP 
+Q55GC2      NI.NGSNTKS .NTIDKKTTA AASASASSLN LSTGNLQQ.S .LSGSGSIT. 
+
+Q8J230      AGST...GGT PESILTVSIA TARGNSTSTA LSAADAAF.S EEADS..... 
+Q55GC2      TNS.GVGNGT ..S..G.K.P TTNGKSSDDR .SP.DIR.TN RKAGRPVTIR 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      KTLEKRNDAV KKIVNAKLMK QQLKDIKKQQ QKQQEEEEQL LKQQQKEKDD 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      LLKQNAAKAT QQQKQSAAKE EKIQKQHKVE KETLSRQQKA DREQLLKKNQ 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      SDCSKQRTKV TDQQKQQQRE FKDQQKQQQK QKEHEFKDQN KVLDKSTPKK 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      LSKHIAIHQK VIREQEICVQ DLVFQQKQDF QKLVDDHQNA TQNLFLENKQ 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      QSEQLFAWHT QQNQQFQFQQ QCQLENYQEY HTVLRENMNA EHQLAKSQLE 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      HSHLSETNHL KERQVTETEQ HIKQMTTEQR NSLKEFKLKQ TQDFKEFLNK 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      LKKELKDEKG NKKQLQQQHK EQKKQFELTL STQEVDFQKK QARQKEEEDD 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      ILLTHQKESF KRLQDKQQNI IRDIEEHCKL QRQQFETEYT FNEEEMLIEH 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      YRQKKALLKQ QHSEQKQIYQ EQTQLQYRLL QEQHKESPAL LTDQHLKQKE 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      SIEEQQKERL TLQQEEHRIQ QESLKKQEQK KKGSVTDLPA SLASMQLEQS 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      KQLQLLSEQL QAELATMFER HTKETQSLQA ELAKAQEKLQ SDQQKLLHDL 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      TEEQKKSKLK LKSESPSCKE NPLHMKKKST GTTPPSTSSN QKTLNNSNGA 
+
+Q8J230      .......... .......... .......... .......... .......... 
+Q55GC2      SSNGHHHHHH QSAGVGGSGG TISSSHNTPV LPHNMKHQRS FSTSLPSFKF 
+
+Q8J230      ....
+Q55GC2      DNQD
+

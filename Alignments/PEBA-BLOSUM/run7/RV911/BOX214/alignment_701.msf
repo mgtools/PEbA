@@ -1,0 +1,178 @@
+PileUp
+
+
+
+   MSF: 2750  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CSPG2_RAT oo  Len:  2750
+ Name: O70156    oo  Len:  2750
+
+//
+
+
+
+CSPG2_RAT      MLINMNGILW MCSTLLLTHA LHKAKMEENP PVKGSLSGKV ILPCHFSTLP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TLPPDYNTSE FLRIKWSKIE VDKNGKDIKE TTVLVAQDGN IKIGQDYKGR 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VSVPTHPDDV GDASLTMVKL RASDAGVYRC DVMYGIEDTQ NTMSLAVDGV 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VFHYRAATSR YTLNFESAQQ ACLDIGAVIA TPEQLFAAYE DGFEQCDAGW 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LSDQTVRYPI RAPREGCYGD MMGKEGVRTY GFRSPQETYD VYCYVDHLDG 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DVFHITAPSK FTFEEAEAEC ANRDARLATV GELHAAWRNG FDQCDYGWLS 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DASVRHPVTV ARAQCGGGLL GVRTLYRFEN QTCFPLPDSR FDAYCFKRSP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LSIIPKTEWS VSETSVPLED EVLGKSDQDT LEQTHLEATM SPEALSTIEV 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TQGETQEEPQ TPGIPFPALS STAVMTKETT AFEEEGEGST YTLSEDRLMT 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DSEIVPSLET TPVGTSYPGG AMTQQEVEMD TMVTQMSSIR PTVVLSTEPE 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VSYEAEGSSP MEFASTLKPF GTQVTQLVEE TTEEGKKTPL DYTDLGSGLF 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EQPRVTELPD FSMTPSDISV FTAIDSLHRT TPLRPPSPFT EEPHIFEKEP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SEKTTGDIIL PRESVTQHPL TTLMDIIAKK TESDIDHEYH MTSKPPVMQP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TRPSVVERKT TSKPQELSTS PPPAGTKFHP DINVYIIEVR ENKTGRMSDM 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VVNGHPIDSE SKEEEPCSEE TDPLHDLFAE ILPELPDSFE IDIYHSEEDE 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DGEEDCVNAT DVTTTPSVQY ITGKPHVTTV PKNPEAAEAR RGLYESVAPS 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      QNFSNTSATD THQFIPAETE LSTTMQFTKS KEATELLEIT WKPETYPETP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EHFSSGEPDV FPTLPSHDGK TTKWSEFITE SNPNTENPEH KQPKPIPLFP 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEFSGEGAID QASQQTIFSR ATEVALGKET DQSPTISTSS IRSGSVSVHA 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LEEDPIALTG ISQTDESMST VESWVEMTPS QTVEFSGSSS APTIEGSGEV 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEYTNKIFNT VTDLPQREPT DTLIPLDMSN IMITDHHIYT PATTAPLDSQ 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LPSTDARPTQ FGIQTTTSEW VSSTSFEGRK TEEDKERDTN AAHTGEVQPA 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TERSDRLLLT SELESSNVAA SSPLDTWEGF VPETTSTVSE KEMANTTPVF 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TETSDVANLE TQSFEHSSSS QPRVQEELTT LSGKPPLIFM DLGSGDASTD 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      MEFITASSFT LDLESDTKVK KELPSTLSPS VETSSSSEPI GLAPSTVLDI 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EIVEVMNQTS KKTLISELSG KPTSQAEVRD L..YPGLGE. DFSGDSSE.. 
+O70156         ........MA FDDKMKPVNG QP.DQKSCGK .KP.KGLH.L .LS..ST.WW 
+
+CSPG2_RAT      YPTVSSTTMK EETVGMGGSE .NE..RVKDT QTLSSIPPTS DNINPVPDSK 
+O70156         CPA.AVT.LA ILCLVL..S. VT.LI.V..Q QT.QLLQ.VS D.L..L...K 
+
+CSPG2_RAT      GFGST.VAST TAFPWEEFMT SAEGSGEELS SV.RSSVSLV LPLGVDILPT 
+O70156         ...Q.YQANL TQ.Q.DHIL. ..EG..Q.MS A.QKKA.E.. .....NA..S 
+
+CSPG2_RAT      TESPY..FDQ EFEEAA.AVT EAGKQSALPI AVSGNTVDLT ENRDIEVNST 
+O70156         QESK.RELKE QIDTLTWKLN EKSKEQEKLL QQNQNLQEAL Q.RAVNASEE 
+
+CSPG2_RAT      MSVDLPQTME PAKLWSKP.E VNP..EKQEI GSETVTQDKA QGQKSFESLH 
+O70156         SKWELKEQID IL.NW.K.L. .N.GISKEQ. .KELL.Q.Q. N.Q.NLQE.. 
+
+CSPG2_RAT      SSLAPEQTTL ESQSL.IETE VQTSYY.SML TTMKTYNTNE EV..EEEGTS 
+O70156         A.L..QKA.. EKYS.E.ES. .QREL.KEQI DTLS.WKLNE K.SKEQE..E 
+
+CSPG2_RAT      IAHMSTPGPG IKGLESYPTH PEATGKSYSF SASALVTESG PARSVVMDSS 
+O70156         L..LQ..... .QN.QNL..Q .EA....... ....L..Q.. ..RAA..NSS 
+
+CSPG2_RAT      TQEEESIKLF .QKDMIL.TH KESNSD.LSF SGL.....GS G..EALPPLP 
+O70156         .....G.PC. PQ.DWI.W.H KE.NC.YL.F HG.PFNWEKS .RENCLS.LD 
+
+CSPG2_RAT      TTSVSLTDMG KINS.TLYPE TSHMESLGTS I...LGDNHE RMKNVSNEV. 
+O70156         AQLLQISTTD DLN.FVLQ.A TSH..S..TS .PFWMGL.H. RK.NP.NH.P 
+
+CSPG2_RAT      RTLI.SETGS ISQDSTEAPN TTLSD.TRTE ESTTSPLPFM KLMDTEHSPK 
+O70156         .WL.W.E..N .G..S...P. ..LS.F...Q ......F.F. R...T..... 
+
+CSPG2_RAT      QTLRW.EEEI QTHRPQTMTG QMTNDNSSVS EAEAAATSAP AFLPETYSVE 
+O70156         ...R.G...V .S.....L.. QM......YS SGTCAYIQGG VVFAEN.CI. 
+
+CSPG2_RAT      MTKAFATSPS QTSDLFDANS GEGSGEVDGL DLVYTSRTTQ ASSQGDSMFA 
+O70156         LT.AFSIC.. Q.K...KANL LLTQ...... .......... .......... 
+
+CSPG2_RAT      SHGFIEKHPE VSRTETGATD GSPTASAMFL HQSEYNESSL YPTSTLPSTV 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TYESPSEGIA DGLQDHIRFE VSTLKPSRRK ATESVIIDLD KEDSKDLGLA 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      ITESAIVEIL PELTSDRNII IDIDHTKPVY EYIPGIQTDL DSDIPLGSHG 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SSEESLEVQE KYEATINLSP TEEAFDGSGD ALPAGHTQAI YNESVTPSDG 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      KQPEDISFSF ATGIPVSSTE TELNTFFPTV STLHIPSKLT TASPEIDKPN 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      IEAISLDDIF ESSTLSDGQA IADQSEVIST LGHLEKTQEE YEEKKYGGPS 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      FQPEFFSGVG EVFTDAPAYV SIGRTYSVAQ PLTEFPNVVG QSDSTHYTEA 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TSAVSSVTEL SPQTPSSPSP VYIDSGVSEF TEVPHKSAQP APTAASSQKL 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      IEGSFKKVRA NIEATIKSLG ENDHGTESPS MSPSPALDIS EDDSKPKLLE 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DLETSPTKTE TSQDSPNKAN DQIPGKTAGI LAGIKTTESG PVVTAADDME 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LGDATQRPHS ASAPAAFRVE TSMVPQPIPQ EPERPTFPSL EINHETHTSL 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      FEESILATSE KQVSQRILDY SNQATVSTLD LNTEHSIPPF SILDNSNETA 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      FLIGISEETV EGTAVYLPGP DLCKTNPCLN GGTCYPTETS YVCTCAPGYS 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      GDQCELDFDE CHSNPCRNGA TCVDGLNTFR CLCLPSYVGA LCEQDTETCD 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      YGWHKFQGQC YKYFAHRRTW DAAERECRLQ GAHLTSILSH EEQMFVNRVG 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      HDYQWIGLND KMFEHDFRWT DGSALQYENW RPNQPDSFFS AGEDCVVIIW 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      HENGQWNDVP CNYHLTYTCK KGTVACGQPP VVENAKTFGK MKPRYEINSL 
+O70156         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      IRYHCKDGFI QRHLPTIRCL GNGRWAMPKI TCMNRKWSFR KNGQPCFNKY
+O70156         .......... .......... .......... .......... ..........
+

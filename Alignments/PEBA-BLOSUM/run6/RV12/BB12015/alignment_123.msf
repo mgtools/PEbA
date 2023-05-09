@@ -1,0 +1,40 @@
+PileUp
+
+
+
+   MSF: 410  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1pbk_      oo  Len:  410
+ Name: FKB4_YEAST oo  Len:  410
+
+//
+
+
+
+1pbk_           .......... .......... .......... .......... .......... 
+FKB4_YEAST      MSDMLPLATY SLNVEPYSPT PALNFKIPVT IRITMAAIDP EPFDDDKKPS 
+
+1pbk_           .......... .......... .......... .......... .......... 
+FKB4_YEAST      TLRIIKRNPE LTRGEYYNQD NNDGLEEDES ESEQEADVPK RSVKSKKGKA 
+
+1pbk_           .......... .......... .......... .......... .......... 
+FKB4_YEAST      VEQSESEDSE DENEIDDEFE ECVLLTLSPK GQYQQALDIT IAPEEDVQFV 
+
+1pbk_           .......... .......... .......... .......... .......... 
+FKB4_YEAST      VTGSYTISLT GNYVKHPFDN SSDSDEDEED YYSDEESSNG EEEEEEEEED 
+
+1pbk_           .......... .......... .......... .......... .......... 
+FKB4_YEAST      DEELSSGDDD LDDLVDASDI ESRLDELVKK DEKKKNNKKD SKRKHEEDEE 
+
+1pbk_           .......... .......... ........PK YTKSVLKKGD .........K 
+FKB4_YEAST      ESAKPAEKKQ TTKKDKKAEK VKDSEESKPK PKTKLLEGG. IIIEDRVTGK 
+
+1pbk_           TNFPKKGDVV H.CW.YTGTL QDGTVFDTNI QTSAKKKKNA KPLS.FKVGV 
+FKB4_YEAST      GPHAKKGTRV .GM.RYVGKL KNGKVFDKN. .T..K...G. KPF.VFKLG. 
+
+1pbk_           .GKVIRGWDE .ALLTMSK.. GEKARLEIEP EWAYGKKGQP DAKIPPNAKL 
+FKB4_YEAST      QGEVIKGWD. IGVAGMA.VG G.ERRIVIPA PYAYGKQALP .G.IPANSEL 
+
+1pbk_           TFEVELVDID
+FKB4_YEAST      TFDVKLVSMK
+

@@ -1,0 +1,40 @@
+PileUp
+
+
+
+   MSF: 450  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fdr_  oo  Len:  450
+ Name: 1cqx_A oo  Len:  450
+
+//
+
+
+
+1fdr_       .......... .......... .......... .......... .......... 
+1cqx_A      MLTQKTKDIV KATAPVLAEH GYDIIKCFYQ RMFEAHPELK NVFNMAHQEQ 
+
+1fdr_       .......... .......... .......... .......... .......... 
+1cqx_A      GQQQQALARA VYAYAENIED PNSLMAVLKN IANKHASLGV KPEQYPIVGE 
+
+1fdr_       .......... .......... .......... .......... .......... 
+1cqx_A      HLLAAIKEVL GNAATDDIIS AWAQAYGNLA DVLMGMESEL YERSAEQPGG 
+
+1fdr_       .ADWV.TG.. KVTKVQNWTD ALFSLTVHAP VL......PF TAGQFTKLGL 
+1cqx_A      WKGW.RT.FV .IREKRPESD VITSFIL.EP A.DGGPVVNF EPGQYTSVAI 
+
+1fdr_       EI...RVQRA YSYVN.SPDN PDL.EF.YLV TV........ PDGKLSP..R 
+1cqx_A      DVPALGLQQI RQYS.LS.DM PN.GR.TYRI SVKREGGGPQ PPGYVS.NLL 
+
+1fdr_       LAALKPGDEV QVVSEAAGFF V.LDEVPHCE TL...WMLAT GTAIGPYLSI 
+1cqx_A      HDHVNVGDQV KLAA.PYGSF .HIDV.D.AK T.PIV.LISG GVGLTPMVSM 
+
+1fdr_       LRLGK..DLD RFKNLVLVHA ARY.AADLSY .LP..LMQEL EKRYEGKLRI 
+1cqx_A      LKVA.LQAPP R.Q.VVFVHG AR.NSA.VH. AM.RDRLREA AKTYEN.L.. 
+
+1fdr_       QTVVSR..ET AAG.SLTGR. ..IPALIES. .GELESTIGL PMNKETSHVM 
+1cqx_A      DLFVF.YDQP LP.EDVQGRD YDYPGLVD.V K.QIEKSILL P.D..ADYY. 
+
+1fdr_       LCGNPQMVRD TQQLLKETRQ MTKHLRRR.P GH..MTAEHY W.........
+1cqx_A      ICG.P..I.P ...FM...RM QHDALKN.L. G.IHEARIHY EVFGPDLFAE
+

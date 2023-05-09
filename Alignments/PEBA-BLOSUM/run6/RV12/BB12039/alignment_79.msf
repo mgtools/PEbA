@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 154  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bc6_      oo  Len:  154
+ Name: FER2_METJA oo  Len:  154
+
+//
+
+
+
+1bc6_           .......... .......... .......... .......... .......... 
+FER2_METJA      MRKRVYYWTD SEHINKPVIS DTILNTGVKI NILKAKVEPQ EAFLILELFG 
+
+1bc6_           .......... .......... ..AYVITEPC IGTKDASCVE VCPVDCIHEG 
+FER2_METJA      SKETIEKALN YLSKFGEVEE ISKVIKRDLE KCVHCGCCIT QCPINVIYMD 
+
+1bc6_           EDQYY...ID PDVCIDCGAC E.AVCPVSAI YHED.FVPEE WKSYIQKNRD 
+FER2_METJA      ED.Y.NVVFK EEDCVGCKNC .LKACPFKAI ..E.IF..E. .......... 
+
+1bc6_           FFKK
+FER2_METJA      ....
+

@@ -1,0 +1,178 @@
+PileUp
+
+
+
+   MSF: 2741  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CSPG2_RAT oo  Len:  2741
+ Name: Q2TUL8    oo  Len:  2741
+
+//
+
+
+
+CSPG2_RAT      MLINMNGILW MCSTLLLTHA LHKAKMEENP PVKGSLSGKV ILPCHFSTLP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TLPPDYNTSE FLRIKWSKIE VDKNGKDIKE TTVLVAQDGN IKIGQDYKGR 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VSVPTHPDDV GDASLTMVKL RASDAGVYRC DVMYGIEDTQ NTMSLAVDGV 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VFHYRAATSR YTLNFESAQQ ACLDIGAVIA TPEQLFAAYE DGFEQCDAGW 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LSDQTVRYPI RAPREGCYGD MMGKEGVRTY GFRSPQETYD VYCYVDHLDG 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DVFHITAPSK FTFEEAEAEC ANRDARLATV GELHAAWRNG FDQCDYGWLS 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DASVRHPVTV ARAQCGGGLL GVRTLYRFEN QTCFPLPDSR FDAYCFKRSP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LSIIPKTEWS VSETSVPLED EVLGKSDQDT LEQTHLEATM SPEALSTIEV 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TQGETQEEPQ TPGIPFPALS STAVMTKETT AFEEEGEGST YTLSEDRLMT 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DSEIVPSLET TPVGTSYPGG AMTQQEVEMD TMVTQMSSIR PTVVLSTEPE 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VSYEAEGSSP MEFASTLKPF GTQVTQLVEE TTEEGKKTPL DYTDLGSGLF 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EQPRVTELPD FSMTPSDISV FTAIDSLHRT TPLRPPSPFT EEPHIFEKEP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SEKTTGDIIL PRESVTQHPL TTLMDIIAKK TESDIDHEYH MTSKPPVMQP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TRPSVVERKT TSKPQELSTS PPPAGTKFHP DINVYIIEVR ENKTGRMSDM 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VVNGHPIDSE SKEEEPCSEE TDPLHDLFAE ILPELPDSFE IDIYHSEEDE 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DGEEDCVNAT DVTTTPSVQY ITGKPHVTTV PKNPEAAEAR RGLYESVAPS 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      QNFSNTSATD THQFIPAETE LSTTMQFTKS KEATELLEIT WKPETYPETP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EHFSSGEPDV FPTLPSHDGK TTKWSEFITE SNPNTENPEH KQPKPIPLFP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEFSGEGAID QASQQTIFSR ATEVALGKET DQSPTISTSS IRSGSVSVHA 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LEEDPIALTG ISQTDESMST VESWVEMTPS QTVEFSGSSS APTIEGSGEV 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEYTNKIFNT VTDLPQREPT DTLIPLDMSN IMITDHHIYT PATTAPLDSQ 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LPSTDARPTQ FGIQTTTSEW VSSTSFEGRK TEEDKERDTN AAHTGEVQPA 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TERSDRLLLT SELESSNVAA SSPLDTWEGF VPETTSTVSE KEMANTTPVF 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TETSDVANLE TQSFEHSSSS QPRVQEELTT LSGKPPLIFM DLGSGDASTD 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      MEFITASSFT LDLESDTKVK KELPSTLSPS VETSSSSEPI GLAPSTVLDI 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EIVEVMNQTS KKTLISELSG KPTSQAEVRD LYPGLGEDFS GDSSEYPTVS 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      STTMKEETVG MGGSENERVK DTQTLSSIPP TSDNINPVPD SKGFGSTVAS 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TTAFPWEEFM TSAEGSGEEL SSVRSSVSLV LPLGVDILPT TESPYFDQEF 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEAAAVTEAG KQSALPIAVS GNTVDLTENR DIEVNSTMSV DLPQTMEPAK 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LWSKPEVNPE KQEIGSETVT QDKAQGQKSF ESLHSSLAPE QTTLESQSLI 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      ETEVQTSYYS MLTTMKTYNT NEEVEEEGTS IAHMSTPGPG IKGLESYPTH 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      PEATGKSYSF SASALVTESG PARSVVMDSS TQEEESIKLF QKDMILTHKE 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SNSDLSFSGL GSGEALPPLP TTSVSLTDMG KINSTLYPET SHMESLGTSI 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LGDNHERMKN VSNEVRTLIS ETGSISQDST EAPNTTLSDT RTEESTTSPL 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      PFMKLMDTEH SPKQTLRWEE EIQTHRPQTM TGQMTNDNSS VSEAEAAATS 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      APAFLPETYS VEMTKAFATS PSQTSDLFDA NSGEGSGEVD GLDLVYTSRT 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      TQASSQGDSM FASHGFIEKH PEVSRTETGA TDGSPTASAM FLHQSEYNES 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SLYPTSTLPS TVTYESPSEG IADGLQDHIR FEVSTLKPSR RKATESVIID 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LDKEDSKDLG LAITESAIVE ILPELTSDRN IIIDIDHTKP VYEYIPGIQT 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      DLDSDIPLGS HGSSEESLEV QEKYEATINL SPTEEAFDGS GDALPAGHTQ 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      AIYNESVTPS DGKQPEDISF SFATGIPVSS TETELNTFFP TVSTLHIPSK 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      LTTASPEIDK PNIEAISLDD IFESSTLSDG QAIADQSEVI STLGHLEKTQ 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      EEYEEKKYGG PSFQPEFFSG VGEVFTDAPA YVSIGRTYSV AQPLTEFPNV 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      VGQSDSTHYT EATSAVSSVT ELSPQTPSSP SPVYIDSGVS EFTEVPHKSA 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      QPAPTAASSQ KLIEGSFKKV RANIEATIKS LGENDHGTES PSMSPSPALD 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      ISEDDSKPKL LEDLETSPTK TETSQDSPNK ANDQIPGKTA GILAGIKTTE 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SGPVVTAADD MELGDATQRP HSASAPAAFR VETSMVPQPI PQEPERPTFP 
+Q2TUL8         .......... .......... .......... .......... .......... 
+
+CSPG2_RAT      SLEINHETHT SLFEESILAT SEKQVSQRIL DYSNQATVST LDLN....TE 
+Q2TUL8         ........MA LPNIYTDVNF KNQPVSSGTV SDSSSCTISS SAL.PKKTTV 
+
+CSPG2_RAT      HSI..PP.FS ILDNSNETAF LIG.ISEETV EGTAVYLPGP DLCKTNPCLN 
+Q2TUL8         HK.SNP.GFP ..TL..LLAL LI.FF...LV ..LAI.LSS. .V...G..L. 
+
+CSPG2_RAT      GGTCYPTETS YVCTCAPGYS GDQCELDFDE CHSNPCRNGA TCVDG.LNTF 
+Q2TUL8         ..T...T.L. F..QM...YS .D...L.LEE ......KN.. T.LQ.QLNHA 
+
+CSPG2_RAT      RCLCLPSYVG ALC.EQDTET CDYGWHKFQG QCYKY.FAHR RTWDAAEREC 
+Q2TUL8         KLHCIKNH.S SV.EDKVWSC CPKNWKPFGS HCYF.TSRDS ASWSDSEEKC 
+
+CSPG2_RAT      RL.QGAHLTS .ILSHEEQM. FVNRVG...H DYQWIGLNDK MFEHDFRWTD 
+Q2TUL8         S.HRGAHLL. VIHSQEEQ.D FITDT.LNPR AHYYVGLSDT ..E.G.H... 
+
+CSPG2_RAT      GSA.LQYENW RPNQPDSF.F SAGEDCVV.I IWHENGQW.N DVPCNYHLTY 
+Q2TUL8         GK.W.Q...W V.DQ..T.PF N..QNAT.S. .WHAD.E.PS G...N..... 
+
+CSPG2_RAT      TCKKGTVACG QPPVVE.... .NAKTFGKMK .PRYEINSLI .RYH.CKDGF 
+Q2TUL8         ..K.G.F.C. ...VV.LSYH PNLKGWGWS. V..APCDGY. HRL.VCK... 
+
+CSPG2_RAT      IQRHLPTIRC LGNGRWAMPK ITCMNRKWSF RKNGQPCFNK Y
+Q2TUL8         .MRQLYV... .......... .......... .......... .
+

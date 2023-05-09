@@ -1,0 +1,181 @@
+PileUp
+
+
+
+   MSF: 2794  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q90636    oo  Len:  2794
+ Name: CSPG2_RAT oo  Len:  2794
+
+//
+
+
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      MLINMNGILW MCSTLLLTHA LHKAKMEENP PVKGSLSGKV ILPCHFSTLP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TLPPDYNTSE FLRIKWSKIE VDKNGKDIKE TTVLVAQDGN IKIGQDYKGR 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      VSVPTHPDDV GDASLTMVKL RASDAGVYRC DVMYGIEDTQ NTMSLAVDGV 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      VFHYRAATSR YTLNFESAQQ ACLDIGAVIA TPEQLFAAYE DGFEQCDAGW 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LSDQTVRYPI RAPREGCYGD MMGKEGVRTY GFRSPQETYD VYCYVDHLDG 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      DVFHITAPSK FTFEEAEAEC ANRDARLATV GELHAAWRNG FDQCDYGWLS 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      DASVRHPVTV ARAQCGGGLL GVRTLYRFEN QTCFPLPDSR FDAYCFKRSP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LSIIPKTEWS VSETSVPLED EVLGKSDQDT LEQTHLEATM SPEALSTIEV 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TQGETQEEPQ TPGIPFPALS STAVMTKETT AFEEEGEGST YTLSEDRLMT 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      DSEIVPSLET TPVGTSYPGG AMTQQEVEMD TMVTQMSSIR PTVVLSTEPE 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      VSYEAEGSSP MEFASTLKPF GTQVTQLVEE TTEEGKKTPL DYTDLGSGLF 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EQPRVTELPD FSMTPSDISV FTAIDSLHRT TPLRPPSPFT EEPHIFEKEP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      SEKTTGDIIL PRESVTQHPL TTLMDIIAKK TESDIDHEYH MTSKPPVMQP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TRPSVVERKT TSKPQELSTS PPPAGTKFHP DINVYIIEVR ENKTGRMSDM 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      VVNGHPIDSE SKEEEPCSEE TDPLHDLFAE ILPELPDSFE IDIYHSEEDE 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      DGEEDCVNAT DVTTTPSVQY ITGKPHVTTV PKNPEAAEAR RGLYESVAPS 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      QNFSNTSATD THQFIPAETE LSTTMQFTKS KEATELLEIT WKPETYPETP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EHFSSGEPDV FPTLPSHDGK TTKWSEFITE SNPNTENPEH KQPKPIPLFP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EEFSGEGAID QASQQTIFSR ATEVALGKET DQSPTISTSS IRSGSVSVHA 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LEEDPIALTG ISQTDESMST VESWVEMTPS QTVEFSGSSS APTIEGSGEV 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EEYTNKIFNT VTDLPQREPT DTLIPLDMSN IMITDHHIYT PATTAPLDSQ 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LPSTDARPTQ FGIQTTTSEW VSSTSFEGRK TEEDKERDTN AAHTGEVQPA 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TERSDRLLLT SELESSNVAA SSPLDTWEGF VPETTSTVSE KEMANTTPVF 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TETSDVANLE TQSFEHSSSS QPRVQEELTT LSGKPPLIFM DLGSGDASTD 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      MEFITASSFT LDLESDTKVK KELPSTLSPS VETSSSSEPI GLAPSTVLDI 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EIVEVMNQTS KKTLISELSG KPTSQAEVRD LYPGLGEDFS GDSSEYPTVS 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      STTMKEETVG MGGSENERVK DTQTLSSIPP TSDNINPVPD SKGFGSTVAS 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TTAFPWEEFM TSAEGSGEEL SSVRSSVSLV LPLGVDILPT TESPYFDQEF 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EEAAAVTEAG KQSALPIAVS GNTVDLTENR DIEVNSTMSV DLPQTMEPAK 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LWSKPEVNPE KQEIGSETVT QDKAQGQKSF ESLHSSLAPE QTTLESQSLI 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      ETEVQTSYYS MLTTMKTYNT NEEVEEEGTS IAHMSTPGPG IKGLESYPTH 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      PEATGKSYSF SASALVTESG PARSVVMDSS TQEEESIKLF QKDMILTHKE 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      SNSDLSFSGL GSGEALPPLP TTSVSLTDMG KINSTLYPET SHMESLGTSI 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LGDNHERMKN VSNEVRTLIS ETGSISQDST EAPNTTLSDT RTEESTTSPL 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      PFMKLMDTEH SPKQTLRWEE EIQTHRPQTM TGQMTNDNSS VSEAEAAATS 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      APAFLPETYS VEMTKAFATS PSQTSDLFDA NSGEGSGEVD GLDLVYTSRT 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      TQASSQGDSM FASHGFIEKH PEVSRTETGA TDGSPTASAM FLHQSEYNES 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      SLYPTSTLPS TVTYESPSEG IADGLQDHIR FEVSTLKPSR RKATESVIID 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LDKEDSKDLG LAITESAIVE ILPELTSDRN IIIDIDHTKP VYEYIPGIQT 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      DLDSDIPLGS HGSSEESLEV QEKYEATINL SPTEEAFDGS GDALPAGHTQ 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      AIYNESVTPS DGKQPEDISF SFATGIPVSS TETELNTFFP TVSTLHIPSK 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      LTTASPEIDK PNIEAISLDD IFESSTLSDG QAIADQSEVI STLGHLEKTQ 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      EEYEEKKYGG PSFQPEFFSG VGEVFTDAPA YVSIGRTYSV AQPLTEFPNV 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      VGQSDSTHYT EATSAVSSVT ELSPQTPSSP SPVYIDSGVS EFTEVPHKSA 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      QPAPTAASSQ KLIEGSFKKV RANIEATIKS LGENDHGTES PSMSPSPALD 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      ISEDDSKPKL LEDLETSPTK TETSQDSPNK ANDQIPGKTA GILAGIKTTE 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      SGPVVTAADD MELGDATQRP HSASAPAAFR VETSMVPQPI PQEPERPTFP 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      SLEINHETHT SLFEESILAT SEKQVSQRIL DYSNQATVST LDLNTEHSIP 
+
+Q90636         ......MPLF LSFSP..RSL REVLAKKSAP PAP.LCPQPD PSLL.LSLHA 
+CSPG2_RAT      PFSILDNSNE TAFL.IGISE ETVEGTAVYL PGPDLC.KTN PCL.N.G... 
+
+Q90636         AGAVPHLYDA TEEKERLSP. .SPPREATTR EGDEERQSQR GSGCSELRQN 
+CSPG2_RAT      .GTC...YP. TET....S.Y V.....CTCA PGY....S.. GD...QCELD 
+
+Q90636         R.RRVLCVAL SAVPCML..V LALVAVIVLQ RP.SCSPRPP FSH..VCPNA 
+CSPG2_RAT      .F..DEC.H. SN.PCR.NG. .A.TCVDGLN T.FRCLCLPS YV.GALCEQ. 
+
+Q90636         ........WV GFQGKCYY.. FSDTESDWNS SREHCHR.LG ASLATLDTKE 
+CSPG2_RAT      DTETCDYGWH KFQGQCY.KY FAHRRT.WDA AERECR.LQG AHLTSILSHE 
+
+Q90636         EMEFMLQYQR PADRWIGLHR AEGDEHWTWA DGSAFTNRPV FELRGG.GRC 
+CSPG2_RAT      EQMFV..... ..NR.VG.H. ...D.Y.QWI .G..LNDK.M FEH.D.F.R. 
+
+Q90636         AYLNGDGISS ALC.HSEKFW V..CSRADSY VRWRKGTNPQ .......... 
+CSPG2_RAT      .W.T.DG.S. AL.QY.E.NW .RP.NQPDSF ..FSAGEDCV VIIWHENGQW 
+
+Q90636         .......... .......... .......... .......... .......... 
+CSPG2_RAT      NDVPCNYHLT YTCKKGTVAC GQPPVVENAK TFGKMKPRYE INSLIRYHCK 
+
+Q90636         .......... .......... .......... .......... ....
+CSPG2_RAT      DGFIQRHLPT IRCLGNGRWA MPKITCMNRK WSFRKNGQPC FNKY
+

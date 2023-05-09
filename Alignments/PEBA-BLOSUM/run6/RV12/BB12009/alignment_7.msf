@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 157  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1csp       oo  Len:  157
+ Name: PIPI_HUMAN oo  Len:  157
+
+//
+
+
+
+1csp            .......... .......... .......... .......... .......... 
+PIPI_HUMAN      MTSESTSPPV VPPLHSPKSP VWPTFPFHRE GSRVWERGGV PPRDLPSPLP 
+
+1csp            .......... .......MLE GKVKWFNSEK GFGFIEVEGQ ..DDVFVHFS 
+PIPI_HUMAN      TKRTRTYSAT ARASAGPVFK GVCKQFSRSQ GHGFITPEN. GSEDIFVHVS 
+
+1csp            AIQGEGFKTL EEGQAVSFEI VEG....NRG PQAANVTKEA .......... 
+PIPI_HUMAN      DIEGEYVP.V E.GDEVTYKM CP.IPPKNQK FQAVEVVLTQ LAPHTPHETW 
+
+1csp            .......
+PIPI_HUMAN      SGQVVGS
+

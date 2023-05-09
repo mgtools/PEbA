@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>P22309</seq-name>
+<seq-info>
+<accession>P22309</accession>
+<nid>P22309</nid>
+<definition>   UDP-glucuronosyltransferase 1-1 precursor EC 2.4.1.17 UDP- glucuronosyltransferasHomo sap</definition>
+<organism>   Homo sapiens (Human). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>28</fstart><fstop>525</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>368</fstart><fstop>448</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>35</fstart><fstop>492</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>34</fstart><fstop>37</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>47</fstart><fstop>53</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>143</fstart><fstop>149</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>190</fstart><fstop>194</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>208</fstart><fstop>212</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>266</fstart><fstop>270</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>278</fstart><fstop>282</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>291</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>302</fstart><fstop>312</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>333</fstart><fstop>338</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>348</fstart><fstop>356</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>357</fstart><fstop>365</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>368</fstart><fstop>387</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>388</fstart><fstop>402</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>408</fstart><fstop>416</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>427</fstart><fstop>432</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>436</fstart><fstop>448</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>460</fstart><fstop>463</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>478</fstart><fstop>484</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>150</fstart><fstop>158</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>252</fstart><fstop>262</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>315</fstart><fstop>319</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>246</fstart><fstop>249</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>486</fstart><fstop>492</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>232</fstart><fstop>238</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_25</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>185</fstart><fstop>188</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>322</fstart><fstop>329</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>425</fstart><fstop>428</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_33</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>528</fstart><fstop>531</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>192</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>420</fstart><fstop>426</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_48</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>104</fstart><fstop>106</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_49</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>491</fstart><fstop>507</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Potential.</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>10</fstart><fstop>36</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>148</fstart><fstop>183</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>299</fstart><fstop>317</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>382</fstart><fstop>400</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>490</fstart><fstop>515</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>COIL</ftype><fstart>413</fstart><fstop>433</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PRED_COIL</fnote></fitem>
+<fitem><ftype>SIGNAL</ftype><fstart>1</fstart><fstop>25</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>Potential.</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>354</fstart><fstop>397</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>102</fstart><fstop>102</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>347</fstart><fstop>347</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>295</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>430</fstart><fstop>430</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from UDB28_HUMAN</fnote></fitem>
+<fitem><ftype>MOD_RES</ftype><fstart>353</fstart><fstop>353</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_N6acetyllysine from Q62452</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>400</fstart><fstop>400</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>N -) D (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>486</fstart><fstop>486</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Y -) D (in CN-II, Gilbert syndrome and tr</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>276</fstart><fstop>276</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) R (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>428</fstart><fstop>428</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>K -) E (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>71</fstart><fstop>71</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) R (in CN-II, Gilbert syndrome and tr</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>478</fstart><fstop>478</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>A -) D (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>357</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Q -) R (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>34</fstart><fstop>34</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>P -) Q (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>403</fstart><fstop>403</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) C (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>401</fstart><fstop>401</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>A -) P (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>387</fstart><fstop>387</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>P -) S (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>377</fstart><fstop>377</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) V (in CN-I and CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>376</fstart><fstop>376</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>H -) R (in CN-I and CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>39</fstart><fstop>39</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>H -) D (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>336</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) L (in CN-I and CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>461</fstart><fstop>461</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>W -) R (in CN-I and CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>367</fstart><fstop>367</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) G (in Gilbert syndrome). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>225</fstart><fstop>225</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>V -) G (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>83</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>F -) L (in Gilbert syndrome). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>229</fstart><fstop>229</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>P -) Q (in CN-II and Gilbert syndrome). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>381</fstart><fstop>381</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>S -) R (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>375</fstart><fstop>375</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>S -) F (in CN-I; no enzyme activity). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>177</fstart><fstop>177</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>C -) R (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>395</fstart><fstop>395</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) V (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>294</fstart><fstop>294</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>I -) T (in Gilbert syndrome and CN-II; 40</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>15</fstart><fstop>15</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>L -) R (in CN-II; mutant protein rapidly </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>331</fstart><fstop>331</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Q -) R (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>308</fstart><fstop>308</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>G -) E (in CN-I; no enzyme activity). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>336</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) Q (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>368</fstart><fstop>368</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>A -) T (in CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>291</fstart><fstop>291</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>E -) V (CN-I). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>336</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) W (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>170</fstart><fstop>170</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Missing (in CN-I and CN-II; has nearly no</fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>354</fstart><fstop>354</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>W -) R (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>175</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>L -) Q (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>209</fstart><fstop>209</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>R -) W (in CN-II). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>511</fstart><fstop>511</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>A -) P (in dbSNP:rs1042709). </fnote></fitem>
+<fitem><ftype>VARIANT</ftype><fstart>292</fstart><fstop>292</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>A -) V (in CN-I). </fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>529</fstart><fstop>533</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_TRG_ER_diLys_1</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>529</fstart><fstop>533</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------mavesqggrplvlg--lllcvlgpvvshagk--illipvdg-shwlsm---lgaiqqlqqrgheivvla--pdaslyird-gafytlktypvp-fqred-vke----sfvslghnvfend-sflqrviktykkikkdsamllsgcshll-hn--kelmasl--aessfdvml-tdpflpcspivaqy--lslp-tvfflhalpcs-lefeat--qcpnpfsyvprp------lssh-sdhmtflqrvknmliaf-----sqnfl-cdvv-yspyatlasefl--q---revtvqdllss-asvwlfrsdfvkdyprpimpnmvfvgg--inclh--qnpls-qe-feayinasgehgivvfslgsmvs--eipekkamaiadalgki-pq---tvlwrytgtrpsn------lanntilvkwlpqndllghpm-trafithagshgvyesicngvpmvmmplfgdqmdnakrmetkgagvtlnvlemt--sedlenalkavindksykenimrlsslhkdrpvepldlavfwvefvmrh----kgaphlrpaahdltwyqyhsldvigfllav-vltvafitfkc--------cay-gyrkcl-gkkgrvkkahkskth
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q17K51</seq-name>
+<seq-info>
+<accession>Q17K51</accession>
+<nid>Q17K51</nid>
+<definition>   Glucosylglucuronosyl transferases.</definition>
+<organism>   Aedes aegypti (Yellowfever mosquito). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>268</fstart><fstop>496</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>668</fstart><fstop>1023</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>512</fstart><fstop>573</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>PROP_PF03033 Glyco_transf_28 from Q026U9</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>866</fstart><fstop>946</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>533</fstart><fstop>990</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>532</fstart><fstop>535</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>546</fstart><fstop>552</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>632</fstart><fstop>638</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>680</fstart><fstop>684</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>698</fstart><fstop>702</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>763</fstart><fstop>767</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>775</fstart><fstop>779</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>788</fstart><fstop>792</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>798</fstart><fstop>808</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>831</fstart><fstop>836</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>846</fstart><fstop>854</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>855</fstart><fstop>863</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>866</fstart><fstop>885</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>886</fstart><fstop>900</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>906</fstart><fstop>914</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>925</fstart><fstop>930</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>934</fstart><fstop>946</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>958</fstart><fstop>961</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>976</fstart><fstop>982</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>640</fstart><fstop>648</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>749</fstart><fstop>759</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>813</fstart><fstop>817</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>984</fstart><fstop>990</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>660</fstart><fstop>667</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_27</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>820</fstart><fstop>827</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1036</fstart><fstop>1039</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>678</fstart><fstop>682</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1034</fstart><fstop>1037</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_55</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>533</fstart><fstop>540</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_58</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>554</fstart><fstop>557</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_206</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>7</fstart><fstop>28</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>491</fstart><fstop>532</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>527</fstart><fstop>548</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>677</fstart><fstop>693</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>984</fstart><fstop>1014</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>574</fstart><fstop>580</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>WARN_PS00092</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>359</fstart><fstop>402</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>852</fstart><fstop>895</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>MOD_RES</ftype><fstart>851</fstart><fstop>851</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_N6acetyllysine from Q62452</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>1037</fstart><fstop>1041</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1021</fstart><fstop>1041</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mvkpswfgstvaiitilssitpssdgakillvsafpgmshwltfehvvnellergheltaitnyrlkgssnytdryrevliepvfdfendlpmesyyrtssftnpfyklkilwwlglattrhafecenvrrfmreeglrfdlviaeqfaqesflmfghkygasivtintlgytdyidrsfgmitplsfvphffteftdemnfyercynviltiydwayrkfiylpehnamakqyfaisnyagelpsveelernvsvilsnnhiisfrprpkmigmvdiaglhirapndlprdikkfietstkgtiyinfgtflrssamppetlevflqvfrnlpqynflwkwetdkvpelppnvllrkwipqndvlahsdiklfithggifgaqeavywarpmlfvpfygdqhgnalklqkagvgltmsianvtieefqgkvqeivenpnfqsatnrlsklfrdnptdpleeavfwieyvirhhgaahlksaavrmpwyqyllldiataavhftpgqylllallafglmfgadssk-ilvlvpfpapshwl-wl--nhfvqellerghqitaianfpaksph--a--nyteilidppy-diphy-f---------pisdifnsk--yssdwsnlvlywkaglattqyalentnv--q--qfieqdd----tdfdlviseqffqeaflmfahk--yrap-ivtigtlgyadymdramg---lltpwsfvphp------illy-vdemsfsqrcynflist-----tdali-rkyyylprqdklakkyfasiegpesfpsvdeleksisvmlinshvstssprpsisglvnvag--ahikp--enplp-hd-iqrfldsa-segaiffslgsyvkssdmpkdklkaffevfrnl-kq---kvlwkfed-etmvn-----vprnvmvrkwlpqsdilahrn-ivlfithggmfgsqegiyrgvpmlfipfygdqhrnalkaeragyaltlnfadvn--iitlgsrinelltnpaytrlarkaselfrdnlvppmdeamhwieyvirh----kgakhlksssvdmswwqylmwdviafyvgvltlticiacktl-kafcvksakhkpkeskrnvsltkpkntkkpksn
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q17GE4</seq-name>
+<seq-info>
+<accession>Q17GE4</accession>
+<nid>Q17GE4</nid>
+<definition>   Glucosylglucuronosyl transferases.</definition>
+<organism>   Aedes aegypti (Yellowfever mosquito). Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>115</fstart><fstop>525</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>369</fstart><fstop>449</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>42</fstart><fstop>493</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>13</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>41</fstart><fstop>44</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>55</fstart><fstop>61</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>140</fstart><fstop>146</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>192</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>206</fstart><fstop>210</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>266</fstart><fstop>270</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>291</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>301</fstart><fstop>311</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>334</fstart><fstop>339</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>349</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>358</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>369</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>389</fstart><fstop>403</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>409</fstart><fstop>417</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>428</fstart><fstop>433</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>437</fstart><fstop>449</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>461</fstart><fstop>464</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>479</fstart><fstop>485</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>148</fstart><fstop>156</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>252</fstart><fstop>262</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>316</fstart><fstop>320</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>246</fstart><fstop>249</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>487</fstart><fstop>493</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>231</fstart><fstop>237</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_25</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>82</fstart><fstop>85</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_26</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>168</fstart><fstop>175</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_27</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>323</fstart><fstop>330</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>426</fstart><fstop>429</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_33</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>522</fstart><fstop>525</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>186</fstart><fstop>190</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>421</fstart><fstop>427</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_48</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>247</fstart><fstop>250</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_57</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>42</fstart><fstop>49</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_58</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>12</fstart><fstop>32</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>159</fstart><fstop>203</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>489</fstart><fstop>516</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>355</fstart><fstop>398</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>316</fstart><fstop>358</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PS00375 UDPGT from Q9WEV9</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>431</fstart><fstop>431</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from UDB28_HUMAN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>523</fstart><fstop>527</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------masgtrplisklllaaaiitfscnslfvget--eaanil-----gilptwakshyi-ig--aeylrvlalaghnvtvvt-----pfr-lg-dsppnyheivmd-gilda-sag-----leknyfkykd-gsflmilsmlyndladttcrfvlkhpkv-------vt--lmk--sdqqfdvvivetfmtesiyglaqh--fnap-lvvfstlgsnlwtnglvg--a-pspyshmahl------mlgf-tdhmnfyermintvvgv-----geqvy-yelvylprqkrfydeafsha----smsfdqqlkn-tslvllnqhfalssprsyppnmvevgg--thir-dv-rplp-ed-lqqyldea-pdgviyfcmgshiqskhfpsdkrdaflkvfsql-kq---rvlwkfed-tsipd-----ipsnvlirswmpqndilahrn-vklfithggllgttealyhgkpivgipifgdqlmnvqkavrsgyglkldyelin--easvrevietvlmnesfterareisgwyhdkpmtaaetaifwteyvirh----rgaaqlrspavelkswqyylldvgavlv---g-lclfvfam--------iykclgairtildk------vnkykrd
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q7QCS2</seq-name>
+<seq-info>
+<accession>Q7QCS2</accession>
+<nid>Q7QCS2</nid>
+<definition>   ENSANGP00000022011.</definition>
+<organism>   Anopheles gambiae str. PEST. Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>252</fstart><fstop>395</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>437</fstart><fstop>507</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PF00201 UDPGT from Q0IFB9</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>124</fstart><fstop>291</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PF00201 UDPGT from Q5RBM9</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>372</fstart><fstop>451</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>33</fstart><fstop>493</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>32</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>46</fstart><fstop>52</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>143</fstart><fstop>149</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>209</fstart><fstop>213</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>269</fstart><fstop>273</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>281</fstart><fstop>285</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>294</fstart><fstop>298</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>304</fstart><fstop>314</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>336</fstart><fstop>341</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>352</fstart><fstop>360</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>361</fstart><fstop>369</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>372</fstart><fstop>391</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>430</fstart><fstop>435</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>439</fstart><fstop>451</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>463</fstart><fstop>466</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>151</fstart><fstop>159</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>255</fstart><fstop>265</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>318</fstart><fstop>322</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>249</fstart><fstop>252</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>487</fstart><fstop>493</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>234</fstart><fstop>240</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_25</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>76</fstart><fstop>79</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_26</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>171</fstart><fstop>178</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_27</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>187</fstart><fstop>190</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>325</fstart><fstop>332</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>428</fstart><fstop>431</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_33</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>190</fstart><fstop>194</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>424</fstart><fstop>429</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_48</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>250</fstart><fstop>253</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_57</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>33</fstart><fstop>40</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_58</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>7</fstart><fstop>37</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>307</fstart><fstop>323</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>487</fstart><fstop>516</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>SIGNAL</ftype><fstart>7</fstart><fstop>19</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_SIG</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>358</fstart><fstop>401</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PS00375 UDPGT from P41713</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>433</fstart><fstop>433</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from UDB28_HUMAN</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>253</fstart><fstop>253</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from Q20086</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>532</fstart><fstop>536</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------matnttvavllatiaavcvsfgeaaki-laifpvplkqhqlvy---rpliealagrgheivlvtt-dpldmadrp-ngt--rsieqid-lsfay-qlp----alaqlgwvgldgr-dmlrnifdvmrtisa-aelrhpamqkliesanlqdgtggt--kcnrfdvvmvewsgvtlmnafaeh--frap-lvgianggayinahealg--npnhpigy-psi------fmpf-sedlsllqrissvlftv-----wyrfy-yyteeipaqnliakssfgeh----isdlrqieqn-adlllinayqqlgnvrpvgpttvylgg--ihqqhr--hqlp-ed-lflflaqs-depvvyvnlvaslgg-vagqaridkiakalahldla----svwaldesmdpin-----stgriyqshsvpqeavlghsk-vrafltdggqinvedaiqhkvpvvgisystsydhylrqivkyeagi-islidfet-q-tfvdklqdvlineryqenvnklhrllndqpqtaleravwwieyvarn----ggtrplhvrh--lswfeylmldvlivvgvlaslacaliayai--------vravrysrsl-pmemvtrgsrkckmm
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q18081</seq-name>
+<seq-info>
+<accession>Q18081</accession>
+<nid>Q18081</nid>
+<definition>   Putative UDP-glucuronosyltransferase ugt-48 precursor EC 2.4.1.17 UDPGT 48.</definition>
+<organism>   Caenorhabditis elegans. Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>18</fstart><fstop>525</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>369</fstart><fstop>451</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>26</fstart><fstop>495</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>64</fstart><fstop>75</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>25</fstart><fstop>28</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>39</fstart><fstop>45</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>135</fstart><fstop>141</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>183</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>201</fstart><fstop>205</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>260</fstart><fstop>264</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>286</fstart><fstop>290</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>295</fstart><fstop>305</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>349</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>358</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>369</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>389</fstart><fstop>403</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>409</fstart><fstop>417</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>430</fstart><fstop>435</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>439</fstart><fstop>451</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>463</fstart><fstop>466</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>481</fstart><fstop>487</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>142</fstart><fstop>150</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>246</fstart><fstop>256</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>310</fstart><fstop>314</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>240</fstart><fstop>243</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>489</fstart><fstop>495</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>229</fstart><fstop>235</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_25</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>163</fstart><fstop>170</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_27</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>317</fstart><fstop>324</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>428</fstart><fstop>431</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_33</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>521</fstart><fstop>524</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>181</fstart><fstop>185</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>423</fstart><fstop>429</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_48</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>519</fstart><fstop>522</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_55</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>241</fstart><fstop>244</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_57</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>26</fstart><fstop>33</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_58</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>325</fstart><fstop>341</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_61</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>489</fstart><fstop>509</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>Potential.</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>376</fstart><fstop>396</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_Potential. from P34317</fnote></fitem>
+<fitem><ftype>SIGNAL</ftype><fstart>1</fstart><fstop>17</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>Potential.</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>355</fstart><fstop>398</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>513</fstart><fstop>513</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>58</fstart><fstop>58</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>305</fstart><fstop>305</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>CARBOHYD_Nlinked GlcNAc Potential</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>522</fstart><fstop>526</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------mllriltflavcqvttshk-ilmfsptaskshmisq---griadelanaghevvnfe--pdflnltdkfvpckkcrrwpvtglnnyk-fkk----iqnglsgdvfqqs---siwskifntdsdpyqdeytnmceemvtn---keliekl--kkekfdayf-geqihlcgmglah-l-igikhrfwiasctmsvsmrdslg---iptpsslipfm-------stldatpapfwqraknfvlqmahi--rdeyrdvv-ltndmfkknfgsdf--------pcveflakt-sdlifvstdelleiqaptlsnvvhigg--lglsse-gggld--ekfvkime-kgk-gvilfslgtianttnlpptimenlmkitqkf-kdyefiikvdkfdrrsfdl---aeglsnvlvvdwvpqtavlahpr-lkafithagynslmesayagvpvilipfmfdqprngrsverkgwgilrdrfqlikdpdaiegaikeilvnptyqekanrlkklmrskpqsaserlvkmtnwvlen----dgveelqyegkhmdfftfynldiiitaasipvlifivlris---------------------nisiitsspknkkd
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q61JW1</seq-name>
+<seq-info>
+<accession>Q61JW1</accession>
+<nid>Q61JW1</nid>
+<definition>   Hypothetical protein CBG09620.</definition>
+<organism>   Caenorhabditis briggsae. Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>21</fstart><fstop>459</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>372</fstart><fstop>453</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>28</fstart><fstop>497</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>27</fstart><fstop>30</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>41</fstart><fstop>47</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>187</fstart><fstop>191</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>205</fstart><fstop>209</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>264</fstart><fstop>268</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>278</fstart><fstop>280</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>291</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>300</fstart><fstop>310</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>334</fstart><fstop>339</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>352</fstart><fstop>360</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>361</fstart><fstop>368</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>372</fstart><fstop>391</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>392</fstart><fstop>406</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>412</fstart><fstop>420</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>432</fstart><fstop>437</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>441</fstart><fstop>453</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>465</fstart><fstop>468</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>483</fstart><fstop>489</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>147</fstart><fstop>155</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>250</fstart><fstop>260</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>315</fstart><fstop>319</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_22</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>491</fstart><fstop>497</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>72</fstart><fstop>75</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_26</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>167</fstart><fstop>174</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_27</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>322</fstart><fstop>329</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>430</fstart><fstop>433</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_33</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>133</fstart><fstop>140</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_36</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>525</fstart><fstop>528</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>185</fstart><fstop>189</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>425</fstart><fstop>431</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_48</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>523</fstart><fstop>526</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_55</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>244</fstart><fstop>247</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_57</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>28</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_58</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>7</fstart><fstop>23</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>20</fstart><fstop>39</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>303</fstart><fstop>316</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>496</fstart><fstop>520</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>379</fstart><fstop>399</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_Potential. from P34317</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>358</fstart><fstop>401</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_PS00375 UDPGT from P41713</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>295</fstart><fstop>295</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from Q64550</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>461</fstart><fstop>461</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from Q64676</fnote></fitem>
+<fitem><ftype>MOD_RES</ftype><fstart>357</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_N6acetyllysine from Q62452</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>526</fstart><fstop>530</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------mrlflflsllfvlyyn-asaynylvvs------pvfgyshlkfm---skvtdtlanaghnvt-ll--qtyvyehwgtirvvknknieivdyyn-kdapsheqsa-svfkffwdsev--vnnpitgaiapmfilynefkpmcdkvltd---kelhdwikskn--fdgfv-aeafdfcslylgd--hlkmn-lmpmfstiknipgsyaig---epsalnfapsl------ht-nygpdqtvwdrlqditsftsfh--yafsnlydrqyrqaysllngevr----------twkdilqtatyffnnnnpyigfpiptlaktveiggftidpp----khekleeefdkilnlr--kstvlisfgtvvqsadmpeafkdglvkmfanl-pet--tfiwkyeve-ddefs--kqlsenvilkkwvpqpall-adhrlnlfithgglgstlevayagkpslmipifgdqflnakmlsrhggaisydkyklgd-skkltetvkeaisnsaynekalllanilqsqpiqpknnllkhaefvarf----grvhalepynvhynfiryymldayaillsifivsly--vfhfi-----------------vkflyrricrskpkte
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q61H12</seq-name>
+<seq-info>
+<accession>Q61H12</accession>
+<nid>Q61H12</nid>
+<definition>   Hypothetical protein CBG10950.</definition>
+<organism>   Caenorhabditis briggsae. Eukaryota   </organism>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>280</fstart><fstop>486</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00201 UDPGT</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>386</fstart><fstop>466</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>25</fstart><fstop>514</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>536</fstart><fstop>551</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>24</fstart><fstop>24</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>38</fstart><fstop>44</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>132</fstart><fstop>138</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>208</fstart><fstop>212</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>276</fstart><fstop>280</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>288</fstart><fstop>292</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>301</fstart><fstop>305</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>311</fstart><fstop>321</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>345</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>366</fstart><fstop>374</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>375</fstart><fstop>383</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>386</fstart><fstop>405</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>406</fstart><fstop>420</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>426</fstart><fstop>434</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>445</fstart><fstop>450</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>454</fstart><fstop>466</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>478</fstart><fstop>481</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>500</fstart><fstop>506</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>139</fstart><fstop>147</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>262</fstart><fstop>272</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>255</fstart><fstop>258</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>508</fstart><fstop>514</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>236</fstart><fstop>242</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_25</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>333</fstart><fstop>340</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>125</fstart><fstop>130</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_36</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>552</fstart><fstop>555</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_38</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>181</fstart><fstop>185</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_43</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>256</fstart><fstop>259</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_57</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>46</fstart><fstop>49</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_206</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>7</fstart><fstop>31</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>146</fstart><fstop>164</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>212</fstart><fstop>226</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>388</fstart><fstop>416</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>TRANSMEM</ftype><fstart>507</fstart><fstop>530</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_TM</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>372</fstart><fstop>415</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00375 UDPGT</fnote></fitem>
+<fitem><ftype>SITE</ftype><fstart>448</fstart><fstop>448</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PROP_CARBOHYD_Nlinked GlcNAc Potential from UDB28_HUMAN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>554</fstart><fstop>557</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>1114</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------mripllafslvqivtsln-ilvflig---tnqfernifeflaqqlalrhhnvisik---pvlipeep--rlvkpklhlvrekviknvlsk----dlfkpledsvpn--tawradydydsylepyyrahnascyklln----snlvdsl--kkesldlai-vysgnpclnalth--lvavptiyfdtegltdetlvaartpidmftspshcaiaespeypilnlyrnsicylqemtaqlglp---ilsslvskrhrlldepitnifrtdytikkryknfpsvntlkqqsvaffantdpllepsralppnvipvgg--lhidh--pkplf--apwnttiaaa-kegliivsfgtqadsskmsakqaksilkaltnlnny---riywrvgpnmklegidetkipkhinlttfipqndllahka-ckllvtnggmssvmeavahgvpivgiplygsnrynlqkvankglgvviqkddln--eislygamkkvlesakykntakemskefkarttspfaaalhvidhvgrhhsfaymqpvyqpiykridfyllllivflpvlflqklfgfffrtsakn--------vqgvkvaeaavkvvkevvesk-knk
+</seq-data></sequence>
+</alignment>
+</macsim>

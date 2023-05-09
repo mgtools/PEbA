@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 254  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1se1_A oo  Len:  254
+ Name: 1mek_  oo  Len:  254
+
+//
+
+
+
+1se1_A      GLFDAQFVPA DQAFAFDFQQ NQHDLNLTWQ IKDGYYLYRK QIRITPEHAK 
+1mek_       .......... .......... .......... .......... .......... 
+
+1se1_A      IADVQLPQGV WHEDEFYGKS EIYRDRLTLP VTINQASAGA TLTVTYQGSA 
+1mek_       .......... .......... .......... .......... .......... 
+
+1se1_A      DAGFCYPPET KTVPLSEVVA NHLNFTQIKT VDELNQALVE AKGKPVMLDL 
+1mek_       .......... ........DA PEEE.DHVLV LRKSNFAEAL AAHKYLLVEF 
+
+1se1_A      YADWCVASKE F.EKYTFSDP QVQKALADTV LLQANV.... ...TANDAQD 
+1mek_       YAPWC.G..H .C.K.ALA.P EYAKAAGK.. L.KAE.GSEI RLAKVDATEE 
+
+1se1_A      VALLKHLNVL GLPTIL.FFD GQGQEHPQAR V..TGFMDAE TFSAHLRDRQ 
+1mek_       SDLAQQYGVR GYPTI.KFFR N.G.DTASPK .EYTAGREAD DIVNWLKKRT 
+
+1se1_A      ....
+1mek_       GPAA
+

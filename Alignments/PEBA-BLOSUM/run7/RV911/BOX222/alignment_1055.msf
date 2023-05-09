@@ -1,0 +1,124 @@
+PileUp
+
+
+
+   MSF: 1831  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q869X4 oo  Len:  1831
+ Name: Q5SMN6 oo  Len:  1831
+
+//
+
+
+
+Q869X4      MVDQDKIKPK QQQNNFSNNN NNNDSTQLNN NNNNNNNDKK KQNISNNNNN 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      NNNNSTQLNN NNNNNNNNNN NNNNNNNNNK KQNTINNNKI NSKQTPINTT 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      NTNTTNTTNT TTNTTTTNIP TNTNTTTNTN TATNTTNTTN NTTNTTTNTN 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      APTNTTTNKI NNTTTANSIE KPIITNGTLN NNMNFRNANN KININETNNI 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      KNNNNNNNNN NNNNNNNNNN NNNNNNNNNN NNIDKVLNSS QEDDSYNTTI 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      DMSSFEKSST DINGINYSNY NNYYNGYSYA VTNNSFSYVN SGSNTTDNRI 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      INSSYNLHYQ QPQQIHYQPI QHHHYQQHQQ KYYSQPTYTH PQLLQQQQQQ 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      QQQQQPQQQP LHPPQYQKQY QQQIHIQQQQ QQQQQQQQQQ QQQQQQQQIY 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      IQHQHQHQPQ QQPQQQPQQQ QHSPKQTSPK SKSQQTPTAL ISTPTPTSKP 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      ISTKIEKPEK QQEKKQEKSE KQEKEQEQQS SLLQQQPQEN KTNFENVNNL 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      ILNSNEPISS FVASDMTELT EESINSISCV SFENNINNTN THANITTNNT 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      STNNNNNNNN NNNNNNNNNN NNNNNNNNNN NNNNNNNNNN NNNNNNNNNS 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      NSNKKKIKGK NNKKSNDSTS PPTTTTTTTT TITTEQQSSR LSINITPLNS 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      SSSTSTSTPT TTTPSVSTPI PSTTTQKPLS SLILEQQQQQ QQQQQQQQQQ 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      QQQQQQQQQQ QQLQQEQEEK EKENTPLSPP SVQTQSPSKT NSSINNSNTN 
+Q5SMN6      .......... .......... .......... .......... .......... 
+
+Q869X4      NTTTTTTTTT VTIPSLASLI KAKPEILDQK QTESDPSNAL SPQSCLKKKQ 
+Q5SMN6      .......... ........ME TLNPD.AGDR AAAGAAQGVG VAAGGEGEAR 
+
+Q869X4      DLEK.KIIW. MKNIEEMPSK SQLVAHRSRG LI.NTSNTCF MNVILQSLTG 
+Q5SMN6      RAEKGEVV.G GGLDPELSVA RIYLGRIGAG L.QNLGNTCY LN....SV.. 
+
+Q869X4      CQLFLRVIKN LSDLEDLGKY PTLHSFNQFY TEYFSNP... TSNILNNNSN 
+Q5SMN6      ..L..QC... L......... .T.YT.EPF. AAYLQS.GKH KSS..CRTAG 
+
+Q869X4      STTTTSSSST TATTTSTSNN NKS..QTPTS PIQQH.HQSQ TNGLSNQPSV 
+Q5SMN6      FCALCALQNH VKTALQSTG. .K.IV.TPSQ IVKN.L.R.. C..ISRS..F 
+
+Q869X4      ATQSQQQQQP .QP..PINPK HFNDLVKSFN SKVSPVPQTT VSPHSM.VQV 
+Q5SMN6      RN.SRQEDA. HE.LM.VN.. ....LLES.. ..MH...KCC L.P.S.GVP. 
+
+Q869X4      ......SKKK LKLQLYNNSL P..QTICQQD ....AQEFLV FLLDLIHEEF 
+Q5SMN6      SESPSAYEKS LVHKIFGGRL .RSQVKCTQ. CSHCSNKFDP FL.DL..S.. 
+
+Q869X4      LTLIKDIDIP KEDDKSTPTS TSIVDHNWEV VGKKGKTAII TNSQQELPKT 
+Q5SMN6      L....DIG.. K....AT..S ..LV...... ..R....A.. ......L... 
+
+Q869X4      PISQIFSGVL RSSFNR.TGS KESITVEPFY CLHLDIRPEE INSLEDALKF 
+Q5SMN6      ...Q...... ....N.FT.A .E....E... .L.LD..... .GG.E...K. 
+
+Q869X4      FMKPEIIEGY TCSTKKIEIS .ASKSWSFES LPRILIVHFK RFAFESDTSK 
+Q5SMN6      ....Q....Y QCQRCRKKV. VAKKKFTIDK APYVLTIHLK RFS.PFNPRE 
+
+Q869X4      KLDKL.IRFP TQLSLSTA.. .SNHQTQKKY SLFSVVS.HH .GR.GLSQGH 
+Q5SMN6      KIDK.KVDFQ PMLDLKP.FI SDSKGADFKY SLYGVL.VH. AG.WNTQSGH 
+
+Q869X4      YT.CDIYQPQ QAQWIRYDDS TFTEVKEQDV LNREAYLLLY QLVN...... 
+Q5SMN6      Y.YC.FVRTS SGMWHNLDDN QVRQVREADV LRQKAYMLFY ..VRDRVGNP 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      TPRKDNITAN MPARRTIPEK ISGLSDMIQS GVIEAKLNGS SSPYGDKRLH 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      GISNGNSIKT SREHYLKKDG KTEAPKASEN NGLASTQKAS APQIDGATLS 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      AQSKQITSTG HREVSSSDRS ASLTHVIVNQ AVAMVPSQEL QPKVDGLTDT 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      SSLGNGNAIL SERNKQTSQH QNPFSMPASH GKDTGAGLAA QTFPTKDAIV 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      SNGVVPSSRD PISSEKVCGL QKSIKQDDKT VKELPISENN IVSGLERVNA 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      RKQTSSEVSM KVAAADSCNS NTPKRVDLKS KKLVRYPVMN MWLGPRQVML 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      GSLKVQKKKK CNRTRRRSVV CEDMANATCS GNNTSEQQAS TSTTTSSETV 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      QCTPRGRKRA YDSDSPKNNN QKQNKQDVIG ADTGSGELNM DKRNVISETA 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      ASAELPKLGP GSSANQEHSR NNVHAKLGVP RHFTVLTRDL AEVTVPCWDD 
+
+Q869X4      .......... .......... .......... .......... .......... 
+Q5SMN6      VAVSNAEARE SKHSESKSIG YVLDEWDEEY DRGKTKKIRN SKEDYGGPNP 
+
+Q869X4      .......... .......... .......... .
+Q5SMN6      FQEEANYISQ RNMKQRTYQP KSWKKHAHVR R
+

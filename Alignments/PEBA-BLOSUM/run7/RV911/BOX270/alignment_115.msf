@@ -1,0 +1,142 @@
+PileUp
+
+
+
+   MSF: 2129  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q03497 oo  Len:  2129
+ Name: Q54XJ4 oo  Len:  2129
+
+//
+
+
+
+Q03497      MSNDPSAVSE LPDKDSLDNG ISNDNERAMG GNGDGGDGLR LPRTTGTLNV 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      NALQKGTNAA HEAGGYKSMD PAKNAETTND DDNNVVSLDD PIQFTRVSSS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      SVISGMSSSM SPHSNIDETK SLEAVTPNIN TSNITPDHSA DNTFSTINAS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      ESDHQFNDTL LSKLSLTDST ETIENNATVK HQQPVASSTV NSNKSSTDIR 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      RATPVSTPVI SKPSMTTTPR QINSASHSLS NPKHKQHKPK VKPSKPEAKS 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      KPVSVKKSFP SKNPLKNSSP PKKQTEKSYY SSSSKKRKSG SNSGTLRMKD 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      VFTSFVQNIK RNSQDDKRAS SSSNNSSSSS ITTALRISTP YNAKHIHHVG 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      VDSKTGEYTG LPEEWEKLLT SSGISKREQQ QNMQAVMDIV KFYQDVTETN 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      GEDKMFKTFN TTTGLPGSPQ VSTPPANSFN KFPPSTSDSH NYGSRTGTPM 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      SNHVMSPTLN TDSSSANGKF IPSRPAPKPP SSASASAPII KSPVMNSAAN 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      VSPLKQTHAP TTPNRTSPNR SSISRNATLK KEEQPLPPIP PTKSKTSPII 
+Q54XJ4      .......... .......... .......... .......... .......... 
+
+Q03497      STAHTPQQVA QSPKAPAQET VTTPTSKPAQ ARSLSKELNE KKREERERRK 
+Q54XJ4      .......... .......... .......... .......... .......MSQ 
+
+Q03497      KQLYAKLNEI CSDGDPST.K YANLVK.IGQ GASGGVYTAY EIGTNVSV.. 
+Q54XJ4      PSLLNQLNNI V.DKESC.GD YLLID.IIGK GG.FGV.V.Y .KGLHKT.KG 
+
+Q03497      ...AIKQMNL EKQPKKE... .....LIINE IL.VMKG..S KHPNIVNFID 
+Q54XJ4      YFSAIKKIKI MKK.KK.LQS ESQISL.MAE I.NLLK.VLS HH.NIVRYYE 
+
+Q03497      SYVL..KGDL WVIMEYMEGG SLTDVVTHC. .ILTEGQ.IG AVC..RETLS 
+Q54XJ4      .HI.PSSSHS YIVMEFIENG SLEKIIKR.H GLLPES.LV. TV.YIAQVLN 
+
+Q03497      GLEFLHSKGV LHRDIKSD.N ILLSMEGDIK LTDFGFCAQI NEL...NL.K 
+Q54XJ4      GLEYLHRQGV IHRDIKA.AN LLISTDGSIK LADFGVATKV SDLSSDN.PD 
+
+Q03497      RTTMVGTPYW MAPEVVSRKE YGPKVDIWSL GIMIIEMIEG EPPYLNE.TP 
+Q54XJ4      .DTFAGTPYW MAPEVIQMQG ISTACDVWSL GCTIIELLTG TPPYFG.LAP 
+
+Q03497      LRALYL.IAT NGTPKLKEPE NLSSSLKKFL DWCLCVEPED RA....SATE 
+Q54XJ4      AAALY.KIVQ EDHPP.IPPG I.SAALKDFL ..LNCFK.KD E.NIRSSAKQ 
+
+Q03497      LLHDEYITEI AE........ .......... .......... .ANSSLAP.. 
+Q54XJ4      LLHHPWVKSV Q.IRNPETQA PKNARQEILS YNAQLQDIIQ DNNSNIT.RP 
+
+Q03497      ....LVKL.. ..ARLKKVAE NMDADEDNDD DNDNEHI.NK TNNCDDNNDS 
+Q54XJ4      RSSAVVQ.PP SPSQLVPPLT NMNISSSNDN NNNNNN.SSA TNN.SPNISS 
+
+Q03497      KETVNL..DV TEDDKQK... .......... .......... .......... 
+Q54XJ4      TTTKN.NSST TNNNNNKLTS PSLSSSLLPI PATSTSTVNQ NKASPTLNSS 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      WSAVPSNKIS QTVNSIDKSS LNKINNGSGQ HVQIASPRKL SAGQKQSIQP 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      NIIAAAATTT TTTTTTTTTN AATNTTTTTT PSSTNTGSNV TSPVVSAIST 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      PPPIPTTPLS PMMKSQEQLN QEKEKINLHL RKFSEKESDD EFDNIVLPNS 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      TICLQKLQPI LSHKPPIQLQ RQQSFNANNN ISNSNSNNNN NNNNNNNNNN 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      NNNNNNNNSN NNNSSNNSNN NSNSNSINSS NSHKLKLLKF NKFTEKDNED 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      DETDLVFDQK VSDTSRFKVR NQKKDWDDEF DNFGSSGDES ESSTATTNAA 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      INSNIAKKIL PSNRIIRYSS SGQLKQQQQQ LLLQQQQQQQ QQHLQQPLSP 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      SEMKLKVKET SEEWDTEFEE SFDTISWSEA DNQRTINIQD KYREQVVKTI 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      VEFILQLKPN QPNDVLIDTC QKLTDLFQTY PDERKLLISN GEGGVYFRLP 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      IITILEILED NCCCNSDTPS DVITTTYHHN NNSDTFSEDF SNVELVINLL 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      KLLNQSIIKE KDIQETICLM NGISIITKLA TKQFDELIRE EVSKFVLQLC 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      SYSTYSLNMF ITGSRGCKVL VDLLDSDYFN GFTLIHNSLD AISLIFKMNT 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      ASPKTALCHL FAKTALMYRI SYLLNQIFNS SDKSATSKSQ QFQQKQIQQQ 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      QQLLLQQQQQ QQQQQQLLPS SSSPNLKFPV LSKSSSVKNL SKDQFDKVLA 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      YSVKAADILL FFSTGDSLVK EEMSQSNVIK YIVNVLDEIY TWKTIGNNIR 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      SFLLKILKVI KNLSMDPNVR SRLDDAGVIP PLINYLKKHG GIDKITEIHN 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      QALHSLYYLL LLDRSRQEKA LKSSILEPLL TIIEERGPLK ELALPILFDL 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      VRSCNNRSLL WKCNTIDKLL DLIEDRNWFA DAIESISTWA TLESKLVFEK 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      LNSGGTISPL TSTSTSTSTS KSSPSSSSSS SSSSLSTSTS TSSSSLQLPT 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      SSSSTSFENH NIPLRLIGIL NINHIKHPSF QKSIIPLFNL INGSQQLLKS 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q54XJ4      LINEGLVNSL VECLRVDSSP VSKITLLKIT ASIVQSPSLL LVDKEQTNSL 
+
+Q03497      .......... .......... .........
+Q54XJ4      YQILNEISKQ DESEIVKKIA ENLVLELNK
+

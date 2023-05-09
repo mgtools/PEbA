@@ -1,0 +1,133 @@
+PileUp
+
+
+
+   MSF: 1959  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q03497 oo  Len:  1959
+ Name: Q24DI1 oo  Len:  1959
+
+//
+
+
+
+Q03497      MSNDPSAVSE LPDKDSLDNG ISNDNERAMG GNGDGGDGLR LPRTTGTLNV 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      NALQKGTNAA HEAGGYKSMD PAKNAETTND DDNNVVSLDD PIQFTRVSSS 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      SVISGMSSSM SPHSNIDETK SLEAVTPNIN TSNITPDHSA DNTFSTINAS 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      ESDHQFNDTL LSKLSLTDST ETIENNATVK HQQPVASSTV NSNKSSTDIR 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      RATPVSTPVI SKPSMTTTPR QINSASHSLS NPKHKQHKPK VKPSKPEAKS 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      KPVSVKKSFP SKNPLKNSSP PKKQTEKSYY SSSSKKRKSG SNSGTLRMKD 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      VFTSFVQNIK RNSQDDKRAS SSSNNSSSSS ITTALRISTP YNAKHIHHVG 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      VDSKTGEYTG LPEEWEKLLT SSGISKREQQ QNMQAVMDIV KFYQDVTETN 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      GEDKMFKTFN TTTGLPGSPQ VSTPPANSFN KFPPSTSDSH NYGSRTGTPM 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      SNHVMSPTLN TDSSSANGKF IPSRPAPKPP SSASASAPII KSPVMNSAAN 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      VSPLKQTHAP TTPNRTSPNR SSISRNATLK KEEQPLPPIP PTKSKTSPII 
+Q24DI1      .......... .......... .......... .......... .......... 
+
+Q03497      STAHTPQQVA QSPKAPAQET VTTPTSKPAQ ARSLSKELNE KKREERERRK 
+Q24DI1      .......... .......... .......... .......... .......M.N 
+
+Q03497      KQLYAKLNEI CSDG.DPSTK YANLVKIG.. QGASGGVYTA YEIGTNVSVA 
+Q24DI1      MNEIGSDSII CTT.ENPEQI .FSLVEI.LG QGSYGKVFKA LNLQNNKYYA 
+
+Q03497      IKQMNLEKQP KK.ELIINEI LVMKGSKHPN IVNFIDSYVL K..GDLWVIM 
+Q24DI1      VKVVNTGNG. D.FDNLKKEI SILQDCQSDY IVHYYGSY.L .YNEQLWIIM 
+
+Q03497      EYMEG.GSLT DVVTH...CI LTEGQIGAVC RE.TLS.GLE FLHSKG..VL 
+Q24DI1      EYCD.IGSVN DLMK.ATQRT LSEVQIACIL K.GVL.LGLK YLHNS.KKI. 
+
+Q03497      HRDIKSDNIL LSMEGDIKLT DFGFCAQI.N ELNLKRTTMV GTPYWMAPEV 
+Q24DI1      HRDIKAGNIL INKDGACKLA DFGVSAQLFN TMGYIE.SFI GTPYWMSPEV 
+
+Q03497      VSRKEYGPKV DIWSLGIMII EMIEGEPPYL .NE..TPLRA LYLIATNGTP 
+Q24DI1      LTQNKYNKKT DIWSLGITAI EMAEGNPPF. SN.FQA.VSA MILIIKK.PP 
+
+Q03497      KL..KEPENL .SSSLKKFLD WCLCVEPEDR ASATELLH.D EYITEIAEAN 
+Q24DI1      Q.GLSDPTK. WSQEFNRFVS RCLTINPDIR PTSEELL.LD PFI..V.N.N 
+
+Q03497      SSL.APLVKL ARLKKVAENM DAD....... ..EDNDDDND NEHINKTNNC 
+Q24DI1      TT.RV.NPQH FLMNLVSDNM ES.IRVFRKN LLEKQKGETQ QQG.EKKNK. 
+
+Q03497      ..DDNNDSKE TV.NLDVTED DKQK...... .......... .......... 
+Q24DI1      QQPAQQQQQE Q.KKEEKKQV DKRLMTEASH DFQDYIANDS GTVIEYQNYD 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QFNNEPDQHQ QFYKKQNQFI NNNNDKQNNF IWENETGTMV EKLENDDGED 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      EEQKDDNLKQ PENSDFMKQF SKKEDGFQNI NWAQNKKEDS SFSNKPNSNL 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QKNNSIGNKS EQREMTSQYN QIEQEDDQVN SSVIIKEDYE IEHIKNQAYS 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      GVAVTDSEKK IQQKNVPDFV LFAQKMEENN NKNFPKKPLN INIQTDNIHI 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QVPQSSTPQQ QKQQTTKQSI SEDSDIPSEY KNMNEQQIET MIETLKKELE 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      MELKAIQDAY SQKITRCEKA LKLVKSKKNG SFTPTSLPMQ LIQIPQNNNF 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      VNQEPISPIK RNINNQLLPQ QQQQYLPSPS STAMKNNLEY LVSSPHLAPS 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      ALPQISQSPY IKNLNLVNGG VYDSNNNSQN LLNGTSSNQI QNKLPNKGFN 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      ALQSSNNPMY TSTNNLVNQS SNNNPLTHLN PVLNNIYSEM PLPATPKTKE 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QAQQNNGGLN YALGVQTQPT SSNIYLTSCQ KSSNNNSNIA QYTNGQIPVQ 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      SQSNQQEDII NNIKRQFQIT NSVLGNVESS NQQQQKQAII NNEMQLRKIN 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      SNHPINQLKN SKNNQLFESN MLNKQPSKPT SQNSNFSKGI QSSSPMITQG 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      GGLSFEEALN RKNILKQNQV QNSSNNNNST VYDENAIYAQ QMQLQQKQRL 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QQEQNGSTKA QSYINMSQIP TGTTPNKLSN LDQINILQQK SVQNNNRQIP 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      QTTLYNQAER SQTEQSHNDF IAKKSSKQYQ QQMINNTNNT DYSKENAYYR 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      DNYSKQPSSN LYNNSNYNNN TARGSNQTKL SNGQNSQNIL SNNGLDGYGH 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      SSSNNNLSTS STSSTQIQQI LSRSQNLQNN ISSIPNKISK NNSQETSNSF 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      LSNGQKSKTS NSYVSNNHSN SNSIDEQKQY TQSKNHLVIL QKKNNNSNNN 
+
+Q03497      .......... .......... .......... .......... .......... 
+Q24DI1      VPMTAKDSQS KSSNNLSSLS QQQNQSQYKP SNAPTSGISF KQLLNQQNER 
+
+Q03497      .........
+Q24DI1      KLPSANNFC
+

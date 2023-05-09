@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 170  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CSPD_HAEIN oo  Len:  170
+ Name: PIPI_HUMAN oo  Len:  170
+
+//
+
+
+
+CSPD_HAEIN      .......... .......... .......... .......... .......... 
+PIPI_HUMAN      MTSESTSPPV VPPLHSPKSP VWPTFPFHRE GSRVWERGGV PPRDLPSPLP 
+
+CSPD_HAEIN      .......... .......MEI GIVKWFNNAK GFGFISAEGV .DADIFAHYS 
+PIPI_HUMAN      TKRTRTYSAT ARASAGPVFK GVCKQFSRSQ GHGFITPEN. GSEDIFVHVS 
+
+CSPD_HAEIN      VIEMDGYRSL KA.GQKVQFE VLHSDKGSHA T.KIIPIADT QE........ 
+PIPI_HUMAN      ..DIEG.... E.Y...VP.. V.E...GDEV TYKMCPIPPK NQKFQAVEVV 
+
+CSPD_HAEIN      .......... ..........
+PIPI_HUMAN      LTQLAPHTPH ETWSGQVVGS
+

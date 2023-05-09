@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 266  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  266
+ Name: FKBX_ECOLI oo  Len:  266
+
+//
+
+
+
+1fd9_A          TDKDKLSYSI GADLGKNFKN QGIDVNPEAM AKGMQDAMSG AQLALTEQQM 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+1fd9_A          KDVLNKFQKD LMAKRTAEFN KKADENKVKG EAFLTENKNK PGVVVLPSGL 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+1fd9_A          QYKVINSGNG VKPGKSDTVT VEYTGRLIDG TVF.DSTEKT GKPATFQVSQ 
+FKBX_ECOLI      ........S. ESVQSNSAVL VHFTLKLDDG TT.AESTRNN GKPALFRLGD 
+
+1fd9_A          VIP...GW.. TEALQLMPAG STW.EIYVPS GLAYGPR.SV GGPIGPNETL 
+FKBX_ECOLI      AS.LSEG.LE QHLLGLKVGD KT.TFSLEPD .AAFGV.PS. ..PDLIQYFS 
+
+1fd9_A          IFKIHLISVK KS........ .......... .......... .......... 
+FKBX_ECOLI      RREFMDAGEP EIGAIMLFTA MDGSEMPGVI REINGDSITV DFNHPLAGQT 
+
+1fd9_A          .......... ......
+FKBX_ECOLI      VHFDIEVLEI DPALEA
+

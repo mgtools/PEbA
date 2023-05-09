@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>Q9H3D4</seq-name>
+<seq-info>
+<accession>Q9H3D4</accession>
+<nid>Q9H3D4</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>391</fstart><fstop>432</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF07710 P53_tetramer</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>541</fstart><fstop>607</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PF07647 SAM_2</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>163</fstart><fstop>359</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>680</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>428</fstart><fstop>444</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>50</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>76</fstart><fstop>84</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>389</fstart><fstop>395</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>470</fstart><fstop>486</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>501</fstart><fstop>517</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>519</fstart><fstop>580</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>583</fstart><fstop>604</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>609</fstart><fstop>659</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>660</fstart><fstop>680</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>52</fstart><fstop>63</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>162</fstart><fstop>173</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>174</fstart><fstop>183</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>204</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>210</fstart><fstop>219</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>220</fstart><fstop>226</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>227</fstart><fstop>238</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>256</fstart><fstop>266</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>271</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>282</fstart><fstop>289</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>290</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>298</fstart><fstop>306</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>313</fstart><fstop>320</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>331</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>405</fstart><fstop>426</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>354</fstart><fstop>365</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>396</fstart><fstop>404</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>307</fstart><fstop>319</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00348 P53</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>55</fstart><fstop>62</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_LIG_MDM2</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>55</fstart><fstop>62</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>111</fstart><fstop>185</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>351</fstart><fstop>541</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>660</fstart><fstop>680</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mnfetsrcatlqycpdpyiqrfvetpahfswkesyyrstmsqstqtneflspevfqhiwdfleqpic-----svqpidln-fvdepsedg----atnkieismdcirmqdsdlsdpmw--------------------------------------------pqytnlgllns-mdqqiqngssstspyntdhaqnsvtapspyaqpsstfdalspspaipsntdypgphsfdvsfqq-ssta-ksatwtystelkklycqiaktcpiqikvmtpppqgavirampvykkaehvtevvkrcpnhelsrefn-egqiappshlirvegnshaqyvedpit-grqsvlvpyeppqvgtefttvlynfmcnssc--vggmnrrpiliivtletrdgqvlgrrcfearicacpgrdrkadedsirkqqvsdstkngdgtkrpfrqnthgiqmts--ikkrrs-----pddellylpvrgretyemllkikeslelmqylpqhtietyrqqqqqqhqhllqkqtsiqspssygnsspplnkmnsmnklpsvsqlinpqqrnaltpttipdgmganipmmgthmpmagdmnglsptqalppplsmpstshctppppyptdcsivsflarlgcsscldyfttqglttiyqiehysmddlaslkipeqfrhaiwkgildhrqlhefsspshllrtpssastvsvgssetrgervidavrftlrqtisfpprdewndfnfdmdarrnkqqrikeege
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q9NGC7</seq-name>
+<seq-info>
+<accession>Q9NGC7</accession>
+<nid>Q9NGC7</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>486</fstart><fstop>549</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>PF00536 SAM_1</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>358</fstart><fstop>400</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF07710 P53_tetramer</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>134</fstart><fstop>328</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>14</fstart><fstop>38</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>PF08563 P53_TAD</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>621</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>90</fstart><fstop>106</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>43</fstart><fstop>59</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>61</fstart><fstop>76</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>82</fstart><fstop>91</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>323</fstart><fstop>332</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>347</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>425</fstart><fstop>436</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>466</fstart><fstop>473</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>477</fstart><fstop>551</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>557</fstart><fstop>584</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>585</fstart><fstop>612</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>616</fstart><fstop>621</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>25</fstart><fstop>36</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>133</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>145</fstart><fstop>154</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>160</fstart><fstop>176</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>182</fstart><fstop>191</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>192</fstart><fstop>198</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>199</fstart><fstop>210</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>227</fstart><fstop>237</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>241</fstart><fstop>251</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>252</fstart><fstop>259</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>260</fstart><fstop>267</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>268</fstart><fstop>276</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>283</fstart><fstop>290</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>300</fstart><fstop>319</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>373</fstart><fstop>394</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>347</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>488</fstart><fstop>534</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50105 SAM_DOMAIN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>28</fstart><fstop>35</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>154</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>324</fstart><fstop>488</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>596</fstart><fstop>621</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>---------------------------mshealhkmsqvaihgtppnqpmsqetfeylwhtleevtdnv--dythintre-ldysyddse----dgtslqvekfrinqhhtdvsd-------------------------------------------------plnpiigttss-ssmspdsqtnisgstasspyqemaltspppysphtnltspiptvpsntnypgdygfeisfatpsket-ksttwtysdilkklyvrmattcpvrfktlrqpppgcvirsmpifmkpehvqeavkrcpnhatskefn--enhpapnhlvrceh-kvskyvedpyt-nrqsvlipqetpqagsewvtnlfqfmclgsc--vggpnrrplqivftlek-dnqvlgrrcvevricacpgrdrkadergslppmvs--ggvkksqmpkfsmgteittvss--gkkrkf----eddeqtftltvrgrenydmlckirdsleiaallpqnqlqslkqkqvevqrqsssiqaatssaripaiaatpattyvqqgvtttssdgkqltmpfntqelvqvtssdvshdgavpqpikeetiqndmqdnsvstwlnalglgayidgfheqnlysllqlddfslddlakmkignshrnkiwksllelrnqgfttaesqdslakqasststislasqgsisqnstynpgfyevtrhtfkhtisltkeerhvqtrssaskad---------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q4H2Z8</seq-name>
+<seq-info>
+<accession>Q4H2Z8</accession>
+<nid>Q4H2Z8</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>136</fstart><fstop>336</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>419</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>15</fstart><fstop>26</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>134</fstart><fstop>145</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>146</fstart><fstop>155</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>162</fstart><fstop>178</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>184</fstart><fstop>193</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>194</fstart><fstop>200</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>201</fstart><fstop>212</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>231</fstart><fstop>241</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>257</fstart><fstop>264</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>265</fstart><fstop>272</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>273</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>290</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>308</fstart><fstop>327</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>383</fstart><fstop>402</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>375</fstart><fstop>382</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>354</fstart><fstop>374</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_18</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>18</fstart><fstop>25</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------mavadtselnfpdsqesfsdfwmntlsennelpswqtdlnqeydqcketvdvlqldttkandiefpvsefltssqasqqsi--------------------------------------------gdlfaqs-lpstqcsgnsqvttvskheysdsg-yvmtlpnnsvlaelqtsslqtevsllpnneypgiynfeinfgektesapksapftysyslqklfvkmnencpikfrcspqppsgcviraipvfekpnnvteivtrcfnhrnecrtessdsntpnshlirvesksnniqyclthe-grecvvvpyepphsgseymallyrfmclsscrtetginrrplltifnlesetgellgkrvvstricacpgrdrtqeeekknvtsqn---ksrkrlcksatnsksipvvqk--neenkvd-ndddgdvvytlnirgkrkfekvkeykealdlldyvqpdvkkaccqrnqi-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>P10360</seq-name>
+<seq-info>
+<accession>P10360</accession>
+<nid>P10360</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>299</fstart><fstop>342</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF07710 P53_tetramer</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>80</fstart><fstop>275</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>367</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>42</fstart><fstop>54</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>54</fstart><fstop>67</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>51</fstart><fstop>60</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>299</fstart><fstop>303</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>12</fstart><fstop>23</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>79</fstart><fstop>90</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>91</fstart><fstop>100</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>105</fstart><fstop>121</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>127</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>137</fstart><fstop>143</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>144</fstart><fstop>155</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>172</fstart><fstop>182</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>187</fstart><fstop>197</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>198</fstart><fstop>205</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>206</fstart><fstop>213</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>214</fstart><fstop>222</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>229</fstart><fstop>236</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>247</fstart><fstop>266</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>315</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>270</fstart><fstop>281</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>306</fstart><fstop>314</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>223</fstart><fstop>235</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00348 P53</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>15</fstart><fstop>22</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>95</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>326</fstart><fstop>367</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>----------------------------------------maeemeplleptevfmdlwsmlpysm---------------------------qqlplpedhsnwqelsplepsdpp-----------------------------------------------------------------------ppppppplplaaaappplnpptppraapspvvpstedyggdfdfrvgfve-agta-ksvtctyspvlnkvycrlakpcpvqvrvgvapppgsslravavykksehvaevvrrcphhercggg--tdglapaqhlirvegnpqaryhddett-krhsvvvpyeppevgsdcttvlynfmcnssc--mggmnrrpiltiltlegpggqllgrrcfevrvcacpgrdrkieeenfrkrgga--ggvakramsppteape--------ppkkrvl---npdneifylqvrgrrryemlkeinealqlaeggsaprpskgrrvkvegpqpscgkkllqkgsd-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>O12946</seq-name>
+<seq-info>
+<accession>O12946</accession>
+<nid>O12946</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>295</fstart><fstop>339</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF07710 P53_tetramer</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>73</fstart><fstop>264</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>202</fstart><fstop>218</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>311</fstart><fstop>366</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>202</fstart><fstop>218</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>311</fstart><fstop>366</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>56</fstart><fstop>56</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>292</fstart><fstop>299</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>17</fstart><fstop>28</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>72</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>84</fstart><fstop>93</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>98</fstart><fstop>114</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>120</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>130</fstart><fstop>136</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>137</fstart><fstop>148</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>163</fstart><fstop>171</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>176</fstart><fstop>186</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>187</fstart><fstop>194</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>195</fstart><fstop>202</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>203</fstart><fstop>211</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>218</fstart><fstop>225</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>236</fstart><fstop>255</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>312</fstart><fstop>333</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>259</fstart><fstop>270</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>303</fstart><fstop>311</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>212</fstart><fstop>224</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00348 P53</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>20</fstart><fstop>27</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>248</fstart><fstop>366</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------------------------mmdeqgldgmqilpgsqdsfselwasvqtpsiati-------------------------aeefddhlgnllqngfdmnl-------------------------------------------------------------------------------------felppemvakdsvtppsstvpvvtdypgeygfqlrfqk-sgta-ksvtstfsellkklycqlaktspvevllskeppqgavlratavykktehvadvvrrcphhqtedt------aehrshlirlegsqralyfedpht-krqsvtvpyeppqlgsettaillsfmcnssc--mggmnrrqiltiltletpdglvlgrrcfevrvcacpgrdrktdeesstktpngpkqtkkrkqapsnsaphtttv-----mkskssssaeeedkevftvlvkgreryeiikkineafegaaekekaknkvavkqelpvpssgkrlvqrgersdsd-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q4H301</seq-name>
+<seq-info>
+<accession>Q4H301</accession>
+<nid>Q4H301</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>405</fstart><fstop>450</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF07710 P53_tetramer</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>177</fstart><fstop>374</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PF00870 P53</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>489</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>11</fstart><fstop>22</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_1</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>176</fstart><fstop>187</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>188</fstart><fstop>197</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_3</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>204</fstart><fstop>220</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>226</fstart><fstop>235</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>236</fstart><fstop>242</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>243</fstart><fstop>254</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>270</fstart><fstop>280</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>297</fstart><fstop>304</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>305</fstart><fstop>312</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>313</fstart><fstop>321</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>328</fstart><fstop>335</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>346</fstart><fstop>365</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>423</fstart><fstop>444</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_15</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>415</fstart><fstop>422</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_17</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>14</fstart><fstop>21</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>198</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>748</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-----------------------------------------mdrppegsfdpdcfsdiwnnqlsqqseitssqqiytfnentdgltnsltidlltefqqfeqgptsdanagenqagntekhdgnegsyqclsnfptsnppmrsysndmtqqntinqhhpanmanlvttsshpinqhnlvyhstspntgdapnstqnspyapspcggyeyptsplsskptippstdypgewdfqinfgeatesapksaqytyspiinklfvkmnvtcpikfkcarpppngcvvrvmpvfkrpehvtdivtrcpnhkipdqa---qhiphsqhliraempgenpaiynvamdgrenvavmferpqigaeyttvlykfmclssc--vgginrrplnavfnlenaegqvlgrrvvevrvcscpgrdrsqeekrkrtaese----vksgskrtykcmqgsmnivqtapakrkcamngnddqeeftlkirgrdkfemlkkikealdlaevaahqqvenyrdedartfkvepssihgkypkqimtsdllsqvgyqe-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</seq-data></sequence>
+</alignment>
+</macsim>
