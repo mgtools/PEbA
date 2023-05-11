@@ -448,9 +448,9 @@ def graph_compare(path, methods, score):
             for i, line in enumerate(file):
                 line = line.split(',')
                 if i == 0 or i % 2 == 0:
-                    method1_sim.append(float(line[0]))
+                    method1_sim.append(float(line[0])/100)
                 if i % 2 != 0:
-                    method2_sim.append(float(line[0]))
+                    method2_sim.append(float(line[0])/100)
 
     # Average the similarity scores to put on the graph, rounding to same decimals as in paper
     m1_avg = round(sum(method1_sim)/len(method1_sim), 3)
@@ -462,7 +462,7 @@ def graph_compare(path, methods, score):
         if pars[0] == 'PEbA':
             titles.append(f'PEbA_{pars[5]}')
         if pars[0] == 'matrix':
-            titles.append(f'{pars[1]}{pars[2]}')
+            titles.append(f'{pars[1].title()}{pars[2]}')
         if pars[0] == 'dedal':
             titles.append('DEDAL')
 
@@ -479,8 +479,8 @@ def graph_compare(path, methods, score):
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignments vs. {titles[1]} Alignments in {path.split("/")[-1]}')
-    ax.set_xlabel(f'{score.upper()} {titles[1]}')
-    ax.set_ylabel(f'{score.upper()} {titles[0]}')
+    ax.set_xlabel(f'{titles[1]}')
+    ax.set_ylabel(f'{titles[0]}')
     ax.legend([f'{titles[1]} Avg: {m2_avg}', f'{titles[0]} Avg: {m1_avg}'])
     plt.plot([0, 1], [0, 1], color='black')
     plt.savefig(f'{path}/comparison.png')
@@ -500,11 +500,11 @@ def main():
     If using pre-embedded sequences, you can use the -encoder to specify which encoder was used.
     Place them into the VecAligns/ folder and name the folder 'x_embed'.
 
-    PEbA with ProtT5 encodings: -compare1 PEbA -encoder ProtT5
-    PEbA with ESM2 encodings: -compare1 PEbA -encoder ESM2
-    Substitution matrix with BLOSUM: -compare1 matrix -matrix1 blosum - value1 <integer>
-    Substitution matrix with PFASUM: -compare1 matrix -matrix1 pfasum - value1 60  (60 only)
-    dedal: -compare1 dedal
+    PEbA with ProtT5 encodings: -method1 PEbA -encoder1 ProtT5
+    PEbA with ESM2 encodings: -method1 PEbA -encoder1 ESM2
+    Substitution matrix with BLOSUM: -method1 matrix -matrix1 blosum - value1 <integer>
+    Substitution matrix with PFASUM: -method1 matrix -matrix1 pfasum - value1 60  (60 only)
+    dedal: -method1 dedal
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
@@ -516,7 +516,7 @@ def main():
     parser.add_argument('-gopen1', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
-    parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
+    parser.add_argument('-method2', type=str, default='PEbA', help='Second method for comparison')
     parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')

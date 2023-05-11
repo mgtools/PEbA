@@ -124,8 +124,8 @@ def compute_score(aligns, score):
     beg3 = int(align1[0].replace('.', '').find(align2[0].replace('.', '')))
     beg4 = int(align1[1].replace('.', '').find(align2[1].replace('.', '')))
     if beg3 == -1:
-        beg4 = 0
-    if beg3 == -1:
+        beg3 = 0
+    if beg4 == -1:
         beg4 = 0
     align2_pairs = get_pairs(align2, beg3, beg4)
 
@@ -178,8 +178,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', type=str, default='ref1.msf', help='First alignment')
-    parser.add_argument('-align2', type=str, default='ref2.msf', help='Second alignment')
+    parser.add_argument('-align1', type=str, help='First alignment')
+    parser.add_argument('-align2', type=str, help='Second alignment')
     parser.add_argument('-score', type=str, default='tcs', help='Comparison score (tcs or f1)')
     args = parser.parse_args()
 
