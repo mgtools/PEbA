@@ -3,18 +3,15 @@
 **************************************************************************************************************
 
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
-embed protein sequences, and then calculates the cosine similarity between each residue's vector to align them 
+embed protein sequences and then calculates the cosine similarity between each amino acid's vector to align them 
 using traditional sequence alignment algorithms. The cosine similarity scores are used in place of substitution
 matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share low character
 identity (<20-35%), referred to as the "twilight zone" of protein sequence alignment.
 
-PEbA is implemented in local_PEbA.py, where it uses the Smith-Waterman 'local' algorithm to align two sequences.
-The script for substitution matrix based alignments are in local_MATRIX.py, which currently supports all BLOSUM 
-matrices and PFASUM60 for testing purposes.
-
-The PEbA script is designed to be run from the command line. The following arguments are allowed, with -embed1
--embed2 being optional arguments if the corresponding sequences from -file1 and -file2 have already been
-been embedded and saved as a numpy array:
+PEbA is implemented in peba.py, where it uses the Smith-Waterman 'local' algorithm to align two sequences. It is
+designed to be run from the command line. The following arguments are allowed, with -embed1 and -embed2 being
+optional arguments if the corresponding sequences from -file1 and -file2 have already been been embedded and
+saved as a numpy array:
 
     -f1, --file1 <file1.fa>     : Path to first sequence fasta file
     -f2, --file2 <file2.fa>     : Path to second sequence fasta file

@@ -127,7 +127,7 @@ def main():
     ============================================================================================="""
 
     # Parse reference folder of interest
-    path = 'BAliBASE_R1-5/bb3_release/RV11'
+    path = 'Data/BAliBASE_R1-5/bb3_release/RV11'
     ref_dir = path.rsplit('/', maxsplit=1)[-1]  # Get last directory in path
     fasta_files = parse_ref_folder(path)
     if not os.path.isdir(f'bb_embed/{ref_dir}'):
