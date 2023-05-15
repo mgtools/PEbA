@@ -156,7 +156,7 @@ def main():
     if args.matrix == 'blosum':
         matrix = bl.BLOSUM(args.score)
     if args.matrix == 'pfasum':
-        matrix = parse_matrix('PFASUM60.txt')
+        matrix = parse_matrix('Data/PFASUM60.txt')
 
     # Align and traceback
     score_m, trace_m = local_align(seq1, seq2, matrix, args.gopen, args.gext)

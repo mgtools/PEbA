@@ -178,7 +178,7 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='Alignments/PEBA-BLOSUM')
+    parser.add_argument('-p', type=str, default='Data/Alignments/PEBA-BLOSUM')
     parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 

@@ -170,9 +170,9 @@ def main():
     """=============================================================================================
     ============================================================================================="""
 
-    paths = ['BAliBASE_R1-5/bb3_release/RV11', 'BAliBASE_R1-5/bb3_release/RV12',
-             'BAliBASE_R1-5/bb3_release/RV911', 'BAliBASE_R1-5/bb3_release/RV912',
-             'BAliBASE_R1-5/bb3_release/RV913']
+    paths = ['Data/BAliBASE_R1-5/bb3_release/RV11', 'Data/BAliBASE_R1-5/bb3_release/RV12',
+             'Data/BAliBASE_R1-5/bb3_release/RV911', 'Data/BAliBASE_R1-5/bb3_release/RV912',
+             'Data/BAliBASE_R1-5/bb3_release/RV913']
 
     bl_scores = []
     sim_scores = []
