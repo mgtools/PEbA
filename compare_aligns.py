@@ -244,7 +244,7 @@ def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
 
     print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
                            file=sys.stdout)
-    os.system(f"python local_MATRIX.py {args}")
+    os.system(f"python matrix.py {args}")
 
 
 def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
@@ -285,6 +285,7 @@ def parse_align_files(msf_files, fasta_files, bb_dir, methods, samp, dedal_model
     :param bb_dir: directory to place files in
     :param methods: dictionary containing methods and their parameters
     :param samp: number of PW alignments to sample from each MSA
+    :param dedal_model: DEDAL model
     ============================================================================================="""
 
     # Parse each fasta file, store names of each for subsequent msf parsing
@@ -427,7 +428,7 @@ def parse_compare(path):
                 file3.write(method2_vals[i])
 
 
-def graph_compare(path, methods, score):
+def graph_compare(path, methods):
     """=============================================================================================
     This function takes a directory and makes two graphs. The first graphs the differences between 
     the two methods compared the reference alignment and the second graphs the sim scores against
@@ -436,7 +437,6 @@ def graph_compare(path, methods, score):
 
     :param path: directory where compare.csv files exist
     :param methods: dict of methods used and their parameters
-    :param score: score used for alignment comparison
     ============================================================================================="""
 
     # Get the similarity scores from the compare files
@@ -462,7 +462,7 @@ def graph_compare(path, methods, score):
         if pars[0] == 'PEbA':
             titles.append(f'PEbA_{pars[5]}')
         if pars[0] == 'matrix':
-            titles.append(f'{pars[1]}{pars[2]}')
+            titles.append(f'{pars[1].upper()}{pars[2]}')
         if pars[0] == 'dedal':
             titles.append('DEDAL')
 
@@ -479,8 +479,8 @@ def graph_compare(path, methods, score):
     ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue')
     ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red')
     ax.set_title(f'{titles[0]} Alignments vs. {titles[1]} Alignments in {path.split("/")[-1]}')
-    ax.set_xlabel(f'{score.upper()} {titles[1]}')
-    ax.set_ylabel(f'{score.upper()} {titles[0]}')
+    ax.set_xlabel(f'{titles[1]}')
+    ax.set_ylabel(f'{titles[0]}')
     ax.legend([f'{titles[1]} Avg: {m2_avg}', f'{titles[0]} Avg: {m1_avg}'])
     plt.plot([0, 1], [0, 1], color='black')
     plt.savefig(f'{path}/comparison.png')
@@ -500,16 +500,16 @@ def main():
     If using pre-embedded sequences, you can use the -encoder to specify which encoder was used.
     Place them into the VecAligns/ folder and name the folder 'x_embed'.
 
-    PEbA with ProtT5 encodings: -compare1 PEbA -encoder ProtT5
-    PEbA with ESM2 encodings: -compare1 PEbA -encoder ESM2
-    Substitution matrix with BLOSUM: -compare1 matrix -matrix1 blosum - value1 <integer>
-    Substitution matrix with PFASUM: -compare1 matrix -matrix1 pfasum - value1 60  (60 only)
-    dedal: -compare1 dedal
+    PEbA with ProtT5 encodings: -method1 PEbA -encoder1 ProtT5
+    PEbA with ESM2 encodings: -method1 PEbA -encoder1 ESM2
+    Substitution matrix with BLOSUM: -method1 matrix -matrix1 blosum - value1 <integer>
+    Substitution matrix with PFASUM: -method1 matrix -matrix1 pfasum - value1 60  (60 only)
+    dedal: -method1 dedal
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-path', type=str, default='BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
-    parser.add_argument('-sample', type=int, default=2, help='MSA sample size')
+    parser.add_argument('-path', type=str, default='Data/BAliBASE_R1-5/bb3_release/RV11', help='Ref direc')
+    parser.add_argument('-sample', type=int, default=1, help='MSA sample size')
     parser.add_argument('-method1', type=str, default='PEbA', help='First method for comparison')
     parser.add_argument('-matrix1', type=str, default='blosum', help='Substution matrix')
     parser.add_argument('-value1', type=int, default=45, help='Sub matrix value')
@@ -517,8 +517,8 @@ def main():
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
     parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
-    parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
-    parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
+    parser.add_argument('-matrix2', type=str, default='pfasum', help='Substution matrix')
+    parser.add_argument('-value2', type=int, default=60, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext2', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder2', type=str, default='ESM2', help='Model used for embeddings')
@@ -559,7 +559,7 @@ def main():
     print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
     compare_aligns(bb_dir, args.score)
     parse_compare(bb_dir)
-    graph_compare(bb_dir, methods, args.score)
+    graph_compare(bb_dir, methods)
     print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
 
 

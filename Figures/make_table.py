@@ -42,6 +42,7 @@ def parse_data(data, parse):
     count = 0
     zeros = 0
     zeros2 = 0
+    zero_avg = 0
     in_zero = False
     for line in data:
 
@@ -70,6 +71,7 @@ def parse_data(data, parse):
                         if in_zero is True:
                             if float(line[0])>0:
                                 zeros2 += 1
+                                zero_avg += float(line[0])/100
                         in_zero = False
                         value[0] += float(line[0])/100
                         value[1] += 1
@@ -83,7 +85,11 @@ def parse_data(data, parse):
         avg_align += float(line[1])
         count += 1
 
-    #print(zeros, zeros2)
+    # Get average BLOSUM score for TC scores where PEbA is 0 and BLOSUM is > 0
+    if zeros2 > 0:
+        print(zero_avg/zeros2)
+
+    print(zeros, zeros2)
     return avg_align, count
 
 
@@ -172,8 +178,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='Alignments/PEBA-BLOSUM')
-    parser.add_argument('-t', type=str, default='len')
+    parser.add_argument('-p', type=str, default='Data/Alignments/PEBA-BLOSUM')
+    parser.add_argument('-t', type=str, default='id')
     args = parser.parse_args()
 
     # Values for each run
@@ -191,6 +197,7 @@ def main():
     avg_align, count = 0, 0
     for run in runs:  #pylint: disable=R1702
         for ref in os.listdir(f'{run}'):
+            print(ref)
 
             # Initialize dicts for each run
             if args.t == 'id':
@@ -203,6 +210,7 @@ def main():
                 COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
 
             for msa in os.listdir(f'{run}/{ref}'):
+                print(msa)
                 if msa.startswith('B'):
                     for file in os.listdir(f'{run}/{ref}/{msa}'):
                         if file.endswith('csv'):

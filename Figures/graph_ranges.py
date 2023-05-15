@@ -193,8 +193,8 @@ def main():
     ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p1', type=str, default='Alignments/PEBA-BLOSUM')
-    parser.add_argument('-p2', type=str, default='Alignments/PEBA-DEDAL')
+    parser.add_argument('-p1', type=str, default='Data/Alignments/PEBA-BLOSUM')
+    parser.add_argument('-p2', type=str, default='Data/Alignments/PEBA-DEDAL')
     parser.add_argument('-r', type=str, default='9')
     parser.add_argument('-t', type=str, default='len')
     args = parser.parse_args()
