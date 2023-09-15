@@ -165,8 +165,8 @@ def main():
         tokenizer = T5Tokenizer.from_pretrained('Rostlab/prot_t5_xl_uniref50', do_lower_case=False)
         model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
         model.to(device)  # Loads to GPU if available
-        vecs1 = prot_t5xl_embed(seq1, tokenizer, model)
-        vecs2 = prot_t5xl_embed(seq2, tokenizer, model)
+        vecs1 = prot_t5xl_embed(seq1, tokenizer, model, device)
+        vecs2 = prot_t5xl_embed(seq2, tokenizer, model, device)
 
     # Load numpy arrays
     else:

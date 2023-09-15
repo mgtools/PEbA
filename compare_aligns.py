@@ -9,14 +9,18 @@ Ben Iovino  03/07/23   VecAligns
 ================================================================================================"""
 
 import os
-import sys
 import argparse
+import logging
 from time import strftime
 from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from utility import parse_fasta, write_msf
+
+log_filename = 'comparison.log'  #pylint: disable=C0103
+logging.basicConfig(filename=log_filename, filemode='w',
+                     level=logging.INFO, format='%(message)s')
 
 
 def dedal(model, seq1, seq2):
@@ -217,8 +221,7 @@ def run_PEbA(bb_dir, ref_align, seq1, ref_dir, seq2, gext, encoder):
             f'--encoder {encoder} '
             f'--savefile {bb_dir}/{ref_align}/alignment_{count}.msf')
 
-    print(f'{strftime("%H:%M:%S")} PEbA: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                           file=sys.stdout)
+    logging.info('%s PEbA: %s/%s and %s/%s\n', strftime("%H:%M:%S"), ref_align, seq1, ref_align, seq2)
     os.system(f"python peba.py {args}")
 
 
@@ -242,8 +245,7 @@ def run_matrix(bb_dir, ref_align, seq1, seq2, gopen, gext, matrix, value):
             f'--score {value} '
             f'--savefile {bb_dir}/{ref_align}/alignment_{count}.msf')
 
-    print(f'{strftime("%H:%M:%S")} MATRIX: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                           file=sys.stdout)
+    logging.info('%s MATRIX: %s/%s and %s/%s\n', strftime("%H:%M:%S"), ref_align, seq1, ref_align, seq2)
     os.system(f"python matrix.py {args}")
 
 
@@ -252,8 +254,7 @@ def dedal_run(bb_dir, ref_align, seq1, seq2, dedal_model):
     This function accepts a list of args and runs dedal on two sequences. Args explained in main().
     ============================================================================================="""
 
-    print(f'{strftime("%H:%M:%S")} DEDAL: {ref_align}/{seq1} and {ref_align}/{seq2}\n',
-                           file=sys.stdout)
+    logging.info('%s DEDAL: %s/%s and %s/%s\n', strftime("%H:%M:%S"), ref_align, seq1, ref_align, seq2)
 
     seq1, id1 = parse_fasta(f'{bb_dir}/{ref_align}/{seq1}')
     seq2, id2 = parse_fasta(f'{bb_dir}/{ref_align}/{seq2}')
@@ -379,7 +380,7 @@ def compare_aligns(path, score):
             # Get names of alignments for output file and call t-coffee's aln_compare
             method1_name = method1_align.split('/')[-1].strip('.msf')
             method2_name = method2_align.split('/')[-1].strip('.msf')
-            print(f'Comparing {method1_name} and {method2_name} to {ref_align}')
+            logging.info('Comparing %s and %s to %s', method1_name, method2_name, ref_align)
             os.system(f'python compute_score.py -align1 {ref_align} -align2 {method1_align} -score {score} > '
                       f'{path}/{folder}/method1_{method1_name}_compare.txt')
             os.system(f'python compute_score.py -align1 {ref_align} -align2 {method2_align} -score {score} > '
@@ -517,8 +518,8 @@ def main():
     parser.add_argument('-gext1', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder1', type=str, default='ProtT5', help='Model used for embeddings')
     parser.add_argument('-method2', type=str, default='matrix', help='Second method for comparison')
-    parser.add_argument('-matrix2', type=str, default='pfasum', help='Substution matrix')
-    parser.add_argument('-value2', type=int, default=60, help='Sub matrix value')
+    parser.add_argument('-matrix2', type=str, default='blosum', help='Substution matrix')
+    parser.add_argument('-value2', type=int, default=62, help='Sub matrix value')
     parser.add_argument('-gopen2', type=float, default=-11, help='Gap open score')
     parser.add_argument('-gext2', type=float, default=-1, help='Gap ext score')
     parser.add_argument('-encoder2', type=str, default='ESM2', help='Model used for embeddings')
@@ -547,7 +548,7 @@ def main():
         dedal_model = 'n'
 
     # Parse reference folder of interest
-    print(f'{strftime("%H:%M:%S")} Parsing and computing alignments...\n', file=sys.stdout)
+    logging.info('%s Parsing reference folder...\n', strftime("%H:%M:%S"))
     msf_files, fasta_files = parse_ref_folder(args.path)
 
     # Sort each list of files to ensure they match up for msf parsing
@@ -556,11 +557,11 @@ def main():
     parse_align_files(msf_files, fasta_files, bb_dir, methods, args.sample, dedal_model)
 
     # Compare alignments to get comparison score and graph results
-    print(f'{strftime("%H:%M:%S")} Comparing alignments...\n', file=sys.stdout)
+    logging.info('%s Comparing alignments...\n', strftime("%H:%M:%S"))
     compare_aligns(bb_dir, args.score)
     parse_compare(bb_dir)
     graph_compare(bb_dir, methods)
-    print(f'{strftime("%H:%M:%S")} Program Complete!\n', file=sys.stdout)
+    logging.info('%s Program Complete!\n', strftime("%H:%M:%S"))
 
 
 if __name__ == '__main__':
