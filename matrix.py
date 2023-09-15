@@ -44,7 +44,7 @@ def local_align(seq1, seq2, subs_matrix, gopen, gext):
             vertical = score_m[i][j+1]
 
             # Score pair of residues based off BLOSUM matrix
-            matrix_score = subs_matrix[f'{seq1_char}{seq2_char}']
+            matrix_score = subs_matrix[seq1_char][seq2_char]
 
             # Add to matrix values via scoring method
             diagonal += matrix_score

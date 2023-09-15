@@ -5,11 +5,12 @@ embedded sequences to a file.
 Ben Iovino  02/16/23  VecAligns
 ================================================================================================"""
 
+import esm
 import os
 import re
 import torch
 import numpy as np
-from transformers import T5EncoderModel, T5Tokenizer, AutoTokenizer, EsmModel
+from transformers import T5EncoderModel, T5Tokenizer
 from Bio import SeqIO
 
 
@@ -34,7 +35,7 @@ def parse_ref_folder(path):
     return fasta_files
 
 
-def prot_t5xl_embed(seq, tokenizer, encoder):
+def prot_t5xl_embed(seq, tokenizer, encoder, device):
     """=============================================================================================
     This function accepts a protein sequence and returns a list of vectors, each vector representing
     a single amino acid using RostLab's ProtT5_XL_UniRef50 model.
@@ -51,8 +52,8 @@ def prot_t5xl_embed(seq, tokenizer, encoder):
 
     # Tokenize, encode, and load sequence
     ids = tokenizer.batch_encode_plus(seq, add_special_tokens=True, padding=True)
-    input_ids = torch.tensor(ids['input_ids'])  # pylint: disable=E1101
-    attention_mask = torch.tensor(ids['attention_mask'])  # pylint: disable=E1101
+    input_ids = torch.tensor(ids['input_ids']).to(device)  # pylint: disable=E1101
+    attention_mask = torch.tensor(ids['attention_mask']).to(device)  # pylint: disable=E1101
 
     # Extract sequence features
     with torch.no_grad():
@@ -68,7 +69,7 @@ def prot_t5xl_embed(seq, tokenizer, encoder):
     return features[0]
 
 
-def esm2_embed(seq, tokenizer, encoder):
+def esm2_embed(seq, tokenizer, encoder, device):
     """=============================================================================================
     This function accepts a protein sequence and returns a list of vectors, each vector representing
     a single amino acid using Facebook's ESM-2 model.
@@ -79,13 +80,21 @@ def esm2_embed(seq, tokenizer, encoder):
     return: list of vectors
     ============================================================================================="""
 
-    inputs = tokenizer(seq, return_tensors="pt")
-    outputs = encoder(**inputs)
-    last_hidden_states = outputs.last_hidden_state
-    return last_hidden_states[0][1:-1]  # First and last tokens are BOS and EOS tokens
+    # Embed sequence
+    seq_str = str(seq.seq).upper()  # tok does not convert to uppercase
+    seq = np.array([seq.id, seq_str], dtype=object)
+    _, _, batch_tokens = tokenizer([seq])  # id and seq are batched together
+    batch_tokens = batch_tokens.to(device)  # send tokens to gpu
+
+    # Encode
+    with torch.no_grad():
+        results = encoder(batch_tokens)
+    embed = results['logits'].cpu().numpy()
+
+    return embed[0]
 
 
-def parse_fasta(filename, encoder, tokenizer, model):
+def parse_fasta(filename, encoder, tokenizer, model, device):
     """=============================================================================================
     This function accepts a fasta file with multiple sequences in each one and writes each sequence
     to its own file in the corresponding folder.
@@ -109,12 +118,11 @@ def parse_fasta(filename, encoder, tokenizer, model):
 
             # Embed with ProtT5_XL_UniRef50
             if encoder == 'prott5':
-                vec = prot_t5xl_embed(str(seq.seq), tokenizer, model)
+                vec = prot_t5xl_embed(str(seq.seq), tokenizer, model, device)
 
             # Embed with ESM-2
             if encoder == 'esm2':
-                vec = esm2_embed(str(seq.seq), tokenizer, model)
-                vec = vec.detach().numpy()
+                vec = esm2_embed(seq, tokenizer, model, device)
 
             # Write embeddings to file
             seqname = seq.id
@@ -133,41 +141,28 @@ def main():
     if not os.path.isdir(f'bb_embed/{ref_dir}'):
         os.makedirs(f'bb_embed/{ref_dir}')
 
-
     # Set an encoder and process each fasta file
-    encoder = 'prott5'
+    encoder = 'esm2'
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  #pylint: disable=E1101
 
     # ProtT5_XL_UniRef50
     if encoder == 'prott5':
-        if os.path.exists('t5_tok.pt'):
-            tokenizer = torch.load('t5_tok.pt')
-        else:
-            tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-            torch.save(tokenizer, 't5_tok.pt')
-        if os.path.exists('prot_t5_xl.pt'):
-            model = torch.load('prot_t5_xl.pt')
-        else:
-            model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-            torch.save(model, 'prot_t5_xl.pt')
+        tokenizer = T5Tokenizer.from_pretrained('Rostlab/prot_t5_xl_uniref50', do_lower_case=False)
+        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+        model.to(device)  # Loads to GPU if available
 
         for file in fasta_files:
-            parse_fasta(file, encoder, tokenizer, model)
+            parse_fasta(file, encoder, tokenizer, model, device)
 
     # ESM-2_t36_3B
     if encoder == 'esm2':
-        if os.path.exists('auto_tok.pt'):
-            tokenizer = torch.load('auto_tok.pt')
-        else:
-            tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t36_3B_UR50D")
-            torch.save(tokenizer, 'auto_tok.pt')
-        if os.path.exists('esm2_t36_3B.pt'):
-            model = torch.load('esm2_t36_3B.pt')
-        else:
-            model = EsmModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
-            torch.save(model, 'esm2_t36_3B.pt')
+        model, alphabet = esm.pretrained.esm2_t36_3B_UR50D()
+        tokenizer = alphabet.get_batch_converter()
+        model.eval()  # disables dropout for deterministic results
+        model.to(device)
 
         for file in fasta_files:
-            parse_fasta(file, encoder, tokenizer, model)
+            parse_fasta(file, encoder, tokenizer, model, device)
 
 
 if __name__ == '__main__':

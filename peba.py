@@ -5,7 +5,6 @@ alignment between the two using the cosine similarity between embedded amino aci
 Ben Iovino  01/23/23   VecAligns
 ================================================================================================"""
 
-import os
 import argparse
 import torch
 import numpy as np
@@ -39,6 +38,7 @@ def local_align(seq1: str, seq2: str, vecs1: list, vecs2:list, gopen: float, gex
     gap = False
     for i in range(len(seq1)):
         seq1_vec = vecs1[i]  # Corresponding amino acid vector in 1st sequence
+        seq1_norm = np.linalg.norm(seq1_vec)
         for j in range(len(seq2)):
 
             # Preceding scoring matrix values
@@ -48,7 +48,7 @@ def local_align(seq1: str, seq2: str, vecs1: list, vecs2:list, gopen: float, gex
 
             # Score pair of residues based off cosine similarity
             seq2_vec = vecs2[j]  # Corresponding amino acid vector in 2nd sequence
-            cos_sim = np.dot(seq1_vec,seq2_vec)/(np.linalg.norm(seq1_vec)*np.linalg.norm(seq2_vec))
+            cos_sim = np.dot(seq1_vec,seq2_vec)/(seq1_norm*np.linalg.norm(seq2_vec))
             cos_sim *= 10
 
             # Add to scoring matrix values via scoring method
@@ -106,7 +106,7 @@ def traceback(score_m: list, trace_m: list, seq1: str, seq2: str):
     count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
     while (index[0] and index[1]) != 0:
-        val = trace_m[index[0], index[1]]
+        val = trace_m[index[0], index[1]]  # \\NOSONAR
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
             index[0] = index[0] - 1
@@ -161,16 +161,10 @@ def main():
 
     # Load models, embed sequences
     if args.embed1=='n':
-        if os.path.exists('t5_tok.pt'):
-            tokenizer = torch.load('t5_tok.pt')
-        else:
-            tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False)
-            torch.save(tokenizer, 't5_tok.pt')
-        if os.path.exists('prot_t5_xl.pt'):
-            model = torch.load('prot_t5_xl.pt')
-        else:
-            model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
-            torch.save(model, 'prot_t5_xl.pt')
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  #pylint: disable=E1101
+        tokenizer = T5Tokenizer.from_pretrained('Rostlab/prot_t5_xl_uniref50', do_lower_case=False)
+        model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+        model.to(device)  # Loads to GPU if available
         vecs1 = prot_t5xl_embed(seq1, tokenizer, model)
         vecs2 = prot_t5xl_embed(seq2, tokenizer, model)
 
