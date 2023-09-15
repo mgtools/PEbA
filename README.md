@@ -2,6 +2,8 @@
 # Protein Embedding Based Alignments (PEbA)
 **************************************************************************************************************
 
+Paper can be read at (https://www.authorea.com/users/623259/articles/646069-protein-embedding-based-alignment).
+
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
 embed protein sequences and then calculates the cosine similarity between each amino acid's vector to align them 
 using traditional sequence alignment algorithms. The cosine similarity scores are used in place of substitution
