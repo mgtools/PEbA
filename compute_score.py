@@ -58,7 +58,7 @@ def get_pairs(filename: str) -> dict:
     and values are the matched positions (including gaps).
 
     :param filename: name of file (msf format)
-    return dict: dict where keys are positions of aligned characters and values are matched positions
+    return dict: dict where keys are positions of aligned residues and values are matched positions
     """
 
     seq1, seq2 = parse_align(filename)
@@ -80,7 +80,7 @@ def get_pairs(filename: str) -> dict:
 def sp_score(al1: dict, al2: dict) -> tuple:
     """Returns sum of pairs (sp) score between two alignments.
 
-    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al1: dict where keys are positions of aligned residues and values are matched positions
     :param al2: dict same as al1
     :return (float, float): similarity and sp scores
     """
@@ -105,21 +105,26 @@ def sp_score(al1: dict, al2: dict) -> tuple:
 def tc_score(al1: dict, al2: dict) -> tuple:
     """Returns TC (total column) score between two alignments.
 
-    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al1: dict where keys are positions of aligned residues and values are matched positions
     :param al2: dict same as al1
     :return (float, float): similarity and TC scores
     """
 
+    # pairwise comparison of columns, end with shortest alignment
+    end = min(len(al1), len(al2))
+
     score, sim, total = 0, 0, 0
-    for pair1 in al1.values():
+    for i in range(end):
+        pair1 = al1[i]
+        pair2 = al2[i]
+        if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
+            sim += 1
         if '.' not in pair1:  # for calculating similarity
             total += 1
-        if pair1 in al2.values():
-            if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
-                sim += 1
+        if pair1 == pair2:  # for calculating TC score
             score += 1
 
-    # TC is (shared number of columns between ref/test align) / (total number of cols in ref align)
+    # TCS is (shared number of columns between ref/test align) / (total number of cols in ref align)
     score = round(score/len(al1), 3)
     sim = round(sim/total, 3)
     logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
@@ -129,7 +134,7 @@ def tc_score(al1: dict, al2: dict) -> tuple:
 def f1_score(al1: dict, al2: dict) -> tuple:
     """Returns F1 score between two alignments.
 
-    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al1: dict where keys are positions of aligned residues and values are matched positions
     :param al2: dict same as al1
     :return (float, float): 
     """
@@ -184,8 +189,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/BOX192_0.msf')
-    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/alignment_0.msf')
+    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/alignment_0.msf')
+    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/BOX192_0.msf')
     parser.add_argument('-score', type=str, default='tcs', help='Comparison score (sp/tcs/f1)')
     args = parser.parse_args()
 
