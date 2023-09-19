@@ -1,10 +1,9 @@
-"""================================================================================================
-This script compares two different alignments in msf format and calculates the 'total column score'
-(TCS) between them. The TCS is the number of residues that are aligned to the same position
-in both alignments divided by the total number of residues in the reference (first) alignment.
+"""Compares two pairwise alignments and returns the Sum of Pairs (SP), Total Column Score (TCS),
+or F1 score between them.
 
-Ben Iovino  03/9/23  VecAligns
-================================================================================================"""
+__author__ = "Ben Iovino"
+__date__ = 09/18/23
+"""
 
 import argparse
 import logging
@@ -18,178 +17,179 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 
-def parse_align(filename):
-    """=============================================================================================
-    This function accepts an alignment in msf format and returns each sequence with gaps as well
-    as the character positions that the alignment begins and ends at.
+def parse_align(filename: str) -> tuple:
+    """Returns a tuple with the two aligned sequences and their names.
 
-    :param filename: name of file
-    return seq1, seq2, id1, id2: sequences and names of sequences
-    ============================================================================================="""
+    :param filename: name of file (msf format)
+    return (str, str): sequences with gaps
+    """
 
-    seq1 = []
-    seq2 = []
+    seq1, seq2 = [], []
     in_align = False
     count = 0
     with open(filename, 'r', encoding='utf8') as file:
         lines = file.readlines()
-        for i, line in enumerate(lines):
+    for line in lines:
 
-            # We are "in the alignment" after the '//', read each aligned sequence
-            if in_align is True:
-                if line.startswith('\n'):
-                    continue
-                if count == 0 or count % 2 == 0:  # Even count indicates first sequence
-                    seq1.append(''.join(line.split()[1:]))
-                else:  # Odd count indicates second sequence
-                    seq2.append(''.join(line.split()[1:]))
-                count += 1
+        # We are "in the alignment" after the '//', read each aligned sequence
+        if in_align is True:
+            if line.startswith('\n'):
                 continue
+            if count % 2 == 0:  # Even count indicates first sequence
+                seq1.append(''.join(line.split()[1:]))
+            else:  # Odd count indicates second sequence
+                seq2.append(''.join(line.split()[1:]))
+            count += 1
+            continue
 
-            # Get names of sequences
-            if i == 6:
-                id1 = line.split()[1]
-            if i == 7:
-                id2 = line.split()[1]
-
-            # Alignment starts after '//'
-            if line.startswith('//'):
-                in_align = True
+        # Alignment starts after '//'
+        if line.startswith('//'):
+            in_align = True
 
     # Join the two sequences and return them
     seq1 = ''.join(seq1)
     seq2 = ''.join(seq2)
 
-    return seq1, seq2, id1, id2
+    return seq1, seq2
 
 
-def get_pairs(align, beg1, beg2):
-    """=============================================================================================
-    This function accepts an alignment and returns a dictionary of the pairs that are matched.
+def get_pairs(filename: str) -> dict:
+    """Returns dictionary where keys are the positions of the aligned characters in the alignment
+    and values are the matched positions (including gaps).
 
-    :param aligns: dict of an alignment
-    :param beg1: beginning char of first sequence
-    :param beg2: beginning char of second sequence
-    return dict: pairs
-    ============================================================================================="""
+    :param filename: name of file (msf format)
+    return dict: dict where keys are positions of aligned characters and values are matched positions
+    """
 
-    seq1_count = beg1
-    seq2_count = beg2
+    seq1, seq2 = parse_align(filename)
     pairs = {}
-
-    # Iterate through each column in the alignment
-    for i in range(len(align[0])):
-        seq1_char = align[0][i]
-        seq2_char = align[1][i]
-
-        # If there is a gap, increment the count of the other sequence
-        if seq1_char == '.':
-            seq2_count += 1
-            continue
-        if seq2_char == '.':
+    seq1_count, seq2_count = 0, 0
+    for i, char1 in enumerate(seq1):
+        char2 = seq2[i]  # Character in second sequence at same position in alignment
+        if char1 != '.':  # If not a gap, add the position to the count
+            char1 = f'{char1}{seq1_count}'
             seq1_count += 1
-            continue
-
-        # If there is a match, add the pair to the dict
-        pairs[f'{seq1_char}{seq1_count}'] = f'{seq2_char}{seq2_count}'
-        seq1_count += 1
-        seq2_count += 1
+        if seq2[i] != '.':
+            char2 = f'{seq2[i]}{seq2_count}'
+            seq2_count += 1
+        pairs[i] = (char1, char2)
 
     return pairs
 
 
-def compute_score(aligns, score):
-    """=============================================================================================
-    This function accepts two alignments and returns either the TCS or F1 score between them. The
-    score and other information is logged to stdout.
+def sp_score(al1: dict, al2: dict) -> tuple:
+    """Returns sum of pairs (sp) score between two alignments.
 
-    :param aligns: dict containing two alignments
-    :param score: tcs or f1
-    ============================================================================================="""
+    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al2: dict same as al1
+    :return (float, float): similarity and sp scores
+    """
 
-    # Get alignments from files and get their respective pairs
-    align1 = aligns[list(aligns.keys())[0]]
-    align2 = aligns[list(aligns.keys())[1]]
-
-    # Find the beginning characters of ref align and find pairs
-    beg1 = int(align2[0].replace('.', '').find(align1[0].replace('.', '')))
-    beg2 = int(align2[1].replace('.', '').find(align1[1].replace('.', '')))
-    if beg1 == -1:
-        beg1 = 0
-    if beg2 == -1:
-        beg2 = 0
-    align1_pairs = get_pairs(align1, beg1, beg2)
-
-    # Find the beginning characters of test align and find pairs
-    beg3 = int(align1[0].replace('.', '').find(align2[0].replace('.', '')))
-    beg4 = int(align1[1].replace('.', '').find(align2[1].replace('.', '')))
-    if beg3 == -1:
-        beg3 = 0
-    if beg4 == -1:
-        beg4 = 0
-    align2_pairs = get_pairs(align2, beg3, beg4)
-
-    # Beginning of comparison is the max beg position of the two aligns
-    beg = max(beg1, beg3)
-
-    # End of comparison is the min end position of the two aligns
-    end1 = list(align1_pairs.keys())[-1]
-    end2 = list(align2_pairs.keys())[-1]
-    end = min(int(end1[1:]), int(end2[1:]))
-
-    # Compare pairs between the two alignments
-    shared_pairs = 0
-    seq_sim = 0
-    for key, value in align1_pairs.items():
-        if int(key[1:]) < beg or int(key[1:]) > end:  # Check if pair is in the comparison region
+    score, total, sim = 0, 0, 0
+    for pair1 in al1.values():
+        if '.' in pair1:  # if gap in first align, skip comparison
             continue
-        if key[0] == value[0]:  # First index is the character
-            seq_sim += 1
-        if key in align2_pairs:  # Check if same pair is in the other alignment
-            if align2_pairs[key] == value:
-                shared_pairs += 1
+        total += 1  # if no gap, add to total number of columns compared
+        if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
+            sim += 1
+        if pair1 in al2.values():
+            score += 1
 
-    # TCS is shared_pairs / number of pairs in first align
-    if score == 'tcs':
-        sc = round(shared_pairs / len(align1_pairs), 3)
+    # sp is (shared pairs between ref/test align) / (total number of pairs in ref align)
+    score = round(score/total, 3)
+    sim = round(sim/total, 3)
+    logger.info('SP: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+            score, len(al1.values()), total, sim)
 
-    # F1 is 2 * (precision*recall) / (precision + recall)
-    elif score == 'f1':
-        precision = shared_pairs / (shared_pairs + len(align2_pairs) - shared_pairs)
-        recall = shared_pairs / (shared_pairs + len(align1_pairs) - shared_pairs)
 
-        # Check if F1 is zero, can't divide by zero
-        if precision == 0 and recall == 0:
-            sc = 0
-        else:
-            sc = 2 * (precision * recall) / (precision + recall)
+def tc_score(al1: dict, al2: dict) -> tuple:
+    """Returns TC (total column) score between two alignments.
 
-    # Report the score and other info
-    sim = round(seq_sim / len(align1_pairs)*100, 2)
-    logger.info('%s: %s   ref_length: %s   comparison_length: %s   similarity: %s',
-            score.upper(), sc, len(align1[0]), len(align1_pairs), sim)
+    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al2: dict same as al1
+    :return (float, float): similarity and TC scores
+    """
+
+    score, sim, total = 0, 0, 0
+    for pair1 in al1.values():
+        if '.' not in pair1:  # for calculating similarity
+            total += 1
+        if pair1 in al2.values():
+            if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
+                sim += 1
+            score += 1
+
+    # TC is (shared number of columns between ref/test align) / (total number of cols in ref align)
+    score = round(score/len(al1), 3)
+    sim = round(sim/total, 3)
+    logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+            score, len(al1.values()), len(al1.values()), sim)
+
+
+def f1_score(al1: dict, al2: dict) -> tuple:
+    """Returns F1 score between two alignments.
+
+    :param al1: dict where keys are positions of aligned characters and values are matched positions
+    :param al2: dict same as al1
+    :return (float, float): 
+    """
+
+    shared_pairs, sim, total = 0, 0, 0
+    for pair1 in al1.values():
+        if '.' not in pair1:  # for calculating similarity
+            total += 1
+        if pair1 in al2.values():
+            if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
+                sim += 1
+            shared_pairs += 1
+
+    # prec/rec
+    precision = shared_pairs / (shared_pairs + len(al2.values()) - shared_pairs)
+    recall = shared_pairs / (shared_pairs + len(al1.values()) - shared_pairs)
+
+    # Check if F1 is zero, can't divide by zero
+    if precision == 0 and recall == 0:
+        score = 0
+    else:
+        score = 2 * (precision * recall) / (precision + recall)
+        score = round(score, 3)
+
+    sim = round(sim/total, 3)
+    logger.info('F1: %s   ref_length: %s   comparison_length: %s   similarity: %s',
+            score, len(al1.values()), len(al1.values()), sim)
+
+
+def compare_aligns(args: argparse.Namespace) -> float:
+    """Returns score between two alignments.
+
+    :param args.align1: first alignment
+    :param args.align2: second alignment
+    :param args.score: score to return (sp/tcs/f1)
+    :return float: score
+    """
+
+    al1 = get_pairs(args.align1)
+    al2 = get_pairs(args.align2)
+
+    if args.score == 'sp':
+        sp_score(al1, al2)
+    if args.score == 'tcs':
+        tc_score(al1, al2)
+    if args.score == 'f1':
+        f1_score(al1, al2)
 
 
 def main():
-    """=============================================================================================
-    This function takes two alignments, the first being the reference, and the second being the
-    alignment to be compared to the reference. It calls parse_align() to extract the sequences
-    and relevant info from the alignments and then calls compute_score() to get the TCS.
-    ============================================================================================="""
+    """Main
+    """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', type=str, help='First alignment')
-    parser.add_argument('-align2', type=str, help='Second alignment')
-    parser.add_argument('-score', type=str, default='tcs', help='Comparison score (tcs or f1)')
+    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/BOX192_0.msf')
+    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/alignment_0.msf')
+    parser.add_argument('-score', type=str, default='tcs', help='Comparison score (sp/tcs/f1)')
     args = parser.parse_args()
 
-    # Parse aligns and store in a dict - {align: (seq1, seq2, beg, end)}
-    aligns = {}
-    aligns[args.align1] = parse_align(args.align1)
-    aligns[args.align2] = parse_align(args.align2)
-
-    # Compute score
-    compute_score(aligns, args.score)
+    compare_aligns(args)
 
 
 if __name__ == '__main__':

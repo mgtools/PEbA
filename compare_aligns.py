@@ -15,7 +15,7 @@ from time import strftime
 from random import sample
 from Bio import SeqIO
 import matplotlib.pyplot as plt
-import tensorflow as tf
+#import tensorflow as tf -> comment out because loading slows down peba script, not sure why
 from utility import parse_fasta, write_msf
 
 log_filename = 'comparison.log'  #pylint: disable=C0103
