@@ -185,7 +185,7 @@ def compare_aligns(args: argparse.Namespace) -> float:
 
 
 def main():
-    """Main
+    """Initialize two alignments and compare them.
     """
 
     parser = argparse.ArgumentParser()
