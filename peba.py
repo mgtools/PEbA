@@ -33,10 +33,10 @@ def score_align(seq1: str, seq2: str, vecs1: list, vecs2:list,
 
     # Score matrix by moving through each index
     gap = False
-    for i in range(len(seq1)):
+    for i in range(0, 226):
         seq1_vec = vecs1[i]  # Corresponding amino acid vector in 1st sequence
         seq1_norm = np.linalg.norm(seq1_vec)
-        for j in range(len(seq2)):
+        for j in range(0, 207):
 
             # Preceding scoring matrix values
             diagonal = score_m[i][j]
@@ -74,10 +74,10 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', '--align', type=str, default='local', help='Alignment algorithm to use (global or local)')
-    parser.add_argument('-f1', '--file1', type=str, help='First fasta file', default='Data/Example/1j46_A.fa')
-    parser.add_argument('-f2', '--file2', type=str, help='Second fasta file', default='Data/Example/1k99_A.fa')
-    parser.add_argument('-e1', '--embed1', type=str, default='Data/Example/1j46_A.txt', help='First embedding file')
-    parser.add_argument('-e2', '--embed2', type=str, default='Data/Example/1k99_A.txt', help='Second embedding file')
+    parser.add_argument('-f1', '--file1', type=str, help='First fasta file', default='Data/Alignments/PEBA-BLOSUM/run1/RV11/BB11020/1eem_A.fa')
+    parser.add_argument('-f2', '--file2', type=str, help='Second fasta file', default='Data/Alignments/PEBA-BLOSUM/run1/RV11/BB11020/1jlv_A.fa')
+    parser.add_argument('-e1', '--embed1', type=str, default='prot_t5_embed/RV11/BB11020/1eem_A.txt', help='First embedding file')
+    parser.add_argument('-e2', '--embed2', type=str, default='prot_t5_embed/RV11/BB11020/1jlv_A.txt', help='Second embedding file')
     parser.add_argument('-go', '--gopen', type=float, default=-11, help='Gap open penalty')
     parser.add_argument('-ge', '--gext', type=float, default=-1, help='Gap extension penalty')
     parser.add_argument('-e', '--encoder', type=str, default='ProtT5', help='Encoder used')

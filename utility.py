@@ -209,31 +209,6 @@ def assign_score(score: int, diagonal: int, horizontal: int,
     return trace_m, gap
 
 
-def get_aligns(rev_seq1: list, rev_seq2: list, index1: int, index0: int) -> tuple:
-    """Returns aligned sequences with gaps inserted based on traceback matrix
-
-    :param rev_seq1: first sequence reversed
-    :param rev_seq2: second sequence reversed
-    :param index1: final traceback matrix row index
-    :param index0: final traceback matrix column index
-    """
-
-    seq1 = ''.join(rev_seq1)
-    seq2 = ''.join(rev_seq2)
-    seq1 = seq1[::-1]
-    seq2 = seq2[::-1]
-
-    # Introduce gaps at beginning of either sequence based off final index positions
-    seq1 = "."*index1+seq1
-    seq2 = "."*index0+seq2
-
-    # Introduce gaps at end of either sequence based off length of other sequence
-    align1 = seq1+"."*max(0, len(seq2)-len(seq1))
-    align2 = seq2+"."*max(0, len(seq1)-len(seq2))
-
-    return align1, align2
-
-
 def global_traceback(trace_m: np.ndarray, seq1: str, seq2: str) -> tuple:
     """Returns global alignment of two sequences with gaps inserted based on traceback matrix
 
@@ -266,7 +241,36 @@ def global_traceback(trace_m: np.ndarray, seq1: str, seq2: str) -> tuple:
         count += 1
 
     # Join lists and reverse strings again
-    align1, align2 = get_aligns(rev_seq1, rev_seq2, index[1], index[0])
+    align1 = ''.join(rev_seq1)[::-1]
+    align2 = ''.join(rev_seq2)[::-1]
+
+    return align1, align2
+
+
+def get_align(seq1: list, seq2: list, index: list) -> tuple:
+    """Returns aligned sequences based on index
+
+    :param seq1: first sequence
+    :param seq2: second sequence
+    :param index: final index of traceback matrix
+    return (str, str): aligned sequences with gaps inserted
+    """
+
+    # Join and reverse lists to get sequences with gaps
+    seq1 = ''.join(seq1)[::-1]
+    seq2 = ''.join(seq2)[::-1]
+
+    # Index sequences so they begin at final cell of traceback
+    align1 = seq1[index[0]:]  # pylint: disable=E1127
+    align2 = seq2[index[1]:]
+
+    # Sometimes the initial cell of traceback is incorrect if there are two equally scoring cells
+    # In this case, we will truncate the sequences so they begin at the first aligned residue
+    if len(align1) != len(align2):
+        if len(align1) > len(align2):
+            align1 = align1[0:len(align2)]
+        else:
+            align2 = align2[0:len(align1)]
 
     return align1, align2
 
@@ -283,6 +287,8 @@ def local_traceback(score_m: np.ndarray, trace_m: np.ndarray, seq1: str, seq2: s
 
     # Find index of highest score in scoring matrix, start traceback at this matrix
     high_score_ind = np.unravel_index(np.argmax(score_m, axis=None), score_m.shape)
+    seq1 = seq1[0:high_score_ind[0]+1]
+    seq2 = seq2[0:high_score_ind[1]+1]
 
     # Reverse strings and convert to lists so gaps can be inserted
     rev_seq1 = list(seq1[::-1])
@@ -296,8 +302,9 @@ def local_traceback(score_m: np.ndarray, trace_m: np.ndarray, seq1: str, seq2: s
     count_adjust1 = len(seq1) - high_score_ind[0]
     count_adjust2 = len(seq2) - high_score_ind[1]
     count = 0
-    while (index[0] and index[1]) != 0:
-        val = trace_m[index[0], index[1]]
+    score = score_m[index[0], index[1]]
+    while score != 0:  # Stop traceback when we reach cell in score_m with 0
+        val = trace_m[index[0], index[1]]  # Get value of cell in traceback matrix
 
         if val == 1:  # If cell is equal to 1, insert a gap into the second sequence
             index[0] = index[0] - 1
@@ -309,8 +316,8 @@ def local_traceback(score_m: np.ndarray, trace_m: np.ndarray, seq1: str, seq2: s
             index[0] = index[0] - 1
             index[1] = index[1] - 1
         count += 1
+        score = score_m[index[0], index[1]]  # Get score of next cell
+    align1, align2 = get_align(rev_seq1, rev_seq2, index)
 
-    # Get aligned sequences with gaps inserted
-    align1, align2 = get_aligns(rev_seq1, rev_seq2, index[1], index[0])
 
     return align1, align2
