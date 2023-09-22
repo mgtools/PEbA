@@ -53,6 +53,7 @@ def write_msf(seq1: str, seq2: str, id1: str, id2: str,
     if path == 'n':
         print(alignment)
     else:
+        path = f'{path}/{id1};{id2}.msf'
         with open(path, 'w', encoding='utf8') as file:
             file.write(alignment)
 
