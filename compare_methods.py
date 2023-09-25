@@ -68,7 +68,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-m1', type=str, default='data/alignments/local_blosum')
-    parser.add_argument('-m2', type=str, default='data/alignments/global_blosum')
+    parser.add_argument('-m2', type=str, default='data/alignments/dedal')
     parser.add_argument('-r', type=str, default='RV913')
     args = parser.parse_args()
 

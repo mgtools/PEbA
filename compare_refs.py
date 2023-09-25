@@ -16,7 +16,7 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-m', type=str, default='data/alignments/local_blosum', help='path to directory containing alignments')
+    parser.add_argument('-m', type=str, default='data/alignments/dedal', help='path to directory containing alignments')
     parser.add_argument('-r', type=str, default='RV913', help='reference to compare to')
     args = parser.parse_args()
 

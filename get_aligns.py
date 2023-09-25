@@ -7,6 +7,8 @@ __date__ = "09/22/23"
 
 import logging
 import os
+import tensorflow as tf
+import utility as ut
 
 log_filename = 'data/logs/get_aligns.log'  #pylint: disable=C0103
 os.makedirs(os.path.dirname(log_filename), exist_ok=True)
@@ -100,9 +102,54 @@ def peba(pw_aligns: list, ref: str, direc: str, method: str):
         os.system(f'python peba.py {args}')
 
 
+def dedal_run(pw_aligns: list, ref: str, direc: str, method: str, model):
+    """Writes all pairwise SW dedal alignments to a file in the msf format
+
+    :param pw_aligns: list of all pairwise combinations of sequences
+    :param ref: reference folder
+    :param direc: subfolder
+    :param method: alignment method
+    :param model: dedal model
+    """
+
+    from dedal import infer  #pylint: disable-all
+
+    method_direc = f'data/alignments/{method}'
+    if not os.path.isdir(method_direc):
+        os.makedirs(method_direc)
+    if not os.path.isdir(f'{method_direc}/{ref}'):
+        os.makedirs(f'{method_direc}/{ref}')
+    if not os.path.isdir(f'{method_direc}/{ref}/{direc}'):
+        os.makedirs(f'{method_direc}/{ref}/{direc}')
+
+    # Align each pair of sequences
+    for pair in pw_aligns:
+        seq1, id1 = ut.parse_fasta(f'data/sequences/{ref}/{direc}/{pair[0]}')
+        seq2, id2 = ut.parse_fasta(f'data/sequences/{ref}/{direc}/{pair[1]}')
+
+        inputs = infer.preprocess(seq1, seq2)
+        align_out = model(inputs)
+        output = infer.expand(
+            [align_out['sw_scores'], align_out['paths'], align_out['sw_params']])
+        output = infer.postprocess(output, len(seq1), len(seq2))
+        alignment = infer.Alignment(seq1, seq2, *output)
+
+        # Want first and third lines of alignment
+        align1 = str(alignment).split('\n')[0]
+        align2 = str(alignment).split('\n')[2]
+        beg = [align1.split()[0], align2.split()[0]]
+        end = [align1.split()[2], align2.split()[2]]
+        align1 = align1.split()[1].replace('-', '.')
+        align2 = align2.split()[1].replace('-', '.')
+        ut.write_msf(align1, align2, id1, id2, method,
+                     0, 0, f'{method_direc}/{ref}/{direc}', beg, end)
+
+
 def main():
     """Main
     """
+
+    dedal_model = tf.saved_model.load('dedal_3')
 
     refs = os.listdir('data/BAliBASE_R1-5')
     for ref in refs:
@@ -116,7 +163,9 @@ def main():
 
             # Get pairwise alignments for each pair of sequences
             pw_aligns = get_aligns(files)
-            blosum(pw_aligns, ref, direc, 'global')
+            dedal_run(pw_aligns, ref, direc, 'dedal', dedal_model)
+            break
+        break
 
 
 if __name__ == '__main__':
