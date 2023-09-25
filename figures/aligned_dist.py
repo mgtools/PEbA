@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from random import sample
 sys.path.append(os.path.abspath(os.path.join(os.path.pardir, 'VecAligns')))
-from compare_aligns import parse_ref_folder, parse_fasta_ca, parse_msf, write_align_ca
+from compare_refs import parse_ref_folder, parse_fasta_ca, parse_msf, write_align_ca
 from compute_score import parse_align
 
 

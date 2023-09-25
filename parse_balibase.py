@@ -184,7 +184,6 @@ def parse_align_files(msf_files: list, fasta_files: list, seq_dir: str, align_di
                 os.makedirs(dir_path)
             file_path = f'{align_dir}/{ref_align}/'
             write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
-            
 
 
 def main():

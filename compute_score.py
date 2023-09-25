@@ -9,7 +9,7 @@ import argparse
 import logging
 import sys
 
-logger = logging.getLogger('compute_tcs')
+logger = logging.getLogger('compute_score')
 logger.setLevel(logging.INFO)
 ch = logging.StreamHandler(stream=sys.stdout)
 formatter = logging.Formatter('%(message)s')
@@ -72,7 +72,6 @@ def get_pos(positions: dict) -> tuple:
     seq1_count = int(seq1_count.split(',')[0])
     seq2_count = int(seq2_count.split(',')[0])
 
-    print(seq1_count, seq2_count)
     return seq1_count, seq2_count
 
 
@@ -212,8 +211,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/1j46_A-1k99_A_1.msf')
-    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/1j46_A-1k99_A.msf')
+    parser.add_argument('-align1', type=str, help='First alignment')
+    parser.add_argument('-align2', type=str, help='Second alignment')
     parser.add_argument('-score', type=str, default='sp', help='Comparison score (sp/tcs/f1)')
     args = parser.parse_args()
 

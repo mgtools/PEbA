@@ -118,9 +118,6 @@ def main():
             pw_aligns = get_aligns(files)
             blosum(pw_aligns, ref, direc, 'global')
 
-        break
-
-
 
 if __name__ == '__main__':
     main()

@@ -14,7 +14,7 @@ import sys
 from Bio import SeqIO
 from random import sample
 sys.path.append(os.path.abspath(os.path.join(os.path.pardir, 'VecAligns')))
-from compare_aligns import parse_ref_folder
+from compare_refs import parse_ref_folder
 from aligned_dist import parse_aligns
 
 
