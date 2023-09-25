@@ -8,8 +8,8 @@ import numpy as np
 from Bio import SeqIO
 
 
-def write_msf(seq1: str, seq2: str, id1: str, id2: str,
-               method: str, gopen: float, gext: float, path: str):
+def write_msf(seq1: str, seq2: str, id1: str, id2: str, method: str,
+               gopen: float, gext: float, path: str, beg: list, end: list):
     """Writes alignment to file in msf format
 
     :param seq1: first aligned sequence
@@ -20,7 +20,11 @@ def write_msf(seq1: str, seq2: str, id1: str, id2: str,
     :param gopen: gap penalty for opening a new gap
     :param gext: gap penalty for extending a gap
     :param path: directory to write alignment to
+    :param list: beginning positions of seqs in alignment
+    :param list: end positions of seqs in alignment
     """
+
+    fpath = f'{path}/{id1}-{id2}.msf'
 
     # Add space every 10 characters
     seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
@@ -43,8 +47,8 @@ def write_msf(seq1: str, seq2: str, id1: str, id2: str,
     length = len(seq1)
     alignment = 'PileUp\n\n\n\n'
     alignment += f'   MSF: {length}  Type: P  Method: {method}  Gopen: {gopen}  Gext: {gext}\n\n'
-    alignment += f' Name: {id1} oo  Len:  {length}\n'
-    alignment += f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n'
+    alignment += f' Name: {id1} oo  Len:  {length}  Start/End:  {beg[0]},{end[0]}\n'
+    alignment += f' Name: {id2} oo  Len:  {length}  Start/End:  {beg[1]},{end[1]}\n\n//\n\n\n\n'
     for i in range(len(seq1_split)): # pylint: disable=C0200
         alignment += f'{id1}      {seq1_split[i]}\n'
         alignment += f'{id2}      {seq2_split[i]}\n\n'
@@ -53,8 +57,7 @@ def write_msf(seq1: str, seq2: str, id1: str, id2: str,
     if path == 'n':
         print(alignment)
     else:
-        path = f'{path}/{id1};{id2}.msf'
-        with open(path, 'w', encoding='utf8') as file:
+        with open(fpath, 'w', encoding='utf8') as file:
             file.write(alignment)
 
 
@@ -283,7 +286,8 @@ def local_traceback(score_m: np.ndarray, trace_m: np.ndarray, seq1: str, seq2: s
     :param trace_m: traceback matrix
     :param seq1: first sequence
     :param seq2: second sequence
-    return (str, str): seq1 with gaps, seq2 with gaps
+    return (str, str, list, list): seq1 with gaps, seq2 with gaps, index of highest score, and
+        index of final cell of traceback matrix
     """
 
     # Find index of highest score in scoring matrix, start traceback at this matrix
@@ -320,5 +324,4 @@ def local_traceback(score_m: np.ndarray, trace_m: np.ndarray, seq1: str, seq2: s
         score = score_m[index[0], index[1]]  # Get score of next cell
     align1, align2 = get_align(rev_seq1, rev_seq2, index)
 
-
-    return align1, align2
+    return align1, align2, index, high_score_ind

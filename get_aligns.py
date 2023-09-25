@@ -32,15 +32,16 @@ def get_aligns(seqs):
     return pw_aligns
 
 
-def local_blosum(pw_aligns: list, ref: str, direc: str):
-    """Writes all pairwise alignments to a file in the msf format
+def blosum(pw_aligns: list, ref: str, direc: str, method: str):
+    """Writes all pairwise SW blosum alignments to a file in the msf format
 
     :param pw_aligns: list of all pairwise combinations of sequences
     :param ref: reference folder
     :param direc: subfolder
+    :param method: alignment method
     """
 
-    method_direc = 'data/alignments/local_blosum'
+    method_direc = f'data/alignments/{method}_blosum'
     if not os.path.isdir(method_direc):
         os.makedirs(method_direc)
     if not os.path.isdir(f'{method_direc}/{ref}'):
@@ -53,7 +54,7 @@ def local_blosum(pw_aligns: list, ref: str, direc: str):
         seq1 = pair[0]
         seq2 = pair[1]
 
-        args = (f'--align local '
+        args = (f'--align {method} '
                 f'--file1 data/sequences/{ref}/{direc}/{seq1} '
                 f'--file2 data/sequences/{ref}/{direc}/{seq2} '
                 f'--gopen -11 '
@@ -64,15 +65,16 @@ def local_blosum(pw_aligns: list, ref: str, direc: str):
         os.system(f'python matrix.py {args}')
 
 
-def global_blosum(pw_aligns: list, ref: str, direc: str):
-    """Writes all pairwise alignments to a file in the msf format
+def peba(pw_aligns: list, ref: str, direc: str, method: str):
+    """Writes all pairwise SW peba alignments to a file in the msf format
 
     :param pw_aligns: list of all pairwise combinations of sequences
     :param ref: reference folder
     :param direc: subfolder
+    :param method: alignment method
     """
 
-    method_direc = 'data/alignments/global_blosum'
+    method_direc = f'data/alignments/{method}_peba'
     if not os.path.isdir(method_direc):
         os.makedirs(method_direc)
     if not os.path.isdir(f'{method_direc}/{ref}'):
@@ -84,16 +86,18 @@ def global_blosum(pw_aligns: list, ref: str, direc: str):
     for pair in pw_aligns:
         seq1 = pair[0]
         seq2 = pair[1]
+        embed1 = seq1.split('.')[0] + '.txt'
+        embed2 = seq2.split('.')[0] + '.txt'
 
-        args = (f'--align global '
+        args = (f'--align {method} '
                 f'--file1 data/sequences/{ref}/{direc}/{seq1} '
                 f'--file2 data/sequences/{ref}/{direc}/{seq2} '
+                f'--embed1 data/embeddings/{ref}/{direc}/{embed1} '
+                f'--embed2 data/embeddings/{ref}/{direc}/{embed2} '
                 f'--gopen -11 '
                 f'--gext -1 '
-                f'--matrix blosum '
-                f'--score 62 '
                 f'--savefile {method_direc}/{ref}/{direc}')
-        os.system(f'python matrix.py {args}')
+        os.system(f'python peba.py {args}')
 
 
 def main():
@@ -112,7 +116,7 @@ def main():
 
             # Get pairwise alignments for each pair of sequences
             pw_aligns = get_aligns(files)
-            local_blosum(pw_aligns, ref, direc)
+            blosum(pw_aligns, ref, direc, 'global')
 
         break
 

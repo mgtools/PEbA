@@ -71,7 +71,7 @@ def main():
     parser.add_argument('-m', '--matrix', type=str, default='blosum', help='Substitution matrix to use (blosum or pfasum)')
     parser.add_argument('-s', '--score', type=int, default=62, help='Log odds score of subsitution matrix')
     parser.add_argument('-o', '--output', type=str, default='msf', help='Output format (msf or fa)')
-    parser.add_argument('-sf', '--savefile', type=str, default='n', help='Filename to save alignment to')
+    parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop', help='Filename to save alignment to')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
@@ -88,13 +88,14 @@ def main():
     score_m, trace_m = score_align(seq1, seq2, matrix, args.gopen, args.gext, args.align)
     if args.align == 'global':
         align1, align2 = ut.global_traceback(trace_m, seq1, seq2)
+        beg, end = [0, 0], [len(seq1), len(seq2)]
     if args.align == 'local':
-        align1, align2 = ut.local_traceback(score_m, trace_m, seq1, seq2)
+        align1, align2, beg, end = ut.local_traceback(score_m, trace_m, seq1, seq2)
 
     # Write align based on desired output format
     if args.output == 'msf':
         ut.write_msf(align1, align2, id1, id2, args.matrix+str(args.score),
-                args.gopen, args.gext, args.savefile)
+                args.gopen, args.gext, args.savefile, beg, end)
     if args.output == 'fa':
         ut.write_fasta(align1, align2, id1, id2, args.savefile)
 

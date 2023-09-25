@@ -1,9 +1,9 @@
-"""================================================================================================
-This script embes protein sequences using a pretrained T5 model and outputs a numpy array of the
-embedded sequences to a file.
+"""This script embes protein sequences using a pretrained language model and writes them
+each to a file.
 
-Ben Iovino  02/16/23  VecAligns
-================================================================================================"""
+__author__ = "Ben Iovino"
+__date__ = 09/22/23
+"""
 
 import esm
 import os
@@ -14,14 +14,12 @@ from transformers import T5EncoderModel, T5Tokenizer
 from Bio import SeqIO
 
 
-def parse_ref_folder(path):
-    """=============================================================================================
-    This function accepts a folder name parses every MSF and FASTA file to write each pairwise
-    alignment and fasta sequence to their own files.
+def parse_ref_folder(path: str):
+    """Returns list of fasta files in a directory
 
     :param path: directory path to folder
     :return: list of fasta files
-    ============================================================================================="""
+    """
 
     # Get FASTA files
     fasta_files = []
@@ -32,19 +30,19 @@ def parse_ref_folder(path):
             new_file = file.split('.in_tfa')[0] + '.tfa'
             os.rename(f'{path}/{file}',f'{path}/{new_file}')
             fasta_files.append(f'{path}/{new_file}')
+
     return fasta_files
 
 
-def prot_t5xl_embed(seq, tokenizer, encoder, device):
-    """=============================================================================================
-    This function accepts a protein sequence and returns a list of vectors, each vector representing
-    a single amino acid using RostLab's ProtT5_XL_UniRef50 model.
+def prot_t5xl_embed(seq: str, tokenizer, encoder, device: str) -> np.ndarray:
+    """Returns an embedding of a protein sequence using ProtT5_XL_UniRef50
 
     :param seq: protein sequence
     :param: tokenizer: tokenizer model
     :param encoder: encoder model
-    return: list of vectors
-    ============================================================================================="""
+    :param device: cpu/gpu
+    return np.ndarray: list of vectors
+    """
 
     # Remove special chars, add space after each amino acid so each residue is vectorized
     seq = re.sub(r"[UZOB]", "X", seq)
@@ -66,19 +64,19 @@ def prot_t5xl_embed(seq, tokenizer, encoder, device):
         seq_len = (attention_mask[seq_num] == 1).sum()
         seq_emd = embedding[seq_num][:seq_len-1]
         features.append(seq_emd)
+
     return features[0]
 
 
-def esm2_embed(seq, tokenizer, encoder, device):
-    """=============================================================================================
-    This function accepts a protein sequence and returns a list of vectors, each vector representing
-    a single amino acid using Facebook's ESM-2 model.
+def esm2_embed(seq: str, tokenizer, encoder, device: str) -> np.ndarray:
+    """Returns an embedding of a protein sequence using ESM-2
 
     :param seq: protein sequence
     :param: tokenizer: tokenizer model
     :param encoder: encoder model
-    return: list of vectors
-    ============================================================================================="""
+    :param device: cpu/gpu
+    return np.ndarray: list of vectors
+    """
 
     # Embed sequence
     seq_str = str(seq.seq).upper()  # tok does not convert to uppercase
@@ -94,23 +92,21 @@ def esm2_embed(seq, tokenizer, encoder, device):
     return embed[0]
 
 
-def parse_fasta(filename, encoder, tokenizer, model, device):
-    """=============================================================================================
-    This function accepts a fasta file with multiple sequences in each one and writes each sequence
-    to its own file in the corresponding folder.
+def parse_fasta(filename: str, encoder, tokenizer, model, device: str):
+    """Writes each sequence in a fasta file as an embedding to a file
 
     :param filename: name of file
     :param encoder: encoder used
     :param tokenizer: tokenizer model
     :param model: model
-    return: sequence and id
-    ============================================================================================="""
+    :param device: cpu/gpu
+    """
 
     # Get reference folder name and folder for the correpsonding fasta files
     refname = filename.split('/')[-2:]  # First index is ref folder, second is fa file
     refname[1] = refname[1].split('.tfa')[0]  # Remove file extension
-    if not os.path.isdir(f'bb_embed/{refname[0]}/{refname[1]}'):
-        os.makedirs(f'bb_embed/{refname[0]}/{refname[1]}')
+    if not os.path.isdir(f'data/embeddings/{refname[0]}/{refname[1]}'):
+        os.makedirs(f'data/embeddings/{refname[0]}/{refname[1]}')
 
     # Parse fasta file and write each sequence to its own file in the corresponding folder
     with open(filename, 'r', encoding='utf8') as file:
@@ -126,23 +122,24 @@ def parse_fasta(filename, encoder, tokenizer, model, device):
 
             # Write embeddings to file
             seqname = seq.id
-            with open(f'bb_embed/{refname[0]}/{refname[1]}/{seqname}.txt', 'w', encoding='utf8') as seqfile:
+            with open(f'data/embeddings/{refname[0]}/{refname[1]}/{seqname}.txt',
+                       'w', encoding='utf8') as seqfile:
                 np.savetxt(seqfile, vec, fmt='%4.6f', delimiter=' ')
 
 
 def main():
-    """=============================================================================================
-    ============================================================================================="""
+    """Main
+    """
 
     # Parse reference folder of interest
-    path = 'Data/BAliBASE_R1-5/bb3_release/RV11'
+    path = 'data/BAliBASE_R1-5/RV11'
     ref_dir = path.rsplit('/', maxsplit=1)[-1]  # Get last directory in path
     fasta_files = parse_ref_folder(path)
-    if not os.path.isdir(f'bb_embed/{ref_dir}'):
-        os.makedirs(f'bb_embed/{ref_dir}')
+    if not os.path.isdir(f'data/embeddings/{ref_dir}'):
+        os.makedirs(f'data/embeddings/{ref_dir}')
 
     # Set an encoder and process each fasta file
-    encoder = 'esm2'
+    encoder = 'prott5'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  #pylint: disable=E1101
 
     # ProtT5_XL_UniRef50
@@ -150,7 +147,6 @@ def main():
         tokenizer = T5Tokenizer.from_pretrained('Rostlab/prot_t5_xl_uniref50', do_lower_case=False)
         model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
         model.to(device)  # Loads to GPU if available
-
         for file in fasta_files:
             parse_fasta(file, encoder, tokenizer, model, device)
 
@@ -160,7 +156,6 @@ def main():
         tokenizer = alphabet.get_batch_converter()
         model.eval()  # disables dropout for deterministic results
         model.to(device)
-
         for file in fasta_files:
             parse_fasta(file, encoder, tokenizer, model, device)
 

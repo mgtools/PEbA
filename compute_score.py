@@ -21,12 +21,13 @@ def parse_align(filename: str) -> tuple:
     """Returns a tuple with the two aligned sequences and their names.
 
     :param filename: name of file (msf format)
-    return (str, str): sequences with gaps
+    return (str, str, dict): sequences with gaps and dict with beg/end positions
     """
 
     seq1, seq2 = [], []
     in_align = False
     count = 0
+    pos = {}
     with open(filename, 'r', encoding='utf8') as file:
         lines = file.readlines()
     for line in lines:
@@ -42,6 +43,12 @@ def parse_align(filename: str) -> tuple:
             count += 1
             continue
 
+        # Get beginning/end positions of aligned sequences
+        if line.startswith(' Name:'):
+            line = line.split()
+            pos[line[1]] = line[6]
+            continue
+
         # Alignment starts after '//'
         if line.startswith('//'):
             in_align = True
@@ -50,7 +57,23 @@ def parse_align(filename: str) -> tuple:
     seq1 = ''.join(seq1)
     seq2 = ''.join(seq2)
 
-    return seq1, seq2
+    return seq1, seq2, pos
+
+
+def get_pos(positions: dict) -> tuple:
+    """Returns beginning positions of aligned sequences
+
+    :param positions: dict with beg/end positions
+    return (int, int): beginning positions of aligned sequences
+    """
+
+    seq1_count = list(positions.values())[0]
+    seq2_count = list(positions.values())[1]
+    seq1_count = int(seq1_count.split(',')[0])
+    seq2_count = int(seq2_count.split(',')[0])
+
+    print(seq1_count, seq2_count)
+    return seq1_count, seq2_count
 
 
 def get_pairs(filename: str) -> dict:
@@ -61,9 +84,9 @@ def get_pairs(filename: str) -> dict:
     return dict: dict where keys are positions of aligned residues and values are matched positions
     """
 
-    seq1, seq2 = parse_align(filename)
+    seq1, seq2, pos = parse_align(filename)
     pairs = {}
-    seq1_count, seq2_count = 0, 0
+    seq1_count, seq2_count = get_pos(pos)
     for i, char1 in enumerate(seq1):
         char2 = seq2[i]  # Character in second sequence at same position in alignment
         if char1 != '.':  # If not a gap, add the position to the count
@@ -189,9 +212,9 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/alignment_0.msf')
-    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/BOX192_0.msf')
-    parser.add_argument('-score', type=str, default='tcs', help='Comparison score (sp/tcs/f1)')
+    parser.add_argument('-align1', type=str, help='First alignment', default='/home/ben/Desktop/1j46_A-1k99_A_1.msf')
+    parser.add_argument('-align2', type=str, help='Second alignment', default='/home/ben/Desktop/1j46_A-1k99_A.msf')
+    parser.add_argument('-score', type=str, default='sp', help='Comparison score (sp/tcs/f1)')
     args = parser.parse_args()
 
     compare_aligns(args)

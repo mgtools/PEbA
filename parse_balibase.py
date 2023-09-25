@@ -100,9 +100,11 @@ def write_align(seq1: str, seq2: str, id1: str, id2: str, path: str):
     :param path: directory
     """
 
+    path += f'{id1}-{id2}.msf'
+    alength = len(seq1)  # Length of alignment
+    length1, length2 = len(seq1.strip('.')), len(seq2.strip('.'))  # Length of seqs
+
     # Add space every 10 characters
-    path += f'{id1};{id2}.msf'
-    length = len(seq1)
     seq1 = [seq1[i:i+10] for i in range(0, len(seq1), 10)]
     seq1 = ' '.join(seq1)
     seq2 = [seq2[i:i+10] for i in range(0, len(seq2), 10)]
@@ -122,9 +124,9 @@ def write_align(seq1: str, seq2: str, id1: str, id2: str, path: str):
     # Write to a new line for every index in the split list i.e. every 55 characters
     with open(f'{path}', 'w', encoding='utf8') as file:
         file.write('PileUp\n\n\n\n')
-        file.write(f'   MSF:  {length}  Type:  P\n\n')
-        file.write(f' Name: {id1} oo  Len:  {length}\n')
-        file.write(f' Name: {id2} oo  Len:  {length}\n\n//\n\n\n\n')
+        file.write(f'   MSF:  {alength}  Type:  P\n\n')
+        file.write(f' Name: {id1} oo  Len:  {alength}  Start/End:  {0},{length1}\n')
+        file.write(f' Name: {id2} oo  Len:  {alength}  Start/End:  {0},{length2}\n\n//\n\n\n\n')
         for i in range(len(seq1_split)):  # pylint: disable=C0200
             file.write(f'{id1}      {seq1_split[i]}\n')
             file.write(f'{id2}      {seq2_split[i]}\n\n')
@@ -182,6 +184,7 @@ def parse_align_files(msf_files: list, fasta_files: list, seq_dir: str, align_di
                 os.makedirs(dir_path)
             file_path = f'{align_dir}/{ref_align}/'
             write_align(align1, align2, seq1, seq2, file_path)  # Write pairwise alignment
+            
 
 
 def main():
