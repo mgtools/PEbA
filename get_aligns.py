@@ -5,15 +5,10 @@ __author__ = "Ben Iovino"
 __date__ = "09/22/23"
 """
 
-import logging
+import argparse
 import os
 import tensorflow as tf
 import utility as ut
-
-log_filename = 'data/logs/get_aligns.log'  #pylint: disable=C0103
-os.makedirs(os.path.dirname(log_filename), exist_ok=True)
-logging.basicConfig(filename=log_filename, filemode='w',
-                     level=logging.INFO, format='%(message)s')
 
 
 def get_aligns(seqs):
@@ -149,23 +144,36 @@ def main():
     """Main
     """
 
-    dedal_model = tf.saved_model.load('dedal_3')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', type=str, default='dedal')
+    parser.add_argument('-m', type=str, default='dedal')
+    args = parser.parse_args()
+
+    # Don't want to load if not using
+    if args.a == 'dedal':
+        dedal_model = tf.saved_model.load('dedal_3')
 
     refs = os.listdir('data/BAliBASE_R1-5')
     for ref in refs:
-        logging.info('Working on %s', ref)
 
         # Get all fasta files in reference folder
         seq_dir = os.listdir(f'data/sequences/{ref}')
         for direc in seq_dir:
-            logging.info('Working on %s', direc)
-            files = os.listdir(f'data/sequences/{ref}/{direc}')
+
+            # Check if directory exists in alignment folder
+            print(f'data/alignments/{args.a}/{ref}/{direc}')
+            if os.path.isdir(f'data/alignments/{args.a}/{ref}/{direc}'):
+                continue
 
             # Get pairwise alignments for each pair of sequences
+            files = os.listdir(f'data/sequences/{ref}/{direc}')
             pw_aligns = get_aligns(files)
-            dedal_run(pw_aligns, ref, direc, 'dedal', dedal_model)
-            break
-        break
+            if args.a == 'blosum':
+                blosum(pw_aligns, ref, direc, args.m)
+            elif args.a == 'peba':
+                peba(pw_aligns, ref, direc, args.m)
+            elif args.a == 'dedal':
+                dedal_run(pw_aligns, ref, direc, args.m, dedal_model)
 
 
 if __name__ == '__main__':

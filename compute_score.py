@@ -1,5 +1,4 @@
-"""Compares two pairwise alignments and returns the Sum of Pairs (SP), Total Column Score (TCS),
-or F1 score between them.
+"""Compares two pairwise alignments and returns the Sum of Pairs (SP) or F1 score between them.
 
 __author__ = "Ben Iovino"
 __date__ = 09/18/23
@@ -124,35 +123,6 @@ def sp_score(al1: dict, al2: dict) -> tuple:
             score, len(al1.values()), total, sim)
 
 
-def tc_score(al1: dict, al2: dict) -> tuple:
-    """Returns TC (total column) score between two alignments.
-
-    :param al1: dict where keys are positions of aligned residues and values are matched positions
-    :param al2: dict same as al1
-    :return (float, float): similarity and TC scores
-    """
-
-    # pairwise comparison of columns, end with shortest alignment
-    end = min(len(al1), len(al2))
-
-    score, sim, total = 0, 0, 0
-    for i in range(end):
-        pair1 = al1[i]
-        pair2 = al2[i]
-        if pair1[0][0] == pair1[1][0]:  # if same character, add to similarity
-            sim += 1
-        if '.' not in pair1:  # for calculating similarity
-            total += 1
-        if pair1 == pair2:  # for calculating TC score
-            score += 1
-
-    # TCS is (shared number of columns between ref/test align) / (total number of cols in ref align)
-    score = round(score/len(al1), 3)
-    sim = round(sim/total, 3)
-    logger.info('TCS: %s   ref_length: %s   comparison_length: %s   similarity: %s',
-            score, len(al1.values()), len(al1.values()), sim)
-
-
 def f1_score(al1: dict, al2: dict) -> tuple:
     """Returns F1 score between two alignments.
 
@@ -191,7 +161,7 @@ def compare_aligns(args: argparse.Namespace) -> float:
 
     :param args.align1: first alignment
     :param args.align2: second alignment
-    :param args.score: score to return (sp/tcs/f1)
+    :param args.score: score to return (sp/f1)
     :return float: score
     """
 
@@ -200,8 +170,6 @@ def compare_aligns(args: argparse.Namespace) -> float:
 
     if args.score == 'sp':
         sp_score(al1, al2)
-    if args.score == 'tcs':
-        tc_score(al1, al2)
     if args.score == 'f1':
         f1_score(al1, al2)
 
@@ -213,7 +181,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-align1', type=str, help='First alignment')
     parser.add_argument('-align2', type=str, help='Second alignment')
-    parser.add_argument('-score', type=str, default='sp', help='Comparison score (sp/tcs/f1)')
+    parser.add_argument('-score', type=str, default='sp', help='Comparison score (sp/f1)')
     args = parser.parse_args()
 
     compare_aligns(args)
