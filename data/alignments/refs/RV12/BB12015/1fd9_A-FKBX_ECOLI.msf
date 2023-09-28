@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF:  259  Type:  P
+
+ Name: 1fd9_A     oo  Len:  259  Start/End:  0,256
+ Name: FKBX_ECOLI oo  Len:  259  Start/End:  0,149
+
+//
+
+
+
+1fd9_A          TDKDKLSYSI GADLGKNFKN QGIDVNPEAM AKGMQDAMSG AQLALTEQQM 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+1fd9_A          KDVLNKFQKD LMAKRTAEFN KKADENKVKG EAFLTENKNK PGVVVLPSGL 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+1fd9_A          QYKVINSGNG .VKPGKSDTV TVEYTGRLID GTVFDSTEK. TGKPATFQV. 
+FKBX_ECOLI      .......... SESVQSNSAV LVHFTLKLDD GTTAESTRNN .GKPALFRLG 
+
+1fd9_A          .SQVIPGWTE ALQLMPAGST WEIYVPSGLA YGPR...... .......... 
+FKBX_ECOLI      DASLSEGLEQ HLLGLKVGDK TTFSLEPDAA FGVPSPDLIQ YFSRREFMDA 
+
+1fd9_A          .......... .......... .......... ..SVGGPIGP NETLIFKIHL 
+FKBX_ECOLI      GEPEIGAIML FTAMDGSEMP GVIREINGDS ITVDFNHPLA GQTVHFDIEV 
+
+1fd9_A          ISVKKS...
+FKBX_ECOLI      LEIDPALEA
+

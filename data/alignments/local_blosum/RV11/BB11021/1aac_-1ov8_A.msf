@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 152  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1aac_  oo  Len:  152  Start/End:  4,104
+ Name: 1ov8_A oo  Len:  152  Start/End:  9,137
+
+//
+
+
+
+1aac_       IPSESPFAAA EVADGAIVVD .IAKMKYETP EL..HVKVGD TVTWINREAM 
+1ov8_A      V.NETPAQTV EVRAAPDAL. AFAQTSLSLP A.NTVVRL.D FVNQ.NNLGV 
+
+1aac_       PHNVHFVAGV L......... .....GEAAL KGPM...... ......MKKE 
+1ov8_A      QHNWVLVNGG .DDVAAAVNT AAQNNADALF VPP.PDTPNA LAWTAMLNAG 
+
+1aac_       QAYSLTF.TE A.GTYDYH.C TP...HP... FMRGKVVVE
+1ov8_A      ESGSVTFRTP APGTYLY.IC T.FPGH.YLA GMKGTLTVT
+

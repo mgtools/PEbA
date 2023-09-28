@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 95  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1erv_  oo  Len:  95  Start/End:  4,82
+ Name: 1j0f_A oo  Len:  95  Start/End:  34,98
+
+//
+
+
+
+1erv_       IESKTAFQEA LDAAG.DKLV VVDFSATW.C GP..CKMIKP FFHS.LSEKY 
+1j0f_A      LDGKRIQYQL VDIS.QDN.A LRDEMRT.LA G.NP.KATPP ..Q.IVN... 
+
+1erv_       SNV.IFLE.V DVDDCQDVAS ECEVKSMPTF QF.FKKG
+1j0f_A      GN.H.YC.G. DYE..LFV.. EA.VEQ.DTL Q.EFLKL
+

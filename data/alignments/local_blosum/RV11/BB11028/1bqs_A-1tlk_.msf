@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 100  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bqs_A oo  Len:  100  Start/End:  104,186
+ Name: 1tlk_  oo  Len:  100  Start/End:  36,98
+
+//
+
+
+
+1bqs_A      PGDPEVAC.. TAHKV..TPV DPNALSFSLL VGGQELEGA. QALGPEVQEE 
+1tlk_       P.DPEVM.WF ...K.DDNPV KESR.HFQ.I DY.DE.EG.N CSL.T.ISE. 
+
+1bqs_A      ..EEEPQGDE DVLFRVTERW RLPPLGTPVP .PALYCQATM R
+1tlk_       VC.....GDD DA..K....Y TCKAVNS.L. GEAT.CTAEL L
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 83  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 2hip_A     oo  Len:  83  Start/End:  0,70
+ Name: HPIS_PARSP oo  Len:  83  Start/End:  6,69
+
+//
+
+
+
+2hip_A          EPRAEDGHAH DYVNEAADAS GHPRYQEGQL .CENCAFWGE AVQDGW.GRC 
+HPIS_PARSP      DPSAEQAQAL NYVKDTAEAA DHPAHQEGE. QCDNCMFF.Q ..ADS.QG.C 
+
+2hip_A          TH..PDFDEV LVKAEGWCSV .YAPAS
+HPIS_PARSP      Q.LFPQ.NSV ..EPAGWCQ. SWT.AQ
+

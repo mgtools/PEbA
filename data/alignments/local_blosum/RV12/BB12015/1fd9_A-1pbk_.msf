@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 122  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A oo  Len:  122  Start/End:  112,201
+ Name: 1pbk_  oo  Len:  122  Start/End:  16,115
+
+//
+
+
+
+1fd9_A      PGKSDTVT.V EYTGRLI.DG TVFDSTE... .....KTGKP ATFQVSQ... 
+1pbk_       PKKGDVV.HC WYTGTL.QDG TVFDTN.IQT SAKKKKNAKP LSFKVG.VGK 
+
+1fd9_A      VIPGWTEALQ .LMPAGSTWE IY..VPSGLA YGPRSVGG.P I....GPNET 
+1pbk_       VIRGWDEAL. LTMSKGEKAR L.EIEPEW.A YG.KK.G.QP .DAKIPPNAK 
+
+1fd9_A      LIFKIHLISV K
+1pbk_       LTFEVELVDI D
+

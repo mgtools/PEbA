@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 125  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kdi_  oo  Len:  125  Start/End:  15,101
+ Name: 1ov8_A oo  Len:  125  Start/End:  36,137
+
+//
+
+
+
+1kdi_       PDSITVSAGE A.VEF..TLV GETGHNI... ...VFDIPAG APGTVASELK 
+1ov8_A      PANTVVRL.D .FVN.QNNL. G.VQHN.WVL VNGGDDVAAA VN.TAAQN.N 
+
+1kdi_       AA........ ....SMDEND LLSEDEPSF. ..KAKVSTPG TYTFYCTP.. 
+1ov8_A      A.DALFVPPP DTPNALAWTA MLNAGE.S.G SVTFRTPAPG TYLYICT.FP 
+
+1kdi_       .HKSANMKGT LTVK
+1ov8_A      GHYLAGMKGT LTVT
+

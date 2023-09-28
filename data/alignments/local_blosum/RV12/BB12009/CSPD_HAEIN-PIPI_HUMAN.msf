@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 74  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CSPD_HAEIN oo  Len:  74  Start/End:  3,67
+ Name: PIPI_HUMAN oo  Len:  74  Start/End:  70,120
+
+//
+
+
+
+CSPD_HAEIN      GIVKWFNNAK GFGFISAEGV .DADIFAHYS VIEMDGYRSL KA.GQKVQFE 
+PIPI_HUMAN      GVCKQFSRSQ GHGFITPEN. GSEDIFVHVS ..DIEG.... E.Y...VP.. 
+
+CSPD_HAEIN      VLHSDKGSHA T.KIIPIA
+PIPI_HUMAN      V.E...GDEV TYKMCPIP
+

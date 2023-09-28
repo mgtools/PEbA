@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 112  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cno_A oo  Len:  112  Start/End:  13,78
+ Name: 1h31_B oo  Len:  112  Start/End:  41,132
+
+//
+
+
+
+1cno_A      CAACHG.... ....QN.... ......GISQ V.PIYPNLAG ........QK 
+1h31_B      CIACH.EVTE MADAQ.FPGT VGPSLDGVAA .R..YPE.A. MIRGILVNSK 
+
+1cno_A      EQYLVAALKA YK...AGQRQ GGQAP....V MQGQATALSD ADI..ANLAA 
+1h31_B      NVFPETVMPA Y.YRVEGFNR PGIA.FTSKP IEGEIRPLMT AG.QIEDVVA 
+
+1cno_A      YY
+1h31_B      YL
+

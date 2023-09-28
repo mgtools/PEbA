@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 124  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1erv_  oo  Len:  124  Start/End:  1,103
+ Name: 2trc_P oo  Len:  124  Start/End:  100,193
+
+//
+
+
+
+1erv_       VKQIESKTAF QEALDAAGDK LVVVD...FS ATWC.GPCKM IKPF.FHSLS 
+2trc_P      VYELETGEQF LETIEKEQKV TTIV.VNIYE DGV.RG.CDA LNS.SLECLA 
+
+1erv_       EKYSNVI.FL EVD.VDDCQD VASECEVKSM PTFQ.FFKKG QKVGEFS.GA 
+2trc_P      AEYPXV.KFC KI.RASNTG. AGDRFSSDVL PTL.LVYK.G ...GEL.I.S 
+
+1erv_       NK.EKLEATI NEL
+2trc_P      N.F..I.SVA .EQ
+

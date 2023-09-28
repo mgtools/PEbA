@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 63  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A     oo  Len:  63  Start/End:  11,60
+ Name: CADO_BUNCA oo  Len:  63  Start/End:  16,66
+
+//
+
+
+
+1cb9_A          KTCPAGKNLC YKMF..MV.A APHVP.VKRG CID.VCPKSS LLVK...YV. 
+CADO_BUNCA      KVCASGEKYC FKE.SWR.EA R.GT.RIERG CA.ATCPKGS ..V.YGLYVL 
+
+1cb9_A          CCNTDKCN
+CADO_BUNCA      CCTTDDCN
+

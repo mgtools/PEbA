@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 129  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1d9k_A oo  Len:  129  Start/End:  0,106
+ Name: 2ncm_  oo  Len:  129  Start/End:  3,91
+
+//
+
+
+
+1d9k_A      QVRQSPQSLT VWEGETTILN .CSYEDSTF. ..DYFPWYRQ F..PGKSPAL 
+2ncm_       QVDIVPSQGE ISVGESKFF. LCQVAGDA.K DKDI.SWFSP .NGEKLSPN. 
+
+1d9k_A      ..LIAISLVS NKKEDGRFTI FFNKREKKLS LHITDSQP.G DSATYFCAAT 
+2ncm_       QQ..RISVVW ND.DDS..S. ..T.....LT ..IYNAN.ID DAGIYKCVVT 
+
+1d9k_A      GSFNKLTFGA GTRL..AV
+2ncm_       .A..E.D.G. .TQ.SEAT
+

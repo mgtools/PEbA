@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 100  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kdu_      oo  Len:  100  Start/End:  0,75
+ Name: KRM2_HUMAN oo  Len:  100  Start/End:  35,110
+
+//
+
+
+
+1kdu_           CYEGNGHF.Y RGKASTDTM. ....GRPCLP .WNSATV.LQ QTYHAHRSD. 
+KRM2_HUMAN      CFQVNGA.DY RGHQN.RT.G PRGAGRPCL. FWDQ.T.Q.Q HSYSS.ASDP 
+
+1kdu_           ...AGLGK.N YCRNPDNR.. RRPWCYVQGL KPLVQECMVH D
+KRM2_HUMAN      HGRWGLGAHN FCRNPDG.DV Q.PWCYV.A. E..TEEG.IY W
+

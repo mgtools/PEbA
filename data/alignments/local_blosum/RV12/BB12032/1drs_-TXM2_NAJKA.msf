@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 63  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1drs_      oo  Len:  63  Start/End:  12,59
+ Name: TXM2_NAJKA oo  Len:  63  Start/End:  12,65
+
+//
+
+
+
+1drs_           TTETCQEDSC ....YKNIWT FDNI.....I RRGCGCFTPR ..GDMPGPYC 
+TXM2_NAJKA      TTEDCP.DG. QNLCFKR.WH MIV.PGRYKK TRGCAATCP. IAENRDVIEC 
+
+1drs_           CESDKCNL
+TXM2_NAJKA      CSTDKCNL
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 80  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: Q14820 oo  Len:  80  Start/End:  3,66
+ Name: Q4IL28 oo  Len:  80  Start/End:  1180,1241
+
+//
+
+
+
+Q14820      GANATPL... .DF.PSKKRK RSRWNQDTME QKTVI..PGM PTVIP.PGLT 
+Q4IL28      GRDPEP.RSE AD.GPRRRKK RNRWG.DASE NKAA.GLMGL PTAI.LSNMT 
+
+Q14820      REQERAYIG. KYTFCIQMHF EIV
+Q4IL28      SEQLEAYT.L .H.L..RIE. EIS
+

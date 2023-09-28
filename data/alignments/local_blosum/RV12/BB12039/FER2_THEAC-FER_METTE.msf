@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 64  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FER2_THEAC oo  Len:  64  Start/End:  11,64
+ Name: FER_METTE  oo  Len:  64  Start/End:  4,58
+
+//
+
+
+
+FER2_THEAC      VDRNLCNYCG ACVGM.CPTD AIW..LDETV IKIHEEKCIE CGF.CI..VG 
+FER_METTE       VNVDLCTGCG SCVD.ECPAA AI.SLNDDGI ATVDESECLD CG.SC.ED.A 
+
+FER2_THEAC      CPTGAITAE
+FER_METTE       CPNNAITIE
+

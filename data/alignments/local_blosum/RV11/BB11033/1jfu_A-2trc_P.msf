@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 140  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1jfu_A oo  Len:  140  Start/End:  57,166
+ Name: 2trc_P oo  Len:  140  Start/End:  121,198
+
+//
+
+
+
+1jfu_A      TLLVNLWATW .CVP..CRKE MPALDELQGK LSG.PNFEVV AINIDTRDPE 
+2trc_P      TIVVNIYED. G.V.RGC..D ..ALNS.... .S.L...EC. .L.A.A...E 
+
+1jfu_A      K.PKTFLKEA NLTRLGYFND QKAKVFQDLK AIGRALGM.. ......PTSV 
+2trc_P      .YPX..VK.. .FCKI..... .RAS...N.. T.G.A.G.DR FSSDVLPTLL 
+
+1jfu_A      LVDPQGC.EI ATIAGP.... AEWASEDA
+2trc_P      VY..KG.GEL ..ISN.FISV AEQFAEDF
+

@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 122  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bai_A    oo  Len:  122  Start/End:  34,124
+ Name: POL_OMVVS oo  Len:  122  Start/End:  41,123
+
+//
+
+
+
+1bai_A         LLDTGADD.T VISEEDWP.T DWPVMEAANP QIHGIGGGIP VRKSRDMIEL 
+POL_OMVVS      LVDTGAD.RT IV.R..Y.H. D.......N. S..GI....P T..GR..IKL 
+
+1bai_A         GVINR...DG SL........ ..ERP..LLL FPLVAMTPVN ILGRDC.... 
+POL_OMVVS      QGIG.GIIEG E.KWDKVVIQ YKEK.RIEGT IVVLPSSPVE VLGRD.NMAK 
+
+1bai_A         LQGLGLRLTN L
+POL_OMVVS      LDI.GIIMAN L
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 94  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hip_      oo  Len:  94  Start/End:  7,83
+ Name: HPIS_THIPF oo  Len:  94  Start/End:  7,79
+
+//
+
+
+
+1hip_           AADNATAIAL KYNQDATKSE RVAAARPG.. ...LPPEEQH CA.DCQFMQA 
+HPIS_THIPF      AATNPIAQSL HYIEDANASE R....NP.VT KTELPGSEQF C.HNCSFIQA 
+
+1hip_           DAAGATDEWK G.CQLFPGK. LINVNGWCAS WTL.KA
+HPIS_THIPF      DS.GA...WR .PCTLYPG.Y TVSEDGWCLS WA.HKT
+

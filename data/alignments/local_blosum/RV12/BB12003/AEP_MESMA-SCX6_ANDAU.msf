@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 81  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: AEP_MESMA  oo  Len:  81  Start/End:  15,81
+ Name: SCX6_ANDAU oo  Len:  81  Start/End:  2,64
+
+//
+
+
+
+AEP_MESMA       DGLVNADGYI RGSNGCKVSC L.LGNEG... CNKECRAY.G ASYGYCWTWK 
+SCX6_ANDAU      DGYV.VK... NGTN.CKYSC .EIGSE.YEY CGPLCKR.KN AKTGYCYAF. 
+
+AEP_MESMA       LACWCQ.GLP DD.KTWKSES NTCG
+SCX6_ANDAU      .ACWC.IDVP DDVKLYGDDG TYCS
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 76  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1csp       oo  Len:  76  Start/End:  0,63
+ Name: PIPI_HUMAN oo  Len:  76  Start/End:  67,132
+
+//
+
+
+
+1csp            MLEGKVKWFN SEKGFGFIEV EGQ..DDVFV HFSAIQGEGF KTLEEGQAVS 
+PIPI_HUMAN      VFKGVCKQFS RSQGHGFITP EN.GSEDIFV HVSDIEGEYV P.VE.GDEVT 
+
+1csp            FEIVEG.... NRGPQAANVT
+PIPI_HUMAN      YKMCP.IPPK NQKFQAVEVV
+

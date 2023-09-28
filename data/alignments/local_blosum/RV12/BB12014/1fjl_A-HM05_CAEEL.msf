@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 69  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fjl_A     oo  Len:  69  Start/End:  0,60
+ Name: HM05_CAEEL oo  Len:  69  Start/End:  33,92
+
+//
+
+
+
+1fjl_A          KQRRSRTTFS ASQLDELERA FERTQYP.DI YTREELAQRT NLTEA.RIQV 
+HM05_CAEEL      RPKRPRTVFT DEQLEKLEES FNTSGY.LSG STRAKLAESL GLSD.NQVKV 
+
+1fjl_A          WFQNRRARLR KQH
+HM05_CAEEL      WFQNRRTK.Q KKI
+

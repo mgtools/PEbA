@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 136  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ghq_B oo  Len:  136  Start/End:  23,127
+ Name: 1nwv_A oo  Len:  136  Start/End:  26,126
+
+//
+
+
+
+1ghq_B      VGTVIRYSCS GTFRL.IGEK SLL.CITKDK VDG...TWDK PAPKCEYFNK 
+1nwv_A      VGTVVEYEC. ...R.P.GYR RE.PS.LSPK LT.CLQN.LK WSTAVEFC.K 
+
+1ghq_B      YSSCPEPI.. .......VPG GYKIR..GST PYRHGDSVTF ACKTNFSMNG 
+1nwv_A      KKSCPNP.GE IRNGQIDVPG G..I.LFGAT .I....S..F SCNTGYKLFG 
+
+1ghq_B      NKSVWC...Q ANNMWGPTRL PTCV
+1nwv_A      STSSFCLISG SSVQWS.DPL PECR
+

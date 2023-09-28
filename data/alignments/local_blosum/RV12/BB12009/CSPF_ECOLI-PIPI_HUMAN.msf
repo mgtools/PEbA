@@ -1,0 +1,16 @@
+PileUp
+
+
+
+   MSF: 52  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CSPF_ECOLI oo  Len:  52  Start/End:  6,46
+ Name: PIPI_HUMAN oo  Len:  52  Start/End:  70,114
+
+//
+
+
+
+CSPF_ECOLI      GIVKTFDG.K SGKGLITPSD GRI.DVQLHV SALNL..... RDAEEITT
+PIPI_HUMAN      GVCKQFS.RS QGHGFITPEN GS.EDIFVHV SDIE.GEYVP VEGDEVTY
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 61  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FER2_THEAC oo  Len:  61  Start/End:  16,61
+ Name: FERN_AZOVI oo  Len:  61  Start/End:  8,60
+
+//
+
+
+
+FER2_THEAC      CNYCGACVGM CPTDAIW.LD ETVIKIHEEK CIECGF.... ...CIVGCPT 
+FERN_AZOVI      CVNCWACVDV CPSEAI.SLA GPHFEISASK CTECD.GDYA EKQCASICPV 
+
+FER2_THEAC      G..AIT
+FERN_AZOVI      .EGAIL
+

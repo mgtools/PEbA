@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 112  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  112  Start/End:  110,189
+ Name: SLYD_TREPA oo  Len:  112  Start/End:  0,87
+
+//
+
+
+
+1fd9_A          VKP.GKSDTV TVEYTGRL.I DGTV...FDS TEKTGKP..A TFQVSQVIPG 
+SLYD_TREPA      MK.IANECVV NIEYTLR.D. D.T.GEIIDS SDVMGA.LEY VQGHGMIIPG 
+
+1fd9_A          WTEALQLMP. ..AGSTWEIY VPSG.LAYGP RS........ VGGPI...GP 
+SLYD_TREPA      .LETA.LI.N REEGEEFSVT IPP.VGAYG. E.VQEDLRMT VGRD.QFP.P 
+
+1fd9_A          NE
+SLYD_TREPA      NV
+

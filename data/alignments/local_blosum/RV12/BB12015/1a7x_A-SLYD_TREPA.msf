@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 120  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1a7x_A     oo  Len:  120  Start/End:  16,107
+ Name: SLYD_TREPA oo  Len:  120  Start/End:  1,97
+
+//
+
+
+
+1a7x_A          KRGQTCVVH. .YTGMLEDG. .KK.FDSSRD RN..KPFKFM LGKQEVIR.G 
+SLYD_TREPA      KIANECVVNI EYT.LRDD.T GE.IIDSS.D V.MGA.LEYV QGHGMII.PG 
+
+1a7x_A          W.EEGVAQMS VGQRAKLTIS PD.YAYG... .....ATGHP GIIPPHATLV 
+SLYD_TREPA      .LETALINRE EGEEFSVTIP P.VGAYGEVQ EDLRMTVGR. DQFPPNVP.I 
+
+1a7x_A          FDVE.LLKLE
+SLYD_TREPA      .EV.GM.RFD
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 75  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kba_A     oo  Len:  75  Start/End:  2,64
+ Name: NXL3_OPHHA oo  Len:  75  Start/End:  2,63
+
+//
+
+
+
+1kba_A          CLISPSSTPQ TCPN.GQDIC FLKAQCD.KF CSIRGPVIEQ GCVATCPQFR 
+NXL3_OPHHA      CYVTPDVKSE TCP.AGQDLC YTETWC.VAW CTVRGKRVSL TCAAICP.I. 
+
+1kba_A          ..SNYRSLL. CCTTDN.CN
+NXL3_OPHHA      VPP.KVSI.K CCSTD.ACG
+

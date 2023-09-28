@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 61  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1e08_A    oo  Len:  61  Start/End:  8,57
+ Name: FER_METTE oo  Len:  61  Start/End:  9,58
+
+//
+
+
+
+1e08_A         CIGCDTCSQY .CPTAAIFGE MGEPHSIPH. ..IEACINCG QCL.THCPEN 
+FER_METTE      CTGCGSCVD. ECPAAAI.S. LND.DGIA.T VDESECLDCG SC.EDACPNN 
+
+1e08_A         AIY..E
+FER_METTE      AI.TIE
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 92  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1pbk_      oo  Len:  92  Start/End:  21,97
+ Name: FKBX_ECOLI oo  Len:  92  Start/End:  10,76
+
+//
+
+
+
+1pbk_           VVHCWYTGTL QDGTVF..DT NIQTSAKKKK NAKPLSFKVG V.GKVI.RGW 
+FKBX_ECOLI      LVHF.TL.KL DDGTT.AEST ..RNNGKP.. .A..L.FRLG .DASL.SEG. 
+
+1pbk_           .DEA.LLTMS KGEKARLEIE PEW.AYGKKG QPDA
+FKBX_ECOLI      LEQ.HLLGLK VGDKTTFSLE PD.AAFGVPS .PDL
+

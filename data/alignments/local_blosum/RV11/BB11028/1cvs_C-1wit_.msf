@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 81  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cvs_C oo  Len:  81  Start/End:  33,100
+ Name: 1wit_  oo  Len:  81  Start/End:  27,91
+
+//
+
+
+
+1cvs_C      GTPQPTLRWL K...NGKEFK PDHR.IGGYK VRYATW.SII MDSVV.PSDK 
+1wit_       GAPDPTATWT .VGDSGAALA PEL.LV...D AKSST.TSIF FPSA.KRADS 
+
+1cvs_C      GNYTCIVENE YGSINHTYQL DVVE
+1wit_       GNYKLKVKNE LGE.DEAI.F EVIV
+

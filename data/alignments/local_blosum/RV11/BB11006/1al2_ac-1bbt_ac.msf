@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 191  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1al2_ac oo  Len:  191  Start/End:  5,153
+ Name: 1bbt_ac oo  Len:  191  Start/End:  69,209
+
+//
+
+
+
+1al2_ac      SDRVL.QLTL GNSTITTQEA ANSVVAYGR. WPEYLRDS.E ANPVDQP... 
+1bbt_ac      SDRVLAQFDM ..SL.AAKHM SNTFLA.G.L .AQYYTQ.YS GT.INL.HFM 
+
+1al2_ac      .TEPDVAACR FYTLDTVSWT KESRGWW... WKLPDA.... LRD....MGL 
+1bbt_ac      FTGPTDAKAR .Y.M..VAYA P.P.GM.EPP .KTPEAAAHC IH.AEWDTGL 
+
+1al2_ac      FGQN..MYYH YLGRSGYTVH VQCNASKFH. ..QGALGVFA VPEM.CLAGD 
+1bbt_ac      NSK.FTFSIP YLSAADYTY. TASDVAET.T NVQGWVCLFQ ITH.G..KAD 
+
+1al2_ac      SNTTTMH.TS YQNANPGEKG GTFT
+1bbt_ac      GDALVV.LAS ...A..G.KD ..FE
+

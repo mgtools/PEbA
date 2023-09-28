@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 183  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bbt_ac oo  Len:  183  Start/End:  13,163
+ Name: 1mec_aa oo  Len:  183  Start/End:  69,192
+
+//
+
+
+
+1bbt_ac      LVTTDPKTAD PVYGKVFNPP RN..QLP.GR FTNL.LDVAE AC.PTF.... 
+1mec_aa      ILTPGPQF.D PAYDQL.RPQ R.LTEI.WGN G.N.E.ETSE V.FPL.KTKQ 
+
+1bbt_ac      .LRFEG.GVP YVTT.KTDS. DR.VLAQFDM SLAAKHMSNT FLAGLAQYYT 
+1mec_aa      DYSFC.LFSP FVY.YKCD.L E.VTLSPHT. S.GA.H.G.. .L..LVRW.C 
+
+1bbt_ac      QYSGTINLHF MFTGPTDAKA RY.MVAYAPP GMEPPKTPEA AAH.CIHAEW 
+1mec_aa      P...T.G... ..T.PT..KP T.TQVLHE.. .VS..SLSEG RT.PQVYSA. 
+
+1bbt_ac      DTGLNSKFTF SIPYLSA
+1mec_aa      GPGTSNQISF VVPYNSP
+

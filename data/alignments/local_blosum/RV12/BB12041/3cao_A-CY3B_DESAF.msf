@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 136  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 3cao_A     oo  Len:  136  Start/End:  5,103
+ Name: CY3B_DESAF oo  Len:  136  Start/End:  34,138
+
+//
+
+
+
+3cao_A          HVPTDAFGKL ERPAAVFNHD EHN.....EK AGIESCNACH HV.WVNGVLA 
+CY3B_DESAF      HLSNP.NAKL EYKV.KFSHK AH.ASLGTDA AA...CQKCH H.KW.DG... 
+
+3cao_A          EDED.SVGTP CSDCHALEQD G.....DTPG ..LQDAYHQQ ....CW.GCH 
+CY3B_DESAF      KSE.IG.GCA TEGCHADTTS .FKATEKDP. KFLMTAFHSK SPMSC.QGCH 
+
+3cao_A          EKQAKG.... ...PVMCGEC HVKN
+CY3B_DESAF      .KEMK.TAKK TTGPTACAQC H..N
+

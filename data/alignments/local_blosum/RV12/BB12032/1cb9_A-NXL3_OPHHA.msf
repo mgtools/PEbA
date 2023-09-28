@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 74  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A     oo  Len:  74  Start/End:  1,59
+ Name: NXL3_OPHHA oo  Len:  74  Start/End:  1,63
+
+//
+
+
+
+1cb9_A          KCKKLVPLFS KTCPAGKNLC YKM..FMVAA P.HVPVKR.. .GCID.VCPK 
+NXL3_OPHHA      KCYVTPDVKS ETCPAGQDLC YT.ETWCVAW .CTVRGKRVS LTCA.AICP. 
+
+1cb9_A          ..SSLLVKYV CCNTDKCN
+NXL3_OPHHA      IVP.PKVSIK CCSTDACG
+

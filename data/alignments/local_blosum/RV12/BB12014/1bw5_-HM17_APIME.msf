@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 62  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bw5_      oo  Len:  62  Start/End:  6,61
+ Name: HM17_APIME oo  Len:  62  Start/End:  12,66
+
+//
+
+
+
+1bw5_           RTVLNEKQLH TLRTC.YAAN PRPDALMKEQ LVEMTGLSPR VIRVWFQNKR 
+HM17_APIME      RTPFTTQQLL SLEK.KFREK QYLTIAERAE FSSSLHLTET QVKIWFQNRR 
+
+1bw5_           CKDKKRS
+HM17_APIME      AK.AKRL
+

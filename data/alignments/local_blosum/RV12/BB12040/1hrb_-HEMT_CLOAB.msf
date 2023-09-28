@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 140  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hrb_      oo  Len:  140  Start/End:  7,112
+ Name: HEMT_CLOAB oo  Len:  140  Start/End:  1,103
+
+//
+
+
+
+1hrb_           YVWDPSFRTF .YSI.IDDEH KTLFNGIF.. ........HL AIDDNA.DNL 
+HEMT_CLOAB      FVWKDEFEL. GID.KIDNEH RKLFE.I.AN KGYELLKNEF YVD.K.YDKI 
+
+1hrb_           G.....ELRR C.TG.KHFLN QEV..LMEAS QYQFYDEHKK EHDGFINALD 
+HEMT_CLOAB      .MDIIVELKE .YA.EFHFSE EE.DYL.ASI GYKKLFTHKL EHDSFIK... 
+
+1hrb_           NWKGDVKWAK AWLVNHIKTI DFKYKGKI
+HEMT_CLOAB      ..K..VE.S. .F..N.IKEI DYDQD.KY
+

@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 186  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1al2_ac oo  Len:  186  Start/End:  117,265
+ Name: 1bbt_aa oo  Len:  186  Start/End:  50,186
+
+//
+
+
+
+1al2_ac      LGVFAVPEM. CLAGDSN..T TTMHTSYQNA NPGEKGGTF. .TGTFTPDNN 
+1bbt_aa      LDLMQVPS.H TLVGGL.LRA STYYFS..DL ...EIA.V.K HEGDLTWVPN 
+
+1al2_ac      QTSPARRFCP VDY.LLGNG. ........TL LGNAFVFPHQ II.NLRTNNC 
+1bbt_aa      G.APEK..A. LD.NTT.N.P TAYHKAPLTR LALPYTAPHR VLATVYNGEC 
+
+1al2_ac      ATLVLPYVNS LSIDSMVKHN NWGIAILPLA P..LNF.ASE SSPEIPITLT 
+1bbt_aa      RTL..P.T.S FNYGA.IK.. ..ATRVTELL .YRMK.RAET YCPR.PLLA. 
+
+1al2_ac      IA.PMCCEF. .NGLRNITLP
+1bbt_aa      I.HPT..E.A RH.KQKIVAP
+

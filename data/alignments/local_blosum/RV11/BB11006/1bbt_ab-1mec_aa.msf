@@ -1,0 +1,28 @@
+PileUp
+
+
+
+   MSF: 235  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bbt_ab oo  Len:  235  Start/End:  26,210
+ Name: 1mec_aa oo  Len:  235  Start/End:  0,167
+
+//
+
+
+
+1bbt_ab      GYATAEDFVS GPNTSGLETR VVQAER..FF KTHL.....F DWVTSDSFGR 
+1mec_aa      GVENAEKGVT .ENTDATAD. FV.AQ.PVYL PEN.QTKVAF FYDRSSPIGR 
+
+1bbt_ab      CHLLELPTDH KGVYGSLTDS YAYMRNG... WDVEVTAVGN .QFNGGC... 
+1mec_aa      ..FA.VK... SG..S.LESG FAPFSN.KAC PNSVILTPG. PQFDPA.YDQ 
+
+1bbt_ab      LLVAMVPELC .SIQKRELYQ LTL...FPHQ FINPRTNMTA HITVPFVGVN 
+1mec_aa      LRPQRLTEI. WG.NGNE..E .T.SEVFPLK ...TKQDYSF CLFSPFV.Y. 
+
+1bbt_ab      RYDQYKVHKP WTLV.VMVVA PLTVNTEGAP ..QIKVY... ...ANIAPTN 
+1mec_aa      .Y.KCD.... ..L.EV.TLS P...HTSGA. HGLL.V.RWC PTGTPTKPTT 
+
+1bbt_ab      VHVAG.EFPS K..E
+1mec_aa      .QVL.HEVSS .LSE
+

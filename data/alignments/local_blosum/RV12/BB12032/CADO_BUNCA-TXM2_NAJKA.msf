@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 62  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CADO_BUNCA oo  Len:  62  Start/End:  18,66
+ Name: TXM2_NAJKA oo  Len:  62  Start/End:  16,64
+
+//
+
+
+
+CADO_BUNCA      CASGEKYCFK ESWRE..AR. GTR..IERGC AATCPKGSVY ....GLYVLC 
+TXM2_NAJKA      CPDGQNLCFK R.WH.MIV.P GR.YKKTRGC AATCP...I. AENRDV.IEC 
+
+CADO_BUNCA      CTTDDCN
+TXM2_NAJKA      CSTDKCN
+

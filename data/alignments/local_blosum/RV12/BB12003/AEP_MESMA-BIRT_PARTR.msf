@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 60  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: AEP_MESMA  oo  Len:  60  Start/End:  25,78
+ Name: BIRT_PARTR oo  Len:  60  Start/End:  10,57
+
+//
+
+
+
+AEP_MESMA       RGSNGCKVSC LLGNEGCNKE CRAYGASYGY CWTWKLACWC QG.LPDDKTW 
+BIRT_PARTR      KDGNTYKCFL LGGNEECLNV CKLHGVQYGY CYA.S.KCWC E.YLEDDK.. 
+
+AEP_MESMA       KSESN
+BIRT_PARTR      ..DSV
+

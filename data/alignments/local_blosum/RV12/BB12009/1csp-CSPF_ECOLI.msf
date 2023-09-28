@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 73  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1csp       oo  Len:  73  Start/End:  1,63
+ Name: CSPF_ECOLI oo  Len:  73  Start/End:  4,67
+
+//
+
+
+
+1csp            LEGKVKWFNS EKGF.GFIEV .EGQDDVFVH FSAIQG..EG FKTLEEGQAV 
+CSPF_ECOLI      MTGIVKTFDG KSG.KGLITP SDGRIDVQLH VSALN.LRD. AEEITTGLRV 
+
+1csp            SFEIVEGNRG PQAANVT
+CSPF_ECOLI      EFCRINGLRG PSAANVY
+

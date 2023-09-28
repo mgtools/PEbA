@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 74  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A     oo  Len:  74  Start/End:  0,60
+ Name: TXM2_NAJKA oo  Len:  74  Start/End:  3,64
+
+//
+
+
+
+1cb9_A          LKC.KKLVPL F.SKTCPAGK NLCYKMFMVA APHVP..VKR GCIDVCPK.. 
+TXM2_NAJKA      VK.EKSIFGV .TTEDCPDGQ NLCFKRWHMI VPGR.YKKTR GCAATCP.IA 
+
+1cb9_A          SSL..LVKYV CCNTDKCN
+TXM2_NAJKA      EN.RD.VI.E CCSTDKCN
+

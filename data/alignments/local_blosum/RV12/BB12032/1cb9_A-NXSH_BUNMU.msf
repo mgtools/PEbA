@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 62  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A     oo  Len:  62  Start/End:  6,60
+ Name: NXSH_BUNMU oo  Len:  62  Start/End:  31,82
+
+//
+
+
+
+1cb9_A          VPLFSKTCPA GKNLCYKMFM VAAPHVP..V KRGCID.VCP KSSLLVKYVC 
+NXSH_BUNMU      IPITFTNCEE GHV.CYKYST TETPNR.ILI HRGCA.AKCP KR.L..RVIC 
+
+1cb9_A          CNTDKCN
+NXSH_BUNMU      CSTDKCN
+

@@ -1,0 +1,162 @@
+PileUp
+
+
+
+   MSF: 1038  Type: P    Check:  5306   .. 
+
+ Name: P47160 oo  Len: 1038  Check:  6240  Weight:  10.0
+ Name: Q5ALM4 oo  Len: 1038  Check:  6920  Weight:  10.0
+ Name: Q6CQJ4 oo  Len: 1038  Check:  1817  Weight:  10.0
+ Name: Q7XTR7 oo  Len: 1038  Check:   581  Weight:  10.0
+ Name: Q948G6 oo  Len: 1038  Check:  9748  Weight:  10.0
+
+//
+
+
+
+P47160      .MSLEDTLAN MSLYDAKKYF RKAQNVVFNY TEMEGKVREA TNNEPWGASS 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      MDSISKKLGN LGLHDFRNAA RFAQNVIVQY EPYQIDIRRA TNTDSWGPTP 
+Q7XTR7      ..MDFVKVFD QAVREIKREV NL...KVLKV PELEQKVLDA TSDEPWGPHG 
+Q948G6      ....MKKVFD QTVRDLKREV NK...KVLKV PGIEQKILDA TSNEPWGPHG 
+
+
+P47160      TLMDQISQGT YN........ ...FREREEI LSMIFRRFT. ..E....KAG 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      KHLAKVMRHR YEVSMFLMTE YTLKRLVDHM AKRPKNMYEK ARKQYVNYG. 
+Q7XTR7      TTLSELSHAT KK........ ...FAECQMV MSVLWTRLS. ..E....RG. 
+Q948G6      SLLAEIAQAT QN........ ...YHEYQMV MNVVWKRIN. ..D....TG. 
+
+
+P47160      SEWRQIYKAL QLLDYLIKHG SE........ RFIDDTRNSI NLIRILETFH 
+Q5ALM4      .......... .......... .......... .......... ....MLKSFH 
+Q6CQJ4      NEWRVVLKCL VLLEYLLMRS DRGKETDQVL SCLQAHKHIL TKETMQYRVD 
+Q7XTR7      SKWRHVYKAL TIIEYLIANG SE........ RAVDDILDHY SKISVLSSFE 
+Q948G6      KNWRHVYKGL IVLDYLVAHG TE........ RVIDDIREHS YQISTLADFQ 
+
+
+P47160      YIDS.QGRDQ GINVRTRVKA LIELLSDDNK IRAERKKARE T.AKKYKG.. 
+Q5ALM4      YIDS.KGRDQ GINVRNKSKN LIAFLNDDNL IRSERKKARA N.AKKFGG.V 
+Q6CQJ4      FSSDGKMELH ERGIKKKCEH IIQLIEDTSY LKRERSKTAE NTQKIVAG.S 
+Q7XTR7      YVEP.NGKDA GINVRKKVET ILGLINDKEK IKSVREKAAS N.RDKYVGLS 
+Q948G6      YIDS.SGRDQ GSNVRRKSQS LVSLVNDKER IQEVRQKALA T.RDKYRSAF 
+
+
+P47160      VAGG...... SASADGSLNS KAGF...... .......... .......... 
+Q5ALM4      SSAAY...GG ASSMGTGFGS GGSTFTGDDE DFANRVYGDG GVYGER.... 
+Q6CQJ4      AGSRSE.... ..SLYNDISI NADSFAG... .......... .......... 
+Q7XTR7      STGITYKS.S SASFGSNYSS GERYGSFSGT REG.DSYGDS YRDKEP.... 
+Q948G6      ATSGTHRSPG GYDNDRYEGS YGSRYDNRNG YGGEREYGYR DDDRYGVAGT 
+
+
+P47160      .......... .......... ........TS TKVHGISVSA DFDSDNEDNE 
+Q5ALM4      .....FDDPA SAYNNGATGN DNFEEYDVQA SSSHATSKPT TSSSRVNAKA 
+Q6CQJ4      .......... ..SSSTIDDS DDF.EYEPT. PTAHRDRRSS A.VDEQRRQR 
+Q7XTR7      .........V KSSPSYTGSQ KSGSRIKKDV NRRNEDSPSS LK........ 
+Q948G6      TPNREGDRYS RDSNEQRYSR DREDEYK.GS HSNHEYAEGS GRRSYGRDRD 
+
+
+P47160      DGSFSQNGYN .......... ..DNASRATS TPGQGKQEPE DFVDFFSSES 
+Q5ALM4      SKKEPQN... .......... .......... .........D LLGDLLSFDG 
+Q6CQJ4      RELLRERIRN .......... ......SEHQ RKVSAQEPEI DLLDFDDAPA 
+Q7XTR7      .......... .......... .......... .......... .......... 
+Q948G6      SYGDDEAYSS RGRQSNADGP TQDERPMERK PSNQQIASPP PNYEDVTRDT 
+
+
+P47160      SKPSKELIQE D......... .......... .......... .....EKKAD 
+Q5ALM4      DGQQTSTN.. .......... .......... .......... TATASRGTGA 
+Q6CQJ4      PASPSI.... .......... .......... .....NNSNN ANVFESFGVD 
+Q7XTR7      .......... .......... .......... .......... .........S 
+Q948G6      QDNNHDGRNG GTVPVPVAAA KVSSPPRTSV PPGQVNGVHD NTVEDVPAPP 
+
+
+P47160      EEEDDDDEFS EFQSAVPVT. .......... NPANSFNLLN TSPIEGMPAT 
+Q5ALM4      NDDDDDDDFD DFQAAPSQPQ KPAN...... ....LSNNLN NLYNPSSQQQ 
+Q6CQJ4      GEDDDDDEFG DFQSEKSPVP PASGNFNSFG NDNNNNNNNN KTSNNNATLN 
+Q7XTR7      NAKGNEDDFD DFDPRGSSSN G......... ...AAN.TNT SGVDLFAPNL 
+Q948G6      PTHPEVNGFD EFDPRGSVPD TSPPV..... ..NPSQAVNS LEMDLFGPDP 
+
+
+P47160      TSSMPF.... .....YNSST TDQGKIT... ......PAIA EPKKVD.PFS 
+Q5ALM4      NQAVSG.... .....PNYNV NYQASQS... ......TGPA KTTSNNDAFS 
+Q6CQJ4      ..DLLD.... .....FGGSS STTTPAA... ......TNNN NASTKSDAFA 
+Q7XTR7      LDDFIDVPAA ATHETNDSAD AQVDLFADAD FQSAIPSTET AAGSDVQGNV 
+Q948G6      INSLALVSV. .....PQPTA SPNVEPS..A NPGFESNSFM GMPPASTGFN 
+
+
+P47160      SLFSTAKASA EAPSAPKASQ AKAAASNPVS N......... ......STTA 
+Q5ALM4      SLFSSAKTKS KTSTGNTSTS SSTT...... .......TPA AAAAASVNAS 
+Q6CQJ4      DLFSMSKNQI .......... .......... .......... .......... 
+Q7XTR7      DLFAEQPAFT AAFPPQTGFI PPPSSGTSEA N.TSTSKNTT PEPFDPFGAI 
+Q948G6      EAFDATNPFG DPTPFKAVHE ETPAVSQT.. .NAAPAGSFH ATEPAADANP 
+
+
+P47160      LSTDQDDDDE FGEMHG.GAV QQEQNTNN.. ......NHTS SKEIDLLSF. 
+Q5ALM4      NPTSSANDDF FGGFSSNNNS SSNNTKTKPA TNGNGTNNTN SGDIDLLSF. 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      PINSFDGSDP FGAFNSDVGS SSIPPPTQ.. ...SSVGNIS TPSQNPQAAS 
+Q948G6      FQPASAASFG FGDTLGDLSF GS........ .......NAA PGQQDIFVP. 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      DFGGFVSSTV ETAAKDPFDF SSS.NLGKT. ..PLADPKAD ASDFGAFVSH 
+Q948G6      .....TSSHS EVPPANPSVH PEQAVPSYVS SQAPQPA... .AAGPQTHAA 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      SEEVAKDPFD LSLSTSSGRT NQAPLAAPKS DTKKENFQVK SGIWADSLSR 
+Q948G6      PASFA..... ........SQ APPTSFASQA PQAGAPYPQA ASTFPHSQAS 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      GLIDLNITGP .KKVNLADVG IVGGLDDGSD DKA.LPS... .WTMGAGG.. 
+Q948G6      HPAATNPSTI PQNVATPFAP LQMPQPVPSG QSNYFMQPVP GTGINGMSGA 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      .SSLGMSGIP SSTQS...GG IESLA..... .......... ...NYNKYQF 
+Q948G6      PSQNGAPSYI PSQASQFAAP TNLQPSQPTF PPQTAMAASQ ATSISRGASQ 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      GFK....... .......... .......... .......... .......... 
+Q948G6      PLAVPNSMPS GVNFPLQSSS SAPPETILSA LQVSQSEPVK KFESKSTVWA 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      .......... .......... .......... .......... .......... 
+Q948G6      DTLSRGLVNL DISGPKANPH ADIGVDFDSI NRKEKRQEKK VSQAPVVSTI 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      .......... .......... .......... .......... .......... 
+Q948G6      TMGKAMGTGS GIGRAGASAM APPANPMGAS RGIGMGMGAA GSGYGGGMGM 
+
+
+P47160      .......... .......... .......... .......... .......... 
+Q5ALM4      .......... .......... .......... .......... .......... 
+Q6CQJ4      .......... .......... .......... .......... .......... 
+Q7XTR7      .......... .......... .......... .......... .......... 
+Q948G6      NRPMGMGMGM NQQMGMGMGM NQQAMGMGMN QQAMGMGMNQ QPMGMNMGMG 
+
+
+P47160      .......... .......... .......... ........
+Q5ALM4      .......... .......... .......... ........
+Q6CQJ4      .......... .......... .......... ........
+Q7XTR7      .......... .......... .......... ........
+Q948G6      MNQGMGMNMR PPMGMGPGSG YNPMGTGYGG QQPYGGYR
+

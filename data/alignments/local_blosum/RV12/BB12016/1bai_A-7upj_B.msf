@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 104  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bai_A oo  Len:  104  Start/End:  33,121
+ Name: 7upj_B oo  Len:  104  Start/End:  21,97
+
+//
+
+
+
+1bai_A      ALLDTGADDT VISEEDWPTD WPVMEAANPQ .IHGIGGGIP VRKSRDMIEL 
+7upj_B      ALLDTGADDT VL.EE.M.S. ..LPGRWKPK MIGGIGG.F. I.KVRQYDQI 
+
+1bai_A      GVINRDGSLE ...RPLL.LF PLVAMTPVNI LGRDCLQG.L GLRLT
+7upj_B      .LI..E..I. CGHKAI.G.T VLVGPTPVNI IGRNLLT.QI GCTLN
+

@@ -1,0 +1,28 @@
+PileUp
+
+
+
+   MSF: 272  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1al2_ac oo  Len:  272  Start/End:  39,267
+ Name: 1mec_aa oo  Len:  272  Start/End:  13,173
+
+//
+
+
+
+1al2_ac      DSEANPVDQP TE..PDVAAC ..RFYTLDTV SWTKE.SRGW WWKLPDALRD 
+1mec_aa      DATADFVAQP V.YLPENQT. KVAF.FYDR. S.SP.I..G. ..RF..AVKS 
+
+1al2_ac      MGLFGQNMYY HYLGRSGYTV HVQCNASKFH QGALGVFAVP EMCLAGDSNT 
+1mec_aa      .G....SL.. E....SGFA. ..P.....F. ..S.N..... KAC.P...NS 
+
+1al2_ac      TTMHTSYQNA NPGEKGGTFT GTFTPDN.NQ TSPARRFCPV DYLLGNGTLL 
+1mec_aa      VIL.T..... .PGPQ...FD ....PA.YDQ LRPQRL.TEI .W..GNG... 
+
+1al2_ac      GNAF.VFPHQ IINLRTNNC. ..ATLVLPYV N....SLSID SMVKHNNWGI 
+1mec_aa      .NE.E..TSE VFPLKTKQ.D YSFCLFSPFV .YYKCDLEV. TLSPHTS.G. 
+
+1al2_ac      AI..LPLAPL NFASESSPEI .PITLTIAPM CCEFNGLRNI ..TLPRLQ
+1mec_aa      A.HGL..L.V RWCPTGTPT. KPTT.QVL.H ..EVSSLSE. GRT.PQVY
+

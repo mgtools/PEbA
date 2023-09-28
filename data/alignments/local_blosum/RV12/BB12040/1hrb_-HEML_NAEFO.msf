@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 148  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hrb_      oo  Len:  148  Start/End:  3,113
+ Name: HEML_NAEFO oo  Len:  148  Start/End:  4,118
+
+//
+
+
+
+1hrb_           IPDPYVWDPS FR....TFYS IIDDEHKTLF NGIFHLAIDD ....NADNLG 
+HEML_NAEFO      IPSPFNWDSS F.CVGNN..E L.NEQHKKLF .ALI.NALD. ANRSSASALK 
+
+1hrb_           ELR...RCTG KHFL.NQEVL MEASQYQFY. ..DEHKKEHD G.FINA.... 
+HEML_NAEFO      EL.LDF.VV. MHF.KAEEDL F.AK.VNF.S DSTSHKETHD .KFVQ.DALG 
+
+1hrb_           LDNWKGDVKW ...AKAWLVN HIKT..IDFK YKGKI
+HEML_NAEFO      LKT.VGDAE. IQFIKQWLVN HIK.GS.DMK YKG.V
+

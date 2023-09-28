@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 100  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  100  Start/End:  113,198
+ Name: FKBX_PSEFL oo  Len:  100  Start/End:  11,71
+
+//
+
+
+
+1fd9_A          GKSDTVTVEY TG.RLIDGTV FDSTE.KTGK PATFQVSQVI PGWTEALQLM 
+FKBX_PSEFL      GQNTEVTLHF A.LRLENGDT VDST.FD.KA PATFKVGD.. .G...NL.L. 
+
+1fd9_A          PAGSTWEIYV PSGLAYGPRS VG.GP..IGP NETLIFKIHL I
+FKBX_PSEFL      P.G..FE... .A..A..... L.FG.FKAGD KRTL..QI.L P
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 70  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FER2_THEAC oo  Len:  70  Start/End:  7,64
+ Name: FER_ENTHI  oo  Len:  70  Start/End:  4,59
+
+//
+
+
+
+FER2_THEAC      TEMDVDRNLC NYCGACV.GM CPTDAIWLDE TVIKIHEEK. .....CIECG 
+FER_ENTHI       TIVNID.D.C VACGAC.SGT CP.QSV.L.E .VND.HVE.I KNPDDCIGCG 
+
+FER2_THEAC      FCIVGCPTGA ITAE
+FER_ENTHI       ACVDACPQGV LKVE
+

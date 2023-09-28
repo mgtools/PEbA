@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 83  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bmr_      oo  Len:  83  Start/End:  1,67
+ Name: SCX6_CENLL oo  Len:  83  Start/End:  19,83
+
+//
+
+
+
+1bmr_           RDGYIAQPEN .CV.YHCFPG ...SSGCDTL .CKEKGGTSG HCGFKVGHGL 
+SCX6_CENLL      KEGYLVNMKT GC.KYGCYE. LGDNGYCDR. KCKAESGNYG YC.YTVG... 
+
+1bmr_           ACWCNALPDN V..GII..VE GEKCHS
+SCX6_CENLL      .CWCEGLPNS .KP.T.WPLP GKSC.S
+

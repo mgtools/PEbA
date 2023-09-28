@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 181  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ix5_A     oo  Len:  181  Start/End:  6,141
+ Name: FKBP_STRCH oo  Len:  181  Start/End:  4,122
+
+//
+
+
+
+1ix5_A          KIKVDYIGKL ESG....... DVFDT..... .......SIE EVAK...EAG 
+FKBP_STRCH      KPEVDFPGG. EP.PADLAIK DIWE.GDGPV AQAGQTVSVH YVG.VAFSTG 
+
+1ix5_A          I...YAPDRE YEPLEFV.VG EGQLIQGFEE AVL.DMEVGD EKTVKIPAEK 
+FKBP_STRCH      .EEFDASWNR GTPLQF.QLG AGQVISGWDQ GV.QGMKVGG RRELIIPAH. 
+
+1ix5_A          .AYGNRNEML IQKIPRDAFK EADFEPEEGM VILAEGIPAT ITEVTDNEVT 
+FKBP_STRCH      LAYG...D.. .....RGA.. .GG.....G. ....K.I.AP ......GE.T 
+
+1ix5_A          LD.FNHELAG KDLVF
+FKBP_STRCH      L.IF...VC. .DLVA
+

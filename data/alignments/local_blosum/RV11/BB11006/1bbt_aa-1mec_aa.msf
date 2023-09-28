@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 171  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bbt_aa oo  Len:  171  Start/End:  70,183
+ Name: 1mec_aa oo  Len:  171  Start/End:  121,265
+
+//
+
+
+
+1bbt_aa      YYFSDLEIAV KH......EG DLT.WVPNGA PEK....... ...ALDNTTN 
+1mec_aa      YYKCDLEVTL S.PHTSGAHG LLVRWCPTGT PTKPTTQVLH EVSSLSEGRT 
+
+1bbt_aa      PTAYHKAPL. ....TRLALP YTAPH.RVLA TV.YNGEC.. .......RTL 
+1mec_aa      PQVYSAGP.G TSNQISFVVP YNSP.LSVLP AVWYNGH.KR FDNTGDLGIA 
+
+1bbt_aa      PTSFNYGAIK ...ATRVTEL L.....YRMK RAETYCPRPL LAIHPT.EAR 
+1mec_aa      PNS.DFGTL. FFAGTK.PDI .KFTVYLRYK NMRVFCPRPT .VFFP.WPT. 
+
+1bbt_aa      HKQKIV
+1mec_aa      SGDKID
+

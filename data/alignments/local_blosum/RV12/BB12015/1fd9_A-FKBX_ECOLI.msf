@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 86  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fd9_A     oo  Len:  86  Start/End:  115,185
+ Name: FKBX_ECOLI oo  Len:  86  Start/End:  6,75
+
+//
+
+
+
+1fd9_A          SDTVTVEYTG RLIDGTVF.D STEKTGKPAT FQVSQVIP.. .GW..TEALQ 
+FKBX_ECOLI      NSAVLVHFTL KLDDGTT.AE STRNNGKPAL FRLGDAS.LS EG.LEQHLLG 
+
+1fd9_A          LMPAGSTW.E IYVPSGLAYG PR.SVGGPI
+FKBX_ECOLI      LKVGDKT.TF SLEPD.AAFG V.PS...PD
+

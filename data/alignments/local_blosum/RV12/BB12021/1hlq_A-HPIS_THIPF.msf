@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 86  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hlq_A     oo  Len:  86  Start/End:  5,74
+ Name: HPIS_THIPF oo  Len:  86  Start/End:  7,79
+
+//
+
+
+
+1hlq_A          AETDANAKSL G.YVADTTKA DK...TKY.P KHTKDQSCST CALYQGKTAP 
+HPIS_THIPF      AATNPIAQSL .HYIEDANAS ERNPVTK.TE LPGSEQFCHN CSFIQ...AD 
+
+1hlq_A          QGA...CPLF AGKEVVAKGW CS.AWAKKA
+HPIS_THIPF      SGAWRPCTLY PGYTVSEDGW C.LSWAHKT
+

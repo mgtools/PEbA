@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 72  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1e08_A     oo  Len:  72  Start/End:  1,59
+ Name: FER4_METJA oo  Len:  72  Start/End:  2,62
+
+//
+
+
+
+1e08_A          VQIDEAKCIG CDTCSQY... .CPTAAIFGE MGEPHSIPHI EACINCGQ.C 
+FER4_METJA      VTIDYSLCKG AE.CAE.CVN NC.PMEVFEI EGDKVVVARP DDCTYCG.VC 
+
+1e08_A          L.THCPENAI Y..EAQ
+FER4_METJA      .EDVCPTGAV .KVEPE
+

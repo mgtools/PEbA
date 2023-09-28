@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 62  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1b7v_A oo  Len:  62  Start/End:  10,63
+ Name: 1cno_A oo  Len:  62  Start/End:  13,59
+
+//
+
+
+
+1b7v_A      CISCHGGDLT GASAP.AIDK AG.ANYSEEE ILDIILNGQG GMPGGI.AKG 
+1cno_A      CAACHG.Q.N GISQ.VPIYP N.LAG.QKEQ YLVAAL..K. AYKAG.QRQG 
+
+1b7v_A      AEAEAVA
+1cno_A      GQAP.VM
+

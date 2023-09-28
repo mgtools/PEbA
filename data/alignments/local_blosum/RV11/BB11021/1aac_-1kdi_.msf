@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 112  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1aac_ oo  Len:  112  Start/End:  23,105
+ Name: 1kdi_ oo  Len:  112  Start/End:  7,102
+
+//
+
+
+
+1aac_      DIAKMKYETP ELHVKVGDTV TWINR...EA MPHNVHFV.. .AGVL..... 
+1kdi_      EVGNFKFYPD SITVSAGEAV EF.T.LVGET G.HNIVF.DI PAGA.PGTVA 
+
+1aac_      ....GEAALK GPMMKKEQAY ..SLTFTEAG TYDYHCTPHP F...MRGKVV 
+1kdi_      SELKAASMDE NDLLSEDEP. SFKAKVSTPG TYTFYCTPHK .SANMKGTLT 
+
+1aac_      VE
+1kdi_      VK
+

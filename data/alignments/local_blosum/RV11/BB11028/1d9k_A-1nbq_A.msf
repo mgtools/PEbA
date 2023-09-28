@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 115  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1d9k_A oo  Len:  115  Start/End:  13,101
+ Name: 1nbq_A oo  Len:  115  Start/End:  121,202
+
+//
+
+
+
+1d9k_A      GETTILNCSY .EDSTF...D YFPWYRQF.. ..PGKSPALL .IAISL.... 
+1nbq_A      GNRAVLTCS. EQDGS.PPSE Y.TWFKD.GI VMPTNPKST. R.AFS.NSSY 
+
+1d9k_A      VSNKKEDGRF TIFFNKREKK LSLHITDSQP GDSATYF.CA ATGSFNKL.. 
+1nbq_A      VLNPT.TGEL .VF.DP.... LS...A.S.. .DTGEY.SCE ARNGYGT.PM 
+
+1d9k_A      TFGAG
+1nbq_A      TSNAV
+

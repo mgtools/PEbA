@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 73  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1csp       oo  Len:  73  Start/End:  3,65
+ Name: CSPD_HAEIN oo  Len:  73  Start/End:  3,63
+
+//
+
+
+
+1csp            GKVKWFNSEK GFGFIEVEGQ ...DDVFVHF SAIQG.EGFK TLEEGQAVSF 
+CSPD_HAEIN      GIVKWFNNAK GFGFISAEG. VDAD.IFAHY SVIE.MDGYR SLKAGQKVQF 
+
+1csp            EIVEGNRGPQ AANVTKE
+CSPD_HAEIN      EVLHSDKG.. S.HATKI
+

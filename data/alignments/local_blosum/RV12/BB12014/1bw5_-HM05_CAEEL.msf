@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 69  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bw5_      oo  Len:  69  Start/End:  4,60
+ Name: HM05_CAEEL oo  Len:  69  Start/End:  36,92
+
+//
+
+
+
+1bw5_           RVRTVLNEKQ LHTLRTCYAA NPRPDALMKE .....QLVEM TGLSPRV.IR 
+HM05_CAEEL      RPRTVFTDEQ LEKLEE..SF NT..SGYLS. GSTRAKLAES LGLSDN.QVK 
+
+1bw5_           VWFQNKRCKD KKR
+HM05_CAEEL      VWFQNRRTKQ KKI
+

@@ -1,0 +1,28 @@
+PileUp
+
+
+
+   MSF: 225  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bbt_aa oo  Len:  225  Start/End:  9,165
+ Name: 1bbt_ac oo  Len:  225  Start/End:  3,185
+
+//
+
+
+
+1bbt_aa      PVTTTVENYG GETQIQR.RQ HTDVSF.IMD RFVKVTPQNQ IN......IL 
+1bbt_ac      PV.ACSDGYG GLVTTD.P.K .T.AD.PVYG KVFN.PPRNQ L.PGRFTNLL 
+
+1bbt_aa      DLMQVP.SHT LVG....GLL .RASTYYFSD L........E IAVKHEGDLT 
+1bbt_ac      DVAEA.CP.T FL.RFEGGV. PYVTTKTDSD .RVLAQFDMS LAAKHMSN.T 
+
+1bbt_aa      WVPNGAPEKA LDNTTNPTAY HK....APLT RLAL....PY TAPH...... 
+1bbt_ac      FL.AGLAQYY TQYSGTINL. H.FMFTGPTD AKA.RYMVAY APP.GMEPPK 
+
+1bbt_aa      ..RVLATVYN GECRT.LPTS FNYGAIKATR VTELLYRMKR ..AETY.... 
+1bbt_ac      TPEAAAHCIH AEWDTGLNSK FTF.SIPYLS AADYTYTAS. DVAET.TNVQ 
+
+1bbt_aa      ...CP
+1bbt_ac      GWVCL
+

@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 166  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1svp_A oo  Len:  166  Start/End:  13,155
+ Name: 2sga_  oo  Len:  166  Start/End:  47,151
+
+//
+
+
+
+1svp_A      NEDGDVIGHA L...AMEGKV MKPLHVKGTI DHPVLSKLKF TKSSAYDMEF 
+2sga_       NDYG.IIRHS .NPAAADGRV Y..LY.Q... D..I.T.... T...A..... 
+
+1svp_A      AQLPVNMRSE AFTYTSEHPE GFYNW..HHG AVQYSGG.RF TIPRGVGGRG 
+2sga_       GNA.F.V.GQ A....VQ.RS GSTT.GLRSG SV..TG.LNA TVNYGSSGIV 
+
+1svp_A      DAGRPIMDNS GRVVAIVLGG AD.EGTRTAL SVVTWNSKGK TIKTT.PEGT 
+2sga_       .YGM.IQTNV ..CAGDSGGS L.FAGS.TAL GLTS.GGSGN C.RT.G..GT 
+
+1svp_A      E
+2sga_       T
+

@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 149  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hrb_      oo  Len:  149  Start/End:  8,113
+ Name: HEMT_PSEAE oo  Len:  149  Start/End:  4,124
+
+//
+
+
+
+1hrb_           VWDPSFRTFY SIIDDEHKTL FNG.IFHLA. IDD....... ..NADNLG.E 
+HEMT_PSEAE      VWQDDLNTGI QVIDNQHKRI VE.MINHL.H .D.AQQGKEH AAIAEVI.EE 
+
+1hrb_           LRRCTGKHFL N.QEVLMEA. SQ.YQFY.DE HKKEHDG.FI NALDNWKG.. 
+HEMT_PSEAE      LVDYTLSHFA .FEETLME.D A.GYQF.SRA HKKIHE.LFI RRVSEYR.VR 
+
+1hrb_           ........DV ...KWAKAWL VNHIKTIDFK YKGK.I
+HEMT_PSEAE      FQAGEDVGD. ELKGLLSRWL FNHIRN.D.D .AG.YV
+

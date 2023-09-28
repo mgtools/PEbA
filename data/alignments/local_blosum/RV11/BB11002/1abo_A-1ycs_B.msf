@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 65  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1abo_A oo  Len:  65  Start/End:  4,55
+ Name: 1ycs_B oo  Len:  65  Start/End:  138,193
+
+//
+
+
+
+1abo_A      ALYDFVASGD NTLSITKGEK .LRVLGYNHN G....EWCE. AQTKNGQGWV 
+1ycs_B      ALWDYEPQND DELPMKEGD. CMTII.HRED .EDEIEWW.W ARLNDKEGYV 
+
+1abo_A      PSNYIT...P
+1ycs_B      PRNLL.GLYP
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 64  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A oo  Len:  64  Start/End:  11,60
+ Name: 1kba_A oo  Len:  64  Start/End:  11,65
+
+//
+
+
+
+1cb9_A      KTCPAGKNLC YK......MF MVAAPHVPVK RGCID.VCPK S..SLLV.KY 
+1kba_A      QTCPNGQDIC F.LKAQCDKF C.SIRGPVIE QGCV.ATCPQ .FRSNY.RSL 
+
+1cb9_A      VCCNTDKCN
+1kba_A      LCCTTDNCN
+

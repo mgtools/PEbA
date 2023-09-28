@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 58  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: CADO_BUNCA oo  Len:  58  Start/End:  18,66
+ Name: NXSH_BUNMU oo  Len:  58  Start/End:  38,82
+
+//
+
+
+
+CADO_BUNCA      CASGEKYCFK ESW.REARGT RIER...GCA ATCPKGSVYG LY.VLCCTTD 
+NXSH_BUNMU      CEEGH.VCYK YS.TTETP.N RIL.IHRGCA AKCPK.R... L.RVICCSTD 
+
+CADO_BUNCA      DCN
+NXSH_BUNMU      KCN
+

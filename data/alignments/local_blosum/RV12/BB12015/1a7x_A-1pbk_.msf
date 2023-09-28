@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 127  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1a7x_A oo  Len:  127  Start/End:  6,107
+ Name: 1pbk_  oo  Len:  127  Start/End:  7,116
+
+//
+
+
+
+1a7x_A      ISPGDGRTFP KRGQTCVVHY ...TGMLEDG KK.FDSSR.. .....DRN.K 
+1pbk_       LKKGDKTNFP KKGD..VVH. CWYTGTLQDG T.VFDTN.IQ TSAKKKKNAK 
+
+1a7x_A      PFKFMLGKQ. EVIRGWEEGV AQMSVGQRAK LTISPDYAYG ATGHPGII.. 
+1pbk_       PLSFKVGV.G KVIRGWDEAL LTMSKGEKAR LEIEPEWAYG KKGQPDA.KI 
+
+1a7x_A      PPHATLVFDV ELLKLE
+1pbk_       PPNAKLTFEV ELVDID
+

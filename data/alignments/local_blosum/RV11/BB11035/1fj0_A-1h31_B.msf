@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 130  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fj0_A oo  Len:  130  Start/End:  12,113
+ Name: 1h31_B oo  Len:  130  Start/End:  41,136
+
+//
+
+
+
+1fj0_A      CMTCHRADKN MVGPAL..AG VVGR..KAGT AAGFTYSPLN HNSG..EAGL 
+1h31_B      CIACHEVT.E MAD.A.QFPG TVG.PSLDGV AAR..Y.P.E ..A.MI.RGI 
+
+1fj0_A      VW.TADNIVP YLADPNAFLK KFLTEKGK.A DQAVGVTKMT FKL....... 
+1h31_B      L.VNSKNVFP ETVMPA.YYR ..V.E.G.F. NRP.GIA.FT SK.PIEGEIR 
+
+1fj0_A      ..ANEQQRKD VVAYLATLK
+1h31_B      PLMTAGQIED VVAYLMTLT
+

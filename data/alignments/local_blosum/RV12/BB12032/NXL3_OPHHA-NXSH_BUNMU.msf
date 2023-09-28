@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 60  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: NXL3_OPHHA oo  Len:  60  Start/End:  13,63
+ Name: NXSH_BUNMU oo  Len:  60  Start/End:  38,81
+
+//
+
+
+
+NXL3_OPHHA      CPAGQDLCYT ETWCVAWCTV ..RGKRVSLT CAAICPI..V PPKVSIKCCS 
+NXSH_BUNMU      CEEGH.VCYK YSTT.E..T. PNR.ILIHRG CAAKCP.KRL ..RV.I.CCS 
+
+NXL3_OPHHA      TDACG
+NXSH_BUNMU      TDKCN
+

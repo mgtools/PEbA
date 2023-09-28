@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 60  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1cb9_A oo  Len:  60  Start/End:  13,60
+ Name: 1cod_  oo  Len:  60  Start/End:  16,61
+
+//
+
+
+
+1cb9_A      CPAGKNLCYK MF.MVAAPHV ....PVKRGC IDVCPKS..S L.LVKYVCCN 
+1cod_       CSGGETNCYK K.RW.R.DH. RGYR.TERGC G.C.PS.VKN .G.IEINCCT 
+
+1cb9_A      TDKCN
+1cod_       TDRCN
+

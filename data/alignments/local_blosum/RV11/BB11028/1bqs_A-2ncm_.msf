@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 116  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bqs_A oo  Len:  116  Start/End:  3,90
+ Name: 2ncm_  oo  Len:  116  Start/End:  2,98
+
+//
+
+
+
+1bqs_A      LQVEPPEPVV AVALGASRQL TCRLAC...A DRGASV.... ...QWRGLDT 
+2ncm_       LQVDIVPSQG EISVGESKFF LCQVA.GDAK DKDIS.WFSP NGEKLSPNQQ 
+
+1bqs_A      SLGAVQ.SDT GRSVLTVR.N ASLSA.AGTR .VCVG.SCG. .GRTFQHTVQ 
+2ncm_       RISVV.WNDD DSSTLTI.YN ANID.DAGI. YKCV.VTA.E DGTQSEATVN 
+
+1bqs_A      LL.VYA
+2ncm_       V.KIFQ
+

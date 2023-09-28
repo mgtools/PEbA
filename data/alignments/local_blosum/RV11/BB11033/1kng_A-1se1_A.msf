@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 149  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kng_A oo  Len:  149  Start/End:  3,117
+ Name: 1se1_A oo  Len:  149  Start/End:  107,212
+
+//
+
+
+
+1kng_A      PQTALPPLEG .LQADNVQVP G......... ..LDPAAFKG KVSLVNVWAS 
+1se1_A      PETKTVPLS. EVVANHLNFT .QIKTVDELN QALVE.A.KG KPVMLDLYAD 
+
+1kng_A      WCVPCHDEAP LLTELGKDKR FQLVGINYKD .AA.DNARRF LGRYGNPFGR 
+1se1_A      WCV.....A. ..S...KE.. FE....KYT. FS.DPQVQKA L.A.DTVLLQ 
+
+1kng_A      VGVDANGRAS IEW.....GV YGVPETFVVG ..REGT
+1se1_A      ANVTANDAQD VA.LLKHLNV LGLP.T.IL. FF.DGQ
+

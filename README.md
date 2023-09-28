@@ -2,7 +2,7 @@
 # Protein Embedding Based Alignments (PEbA)
 **************************************************************************************************************
 
-Paper can be read at (https://www.authorea.com/users/623259/articles/646069-protein-embedding-based-alignment).
+Paper can be viewed at https://www.authorea.com/users/623259/articles/646069-protein-embedding-based-alignment.
 
 This project uses Rostlab's ProtT5-XL-UniRef50 encoder (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) to
 embed protein sequences and then calculates the cosine similarity between each amino acid's vector to align them 
@@ -10,11 +10,12 @@ using traditional sequence alignment algorithms. The cosine similarity scores ar
 matrices, such as BLOSUM, with the goal of producing accurate alignments for sequences that share low character
 identity (<20-35%), referred to as the "twilight zone" of protein sequence alignment.
 
-PEbA is implemented in peba.py, where it uses the Smith-Waterman 'local' algorithm to align two sequences. It is
-designed to be run from the command line. The following arguments are allowed, with -embed1 and -embed2 being
-optional arguments if the corresponding sequences from -file1 and -file2 have already been been embedded and
-saved as a numpy array:
+PEbA is implemented in peba.py, where it can use either the Needleman-Wunsch 'global' algorithm or the Smith-Waterman
+'local' algorithm to align two sequences. It is designed to be run from the command line. The following arguments
+are allowed, with -embed1 and -embed2 being optional arguments if the corresponding sequences from -file1 and -file2
+have already been been embedded and saved as a numpy array:
 
+    -a,  --align <str>          : Alignment algorithm to use (global or local) (default: local)
     -f1, --file1 <file1.fa>     : Path to first sequence fasta file
     -f2, --file2 <file2.fa>     : Path to second sequence fasta file
     -e1, --embed1 <file1.txt>   : Path to first sequence embedding file
@@ -41,8 +42,7 @@ pip install -r base_requirements.txt
 ```
 
 This project was developed using python 3.10.6. Necessary requirements for running PEbA can be installed from
-base_requirements.txt. Requirements for reproducing the results of this project can be installed from
-all_requirements.txt.
+requirements.txt.
 
 **************************************************************************************************************
 # Running PEbA
@@ -51,7 +51,7 @@ all_requirements.txt.
 An example of running PEbA with two fasta files and their corresponding embeddings is shown below:
 
 ```
-python peba.py -f1 Data/Example/1j46_A.fa -f2 Data/Example/1k99_A.fa -e1 Data/Example/1j46_A.txt -e2 Data/Example/1k99_A.txt
+python peba.py -f1 data/example/1j46_A.fa -f2 data/example/1k99_A.fa -e1 data/example/1j46_A.txt -e2 data/example/1k99_A.txt
 ```
 
 On default settings, this will produce the following output in the console:
@@ -77,9 +77,8 @@ PileUp
 1k99_A      ELPEKKKMKY IQDFQREKQE FERNLARFRE DHPDLIQNAK K
 ```
 
-To embed sequences, PEbA will download the ProtT5-XL-UniRef50 model and T5encoder from HuggingFace if they
-are not already detected in your directory. If -e1 and -e2 are specified, meaning that the embeddings are
-already generated, these models are not be downloaded nor used to embed the sequences.
+To embed sequences, PEbA will use the ProtT5-XL-UniRef50 model and T5encoder from HuggingFace. If -e1 and
+-e2 are specified, meaning that the embeddings are already generated, these models will not be used.
 
 **************************************************************************************************************
 # Comparing PEbA to Reference Alignments
@@ -87,7 +86,7 @@ already generated, these models are not be downloaded nor used to embed the sequ
 
 To determine if PEbA alignments produce more accurate alignments than those with subsitution matrices, both 
 types of alignments are compared to reference alignments from BAliBASE3 (https://www.lbgi.fr/balibase/), found
-in the Data/BAliBASE_R1-5 folder. BAliBASE alignments are structure based benchmarks used to compare new methods of
+in the data/BAliBASE_R1-5 folder. BAliBASE alignments are structure based benchmarks used to compare new methods of
 alignment, such as this one. References RV11 and 911 contain sequences with <20% sequence identity, references
 RV12 and RV912 with 20-40% sequence identity, and reference RV913 with 40-80% sequence identity.
 
@@ -105,7 +104,7 @@ representing that all residue pairs are found in both alignments. The TC score i
 number of shared residue pairs between the reference and test alignment by the number of pairs in the reference
 alignment. ref_length is the length of the reference alignment, and comparison_length is the number of residue
 pairs being compared (gaps are not counted). The similarity is the percentage of identical residues between
- the two sequences that are matched together i.e. if a pair has the same two residues, it is a match.
+the two sequences that are matched together i.e. if a pair has the same two residues, it is a match.
 
 F1 score can also be calculated to compare alignments, but TC score is the default.
 
@@ -113,11 +112,8 @@ F1 score can also be calculated to compare alignments, but TC score is the defau
 # Data and Methods Compared
 **************************************************************************************************************
 
-From each BAliBASE benchmark MSA we extracted each pairwise alignment. We took each pair and generated
-alignments using PEbA with ProtT5 embeddings, PEbA with ESM2 embeddings, BLOSUM, and DEDAL. All testing was
-done with compare_aligns.py, which takes in a directory of reference alignments, two different methods to
-compare (PEbA and BLOSUM for example), and then calculates the TC score or F1 score between each test alignment
-to the reference alignment. A plot of the results is made that shows the distribution of TCS/F1 scores.
+From each BAliBASE benchmark MSA we extracted each sequence and each pairwise alignment. We took each pair of
+sequences and generated alignments using PEbA with ProtT5 embeddings, PEbA with ESM2 embeddings, BLOSUM, and DEDAL.
 
 **************************************************************************************************************
 # Using ProtT5, ESM2, and DEDAL
@@ -133,15 +129,14 @@ We adapted their code and used it to embed sequences in embed_seqs.py.
 
 The readme for DEDAL can be found here, which contains instructions for using the model:
 https://github.com/google-research/google-research/tree/master/dedal
-We adapted their code and used it to run their model in run_DEDAL.py.
+We adapted their code and used it to run their model in get_aligns.py.
 
 **************************************************************************************************************
 # Results and Figures
 **************************************************************************************************************
 
-The 'Data/Alignments' folder contains all of the pairwise alignments that we generated and used for analysis. The
-'Figures' folder contains several scripts used to generate the figures and tables in the paper, not including
-the graphs comparing PEbA to other methods made from compare_aligns.py.
+The 'data/alignments' folder contains all of the pairwise alignments that we generated and used for analysis.
+The 'figures' folder contains several scripts used to generate the figures and tables in the paper.
 
 **************************************************************************************************************
 # License

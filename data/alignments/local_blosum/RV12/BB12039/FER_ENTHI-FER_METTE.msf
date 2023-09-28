@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 62  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FER_ENTHI oo  Len:  62  Start/End:  6,59
+ Name: FER_METTE oo  Len:  62  Start/End:  4,58
+
+//
+
+
+
+FER_ENTHI      VNIDDCVACG ACSGTCPQSV LEVNDHV... EIKNPDDCIG CGACV.DACP 
+FER_METTE      VNVDLCTGCG SCVDECPAAA ISLNDD.GIA TVDE.SECLD CGSC.EDACP 
+
+FER_ENTHI      QGVLKVE
+FER_METTE      NNAITIE
+

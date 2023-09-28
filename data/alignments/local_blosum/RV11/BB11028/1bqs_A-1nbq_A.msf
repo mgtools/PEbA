@@ -1,0 +1,28 @@
+PileUp
+
+
+
+   MSF: 237  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bqs_A oo  Len:  237  Start/End:  5,207
+ Name: 1nbq_A oo  Len:  237  Start/End:  6,138
+
+//
+
+
+
+1bqs_A      VEPPEPVVAV ALGASRQLTC RLAC..ADRG ASVQWRGLDT SLGAVQSDTG 
+1nbq_A      VHSSEPEVRI PENNPVKLSC AYS.GFS..S PRVEWK.FD. Q.G..DT.T. 
+
+1bqs_A      RSVLTVRNAS LSAAGTRVCV GSCGGRTFQH TVQLLVYAFP NQLTVSPAAL 
+1nbq_A      R..LV...C. YN........ .N...K.... .I...T.A.S YE.D.R.VTF 
+
+1bqs_A      VPGDPEVACT AHKVTPVDPN ALSFSLLVGG QELEGAQALG PEVQEEEEEP 
+1nbq_A      LP....TGIT FKSVT.REDT G.TYTCMVS. .E.EG....G .N.S...... 
+
+1bqs_A      QGDEDVLFRV TERWRLPPLG TP.VPPAL.Y CQATMRLPGL ..ELSHRQAI 
+1nbq_A      YG.E.V..KV ..K..L..I. V.LVPPS.K. .PTV.NIPS. SATIGNR.AV 
+
+1bqs_A      PVLH...... .SPTSP
+1nbq_A      ..L.TCSEQD GSPPSE
+

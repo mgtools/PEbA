@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 79  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1mnm_C     oo  Len:  79  Start/End:  7,76
+ Name: BRX2_HUMAN oo  Len:  79  Start/End:  97,164
+
+//
+
+
+
+1mnm_C          TQDMINKSTK PYRGHR.FTK ENVRILESWF AKNIENPYLD TKGLENLMKN 
+BRX2_HUMAN      TEQPTPRQKK PRRSRTIFT. EL.QLM.GLE KKFQKQKYLS TPDRLDLAQS 
+
+1mnm_C          TSLSRIQIKN WVSNRRRKE. KT
+BRX2_HUMAN      LGLTQLQVKT WYQNRRMK.W KK
+

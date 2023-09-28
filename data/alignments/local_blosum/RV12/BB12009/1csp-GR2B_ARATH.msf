@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 72  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1csp       oo  Len:  72  Start/End:  2,64
+ Name: GR2B_ARATH oo  Len:  72  Start/End:  15,79
+
+//
+
+
+
+1csp            EGKVKWFNSE KGFGFIEV.E GQDDVFVHFS AIQGEGFKTL EEGQAVSFEI 
+GR2B_ARATH      KGTVKWFDTQ KGFGFITPSD GGDDLFVHQS SIRSEGFRSL AAEESVEFDV 
+
+1csp            VEGNRGP..Q AANVTK
+GR2B_ARATH      EVDNSG.RPK AIEVSG
+

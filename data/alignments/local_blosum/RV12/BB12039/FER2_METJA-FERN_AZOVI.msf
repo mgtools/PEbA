@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 59  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FER2_METJA oo  Len:  59  Start/End:  78,123
+ Name: FERN_AZOVI oo  Len:  59  Start/End:  5,55
+
+//
+
+
+
+FER2_METJA      LEKCVHCGCC ITQCPINVIY ..MDEDYNV. VFKEEDCV.G C....KNCLK 
+FERN_AZOVI      VESCVNCWAC VDVCPSEAI. SLAGPHFEIS ASKCTEC.DG .DYAEKQCAS 
+
+FER2_METJA      ACPF
+FERN_AZOVI      ICPV
+

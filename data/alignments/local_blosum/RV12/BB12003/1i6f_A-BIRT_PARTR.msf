@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 64  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1i6f_A     oo  Len:  64  Start/End:  3,54
+ Name: BIRT_PARTR oo  Len:  64  Start/End:  6,57
+
+//
+
+
+
+1i6f_A          YPVDSKGC.. .KLSCVANNY .CDNQCKMKK .ASG.GHCYA MSCYCEG.LP 
+BIRT_PARTR      YPLDKDG.NT YKCFLLGGNE ECLNVCKLH. GVQ.YGYCYA SKCWCE.YL. 
+
+1i6f_A          ENAKVSDSA
+BIRT_PARTR      ED.D.KDSV
+

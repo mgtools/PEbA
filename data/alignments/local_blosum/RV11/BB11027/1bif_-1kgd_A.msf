@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 303  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bif_  oo  Len:  303  Start/End:  108,373
+ Name: 1kgd_A oo  Len:  303  Start/End:  42,173
+
+//
+
+
+
+1bif_       EQNGYKT.FF VESI.CVDPE VIAANIVQVK LGSPDYVNRD SDEA.TEDFM 
+1kgd_A      EENGKN.YYF V.S.H..D.Q MM.....Q.D I.S.N..N.. ..E.Y....L 
+
+1bif_       RRIECYENSY ESLDEEQDRD LSYIKIMDVG QSYVVNRVAD HIQSRIVYYL 
+1kgd_A      ...E.Y.GSH E..D...... .A....M... ..Y..G.... ...TK....L 
+
+1bif_       MNIHVTPRSI YLCRHGESEL NLKGRIG.GD PGLSPRGREF SKHLAQFISD 
+1kgd_A      .E...T...I ...R...... ..K..I.H.E ........Q. G..L...IA. 
+
+1bif_       QNIKDLKVF. TSQMKRTIQT AEALSVPYEQ FKVLNEIDAG VCEEMTYEEI 
+1kgd_A      ..I..LDV.E PQALK.VLRT AE.FA.P... F.V...V... ....F....I 
+
+1bif_       QD.HYPLE.. FALRDQDKYR YRYPKGESYE DLVQRLEPVI MELE.RQENV 
+1kgd_A      A.A..PT.IT PGLNEDESLQ .RLQK.ES.D .ILQR...TY AHY.F..DLT 
+
+1bif_       LVICHQAVM. RCLLAYFLDK AAEELP
+1kgd_A      .IINNE.I.D ET..IRHLEE AVE.LV
+

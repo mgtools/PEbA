@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 63  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ue9_A oo  Len:  63  Start/End:  15,69
+ Name: 1ycs_B oo  Len:  63  Start/End:  142,193
+
+//
+
+
+
+1ue9_A      YVASGSEQLS LAPGQLILIL KKNTSGWWQG ELQA....RG KKRQKGWFPA 
+1ycs_B      YEPQNDDELP MKEGDCMTII HRE.D...ED EIE.WWWARL N.DKEGYVPR 
+
+1ue9_A      SHVKLLGP
+1ycs_B      NLLGLY.P
+

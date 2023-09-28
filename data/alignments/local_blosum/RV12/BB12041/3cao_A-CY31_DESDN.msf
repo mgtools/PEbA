@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 120  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 3cao_A     oo  Len:  120  Start/End:  9,103
+ Name: CY31_DESDN oo  Len:  120  Start/End:  22,118
+
+//
+
+
+
+3cao_A          DAFGKLERPA AVFNHDEHNE KAGIESCN.A CHHVW..VNG V.LAEDEDSV 
+CY31_DESDN      DKPGALQK.T VPFPHTKHAT .V..E.C.VQ CHHT.LEADG .GAVK.KCTT 
+
+3cao_A          GTPCSDCH.A LEQDGDTPGL QD....AYHQ QCW.GCHEK. .....QAKGP 
+CY31_DESDN      .SGCHDS.LE FRDKANAKDI K.LVESAFHT QC.IDCHA.L KKKDKKPTGP 
+
+3cao_A          VMCGECHVKN
+CY31_DESDN      TACGKCHTTN
+

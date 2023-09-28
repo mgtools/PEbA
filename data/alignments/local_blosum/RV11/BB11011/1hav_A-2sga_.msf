@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 163  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hav_A oo  Len:  163  Start/End:  60,196
+ Name: 2sga_  oo  Len:  163  Start/End:  40,145
+
+//
+
+
+
+1hav_A      RGGTYYSISA GNVVIQSL.. ...DVGFQDV VLMKVPTIP. KFRDITQHFI 
+2sga_       RTGTSFNNDY G.IIRHS.NP AAAD.G.RVY LYQDITTA.G ...N...AFV 
+
+1hav_A      KKGDVPRALN RL.ATLVTTV NGTPMLISEG PLKMEE..KA TYVHKKNDGT 
+2sga_       GQ.....AVQ R.SGS..TT. .GL.R..S.G ..SVT.GLNA T.VNYGSSGI 
+
+1hav_A      TVD..LTVDQ AWRGK.GEGL PGMCGGALVS SNQSIQNAIL GIHVAGGNS
+2sga_       .V.YGM.IQT ..NV.CA.G. DS..GGSLFA GSTAL.G..L TS.GGSGNC
+

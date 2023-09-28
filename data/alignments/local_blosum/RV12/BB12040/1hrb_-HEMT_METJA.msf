@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 148  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hrb_      oo  Len:  148  Start/End:  9,109
+ Name: HEMT_METJA oo  Len:  148  Start/End:  7,128
+
+//
+
+
+
+1hrb_           WDPSFRTFYS IIDDEHK... .TLFNGIFHL ...AI..DDN ADNLG.ELRR 
+HEMT_METJA      WSKDFETGIK AFDDEHKILV KTL.NDIYNL LNEG.KRDE. AKEL.LK.RR 
+
+1hrb_           CTG...KHFL ..NQEVLMEA SQYQFYDEHK KEHDG.FINA LD........ 
+HEMT_METJA      VVNYAAKHF. KHEEEV.MEK YGYPDLERHR KTHE.IFVKT V.IEKLLPKI 
+
+1hrb_           ......NWKG D.VKWAKAWL VN.HIKTI.D F.KYK
+HEMT_METJA      EEGSENDFRS .ALSFLVGWL T.MHIAK.PD .KKYG
+

@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 139  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1jfu_A oo  Len:  139  Start/End:  50,161
+ Name: 1se1_A oo  Len:  139  Start/End:  137,229
+
+//
+
+
+
+1jfu_A      LSDFRGKTLL VNLWATWCVP CRKEMPALDE LQGKLSGPNF EVVAINIDTR 
+1se1_A      LVEAKGKPVM LDLYADWCV. ......A.S. ...K.E...F E....KYTFS 
+
+1jfu_A      DPEKPK.... TFLK.EANLT RLGYFNDQKA KVFQD.LKAI GRALGMPTS. 
+1se1_A      DPQVQKALAD TVL.LQANVT A....NDAQD .V.A.LLKHL N.VLGLPT.I 
+
+1jfu_A      VLVDP.QGC. EI...ATIAG P...AEW
+1se1_A      LFFD.GQG.Q E.HPQARVTG .FMDAET
+

@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 123  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1gyo_A oo  Len:  123  Start/End:  16,104
+ Name: 3cao_A oo  Len:  123  Start/End:  7,100
+
+//
+
+
+
+1gyo_A      PH.PRFGKVE .....MSHAK HRNV.....S CVSCHHMFD. ...GCGDF.. 
+3cao_A      P.TDAFGKLE RPAAVFNHDE HNE.KAGIES CNACHHVW.V NGVLAED.ED 
+
+1gyo_A      ...QKCADCH ID..RDDRSY ERGFYKAWHS ESEISCRGCH KAMKAKNEQT 
+3cao_A      SVGTPCSDCH A.LEQDGDT. P.G..LQ..D AYHQQCWGCH E..K...QAK 
+
+1gyo_A      GPIG.CLQGC HE
+3cao_A      GPV.MCG.EC HV
+

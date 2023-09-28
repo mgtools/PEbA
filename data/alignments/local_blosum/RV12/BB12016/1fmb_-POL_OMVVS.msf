@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 120  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fmb_     oo  Len:  120  Start/End:  2,102
+ Name: POL_OMVVS oo  Len:  120  Start/End:  20,114
+
+//
+
+
+
+1fmb_          YNLEKRPTTI V..LINDTPL NVLLDTGADT SVLTTAHYNR L.KYRGR.KY 
+POL_OMVVS      YVVTEAPPKI .DIKVGTNWK KVLVDTGADR TI.VRYHDNS .GIPTGRIKL 
+
+1fmb_          QGTGIGGVG. .GNVETFSTP VTIKK.KG.R HIK.TRMLVA DIPVTILGRD 
+POL_OMVVS      QG..IGGI.I EGE.K.WDKV V.IQ.YK.EK RIEGTIVVLP SSPVEVLGRD 
+
+1fmb_          ILQDLGAKLV
+POL_OMVVS      ...NM.AKLD
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 74  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1i6f_A    oo  Len:  74  Start/End:  1,60
+ Name: AEP_MESMA oo  Len:  74  Start/End:  21,82
+
+//
+
+
+
+1i6f_A         DGYPVD..SK GCKLSCVANN Y..CDNQCKM K..KASG.GH CYA..MSCYC 
+AEP_MESMA      DGY.I.RGSN GCKVSCLLGN .EGCNKECRA .YG.AS.YGY CWTWKLACWC 
+
+1i6f_A         EGLPENAKVS DSATNICG
+AEP_MESMA      QGLPDD.KTW KSESNTCG
+

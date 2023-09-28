@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 118  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bai_A oo  Len:  118  Start/End:  31,124
+ Name: 1fmb_  oo  Len:  118  Start/End:  19,104
+
+//
+
+
+
+1bai_A      ITALLDTGAD DTVISEEDWP TDWPVMEAA. .NP....... ..QIHGIGGG 
+1fmb_       LNVLLDTGAD TSVLT..... T......A.H YN.RLKYRGR KYQGTGIG.G 
+
+1bai_A      IP...VRKSR DMIELGVINR DGSLERPLLL FPLVAM.TPV NILGRDCLQG 
+1fmb_       V.GGNVE.T. FSTPVTIKKK GRHIKT.R.M ..LVA.DIPV TILGRDILQD 
+
+1bai_A      LGLRLTNL
+1fmb_       LGAKLV.L
+

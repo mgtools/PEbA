@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 75  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1i6f_A     oo  Len:  75  Start/End:  0,60
+ Name: SCX6_CENLL oo  Len:  75  Start/End:  19,79
+
+//
+
+
+
+1i6f_A          KDGYPVDSKG ..CKLSCVAN ....NYCDNQ CKMKKASGGH CYAMSCYCEG 
+SCX6_CENLL      KEGYLVNMK. TGCKYGCYE. LGDNGYCDRK CKAESGNYGY CYTVGCWCEG 
+
+1i6f_A          LPENAKVSDS ATN..IC.G
+SCX6_CENLL      LP.N...S.K PT.WPL.PG
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 79  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bw5_      oo  Len:  79  Start/End:  1,66
+ Name: BRX2_HUMAN oo  Len:  79  Start/End:  106,169
+
+//
+
+
+
+1bw5_           KTTRV.RTVL NEK.QLH.TL RTC.YAANPR P..DALMKEQ LVEMTGLSPR 
+BRX2_HUMAN      KPRR.SRTIF TE.LQL.MGL EK.KFQKQ.K .YLSTPDRLD LAQSLGLTQL 
+
+1bw5_           VIRVWFQNKR CKD.KKRSIM MK
+BRX2_HUMAN      QVKTWYQNRR MK.WKK..MV LK
+

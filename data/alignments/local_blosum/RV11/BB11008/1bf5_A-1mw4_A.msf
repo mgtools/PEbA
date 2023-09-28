@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 149  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bf5_A oo  Len:  149  Start/End:  160,291
+ Name: 1mw4_A oo  Len:  149  Start/End:  35,115
+
+//
+
+
+
+1bf5_A      QQLIQSSFVV ERQPCMPTHP QR.PLVLKTG VQFTVKLRLL VKLQELNYNL 
+1mw4_A      QGLVDGLFLV .RES.Q.RNP Q.G.FVL.S. ......L.C. .HLQK..... 
+
+1bf5_A      KVKV..LFDK DVNERNTVKG FRKFNILGTH TKVMNMEEST NGSLAAEFRH 
+1mw4_A      .VK.HYLI.. .L.P.SEEEG RLYFSMDDGQ TRFTDL...L Q..LV.EF.H 
+
+1bf5_A      LQLKEQKNAG TRTNEGPLIV TEELH.SLSF ETQLCQ
+1mw4_A      .QL....N.. .R...G..I. ...L.PCL.L R.HCCT
+

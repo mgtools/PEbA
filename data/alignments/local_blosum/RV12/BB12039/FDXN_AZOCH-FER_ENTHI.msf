@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 65  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: FDXN_AZOCH oo  Len:  65  Start/End:  8,62
+ Name: FER_ENTHI  oo  Len:  65  Start/End:  10,52
+
+//
+
+
+
+FDXN_AZOCH      ECTVCGD.CK P.VCPTGSIV LQGGIYVIDA ..DSCNECAD LGEPRCLGVC 
+FER_ENTHI       DCVACG.ACS .GTCPQ.S.V LE....VND. HVEIKNPDDC IG...C.GAC 
+
+FDXN_AZOCH      PVDF.CIQPL
+FER_ENTHI       .VD.AC..PQ
+

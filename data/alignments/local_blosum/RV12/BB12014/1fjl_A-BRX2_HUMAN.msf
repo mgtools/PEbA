@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 67  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fjl_A     oo  Len:  67  Start/End:  0,59
+ Name: BRX2_HUMAN oo  Len:  67  Start/End:  106,165
+
+//
+
+
+
+1fjl_A          KQRRSRTTFS ASQLDELERA FERTQYPDIY .TREELAQRT NLTEARIQVW 
+BRX2_HUMAN      KPRRSRTIFT ELQLMGLEKK FQKQKYLST. PDRLDLAQSL GLTQLQVKTW 
+
+1fjl_A          FQNRRARLRK Q
+BRX2_HUMAN      YQNRRMKWKK M
+

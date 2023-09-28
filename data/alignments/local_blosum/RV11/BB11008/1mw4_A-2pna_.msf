@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 109  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1mw4_A oo  Len:  109  Start/End:  18,107
+ Name: 2pna_  oo  Len:  109  Start/End:  5,86
+
+//
+
+
+
+1mw4_A      WFHGRISREE SQRLIGQQGL V....DGLFL VRESQRNP.Q GFVLSLCHLQ 
+2pna_       WYWGDISREE ....VNEK.L .RDTADGTFL VRDASTK.MH GDY.TLTL.R 
+
+1mw4_A      KVKHYLILPS E...EEGRLY FSMDDG.QTR FTDLLQLVEF HQL.NRGILP
+2pna_       KGGNNKLI.K .IFHRDGKY. .GFSD.PLT. FNSVVELIN. HY.RNES.LA
+

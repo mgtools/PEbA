@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 56  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bmr_      oo  Len:  56  Start/End:  10,55
+ Name: BIRT_PARTR oo  Len:  56  Start/End:  13,54
+
+//
+
+
+
+1bmr_           NCVYHCFP.. .GSSGCDTLC KEKGGTSGHC GFKVGHGL.A CWCNA.LPDN 
+BIRT_PARTR      N.TYKCF.LL GGNEECLNVC KLHG.VQ.Y. GY.C.YA.SK CWCE.YLEDD 
+
+1bmr_           V
+BIRT_PARTR      K
+

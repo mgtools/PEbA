@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 104  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1b2i_A     oo  Len:  104  Start/End:  0,78
+ Name: KRM1_HUMAN oo  Len:  104  Start/End:  33,116
+
+//
+
+
+
+1b2i_A          CMHGSGENYD GKI...SKTM SGL.ECQAWD SQSP.HAHG. YI.PSKFPNK 
+KRM1_HUMAN      CFTANGADYR GT.QNWTALQ GG.KPCLFWN .ET.FQ.H.P Y.NTLKYPNG 
+
+1b2i_A          NL....KKNY CRNPDR.ELR PWCFTTDPNK R....WELCD IPRCT
+KRM1_HUMAN      E.GGLGEHNY CRNPD.GDVS PWCYVAE.HE .DGVYWKYCE IPACQ
+

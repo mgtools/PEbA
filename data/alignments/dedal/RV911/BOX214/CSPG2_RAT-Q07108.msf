@@ -1,0 +1,16 @@
+PileUp
+
+
+
+   MSF: 4  Type: P  Method: dedal  Gopen: 0  Gext: 0
+
+ Name: CSPG2_RAT oo  Len:  4  Start/End:  180,183
+ Name: Q07108    oo  Len:  4  Start/End:  25,28
+
+//
+
+
+
+CSPG2_RAT      TPEQ
+Q07108         SPHF
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 65  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: NXL3_OPHHA oo  Len:  65  Start/End:  8,63
+ Name: TXM2_NAJKA oo  Len:  65  Start/End:  11,63
+
+//
+
+
+
+NXL3_OPHHA      VKSETCPAGQ DLCYTETWC. .VAWCTVRGK RVSLTCAAIC PIVPP.KV.S 
+TXM2_NAJKA      VTTEDCPDGQ NLCF.KRW.H MIV..PGRYK KTR.GCAATC PIAE.NR.DV 
+
+NXL3_OPHHA      IKCCSTDACG
+TXM2_NAJKA      IECCSTDKCN
+

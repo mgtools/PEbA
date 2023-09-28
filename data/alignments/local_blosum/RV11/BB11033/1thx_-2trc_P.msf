@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 127  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1thx_  oo  Len:  127  Start/End:  7,108
+ Name: 2trc_P oo  Len:  127  Start/End:  105,209
+
+//
+
+
+
+1thx_       TDAEFESEVL KAEQPVLVYF WASW...... CGPCQLMSPL INLAANTYSD 
+2trc_P      TGEQFLETIE K.EQKVTTIV .VN.IYEDGV RGCDALNSSL ECLAAE.YPX 
+
+1thx_       RLKVVKLEID PNPTTVKKYK VEGVPALR.L VKGEQILDST EGVISK..DK 
+2trc_P      .VKFCKIRAS .NTGAGDRFS SDVLPTL.LV YKGGELI.SN ..FIS.VAEQ 
+
+1thx_       LLSF...... LDTHLN
+2trc_P      FAE.DFFAAD VESFLN
+

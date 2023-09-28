@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 72  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kba_A     oo  Len:  72  Start/End:  12,65
+ Name: CADO_BUNCA oo  Len:  72  Start/End:  9,66
+
+//
+
+
+
+1kba_A          TCP.NGQD.. ICFLKAQCDK FCS....... IRGPVIEQGC VATCPQFRSN 
+CADO_BUNCA      TC.RAGE.LK VC.ASGE..K YC.FKESWRE ARGTRIERGC AATCPK.GS. 
+
+1kba_A          .YR..SLLCC TTDNCN
+CADO_BUNCA      VY.GLYVLCC TTDDCN
+

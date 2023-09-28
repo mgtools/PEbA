@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 68  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fjl_A oo  Len:  68  Start/End:  1,60
+ Name: 1ftt_  oo  Len:  68  Start/End:  1,60
+
+//
+
+
+
+1fjl_A      QRRSRTTFSA SQLD.ELERA FERTQYPDIY TREELAQRTN LTEARIQVWF 
+1ftt_       RRKRRVLFSQ AQV.YELERR FKQQKYLSAP EREHLASMIH LTPTQVKIWF 
+
+1fjl_A      QNRRA.RLRK QH
+1ftt_       QNHR.YKMKR QA
+

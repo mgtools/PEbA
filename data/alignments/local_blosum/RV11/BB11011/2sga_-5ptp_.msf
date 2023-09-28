@@ -1,0 +1,25 @@
+PileUp
+
+
+
+   MSF: 173  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 2sga_ oo  Len:  173  Start/End:  11,145
+ Name: 5ptp_ oo  Len:  173  Start/End:  96,219
+
+//
+
+
+
+2sga_      SRCSLGFNVV ..AHALTAGH CTNISAWSIG TRTGTSFNND YG.....IIR 
+5ptp_      SRVA.SISL. PTSCA.SAGT QCLISGWG.N TKS..S.GTS Y.PDVLKCLK 
+
+2sga_      H....SNPAA ADGRVYLYQD ITTAGNAFVG QAVQR.SGST TGL.RSGSVT 
+5ptp_      .APILSDSSC KSA..Y.PGQ ITS.N.MFCA .GLE.GGDSC QG.DXGGPVV 
+
+2sga_      G....LNATV NYGSSGIVY. ...GMIQTNV CAGD..SG.G SLFAGSTALG 
+5ptp_      .CSGKLQGIV SWG.SGCA.K NKPGV.YTKV C.N.YVS.W. .IK..QT.I. 
+
+2sga_      LTSGGSGN
+5ptp_      ..A..S.N
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 57  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1bc6_      oo  Len:  57  Start/End:  14,59
+ Name: FER2_THEAC oo  Len:  57  Start/End:  21,66
+
+//
+
+
+
+1bc6_           SCVEVCPVDC IH..EGEDQY YIDPDVCIDC GACE.AVCPV SAIY..HED. 
+FER2_THEAC      ACVGMCPTDA I.WLD.ETVI KIHEEKCIEC GFC.IVGCPT GAI.TA.E.W 
+
+1bc6_           FV
+FER2_THEAC      FH
+

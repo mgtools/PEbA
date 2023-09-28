@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 79  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1fas_      oo  Len:  79  Start/End:  0,59
+ Name: NXL3_OPHHA oo  Len:  79  Start/End:  0,63
+
+//
+
+
+
+1fas_           TMCYS.HTTT SRAILTNCGE NSCYRKSR.. ......RH.P PKMVLG..RG 
+NXL3_OPHHA      TKCY.V.TPD VKSETCPAGQ DLCYTET.WC VAWCTVR.GK .RVSL.TCA. 
+
+1fas_           CGCPPGDDYL EVKCCTSPDK CN
+NXL3_OPHHA      AICPIVPPKV SIKCCST.DA CG
+

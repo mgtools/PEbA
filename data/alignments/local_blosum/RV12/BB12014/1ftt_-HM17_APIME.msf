@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 73  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1ftt_      oo  Len:  73  Start/End:  2,68
+ Name: HM17_APIME oo  Len:  73  Start/End:  9,69
+
+//
+
+
+
+1ftt_           RKRRVLFSQA QVYELERRFK QQKYLSAPER EHLASMIHLT PTQVKIWFQN 
+HM17_APIME      RKPRTPFTTQ QLLSLEKKFR EKQYLTIAER AEFSSSLHLT ETQVKIWFQN 
+
+1ftt_           HRYKMKRQAK D.KAAQQ
+HM17_APIME      .R....R.AK .AKRLQE
+

@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 71  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1hlq_A     oo  Len:  71  Start/End:  11,75
+ Name: HPIS_PARSP oo  Len:  71  Start/End:  12,69
+
+//
+
+
+
+1hlq_A          AKSLGYVADT TKADKTKYPK HTKDQSCSTC ALYQGKTAPQ GACPLFAG.K 
+HPIS_PARSP      AQALNYVKDT ..AEAADHPA HQEGEQCDNC MFFQ...ADS QGCQLFP.QN 
+
+1hlq_A          EVVAKGWCSA WAKKA
+HPIS_PARSP      SVEPAGWCQS WT..A
+

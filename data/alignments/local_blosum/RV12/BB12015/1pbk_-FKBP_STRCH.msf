@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 123  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1pbk_      oo  Len:  123  Start/End:  18,115
+ Name: FKBP_STRCH oo  Len:  123  Start/End:  25,124
+
+//
+
+
+
+1pbk_           KGDV..VH.. CW.YTG..TL QDGTVFDTNI QT.SAKK.KK NAKPLSFKVG 
+FKBP_STRCH      EGD.GPV.AQ A.GQT.VSVH YVGVAFSTGE E.FDAS.WN. RGTPLQFQLG 
+
+1pbk_           VGKVIRGWDE ALL.TMSKGE KARL.EIEPE W..AYGKKGQ P.DAKIPPNA 
+FKBP_STRCH      AGQVISGWDQ GV.QGMKVGG R.R.ELIIPA .HLAYGDRGA .GGGKIAPGE 
+
+1pbk_           KLTFEVELVD .I
+FKBP_STRCH      TLIFVCDLV. AV
+

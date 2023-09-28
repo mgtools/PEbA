@@ -1,0 +1,19 @@
+PileUp
+
+
+
+   MSF: 56  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: BIRT_PARTR oo  Len:  56  Start/End:  10,55
+ Name: SCX6_CENLL oo  Len:  56  Start/End:  27,72
+
+//
+
+
+
+BIRT_PARTR      KDGNTYKCFL LGGNE..ECL NVCKLHGVQY GYCYASK..C WCEY.LEDDK 
+SCX6_CENLL      KTGCKYGCYE LGDN.GY.CD RKCKAESGNY GYCY.T.VGC WCE.GLPNSK 
+
+BIRT_PARTR      D
+SCX6_CENLL      P
+

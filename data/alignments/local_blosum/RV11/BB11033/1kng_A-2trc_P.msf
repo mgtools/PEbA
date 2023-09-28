@@ -1,0 +1,22 @@
+PileUp
+
+
+
+   MSF: 113  Type: P  Method: blosum62  Gopen: -11.0  Gext: -1.0
+
+ Name: 1kng_A oo  Len:  113  Start/End:  10,89
+ Name: 2trc_P oo  Len:  113  Start/End:  131,217
+
+//
+
+
+
+1kng_A      LEGLQADNVQ VPGLD....P AAFKG..KVS LVNVW.ASW. .CVPCHDE.A 
+2trc_P      VRGCDALNSS LECL.AAEYP XV.K.FCKIR ASNT.GAG.D R..FSSD.VL 
+
+1kng_A      PLLTELGKDK .RFQLVGINY K......... ..DAADNARR FLGRYGN..P 
+2trc_P      PTLLVY.KG. G..ELI.SNF .ISVAEQFAE DFFAAD.VES FLNEYG.LLP 
+
+1kng_A      FGR
+2trc_P      E.R
+

@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<!DOCTYPE macsim SYSTEM "http://www-bio3d-igbmc.u-strasbg.fr/macsim.dtd">
+<macsim>
+<alignment>
+<aln-name>tmp1</aln-name>
+<sequence seq-type="Protein">
+<seq-name>Q8UWJ8</seq-name>
+<seq-info>
+<accession>Q8UWJ8</accession>
+<nid>Q8UWJ8</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>167</fstart><fstop>205</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>209</fstart><fstop>245</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>294</fstart><fstop>324</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>382</fstart><fstop>420</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>39</fstart><fstop>50</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>116</fstart><fstop>208</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>39</fstart><fstop>82</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>246</fstart><fstop>246</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_2</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>297</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_3</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>116</fstart><fstop>172</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_10</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>181</fstart><fstop>228</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_11</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>264</fstart><fstop>279</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_12</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>282</fstart><fstop>288</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_13</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>297</fstart><fstop>336</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>341</fstart><fstop>366</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>382</fstart><fstop>397</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>405</fstart><fstop>411</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>176</fstart><fstop>176</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION_18</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>1</fstart><fstop>114</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>231</fstart><fstop>304</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>1</fstart><fstop>114</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>231</fstart><fstop>304</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>1</fstart><fstop>40</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>245</fstart><fstop>304</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>245</fstart><fstop>274</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>281</fstart><fstop>304</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>71</fstart><fstop>74</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>83</fstart><fstop>83</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>83</fstart><fstop>99</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>134</fstart><fstop>142</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>153</fstart><fstop>160</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>181</fstart><fstop>187</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>219</fstart><fstop>228</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>309</fstart><fstop>314</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>316</fstart><fstop>323</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>330</fstart><fstop>336</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>351</fstart><fstop>358</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>391</fstart><fstop>397</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>405</fstart><fstop>411</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>167</fstart><fstop>172</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>341</fstart><fstop>346</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>373</fstart><fstop>377</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>418</fstart><fstop>422</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>382</fstart><fstop>390</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>427</fstart><fstop>430</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>SBLOCK_51</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>404</fstart><fstop>407</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>360</fstart><fstop>366</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>422</fstart><fstop>426</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_73</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>376</fstart><fstop>379</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_151</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>380</fstart><fstop>384</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_155</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>428</fstart><fstop>431</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>SBLOCK_186</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>116</fstart><fstop>128</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_294</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>192</fstart><fstop>208</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_348</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>443</fstart><fstop>447</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_351</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>322</fstart><fstop>336</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>407</fstart><fstop>421</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>173</fstart><fstop>214</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>388</fstart><fstop>429</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>173</fstart><fstop>429</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PS50294 WD_REPEATS_REGION</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>394</fstart><fstop>398</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>ELM_INSTANCE_LIG_CYCLIN_1</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>63</fstart><fstop>67</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>73</fstart><fstop>76</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>210</fstart><fstop>214</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>285</fstart><fstop>288</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>394</fstart><fstop>398</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>40</fstart><fstop>107</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------------------------------------------------------------------------------------------------------------maqdrrhyriqatcsfcripsirirgratsdngkdglaysallknellgagiekvqdpqtedrrlqpstp--------------------------------------------------------------------------------------ekkslftyslst------------------------------------------------------------krsspddgnevspysls-pvsnksqkllrsprkptrkiskipfkvldapelqddfylnlvdws-slnvlsvglgtcvylw--sactsq--------------vtrlcdlsv--------------------------------------egdsvtsvgwser--gtlvavgthkgfvqiwdaaa-gkklsm-leghtarvgalawnadqlssgsrdrmilqrd-------------------irtpplavgagacratgrrsvglsgrqnhqllafrgkdykllfgnhsslsp------------------vqqyte--hlaavkaiawsphqhgllasgggtadrcirfwntltgqplqcid----tgsqvcnlawsk-------hanelvsthgys----qnqilvwkypsltqvakltg--hsyrvlylamspdgeaivtgag----------detlrfwnvfsktrstkvra-raaaagtravcsllqphlwvq-------------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q4QAF9</seq-name>
+<seq-info>
+<accession>Q4QAF9</accession>
+<nid>Q4QAF9</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>479</fstart><fstop>504</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>508</fstart><fstop>547</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>569</fstart><fstop>607</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>629</fstart><fstop>659</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>717</fstart><fstop>755</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>148</fstart><fstop>159</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>402</fstart><fstop>507</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>148</fstart><fstop>307</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>545</fstart><fstop>551</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_2</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>610</fstart><fstop>616</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_3</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>831</fstart><fstop>838</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_4</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>402</fstart><fstop>465</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_10</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>480</fstart><fstop>527</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_11</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>581</fstart><fstop>596</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_12</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>599</fstart><fstop>605</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_13</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>632</fstart><fstop>671</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>676</fstart><fstop>701</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>720</fstart><fstop>732</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>740</fstart><fstop>746</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>477</fstart><fstop>477</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION_18</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>12</fstart><fstop>22</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>553</fstart><fstop>567</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>771</fstart><fstop>785</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>420</fstart><fstop>428</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>440</fstart><fstop>447</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>480</fstart><fstop>486</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>518</fstart><fstop>527</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>632</fstart><fstop>638</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>644</fstart><fstop>649</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>651</fstart><fstop>658</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>665</fstart><fstop>671</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>686</fstart><fstop>693</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>726</fstart><fstop>732</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>740</fstart><fstop>746</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>460</fstart><fstop>465</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_19</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>599</fstart><fstop>605</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>676</fstart><fstop>681</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>708</fstart><fstop>712</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>589</fstart><fstop>596</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>753</fstart><fstop>757</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>720</fstart><fstop>725</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>762</fstart><fstop>765</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>SBLOCK_51</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>739</fstart><fstop>742</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>576</fstart><fstop>580</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_71</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>695</fstart><fstop>701</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>757</fstart><fstop>761</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_73</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>711</fstart><fstop>714</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_151</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>606</fstart><fstop>608</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SBLOCK_154</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>718</fstart><fstop>718</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_155</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>581</fstart><fstop>588</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_156</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>763</fstart><fstop>766</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>SBLOCK_186</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>402</fstart><fstop>414</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_294</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>491</fstart><fstop>507</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_348</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>761</fstart><fstop>764</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>SBLOCK_356</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>382</fstart><fstop>388</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_359</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>702</fstart><fstop>705</fstop><fcolor>6</fcolor><fscore>0.00</fscore><fnote>SBLOCK_371</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>531</fstart><fstop>551</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_379</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>610</fstart><fstop>616</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_470</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>657</fstart><fstop>671</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>472</fstart><fstop>513</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>514</fstart><fstop>556</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>575</fstart><fstop>607</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>723</fstart><fstop>754</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>472</fstart><fstop>764</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PS50294 WD_REPEATS_REGION</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>171</fstart><fstop>174</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>252</fstart><fstop>255</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>272</fstart><fstop>276</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>664</fstart><fstop>668</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>729</fstart><fstop>733</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>828</fstart><fstop>831</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>347</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>827</fstart><fstop>838</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>mefgtppraahattpgttaattetlfaspsspaprrpgnatpnsvdsshlrgpssrsspldqyrrhaqsharlsppplssqasvdryvsapsrqatsiahflltsrerktpmliraaqqqqqyhlairspsrdpsfdvsssledsynslvryaadrsssrhatvasprshrslprvgstamtpssarlssvfakmhlhpsttvrssrersgsspsftgvdtsggcggqlgddgrsspssamelepyttklartlfsdveqttvlpvndtaarplgmaarsiggcghaeeaeevsspvkdgttglgsrsafgcsgarrhradendgendddaleadwmcneedeqalpssvairrhmasvparvplamsevnqlgmaegarfdaslgvvfecnrtrnfttpsfrviphtperildaadmeddfymnlidwsatsdvlcvalqncvylwdaktcgitelp----------rvvptggglhgdgrsg--------------------------------daqlvcglnwapd--gchlavgghsgavevwdvetqqivhty-rq-hadrtvslsweplggwllasgsrdstvvlrdvrerdts-tsasvaspsssfslasatavlrahetevcglkwsptgamlasggndnqlllwdrrsistgshssdtsgayrhgecqpifflnk--htaavkalswnptqpallasgggshdkalrfwnsltgecvhhin----tgsqvcgvvwnr-------agtelvtahgytd----nqlsiwrypslrrianlig--htsrvlhlalsadgetvvsaag----------detlrfwrcfpaselressphlhrssykstsgvsfssstygggvgmspggtsastssiararavaiasgrcsslsqdrgsrslmneeielr
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q6FU08</seq-name>
+<seq-info>
+<accession>Q6FU08</accession>
+<nid>Q6FU08</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>367</fstart><fstop>405</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>409</fstart><fstop>439</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>505</fstart><fstop>543</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>75</fstart><fstop>80</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>234</fstart><fstop>324</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>75</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>362</fstart><fstop>362</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_2</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>408</fstart><fstop>408</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_3</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>234</fstart><fstop>291</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_10</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>298</fstart><fstop>345</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_11</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>379</fstart><fstop>394</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_12</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>397</fstart><fstop>403</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_13</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>410</fstart><fstop>451</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>456</fstart><fstop>488</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>505</fstart><fstop>520</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>528</fstart><fstop>534</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>295</fstart><fstop>295</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION_18</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>102</fstart><fstop>118</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>1</fstart><fstop>6</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>23</fstart><fstop>34</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>50</fstart><fstop>61</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>68</fstart><fstop>74</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>199</fstart><fstop>207</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>208</fstart><fstop>227</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>599</fstart><fstop>621</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>LBLOCK_2</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>252</fstart><fstop>260</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>271</fstart><fstop>278</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>336</fstart><fstop>345</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>410</fstart><fstop>416</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>424</fstart><fstop>429</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>431</fstart><fstop>438</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>445</fstart><fstop>451</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>466</fstart><fstop>473</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>514</fstart><fstop>520</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>528</fstart><fstop>534</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>397</fstart><fstop>403</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>456</fstart><fstop>461</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>387</fstart><fstop>394</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>541</fstart><fstop>545</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>550</fstart><fstop>553</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>SBLOCK_51</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>527</fstart><fstop>530</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>368</fstart><fstop>372</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_71</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>482</fstart><fstop>488</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>545</fstart><fstop>549</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_73</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>379</fstart><fstop>386</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_156</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>551</fstart><fstop>554</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>SBLOCK_186</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>234</fstart><fstop>246</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_294</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>308</fstart><fstop>324</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_348</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>191</fstart><fstop>196</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_355</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>549</fstart><fstop>552</fstop><fcolor>4</fcolor><fscore>0.00</fscore><fnote>SBLOCK_356</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>266</fstart><fstop>280</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>308</fstart><fstop>322</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>392</fstart><fstop>406</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>437</fstart><fstop>451</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PS00678 WD_REPEATS_1</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>296</fstart><fstop>330</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>373</fstart><fstop>414</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>266</fstart><fstop>552</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PS50294 WD_REPEATS_REGION</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>132</fstart><fstop>135</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>188</fstart><fstop>192</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>517</fstart><fstop>521</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>239</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>557</fstart><fstop>621</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>--------------------------------------------------------------------------------------minkndnslassakrsalsvasptklnimssqngntklhkvtkrplershslnikngnanepfgkfsrpkisvqappllkrnssffkekstslysrsdfafnspsksqelskspmsssqplpnddtitltdrflptlqsgsqnkvqhisldtelpppnaspvt-------------------------hlraqtklvfkqnvaeacglemdnrilqylpapps----ysrerpatl-----------------------------------------------------mrrhqyhyqnrssqtqlqkkntelmklrkvntnperildapgfqddfylnlidws-kknilaialndslylwngnngeat------------llkeyeec--------------------------------------------qitsvhwsdd--dchisigksdgnteiwdvetstlvrtmrsk-lnvrigsqswletllatgfrsgeiqin--------------------dvrikdhivnt-wdehtgevcglsykadglqlasggndntmmiwdtr--------------------tsmpqfvkkdhsaavkalawsptnagllasgggqtdqqihfwnsttgaklhtin----tgsqvsslhwgqsydtkgnmnveivatggsp----dnsisiynyetrykvaevvha-hdariccsklspdgtvlatigg----------denlkfykifepkrkykqksk---gnvveelmtnntpyyrerldasrkltnnddsdyes--ssyhhesvtrtvinskspssaakatdflir
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>P50082</seq-name>
+<seq-info>
+<accession>P50082</accession>
+<nid>P50082</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>380</fstart><fstop>418</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>91</fstart><fstop>102</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>209</fstart><fstop>358</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>91</fstart><fstop>182</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>374</fstart><fstop>374</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_2</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>426</fstart><fstop>426</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_3</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>209</fstart><fstop>282</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_10</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>329</fstart><fstop>370</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_11</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>392</fstart><fstop>407</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_12</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>410</fstart><fstop>416</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_13</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>428</fstart><fstop>466</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>471</fstart><fstop>496</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>516</fstart><fstop>532</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>540</fstart><fstop>546</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>297</fstart><fstop>321</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION_18</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>11</fstart><fstop>25</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>LOWCOMP</ftype><fstart>83</fstart><fstop>99</fstop><fcolor>12</fcolor><fscore>0.00</fscore><fnote>PRED_LOWC</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>227</fstart><fstop>235</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>247</fstart><fstop>254</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>329</fstart><fstop>335</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>428</fstart><fstop>433</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>439</fstart><fstop>444</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>446</fstart><fstop>453</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>460</fstart><fstop>466</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>481</fstart><fstop>488</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>526</fstart><fstop>532</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>540</fstart><fstop>546</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>410</fstart><fstop>416</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>471</fstart><fstop>476</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>507</fstart><fstop>511</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>400</fstart><fstop>407</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>553</fstart><fstop>557</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>516</fstart><fstop>524</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>539</fstart><fstop>542</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>387</fstart><fstop>391</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_71</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>490</fstart><fstop>496</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>557</fstart><fstop>561</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_73</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>510</fstart><fstop>513</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_151</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>417</fstart><fstop>423</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SBLOCK_154</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>514</fstart><fstop>518</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_155</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>392</fstart><fstop>399</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_156</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>422</fstart><fstop>425</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_268</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>209</fstart><fstop>221</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_294</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>342</fstart><fstop>358</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_348</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>26</fstart><fstop>35</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_349</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>497</fstart><fstop>503</fstop><fcolor>6</fcolor><fscore>0.00</fscore><fnote>SBLOCK_371</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>297</fstart><fstop>306</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SBLOCK_479</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>312</fstart><fstop>321</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SBLOCK_480</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>386</fstart><fstop>420</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>386</fstart><fstop>474</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PS50294 WD_REPEATS_REGION</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>273</fstart><fstop>276</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>296</fstart><fstop>300</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>357</fstart><fstop>361</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>447</fstart><fstop>450</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>518</fstart><fstop>522</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>529</fstart><fstop>533</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>1</fstart><fstop>38</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+<fitem><ftype>DISORDER</ftype><fstart>83</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>IUPRED</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>---------------------------------------------------------------matphlyhrynskssnkninssgnstevdrfipksvsrnayksipmlngfdisyselcekspsperlsspeffnelrntghyesisttnefsmssissssesqvtrsgsarasrndyskltkeqkdhrkniahslgfqlpdrvftfettsaeileknk--------------------------------------------------------------aikncfgpgscaeirstfdfstlsp-dvaryyiansnarsa------------------------------------------------------------------spqrqiq-rpakrvkshipyrvldapclrndfysnliswsrttnnvlvglgcsvyiwsekegavsildhqylsekrdlvtcvsfcpyntyfivgtkfgrillydqkeffhssntnekepvfvfqtesfkgicclewfkpgeickfyvgeengnvslfeiks-------------lhfpiknwskrqkle------------------------------denliglklhstyqaqaqqvcgislnehanllavggndnscslwdisdldkp----------------ikkfvlp--hkaavkaiafcpwsksllatgggskdrcikfwhtstgtlldeic----tsgqvtsliwsl-------rhkqivatfgfgdtknpvlitlysypklskllevrsp-nplrvlsavispssmaicvatn----------detirfyelwndkeeiineiqesgiyg-sniieymegietthnkrir--------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>Q09786</seq-name>
+<seq-info>
+<accession>Q09786</accession>
+<nid>Q09786</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>PFAM-A</ftype><fstart>220</fstart><fstop>258</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PFAM-A</ftype><fstart>312</fstart><fstop>350</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>PF00400 WD40</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>80</fstart><fstop>91</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>PHYLOBLOCK</ftype><fstart>172</fstart><fstop>261</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION Undetermined</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>80</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_1</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>297</fstart><fstop>297</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_2</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>534</fstart><fstop>535</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>REGION_4</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>172</fstart><fstop>228</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_10</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>234</fstart><fstop>280</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_11</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>324</fstart><fstop>339</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_12</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>342</fstart><fstop>348</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_13</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>358</fstart><fstop>396</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>401</fstart><fstop>426</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>446</fstart><fstop>475</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>481</fstart><fstop>487</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>230</fstart><fstop>230</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>REGION_18</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>190</fstart><fstop>198</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_4</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>209</fstart><fstop>216</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_5</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>234</fstart><fstop>240</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_6</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>271</fstart><fstop>280</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_7</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>358</fstart><fstop>364</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_8</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>369</fstart><fstop>374</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_9</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>376</fstart><fstop>383</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_10</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>390</fstart><fstop>396</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_11</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>411</fstart><fstop>418</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_12</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>469</fstart><fstop>475</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>481</fstart><fstop>487</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>528</fstart><fstop>531</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>SBLOCK_16</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>342</fstart><fstop>348</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_20</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>401</fstart><fstop>406</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_21</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>437</fstart><fstop>441</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>332</fstart><fstop>339</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_24</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>494</fstart><fstop>498</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>446</fstart><fstop>454</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>481</fstart><fstop>483</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>420</fstart><fstop>426</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>498</fstart><fstop>500</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_73</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>440</fstart><fstop>443</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_151</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>349</fstart><fstop>355</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SBLOCK_154</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>444</fstart><fstop>448</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_155</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>324</fstart><fstop>331</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_156</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>354</fstart><fstop>357</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_268</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>172</fstart><fstop>184</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_294</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>246</fstart><fstop>261</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_348</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>139</fstart><fstop>144</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_355</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>427</fstart><fstop>433</fstop><fcolor>6</fcolor><fscore>0.00</fscore><fnote>SBLOCK_371</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>226</fstart><fstop>258</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>318</fstart><fstop>350</fstop><fcolor>1</fcolor><fscore>0.00</fscore><fnote>PS50082 WD_REPEATS_2</fnote></fitem>
+<fitem><ftype>PROSITE</ftype><fstart>226</fstart><fstop>404</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>PS50294 WD_REPEATS_REGION</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>62</fstart><fstop>65</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>108</fstart><fstop>111</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>218</fstart><fstop>222</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>287</fstart><fstop>290</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>368</fstart><fstop>372</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>377</fstart><fstop>380</fstop><fcolor>26</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_UN</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>460</fstart><fstop>464</fstop><fcolor>8</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_FN</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>------------------------------------------------------------------------mstlyqvnkikeilirfletiiingmnsfsstvygqnaersntptlidpsnketanvcpisknlfqsypkgsyrnsqrltsrngldrfipmtsnkdtislgrhsslsrnlvnktknasetyqqlley-aleve------------------------------------------------------------------------------------------rddnvftyaklqksdmtqkcptmvase-------------------------------------------------------------------kdnkgklnekknrspenllpfrildapelrddfytsllsws-pkgdlaiglaeniylwskelgptr--------------vlees-------------------------------------------iydvssvaysyn--gdilavgrvdgtlqfwqdnervpris---ihhpgdigvlawkpvletnrllvgkgngn-----------ifvydiiwsestskavlvatitnahdeqvcgltwnhdgsqfasggndnrvclfkgsdlrqp-----------------lyvwq---qnaavkalsfcpwqrsllatgagshdkhirfyncfngkkidely----cgaqitsihwsp-------kyrefsvtfgysletvqhrfavyswpqleclvsvlpsvpdircvhsvltsqlnettgrcemtdsiiiassnetikffdlseesswhnsrvltwhgifdsqilemlegidgkidshlr--------------------------------------------
+</seq-data></sequence>
+<sequence seq-type="Protein">
+<seq-name>A0DPS3</seq-name>
+<seq-info>
+<accession>A0DPS3</accession>
+<nid>A0DPS3</nid>
+<group>1</group>
+<sense>1</sense>
+<ftable>
+<fitem><ftype>REGION</ftype><fstart>1</fstart><fstop>17</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_14</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>22</fstart><fstop>51</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_15</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>67</fstart><fstop>82</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_16</fnote></fitem>
+<fitem><ftype>REGION</ftype><fstart>90</fstart><fstop>96</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>REGION_17</fnote></fitem>
+<fitem><ftype>SEQERR</ftype><fstart>4</fstart><fstop>36</fstop><fcolor>3</fcolor><fscore>0.00</fscore><fnote>SEQERR</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>76</fstart><fstop>82</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_13</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>90</fstart><fstop>96</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_14</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>58</fstart><fstop>62</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_23</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>103</fstart><fstop>107</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_29</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>67</fstart><fstop>75</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_31</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>89</fstart><fstop>92</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_62</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>45</fstart><fstop>51</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_72</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>61</fstart><fstop>64</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_151</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>65</fstart><fstop>69</fstop><fcolor>2</fcolor><fscore>0.00</fscore><fnote>SBLOCK_155</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>125</fstart><fstop>129</fstop><fcolor>0</fcolor><fscore>0.00</fscore><fnote>SBLOCK_351</fnote></fitem>
+<fitem><ftype>BLOCK</ftype><fstart>52</fstart><fstop>54</fstop><fcolor>6</fcolor><fscore>0.00</fscore><fnote>SBLOCK_371</fnote></fitem>
+<fitem><ftype>ELM</ftype><fstart>79</fstart><fstop>83</fstop><fcolor>15</fcolor><fscore>0.00</fscore><fnote>ELM_REGEXP_TP</fnote></fitem>
+</ftable>
+<length>914</length>
+<weight>100</weight>
+</seq-info>
+<seq-data>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------mgyqqvvvelqiklldsgmlqkaecysnrqiagsqvcnlmfsk-------menefisthgys----qnqiilwkcngmkriatlvg--htsrvlylamspdgytivtgag----------detlrfwsiytqsmgnqqnskcqlaphnisir-----------------------------------------------------------
+</seq-data></sequence>
+</alignment>
+</macsim>
