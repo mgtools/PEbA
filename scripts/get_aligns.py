@@ -7,7 +7,6 @@ __date__ = "09/22/23"
 
 import argparse
 import os
-import subprocess
 #import tensorflow as tf
 import utility as ut
 
@@ -139,26 +138,6 @@ def dedal_run(pw_aligns: list, ref: str, direc: str, method: str, model):
                      0, 0, f'{method_direc}/{ref}/{direc}', beg, end)
         
 
-def clean_fatcat(align: str) -> tuple:
-    """Returns raw alignment from fatcat output
-
-    :param align: fatcat alignment
-    :return (str, str): seq1 and seq2 with gaps
-    """
-
-    align1, align2 = '', ''
-    beg1, beg2, end1, end2 = 0, 0, 0, 0
-    for line in align.split('\n'):
-        if line.startswith('Chain 1:'):
-            print(line)
-            print(line.split()[3])
-        #elif line.startswith('Chain 2:'):
-            #print(line)
-
-    #print(align1)
-    #print(align2)
-        
-
 def fatcat(pw_aligns: list, ref: str, direc: str):
     """Writes all pairwise SW dedal alignments to a file in the msf format
 
@@ -169,6 +148,8 @@ def fatcat(pw_aligns: list, ref: str, direc: str):
     """
 
     if ref != 'RV11':  # only works for RV11, rest don't have pdb files
+        return
+    if direc in ('BB11006', 'BB11037'):  # unable to get correct pdb files
         return
 
     method_direc = 'data/alignments/fatcat'
@@ -181,15 +162,12 @@ def fatcat(pw_aligns: list, ref: str, direc: str):
 
     # Align each pair of sequences
     for pair in pw_aligns:
-        seq1, seq2 = pair[0].split('.')[0], pair[1].split('.')[0]
-        pdb1, pdb2= f'{seq1.split("_")[0]}.pdb', f'{seq2.split("_")[0]}.pdb'
-        print(pdb1, pdb2)
-
-        args = (f'-p1 data/pdb/{direc}/{pdb1} '
-                f'-p2 data/pdb/{direc}/{pdb2} -q')
-        align = subprocess.getoutput(f'FATCAT {args}')
-        align = clean_fatcat(align)
-        break
+        seq1, seq2 = pair[0], pair[1]
+        pdb1, pdb2 = seq1.split('.')[0], seq2.split('.')[0]
+        args = (f'-f1 data/pdb/{direc}/{pdb1}.pdb '
+                f'-f2 data/pdb/{direc}/{pdb2}.pdb '
+                f'-sf {method_direc}/{ref}/{direc}')
+        os.system(f'python scripts/fatcat.py {args}')
                
 
 def main():
@@ -211,7 +189,6 @@ def main():
         # Get all fasta files in reference folder
         seq_dir = os.listdir(f'data/sequences/{ref}')
         for direc in seq_dir:
-            print(direc)
 
             # Check if directory exists in alignment folder
             if os.path.isdir(f'data/alignments/{args.a}/{ref}/{direc}'):
@@ -228,7 +205,6 @@ def main():
                 dedal_run(pw_aligns, ref, direc, args.m, dedal_model)
             elif args.a == 'fatcat':
                 fatcat(pw_aligns, ref, direc)
-            break
 
 
 if __name__ == '__main__':
