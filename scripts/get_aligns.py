@@ -7,7 +7,8 @@ __date__ = "09/22/23"
 
 import argparse
 import os
-import tensorflow as tf
+import subprocess
+#import tensorflow as tf
 import utility as ut
 
 
@@ -48,8 +49,7 @@ def blosum(pw_aligns: list, ref: str, direc: str, method: str):
 
     # Align each pair of sequences
     for pair in pw_aligns:
-        seq1 = pair[0]
-        seq2 = pair[1]
+        seq1, seq2 = pair[0], pair[1]
 
         args = (f'--align {method} '
                 f'--file1 data/sequences/{ref}/{direc}/{seq1} '
@@ -81,8 +81,7 @@ def peba(pw_aligns: list, ref: str, direc: str, method: str):
 
     # Align each pair of sequences
     for pair in pw_aligns:
-        seq1 = pair[0]
-        seq2 = pair[1]
+        seq1, seq2 = pair[0], pair[1]
         embed1 = seq1.split('.')[0] + '.txt'
         embed2 = seq2.split('.')[0] + '.txt'
 
@@ -138,15 +137,68 @@ def dedal_run(pw_aligns: list, ref: str, direc: str, method: str, model):
         align2 = align2.split()[1].replace('-', '.')
         ut.write_msf(align1, align2, id1, id2, method,
                      0, 0, f'{method_direc}/{ref}/{direc}', beg, end)
+        
 
+def clean_fatcat(align: str) -> tuple:
+    """Returns raw alignment from fatcat output
+
+    :param align: fatcat alignment
+    :return (str, str): seq1 and seq2 with gaps
+    """
+
+    align1, align2 = '', ''
+    beg1, beg2, end1, end2 = 0, 0, 0, 0
+    for line in align.split('\n'):
+        if line.startswith('Chain 1:'):
+            print(line)
+            print(line.split()[3])
+        #elif line.startswith('Chain 2:'):
+            #print(line)
+
+    #print(align1)
+    #print(align2)
+        
+
+def fatcat(pw_aligns: list, ref: str, direc: str):
+    """Writes all pairwise SW dedal alignments to a file in the msf format
+
+    :param pw_aligns: list of all pairwise combinations of sequences
+    :param ref: reference folder
+    :param direc: subfolder
+    :param method: alignment method
+    """
+
+    if ref != 'RV11':  # only works for RV11, rest don't have pdb files
+        return
+
+    method_direc = 'data/alignments/fatcat'
+    if not os.path.isdir(method_direc):
+        os.makedirs(method_direc)
+    if not os.path.isdir(f'{method_direc}/{ref}'):
+        os.makedirs(f'{method_direc}/{ref}')
+    if not os.path.isdir(f'{method_direc}/{ref}/{direc}'):
+        os.makedirs(f'{method_direc}/{ref}/{direc}')
+
+    # Align each pair of sequences
+    for pair in pw_aligns:
+        seq1, seq2 = pair[0].split('.')[0], pair[1].split('.')[0]
+        pdb1, pdb2= f'{seq1.split("_")[0]}.pdb', f'{seq2.split("_")[0]}.pdb'
+        print(pdb1, pdb2)
+
+        args = (f'-p1 data/pdb/{direc}/{pdb1} '
+                f'-p2 data/pdb/{direc}/{pdb2} -q')
+        align = subprocess.getoutput(f'FATCAT {args}')
+        align = clean_fatcat(align)
+        break
+               
 
 def main():
     """Main
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', type=str, default='dedal')
-    parser.add_argument('-m', type=str, default='dedal')
+    parser.add_argument('-a', type=str, default='fatcat')
+    parser.add_argument('-m', type=str, default='fatcat')
     args = parser.parse_args()
 
     # Don't want to load if not using
@@ -159,9 +211,9 @@ def main():
         # Get all fasta files in reference folder
         seq_dir = os.listdir(f'data/sequences/{ref}')
         for direc in seq_dir:
+            print(direc)
 
             # Check if directory exists in alignment folder
-            print(f'data/alignments/{args.a}/{ref}/{direc}')
             if os.path.isdir(f'data/alignments/{args.a}/{ref}/{direc}'):
                 continue
 
@@ -174,6 +226,9 @@ def main():
                 peba(pw_aligns, ref, direc, args.m)
             elif args.a == 'dedal':
                 dedal_run(pw_aligns, ref, direc, args.m, dedal_model)
+            elif args.a == 'fatcat':
+                fatcat(pw_aligns, ref, direc)
+            break
 
 
 if __name__ == '__main__':
