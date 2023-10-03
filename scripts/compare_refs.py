@@ -16,7 +16,7 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-m', type=str, default='data/alignments/global_blosum')
+    parser.add_argument('-m', type=str, default='data/alignments/fatcat')
     parser.add_argument('-r', type=str, default='RV11', help='reference to compare to')
     parser.add_argument('-s', type=str, default='sp', help='score to compare (sp/f1)')
     args = parser.parse_args()
@@ -26,12 +26,15 @@ def main():
                      level=logging.INFO, format='%(message)s')
 
     # Compare alignments in directory to corresponding reference alignments
-    for direc in os.listdir(f'{args.m}/{args.r}'):
+    direcs = sorted(os.listdir(f'{args.m}/{args.r}'))
+    for direc in direcs:
+        if direc in ('BB11006', 'BB110037'):
+            continue
         for align in os.listdir(f'{args.m}/{args.r}/{direc}'):
 
             # Call compute_score
             score = subprocess.getoutput(
-                f'python compute_score.py '
+                f'python scripts/compute_score.py '
                 f'-align1 data/alignments/refs/{args.r}/{direc}/{align} '
                 f'-align2 {args.m}/{args.r}/{direc}/{align} '
                 f'-score {args.s}')

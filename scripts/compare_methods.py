@@ -9,16 +9,17 @@ import os
 import matplotlib.pyplot as plt
 
 
-def get_scores(method: str, ref: str) -> list:
+def get_scores(method: str, ref: str, score: str) -> list:
     """Returns a list of scores for each alignment in the given directory
 
     :param method: path to directory containing alignments
     :param ref: particular reference
+    :param score: score to compare (sp/f1)
     :return list: list of scores
     """
 
     scores = []
-    with open(f'{method}/{ref}_f1.log', 'r', encoding='utf8') as file:
+    with open(f'{method}/{ref}_{score}.log', 'r', encoding='utf8') as file:
         for line in file:
             scores.append(float(line.split()[3]))
 
@@ -69,7 +70,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-m1', type=str, default='data/alignments/local_peba_t5')
-    parser.add_argument('-m2', type=str, default='data/alignments/global_peba_t5')
+    parser.add_argument('-m2', type=str, default='data/alignments/dedal')
     parser.add_argument('-r', type=str, default='RV11')
     parser.add_argument('-s', type=str, default='sp')
     args = parser.parse_args()
@@ -78,8 +79,8 @@ def main():
         os.makedirs('data/graphs')
 
     # Get comparison scores for each set of alignments
-    m1_scores = get_scores(args.m1, args.r)
-    m2_scores = get_scores(args.m2, args.r)
+    m1_scores = get_scores(args.m1, args.r, args.s)
+    m2_scores = get_scores(args.m2, args.r, args.s)
     graph_compare(args.m1, args.m2, args.r, args.s, m1_scores, m2_scores)
 
 

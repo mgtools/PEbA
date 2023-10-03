@@ -7,34 +7,48 @@ __date__ = 10/02/23
 import argparse
 import subprocess
 import utility as ut
+from Bio import SeqIO
+
+
+def get_pos(align: str, pdb: str) -> tuple:
+    """Returns beginning and end positions of an aligned sequence
+
+    :param align: aligned sequence
+    :param pdb: pdb file
+    :return (int, int): beginning and end positions
+    """
+
+    # Get fasta sequence from file
+    pdb = pdb.split('/')
+    name, direc = pdb[-1].split('.')[0], pdb[-2]
+    file = f'data/sequences/RV11/{direc}/{name}.fa'
+    seq = SeqIO.read(file, 'fasta').seq
+
+    # Get beginning and end indices with find()
+    align = align.replace('.', '')
+    beg = seq.find(align)
+    end = beg + len(align)-1
+    
+    return beg, end
 
 
 def clean_align(align: str) -> tuple:
     """Returns aligned sequences from fatcat output
 
     :param align: fatcat stdout output
-    :return (str, str, list, list): aligned sequences, beg/end positions of each seq
+    :return (str, str): aligned sequences with gaps
     """
 
     align1, align2 = '', ''
-    al1_pos, al2_pos = [], []
     for line in align.split('\n'):
         if line.startswith('Chain 1:'):
             line1 = line.split()
             align1 += line1[3].replace('-', '.')
-            al1_pos.append(line1[2])
         elif line.startswith('Chain 2:'):
             line2 = line.split()
             align2 += line2[3].replace('-', '.')
-            al2_pos.append(line2[2])
 
-    # Beg/end positions of each seq
-    beg = [al1_pos[0], al2_pos[0]]
-    end1 = int(line1[2]) + len(line1[3].strip('-'))-1
-    end2 = int(line2[2]) + len(line2[3].strip('-'))-1
-    end = [str(end1), str(end2)]
-
-    return align1, align2, beg, end
+    return align1, align2
 
 
 def fatcat(pdb1: str, pdb2: str) -> tuple:
@@ -46,8 +60,13 @@ def fatcat(pdb1: str, pdb2: str) -> tuple:
     """
 
     align = subprocess.getoutput(f'FATCAT -p1 {pdb1} -p2 {pdb2} -q')
+    align1, align2 = clean_align(align)
+    beg1, end1 = get_pos(align1, pdb1)
+    beg2, end2 = get_pos(align2, pdb2)
+    beg = [beg1, beg2]
+    end = [end1, end2]
 
-    return clean_align(align)
+    return align1, align2, beg, end
 
 
 def main():
@@ -55,13 +74,14 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f1', type=str, default='data/pdb/BB11001/1aab_.pdb')
-    parser.add_argument('-f2', type=str, default='data/pdb/BB11001/1j46_A.pdb')
+    parser.add_argument('-f1', type=str, default='data/pdb/BB11002/1abo_A.pdb')
+    parser.add_argument('-f2', type=str, default='data/pdb/BB11002/1bb9_.pdb')
     parser.add_argument('-o', '--output', type=str, default='msf')
     parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop')
     args = parser.parse_args()
 
     align1, align2, beg, end = fatcat(args.f1, args.f2)
+    fatcat(args.f1, args.f2)
     id1 = args.f1.split('/')[-1].split('.')[0]
     id2 = args.f2.split('/')[-1].split('.')[0]
 
