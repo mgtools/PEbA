@@ -61,20 +61,20 @@ PileUp
 
 
 
-   MSF: 100  Type: P  Method: ProtT5_Sim  Gopen: -11  Gext: -1
+   MSF: 93  Type: P  Method: ProtT5_Sim  Gopen: -11.0  Gext: -1.0
 
- Name: 1j46_A oo  Len:  100
- Name: 1k99_A oo  Len:  100
+ Name: 1j46_A oo  Len:  93  Start/End:  0,85
+ Name: 1k99_A oo  Len:  93  Start/End:  6,91
 
 //
 
 
 
-1j46_A      ......MQDR VKRPMNAFIV WSRDQRRKMA LENPRMRNSE ISKQLGYQWK 
-1k99_A      MKKLKKHPDF PKKPLTPYFR FFMEKRAKYA KLHPEMSNLD LTKILSKKYK 
+1j46_A      MQDRVKRPMN AFIVWSRDQR RKMALENPRM RNSEISKQLG YQWKMLTEAE 
+1k99_A      HPDFPKKPLT PYFRFFMEKR AKYAKLHPEM SNLDLTKILS KKYKELPEKK 
 
-1j46_A      MLTEAEKWPF FQEAQKLQAM HREKYPNYKY RPRRKAKMLP K
-1k99_A      ELPEKKKMKY IQDFQREKQE FERNLARFRE DHPDLIQNAK K
+1j46_A      KWPFFQEAQK LQAMHREKYP NYKYRPRRKA KMLPK
+1k99_A      KMKYIQDFQR EKQEFERNLA RFREDHPDLI QNAKK
 ```
 
 To embed sequences, PEbA will use the ProtT5-XL-UniRef50 model and T5encoder from HuggingFace. If -e1 and
@@ -116,7 +116,7 @@ From each BAliBASE benchmark MSA we extracted each sequence and each pairwise al
 sequences and generated alignments using PEbA with ProtT5 embeddings, PEbA with ESM2 embeddings, BLOSUM, and DEDAL.
 
 **************************************************************************************************************
-# Using ProtT5, ESM2, and DEDAL
+# Language Models and Other Methods
 **************************************************************************************************************
 
 The following guide was used for working with ProtT5:
@@ -130,6 +130,12 @@ We adapted their code and used it to embed sequences in embed_seqs.py.
 The readme for DEDAL can be found here, which contains instructions for using the model:
 https://github.com/google-research/google-research/tree/master/dedal
 We adapted their code and used it to run their model in get_aligns.py.
+
+FATCAT github can be found here:
+https://github.com/GodzikLab/FATCAT-dist
+
+vcMSA github can be found here:
+https://github.com/clairemcwhite/vcmsa
 
 **************************************************************************************************************
 # Results and Figures

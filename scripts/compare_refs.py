@@ -28,8 +28,6 @@ def main():
     # Compare alignments in directory to corresponding reference alignments
     direcs = sorted(os.listdir(f'{args.m}/{args.r}'))
     for direc in direcs:
-        if direc in ('BB11006', 'BB110037'):
-            continue
         for align in os.listdir(f'{args.m}/{args.r}/{direc}'):
 
             # Call compute_score

@@ -28,7 +28,7 @@ def get_pos(align: str, pdb: str) -> tuple:
     align = align.replace('.', '')
     beg = seq.find(align)
     end = beg + len(align)-1
-    
+
     return beg, end
 
 
@@ -74,8 +74,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f1', type=str, default='data/pdb/BB11002/1abo_A.pdb')
-    parser.add_argument('-f2', type=str, default='data/pdb/BB11002/1bb9_.pdb')
+    parser.add_argument('-f1', type=str, default='data/pdb/BB11005/1bw0_A.pdb')
+    parser.add_argument('-f2', type=str, default='data/pdb/BB11005/1ohv_A.pdb')
     parser.add_argument('-o', '--output', type=str, default='msf')
     parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop')
     args = parser.parse_args()

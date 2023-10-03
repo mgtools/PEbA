@@ -96,7 +96,7 @@ def peba(pw_aligns: list, ref: str, direc: str, method: str):
 
 
 def dedal_run(pw_aligns: list, ref: str, direc: str, method: str, model):
-    """Writes all pairwise SW dedal alignments to a file in the msf format
+    """Writes all pairwise dedal alignments to a file in the msf format
 
     :param pw_aligns: list of all pairwise combinations of sequences
     :param ref: reference folder
@@ -139,7 +139,7 @@ def dedal_run(pw_aligns: list, ref: str, direc: str, method: str, model):
         
 
 def fatcat(pw_aligns: list, ref: str, direc: str):
-    """Writes all pairwise SW dedal alignments to a file in the msf format
+    """Writes all pairwise fatcat alignments to a file in the desired format
 
     :param pw_aligns: list of all pairwise combinations of sequences
     :param ref: reference folder
@@ -168,6 +168,27 @@ def fatcat(pw_aligns: list, ref: str, direc: str):
                 f'-f2 data/pdb/{direc}/{pdb2}.pdb '
                 f'-sf {method_direc}/{ref}/{direc}')
         os.system(f'python scripts/fatcat.py {args}')
+
+
+def vcmsa(pw_aligns: list, ref: str, direc: str):
+    """Writes all pairwise vcmsa alignments to a file in the desired format
+    """
+
+    method_direc = 'data/alignments/vcmsa'
+    if not os.path.isdir(method_direc):
+        os.makedirs(method_direc)
+    if not os.path.isdir(f'{method_direc}/{ref}'):
+        os.makedirs(f'{method_direc}/{ref}')
+    if not os.path.isdir(f'{method_direc}/{ref}/{direc}'):
+        os.makedirs(f'{method_direc}/{ref}/{direc}')
+
+    # Align each pair of sequences
+    for pair in pw_aligns:
+        seq1, seq2 = pair[0], pair[1]
+        args = (f'-f1 data/sequences/{ref}/{direc}/{seq1} '
+                f'-f2 data/sequences/{ref}/{direc}/{seq2} '
+                f'-sf {method_direc}/{ref}/{direc}')
+        os.system(f'python scripts/vcmsa.py {args}')
                
 
 def main():
@@ -175,8 +196,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', type=str, default='fatcat')
-    parser.add_argument('-m', type=str, default='fatcat')
+    parser.add_argument('-a', type=str, default='vcmsa')
+    parser.add_argument('-m', type=str, default='vcmsa')
     args = parser.parse_args()
 
     # Don't want to load if not using
@@ -205,6 +226,8 @@ def main():
                 dedal_run(pw_aligns, ref, direc, args.m, dedal_model)
             elif args.a == 'fatcat':
                 fatcat(pw_aligns, ref, direc)
+            elif args.a == 'vcmsa':
+                vcmsa(pw_aligns, ref, direc)
 
 
 if __name__ == '__main__':
