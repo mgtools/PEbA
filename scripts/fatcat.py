@@ -24,9 +24,13 @@ def get_pos(align: str, pdb: str) -> tuple:
     file = f'data/sequences/RV11/{direc}/{name}.fa'
     seq = SeqIO.read(file, 'fasta').seq
 
-    # Get beginning and end indices with find()
+    # Remove gaps and find beginning and end positions
     align = align.replace('.', '')
     beg = seq.find(align)
+    tmp_align = align
+    while beg == -1:  # Some aligns don't match exactly
+        tmp_align = tmp_align[:-1]
+        beg = seq.find(tmp_align)
     end = beg + len(align)-1
 
     return beg, end
@@ -74,8 +78,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f1', type=str, default='data/pdb/BB11005/1bw0_A.pdb')
-    parser.add_argument('-f2', type=str, default='data/pdb/BB11005/1ohv_A.pdb')
+    parser.add_argument('-f1', type=str, default='data/pdb/BB11036/1rvk_A.pdb')
+    parser.add_argument('-f2', type=str, default='data/pdb/BB11036/2mnr_.pdb')
     parser.add_argument('-o', '--output', type=str, default='msf')
     parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop')
     args = parser.parse_args()

@@ -9,21 +9,20 @@ import os
 import matplotlib.pyplot as plt
 
 
-def get_scores(method: str, ref: str, score: str) -> list:
+def get_scores(method: str, ref: str, score: str) -> dict:
     """Returns a list of scores for each alignment in the given directory
 
     :param method: path to directory containing alignments
     :param ref: particular reference
     :param score: score to compare (sp/f1)
-    :return list: list of scores
+    :return dict: dict where key is alignment name and value is sim score to ref align
     """
 
-    scores = []
+    scores = {}
     with open(f'{method}/{ref}_{score}.log', 'r', encoding='utf8') as file:
         for line in file:
-            if line.startswith('BB11006') or line.startswith('BB11036'):
-                continue
-            scores.append(float(line.split()[3]))
+            line = line.split()
+            scores[line[1]] = float(line[3])
 
     return scores
 
@@ -81,8 +80,12 @@ def main():
         os.makedirs('data/graphs')
 
     # Get comparison scores for each set of alignments
-    m1_scores = get_scores(args.m1, args.r, args.s)
-    m2_scores = get_scores(args.m2, args.r, args.s)
+    m1_dict = get_scores(args.m1, args.r, args.s)
+    m2_dict = get_scores(args.m2, args.r, args.s)
+
+    # Only take scores from alignments that are in both methods
+    m1_scores = [m1_dict[align] for align in m1_dict if align in m2_dict]
+    m2_scores = [m2_dict[align] for align in m2_dict if align in m1_dict]
     graph_compare(args.m1, args.m2, args.r, args.s, m1_scores, m2_scores)
 
 
