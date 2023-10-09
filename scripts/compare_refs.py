@@ -16,8 +16,8 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-m', type=str, default='data/alignments/fatcat')
-    parser.add_argument('-r', type=str, default='RV11', help='reference to compare to')
+    parser.add_argument('-m', type=str, default='data/alignments/vcmsa')
+    parser.add_argument('-r', type=str, default='RV913', help='reference to compare to')
     parser.add_argument('-s', type=str, default='sp', help='score to compare (sp/f1)')
     args = parser.parse_args()
 

@@ -253,10 +253,6 @@ def main():
         seq_dir = os.listdir(f'data/sequences/{ref}')
         for direc in seq_dir:
 
-            # Check if directory exists in alignment folder
-            if os.path.isdir(f'data/alignments/{args.a}/{ref}/{direc}'):
-                continue
-
             # Get pairwise alignments for each pair of sequences
             files = os.listdir(f'data/sequences/{ref}/{direc}')
             pw_aligns = get_aligns(files)

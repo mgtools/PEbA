@@ -2,18 +2,6 @@ BB11001, 1j46_A-2lef_A.msf, SP: 1.0   ref_length: 88   comparison_length: 83   s
 BB11001, 1aab_-2lef_A.msf, SP: 0.908   ref_length: 93   comparison_length: 76   similarity: 0.092
 BB11001, 1aab_-1j46_A.msf, SP: 0.641   ref_length: 90   comparison_length: 78   similarity: 0.192
 BB11001, 1j46_A-1k99_A.msf, SP: 1.0   ref_length: 91   comparison_length: 85   similarity: 0.212
-BB11001, .1aab_-1j46_A.msf.swp, Traceback (most recent call last):
-  File "/home/ben/Code/VecAligns/scripts/compute_score.py", line 202, in <module>
-    main()
-  File "/home/ben/Code/VecAligns/scripts/compute_score.py", line 198, in main
-    compare_aligns(args)
-  File "/home/ben/Code/VecAligns/scripts/compute_score.py", line 179, in compare_aligns
-    al1 = get_pairs(args.align1)
-  File "/home/ben/Code/VecAligns/scripts/compute_score.py", line 85, in get_pairs
-    seq1, seq2, pos = parse_align(filename)
-  File "/home/ben/Code/VecAligns/scripts/compute_score.py", line 30, in parse_align
-    with open(filename, 'r', encoding='utf8') as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/alignments/refs/RV11/BB11001/.1aab_-1j46_A.msf.swp'
 BB11001, 1k99_A-2lef_A.msf, SP: 1.0   ref_length: 94   comparison_length: 83   similarity: 0.181
 BB11001, 1aab_-1k99_A.msf, SP: 0.617   ref_length: 93   comparison_length: 81   similarity: 0.222
 BB11002, 1abo_A-1ycs_B.msf, SP: 0.965   ref_length: 194   comparison_length: 57   similarity: 0.228

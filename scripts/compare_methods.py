@@ -55,8 +55,10 @@ def graph_compare(m1: str, m2: str, ref: str, metric: str, m1_scores: list, m2_s
             method1_scores.append([m1_scores[i], score])
         else:  # Make method2 score the x value if greater than method1 score
             method2_scores.append([score, m1_scores[i]])
-    ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores], color='blue', alpha=0.5)
-    ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores], color='red', alpha=0.5)
+    ax.scatter([i[0] for i in method2_scores], [i[1] for i in method2_scores],
+                color='blue', alpha=0.5)
+    ax.scatter([i[1] for i in method1_scores], [i[0] for i in method1_scores],
+                color='red', alpha=0.5)
     ax.set_title(f'{m1_title} Alignments vs. {m2_title} Alignments in {ref}')
     ax.set_xlabel(f'{m2_title}')
     ax.set_ylabel(f'{m1_title}')
@@ -71,8 +73,8 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-m1', type=str, default='data/alignments/local_peba_t5')
-    parser.add_argument('-m2', type=str, default='data/alignments/fatcat')
-    parser.add_argument('-r', type=str, default='RV11')
+    parser.add_argument('-m2', type=str, default='data/alignments/local_blosum')
+    parser.add_argument('-r', type=str, default='RV913')
     parser.add_argument('-s', type=str, default='sp')
     args = parser.parse_args()
 

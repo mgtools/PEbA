@@ -2,10 +2,10 @@ PileUp
 
 
 
-   MSF: 159  Type: P  Method: fatcat  Gopen: 0  Gext: 0
+   MSF: 158  Type: P  Method: fatcat  Gopen: 0  Gext: 0
 
- Name: 1ewx_A oo  Len:  159  Start/End:  6,140
- Name: 2trc_P oo  Len:  159  Start/End:  106,212
+ Name: 1ewx_A oo  Len:  158  Start/End:  6,140
+ Name: 2trc_P oo  Len:  158  Start/End:  106,212
 
 //
 
@@ -15,8 +15,8 @@ PileUp
 2trc_P      GEQFLETI.. .....EKEQK VTTIVVNIYE DGVRGCDALN SSLECLAAEY 
 
 1ewx_A      HESKNFEVVF CTWDEEEDGF AGYFAKMPWL AVPFAQSEAV QKLSKHFNVE 
-2trc_P      P....VKFCK IRASN..... .......... .........T GAGDRFSS.D 
+2trc_P      PX...VKFCK IRASN..... .......... .........T GAGDRFSS.D 
 
-1ewx_A      SIPTLIGVDA DSGDVVTTRA RAT....... ...LVKDPEG EQFPW
-2trc_P      VLPTLLVYKG ..GELISNFI SVAEQFAEDF FAADVESFLN EYGLL
+1ewx_A      SIPTLIGVDA DSGDVVTTRA RAT....... ..LVKDPEGE QFPW
+2trc_P      VLPTLLVYKG G..ELISNFI SVAEQFAEDF FAADVESFLN EYGL
 

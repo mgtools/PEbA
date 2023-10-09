@@ -1,0 +1,40 @@
+PileUp
+
+
+
+   MSF: 493  Type: P  Method: vcmsa  Gopen: 0  Gext: 0
+
+ Name: FKB4_YEAST oo  Len:  493  Start/End:  0,391
+ Name: FKBX_ECOLI oo  Len:  493  Start/End:  0,147
+
+//
+
+
+
+FKB4_YEAST      MSDMLPLATY SLNVEPYSPT PALNFKIPVT IRITMAAIDP EPFDDDKKPS 
+FKBX_ECOLI      .SE....... .......... .......... .......... .......... 
+
+FKB4_YEAST      TLRIIKRNPE LTRGEYYNQD NNDGLEEDES ESEQEADVPK RSVKSKKGKA 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKB4_YEAST      VEQSESEDSE DENEIDDEFE ECVLLTLSPK GQYQQALDIT IAPEEDVQFV 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKB4_YEAST      VTGSYTISLT GNYVKHPFDN SSDSDEDEED YYSDEESSNG EEEEEEEEED 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKB4_YEAST      DEELSSGDDD LDDLVDASDI ESRLDELVKK DEKKKNNKKD SKRKHEEDEE 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKB4_YEAST      ESAKPAEKKQ TTKKDKKAEK VKDSEESKPK PKTKLLEGGI IIEDRVTGKG 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKB4_YEAST      PHAKKGTRVG MRYVGKLKNG KVFDK.NTKG KPFVFKLGQG EVIKGWDIGV 
+FKBX_ECOLI      .SVQSNSAVL VHFTLKLDDG TTAESTRNNG KPALFRLGDA SLSEGLEQHL 
+
+FKB4_YEAST      AGMAVGGERR IVI.PAPYAY GKQALP.... .......... GI........ 
+FKBX_ECOLI      LGLKVGDKTT FSLEP.DAAF GV.PSPDLIQ YFSRREFMDA GEPEIGAIML 
+
+FKB4_YEAST      .......... .......... .......P.A NSELTFDVKL VSM.....K
+FKBX_ECOLI      FTAMDGSEMP GVIREINGDS ITVDFNHPLA GQTVHFDIEV LEIDPALEA
+

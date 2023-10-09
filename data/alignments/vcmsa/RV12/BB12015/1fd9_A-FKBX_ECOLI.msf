@@ -1,0 +1,31 @@
+PileUp
+
+
+
+   MSF: 288  Type: P  Method: vcmsa  Gopen: 0  Gext: 0
+
+ Name: 1fd9_A     oo  Len:  288  Start/End:  0,203
+ Name: FKBX_ECOLI oo  Len:  288  Start/End:  0,147
+
+//
+
+
+
+1fd9_A          TDKDKLSYSI GADLGKNFKN QGIDVNPEAM AKGMQDAMSG AQLALTEQQM 
+FKBX_ECOLI      SE........ .......... .......... .......... .......... 
+
+1fd9_A          KDVLNKFQKD LMAKRTAEFN KKADENKVKG EAFLTENKNK PGVVVLPSGL 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+1fd9_A          QYKVINSGNG VKPGKSDTVT VEYTGRLIDG TVFDSTEKTG KPATFQV..S 
+FKBX_ECOLI      .......... .SVQSNSAVL VHFTLKLDDG TTAESTRNNG KPALFRLGDA 
+
+1fd9_A          QVIPGWTE.A LQLMPAGSTW EIYV.PSGLA YGPRSV.... .......... 
+FKBX_ECOLI      SLSEGL.EQH LLGLKVGDKT TFSLEP.DAA FGV.PSPDLI QYFSRREFMD 
+
+1fd9_A          .GGP...... .......... .......... .......... IGPNETLIFK 
+FKBX_ECOLI      AG.EPEIGAI MLFTAMDGSE MPGVIREING DSITVDFNHP L.AGQTVHFD 
+
+1fd9_A          IHLISVKK.. .S
+FKBX_ECOLI      IEVLEIDPAL EA
+

@@ -1,0 +1,40 @@
+PileUp
+
+
+
+   MSF: 460  Type: P  Method: vcmsa  Gopen: 0  Gext: 0
+
+ Name: FKBH_SCHPO oo  Len:  460  Start/End:  0,361
+ Name: FKBX_ECOLI oo  Len:  460  Start/End:  0,147
+
+//
+
+
+
+FKBH_SCHPO      MSKEETLYSV KVDQERVPLF DEDFYKGFRS ELSVRFTMAA LDPRAKSNDA 
+FKBX_ECOLI      .S.E...... .......... .......... .......... .......... 
+
+FKBH_SCHPO      VTVNVITRLE HPEEDGEESD EELFQEEKFT LCTLKKGSVY QQPIDIIFSP 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKBH_SCHPO      GEEVFFERVG GDIPVYLSGT CIITNIPEEE DSSDLENDFL YGADEFSSDE 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKBH_SCHPO      EEMDDISVTS SEEEEEENGA RIEELNSDEE DAEQAEEEIL EKPVPKDEVA 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKBH_SCHPO      EKHSKDKLKK EEKEKKTAVD VSDSVNGKKR KTEPAGEGEQ TEKKSKSTKT 
+FKBX_ECOLI      .......... .......... .......... .......... .......... 
+
+FKBH_SCHPO      YPKQVLEGNV TVQDKVKGDG PAAKRKKRVS MRYIGRLTNG KVFDK.NITG 
+FKBX_ECOLI      .......... .......... .SVQSNSAVL VHFTLKLDDG TTAESTRNNG 
+
+FKBH_SCHPO      KPFTFNLGLE EVIKGWDVGI VGMQVGGERT IHI.PAAMAY GSKRLP.... 
+FKBX_ECOLI      KPALFRLGDA SLSEGLEQHL LGLKVGDKTT FSLEP.DAAF GVP.SPDLIQ 
+
+FKBH_SCHPO      .......... GI........ .......... .......... .......P.A 
+FKBX_ECOLI      YFSRREFMDA GEPEIGAIML FTAMDGSEMP GVIREINGDS ITVDFNHPLA 
+
+FKBH_SCHPO      NSDLVFDVKL LAV.....N
+FKBX_ECOLI      GQTVHFDIEV LEIDPALEA
+

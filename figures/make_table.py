@@ -1,231 +1,136 @@
-"""================================================================================================
-This script reads csv files and builds tables with the results. The directories that are read
-in this script are a result from compare_aligns.py. A set of runs comes from using two methods,
-i.e. PEbA and BLOSUM, on each BAliBASE reference used in this project, of which there are five.
-The resulting tables have a column for reach run and a row for each range of values, for either
-pairwise identity or alignment length.
+"""Returns a table of the scores for the desired method. Requires log files from
+compare_refs.py to already exist and be in the correct directory.
 
-Ben Iovino  04/05/23   VecAligns
-================================================================================================"""
+__author__ = "Ben Iovino"
+__date__ = 10/10/23
+"""
 
-import csv
 import os
-import pickle
 import argparse
 import pandas as pd
 
 
-def read_csv(filename):
-    """=============================================================================================
-    This function accepts a csv filename and returns a list of lists with each line being a list.
+def parse_ref(method: str, bucket: str) -> dict:
+    """Returns a dict of ref alignments and each alignment's sim score OR length and SP score.
 
-    :param filename: csv file to be read
-    :return: list of lists
-    ============================================================================================="""
+    :param method: directory containing alignments
+    :param bucket: value of interest for bucketing (id or len)
+    :return dict: dict where key is reference name and value is a list of tuples
+    """
 
-    with open(filename, 'r', encoding='utf8') as file:
-        reader = csv.reader(file)
-        data = list(reader)
-    return data
+    # For each log file in directory, get sim score OR ref align length and SP score
+    refs = {}
+    for file in os.listdir(method):
+        if file.endswith('.log'):
+            refs[file.split('_')[0]] = []
+            with open(f'{method}/{file}', 'r', encoding='utf8') as lfile:
+                for line in lfile:
+                    line = line.split()
 
+                    # SP on line[3], length on line[5], sim on line[9]
+                    if bucket == 'len':
+                        refs[file.split('_')[0]].append((line[5], line[3]))
+                    if bucket == 'id':
+                        refs[file.split('_')[0]].append((line[9], line[3]))
 
-def parse_data(data, parse):
-    """=============================================================================================
-    This function accepts a list of lists and parses for relevant info.
-
-    :param data: list of lists
-    :param parse: output to be parsed
-    :return: list of lists
-    ============================================================================================="""
-
-    avg_align = 0
-    count = 0
-    zeros = 0
-    zeros2 = 0
-    zero_avg = 0
-    in_zero = False
-    for line in data:
-
-        # Even lines are from method 1
-        if count == 0 or count % 2 == 0:
-            for key, value in COMPARE_DICT_M1.items():
-                if parse == 'id':
-                    if float(line[3]) <= key:
-                        if float(line[0]) == 0:
-                            in_zero = True
-                            zeros += 1
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-                elif parse == 'len':
-                    if float(line[1]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-
-        # Odd lines are from method 2
-        else:
-            for key, value in COMPARE_DICT_M2.items():
-                if parse == 'id':
-                    if float(line[3]) <= key:
-                        if in_zero is True:
-                            if float(line[0])>0:
-                                zeros2 += 1
-                                zero_avg += float(line[0])/100
-                        in_zero = False
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-                elif parse == 'len':
-                    if float(line[1]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-
-        avg_align += float(line[1])
-        count += 1
-
-    # Get average BLOSUM score for TC scores where PEbA is 0 and BLOSUM is > 0
-    if zeros2 > 0:
-        print(zero_avg/zeros2)
-
-    print(zeros, zeros2)
-    return avg_align, count
+    return refs
 
 
-def avg_dict():
-    """=============================================================================================
-    This function takes a dictionary with a list of values and returns a dictionary with the average
-    of the values.
+def parse_scores_id(scores: dict):  #\\NOSONAR
+    """Prints a pandas table of the average SP score for each bucket of pairwise id
 
-    :return: dict
-    ============================================================================================="""
+    :param scores: dict where key is reference name and value is a list of tuples
+    """
 
-    # Dicts are global
-    for key, value in COMPARE_DICT_M1.items():
-        if value[1] > 10: # Want at least 10 alignments in this range before we average
-            COMPARE_DICT_M1[key] = value[0]/value[1]*100
-        else:
-            COMPARE_DICT_M1[key] = 0
-    for key, value in COMPARE_DICT_M2.items():
-        if value[1] > 10:
-            COMPARE_DICT_M2[key] = value[0]/value[1]*100
-        else:
-            COMPARE_DICT_M2[key] = 0
+    # Create pandas table with columns for each bucket and rows for each reference
+    table = pd.DataFrame(columns=['0-9', '10-19', '20-29', '30-39', '40-49',
+                                    '50-59', '60-69', '70-79', '80-89', '90-99'],
+                            index=scores.keys())
 
-    # Count number of pkl files
-    count = 0
-    for file in os.listdir('Figures'):
-        if file.endswith('.pkl'):
-            count += 1
+    # For each reference in dict, add SP score to appropriate bucket
+    for ref in scores:
 
-    # Save to pickle
-    with open(f'Figures/compare_dict_m1_{count}.pkl', 'wb') as file:
-        pickle.dump(COMPARE_DICT_M1, file)
-    with open(f'Figures/compare_dict_m2_{count}.pkl', 'wb') as file:
-        pickle.dump(COMPARE_DICT_M2, file)
+        # Create dict of lists for each bucket
+        id_dict = {9: [], 19: [], 29: [], 39: [], 49: [],
+                59: [], 69: [], 79: [], 89: [], 99: []}
+
+        for score in scores[ref]:
+
+            # Add SP score to appropriate bucket
+            for bucket in id_dict:  #pylint: disable=C0206
+                if float(score[0])*100 <= bucket:
+                    id_dict[bucket].append(float(score[1]))
+                    break
+
+        # Get average SP score for each bucket
+        for bucket, score_list in id_dict.items():
+            if len(score_list) <= 10:
+                id_dict[bucket] = 0
+                continue
+            id_dict[bucket] = round(sum(score_list)/len(score_list), 2)
+
+        # Add row to table, each value in dict is a column
+        for i, bucket in enumerate(id_dict):
+            table.iloc[table.index.get_loc(ref), i] = id_dict[bucket]
+
+    # Print table
+    print(table)
 
 
-def build_table():
-    """=============================================================================================
-    This function reads pickle files and builds a table with the results.
+def parse_scores_len(scores: dict):  #\\NOSONAR
+    """Prints a pandas table of the average SP score for each bucket of length
 
-    :return: Pandas dataframe
-    ============================================================================================="""
+    :param scores: dict where key is reference name and value is a list of tuples
+    """
 
-    # Read pickle files
-    pfiles = []
-    for file in os.listdir('Figures'):
-        if file.endswith('.pkl'):
-            pfiles.append(file)
+    # Create pandas table with columns for each bucket and rows for each reference
+    table = pd.DataFrame(columns=['0-499', '500-999', '1000-1499', '1500-1999', '2000-2499'],
+                            index=scores.keys())
 
-    # Sort files so that they are added to dict sequentially
-    pfiles.sort()
+    # For each reference in dict, add SP score to appropriate bucket
+    for ref in scores:
 
-    # Build dict
-    dicts = {}
-    for file in pfiles:
-        with open(f'Figures/{file}', 'rb') as f:
-            dicts[file] = pickle.load(f)
-        os.remove(f'Figures/{file}')
+        # Create dict of lists for each bucket
+        len_dict = {499: [], 999: [], 1499: [], 1999: [], 2499: []}
 
-    # Build table
-    table = pd.DataFrame(dicts)
+        for score in scores[ref]:
 
-    # Split table into two
-    table1 = table.iloc[:, :len(table.columns)//2]
-    table2 = table.iloc[:, len(table.columns)//2:]
+            # Add SP score to appropriate bucket
+            for bucket in len_dict:  #pylint: disable=C0206
+                if int(score[0]) <= bucket:
+                    len_dict[bucket].append(float(score[1]))
+                    break
 
-    # Rename columns
-    refs = ['RV11', 'RV12', 'RV911', 'RV912', 'RV913']
-    table1.columns = refs
-    table2.columns = refs
+        # Get average SP score for each bucket
+        for bucket, score_list in len_dict.items():
+            if len(score_list) <= 10:
+                len_dict[bucket] = 0
+                continue
+            len_dict[bucket] = round(sum(score_list)/len(score_list), 2)
 
-    print(table1)
-    print()
-    print(table2)
+        # Add row to table, each value in dict is a column
+        for i, bucket in enumerate(len_dict):
+            table.iloc[table.index.get_loc(ref), i] = len_dict[bucket]
 
-    # Save to csv
-    #table1.to_csv('Figures/table1.csv')
-    #table2.to_csv('Figures/table2.csv')
+    # Print table
+    print(table)
 
 
 def main():
-    """=============================================================================================
-    This function initializes global dictionaries where values from csv files are stored in buckets.
-    It then reads every csv file in the directory structure and parses for info of interest. It then
-    finds the average of each bucket and builds a dataframe with the results.
-    ============================================================================================="""
+    """Main
+    """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', type=str, default='Data/Alignments/PEBA-BLOSUM')
-    parser.add_argument('-t', type=str, default='id')
+    parser.add_argument('-d', type=str, default='data/alignments/local_blosum')
+    parser.add_argument('-t', type=str, default='len', help='pairwise id (id) or length (len)')
     args = parser.parse_args()
 
-    # Values for each run
-    global COMPARE_DICT_M1  #pylint: disable=W0601
-    global COMPARE_DICT_M2  #pylint: disable=W0601
-
-    # Sort runs so dictionaries are built sequentially
-    runs = []
-    for run in os.listdir(args.p):
-        runs.append(args.p+'/'+run)
-    runs.sort()
-
-    # Directory structure -> set/run/ref/msa/compare.csv
-    # Want to read every single csv
-    avg_align, count = 0, 0
-    for run in runs:  #pylint: disable=R1702
-        for ref in os.listdir(f'{run}'):
-            print(ref)
-
-            # Initialize dicts for each run
-            if args.t == 'id':
-                COMPARE_DICT_M1 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-                COMPARE_DICT_M2 = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-                     59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-            elif args.t == 'len':
-                COMPARE_DICT_M1 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-                COMPARE_DICT_M2 = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
-
-            for msa in os.listdir(f'{run}/{ref}'):
-                print(msa)
-                if msa.startswith('B'):
-                    for file in os.listdir(f'{run}/{ref}/{msa}'):
-                        if file.endswith('csv'):
-
-                            # Read csv and parse
-                            data = read_csv(f'{run}/{ref}/{msa}/{file}')
-                            a, b = parse_data(data, args.t)
-                            avg_align += a
-                            count += b
-
-        # Find average for each key
-        avg_dict()
-
-    # Build table with averaged dictionaries
-    build_table()
+    scores = parse_ref(args.d, args.t)
+    scores = dict(sorted(scores.items()))
+    if args.t == 'id':
+        parse_scores_id(scores)
+    if args.t == 'len':
+        parse_scores_len(scores)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,52 @@
+PileUp
+
+
+
+   MSF: 667  Type: P  Method: vcmsa  Gopen: 0  Gext: 0
+
+ Name: 1bio_      oo  Len:  667  Start/End:  0,219
+ Name: FA12_CAVPO oo  Len:  667  Start/End:  0,602
+
+//
+
+
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      GRLLLGSLLV SLESALSAPP PWKAPKERRH RAEEFTVGLT VTGEPCYFPF 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      QYNRQLYHHC IHKGRPGPRP WCATTPNFDQ DQQWAYCLEP KKVKDHCSKH 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      NPCQRGGICV NTLSSPHCLC PDHLTGKHCQ REKCFEPQLH RFFHENEIWF 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      RTGPAGVAKC HCKGPDAHCK QMHSQECQTN PCLNGGRCLE VEGHHLCDCP 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      MGYTGPFCDL DTTASCYEGR GVSYRGMART TVSGAKCQRW ASEATYRNMT 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      AEQALRRGLG HHTFCRNPDN DTRPWCFVWM GNRLSWEYCD LAQCQYPPQP 
+
+1bio_           .......... .......... .......... .......... .......... 
+FA12_CAVPO      TATPHDRFEH PKLPSSRLSI LQTPQPTTQN QALANELPET SSLLCGQRLR 
+
+1bio_           ........IL GGREAEAHAR PYMASVQLNG AHLCGGVLVA EQWVLSAAHC 
+FA12_CAVPO      KRLSSLSRIV GGLVALPGAH PYIAALYW.G SNFCSGSLIA PCWVLTAAHC 
+
+1bio_           LED....GKV QVLLGAHSLS QPEPSKRLYD VLRAVPHPDS QPDTIDHDLL 
+FA12_CAVPO      LQNRPAPEEL KVVLGQDRHN QSCEHCQTLA VHSYRLHEAF SPSSYLNDLA 
+
+1bio_           LLQLSEK... ...ATLGPAV RPLPQRVD.. ..RVAPGTLC DVAGWGIVNH 
+FA12_CAVPO      LLRLQ.KSAD GSCAQLSPYV QTVCLPSGPA PPSESETTCC EVAGWGHQFE 
+
+1bio_           A.GRRPDSLQ HVLLPVLDRA TCN..RHH.D GAITERLMCA ..ESNRRDSC 
+FA12_CAVPO      GAEEYSSFLQ EAQVPLISSE RCSSPEVHGD .AFLSGMLCA GFLEGGTDAC 
+
+1bio_           KGDSGGPLVC G.......GV LEGVVTSGSR VCG.NRKPGI YTRVASYAAW 
+FA12_CAVPO      QGDSGGPLVC EDEAAEHRLI LRGIVSWGS. GCGDRNKPGV YTDVASYLTW 
+
+1bio_           IDSVL.A
+FA12_CAVPO      IQKHTAS
+
