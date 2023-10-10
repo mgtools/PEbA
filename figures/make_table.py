@@ -32,14 +32,16 @@ def parse_ref(method: str, bucket: str) -> dict:
                         refs[file.split('_')[0]].append((line[5], line[3]))
                     if bucket == 'id':
                         refs[file.split('_')[0]].append((line[9], line[3]))
+    refs = dict(sorted(refs.items()))
 
     return refs
 
 
-def parse_scores_id(scores: dict):  #\\NOSONAR
+def parse_scores_id(scores: dict) -> pd.DataFrame:  #\\NOSONAR
     """Prints a pandas table of the average SP score for each bucket of pairwise id
 
     :param scores: dict where key is reference name and value is a list of tuples
+    :return pd.DataFrame: pandas table of average SP score for each bucket
     """
 
     # Create pandas table with columns for each bucket and rows for each reference
@@ -73,14 +75,14 @@ def parse_scores_id(scores: dict):  #\\NOSONAR
         for i, bucket in enumerate(id_dict):
             table.iloc[table.index.get_loc(ref), i] = id_dict[bucket]
 
-    # Print table
-    print(table)
+    return table
 
 
-def parse_scores_len(scores: dict):  #\\NOSONAR
+def parse_scores_len(scores: dict) -> pd.DataFrame:  #\\NOSONAR
     """Prints a pandas table of the average SP score for each bucket of length
 
     :param scores: dict where key is reference name and value is a list of tuples
+    :return pd.DataFrame: pandas table of average SP score for each bucket
     """
 
     # Create pandas table with columns for each bucket and rows for each reference
@@ -112,8 +114,7 @@ def parse_scores_len(scores: dict):  #\\NOSONAR
         for i, bucket in enumerate(len_dict):
             table.iloc[table.index.get_loc(ref), i] = len_dict[bucket]
 
-    # Print table
-    print(table)
+    return table
 
 
 def main():
@@ -126,11 +127,11 @@ def main():
     args = parser.parse_args()
 
     scores = parse_ref(args.d, args.t)
-    scores = dict(sorted(scores.items()))
     if args.t == 'id':
-        parse_scores_id(scores)
+        table = parse_scores_id(scores)
     if args.t == 'len':
-        parse_scores_len(scores)
+        table = parse_scores_len(scores)
+    print(table)
 
 
 if __name__ == "__main__":

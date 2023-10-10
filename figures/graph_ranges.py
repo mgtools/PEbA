@@ -1,247 +1,126 @@
-"""================================================================================================
-This script reads csv files and graphs values of interest. The directories that are read in this
-script are a result from compare_aligns.py. A set of runs comes from using two methods, i.e. PEbA
-and BLOSUM, on each BAliBASE reference used in this project, of which there are five. The five refs
-are split into two separate graphs due to differences in sequence length and pairwise identity.
+"""Plots a line graph of each method's average similarity score to the reference
 
-Ben Iovino  04/24/23   VecAligns
-================================================================================================"""
+__author__ = "Ben Iovino"
+__date__ = 10/10/23
+"""
 
-import csv
-import os
 import argparse
 import matplotlib.pyplot as plt
+import pandas as pd
+from make_table import parse_ref, parse_scores_id, parse_scores_len
 
 
-def initialize_dict(parse):
-    """=============================================================================================
-    This function accepts a type of information to be parsed and returns a dictionary with
-    corresponding keys.
+def get_table(method: str, bucket: str) -> pd.DataFrame:
+    """Returns a pandas table of the average SP score for each bucket of length or pairwise id
 
-    :param parse: information of interest i.e. pairwise identity or alignment length
-    :return: two dicts
-    ============================================================================================="""
+    :param method: directory containing alignments
+    :param bucket: value of interest for bucketing (id or len)
+    :return pd.DataFrame: pandas table of average SP score for each bucket
+    """
 
-    if parse == 'id':
-        dct = {9: [0, 0], 19: [0, 0], 29: [0, 0], 39: [0, 0], 49: [0, 0],
-             59: [0, 0], 69: [0, 0], 79: [0, 0], 89: [0, 0], 99: [0, 0]}
-    elif parse == 'len':
-        dct = {499: [0, 0], 999: [0, 0], 1499: [0, 0], 1999: [0, 0], 2499: [0, 0]}
+    scores = parse_ref(f'data/alignments/{method}', bucket)
 
-    return dct
+    # Combine scores for RV11/RV12 and RV911/RV912/RV913
+    new_scores = {}
+    for ref, score_list in scores.items():
+        if ref in ['RV11', 'RV12']:
+            new_scores['RV11/RV12'] = new_scores.get('RV11/RV12', []) + score_list  #\\NOSONAR
+        elif ref in ['RV911', 'RV912', 'RV913']:
+            new_scores['RV911/RV912/RV913'] = new_scores.get('RV911/RV912/RV913', []) + score_list  #\\NOSONAR
 
+    if bucket == 'id':
+        table = parse_scores_id(new_scores)
+    if bucket == 'len':
+        table = parse_scores_len(new_scores)
 
-def read_csv(filename):
-    """=============================================================================================
-    This function accepts a csv filename and returns a list of lists with each line being a list.
-
-    :param filename: csv file to be read
-    :return: list of lists
-    ============================================================================================="""
-
-    with open(filename, 'r', encoding='utf8') as file:
-        reader = csv.reader(file)
-        data = list(reader)
-    return data
+    return table
 
 
-def parse_data(data, parse):
-    """=============================================================================================
-    This function accepts a list of lists and parses for relevant info.
+def graph_id(ref_values: list, refs: str):
+    """Plots performance of each method on each reference
 
-    :param data: list of lists
-    :param parse: output to be parsed
-    :return: list of lists
-    ============================================================================================="""
+    :param ref_values: list of lists of SP scores for each method
+    :param refs: string of reference names
+    """
 
-    # Initialize dict based on type of info to be parsed
-    dict_m1 = initialize_dict(parse)
-    dict_m2 = initialize_dict(parse)
-
-    count = 0
-    for line in data:
-
-        # Even lines are from method 1
-        if count == 0 or count % 2 == 0:
-            for key, value in dict_m1.items():
-                if parse == 'id':
-                    if float(line[3]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-                elif parse == 'len':
-                    if float(line[1]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-
-        # Odd lines are from method 2
-        else:
-            for key, value in dict_m2.items():
-                if parse == 'id':
-                    if float(line[3]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-                elif parse == 'len':
-                    if float(line[1]) <= key:
-                        value[0] += float(line[0])/100
-                        value[1] += 1
-                        break
-        count += 1
-
-    return dict_m1, dict_m2
+    # X axis labels
+    if refs == 'RV11/RV12':
+        x_labels = [i*10 for i in range(1, 6)]
+    if refs == 'RV911/RV912/RV913':
+        x_labels = [i*10 for i in range(1, 9)]
 
 
-def parse_run(run, parse):
-    """=============================================================================================
-    This function accepts a run directory and parses for relevant info.
-
-    :param run: directory to be parsed
-    :param parse: information of interest i.e. pairwise identity or alignment length
-    :return: dictionary of lists
-    ============================================================================================="""
-
-    # Initialize dict based on type of info to be parsed
-    dict_m1 = initialize_dict(parse)
-    dict_m2 = initialize_dict(parse)
-
-    # Initialize dictionary
-    data = {}
-    for ref in os.listdir(f'{run}'):
-        for msa in os.listdir(f'{run}/{ref}'):
-            if msa.startswith('B'):
-                for file in os.listdir(f'{run}/{ref}/{msa}'):
-                    if file.endswith('csv'):
-
-                        # Read csv and parse
-                        data = read_csv(f'{run}/{ref}/{msa}/{file}')
-                        dict2_m1, dict2_m2 = parse_data(data, parse)
-
-                        # Add to running total
-                        for key, value in dict_m1.items():
-                            value[0] += dict2_m1[key][0]
-                            value[1] += dict2_m1[key][1]
-
-                        for key, value in dict_m2.items():
-                            value[0] += dict2_m2[key][0]
-                            value[1] += dict2_m2[key][1]
-
-    return dict_m1, dict_m2
+    # Make single line graph
+    methods = ['PEbA', 'BLOSUM62', 'DEDAL', 'vcMSA']
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    for i, method in enumerate(methods):
+        ax.plot(x_labels, ref_values[i], label=method, marker='o')
+    ax.set_xlabel('Pairwise Identity')
+    ax.set_ylabel('Average SP Score')
+    ax.set_title('Average SP Score for Each Reference')
+    ax.legend()
+    ax.grid(color='grey', linestyle='-', linewidth=0.25)
+    plt.show()
 
 
-def avg_dict(dct):
-    """=============================================================================================
-    This function takes a dictionary with a list of values and returns a dictionary with the average
-    of the values.
+def graph_len(ref_values: list, refs: str):
+    """Plots performance of each method on each reference
 
-    :return: dict
-    ============================================================================================="""
+    :param ref_values: list of lists of SP scores for each method
+    :param refs: string of reference names
+    """
 
-    # Dicts are global
-    for key, value in dct.items():
-        if value[1] > 10: # Want at least 10 alignments in this range before we average
-            dct[key] = value[0]/value[1]
-        else:
-            dct[key] = 0
+    # X axis labels
+    if refs == 'RV11/RV12':
+        x_labels = [(500+i*500) for i in range(0, 3)]
+    if refs == 'RV911/RV912/RV913':
+        x_labels = [(500+i*500) for i in range(0, 5)]
 
-
-def build_graph(dict_m1, dict_m2, dict_m3, ref, parse):
-    """=============================================================================================
-    This function takes a set of dictionaries and graphs them.
-
-    :param dict_m1: dictionary of method 1
-    :param dict_m2: dictionary of method 2
-    :param dict_m3: dictionary of method 3
-    :param ref: reference alignments
-    :param parse: information of interest
-    ============================================================================================="""
-
-    # Vars for graph title
-    if ref == '1':
-        ref = 'RV11/12'
-    elif ref == '9':
-        ref = 'RV911/912/913'
-    if parse == 'id':
-        parse = 'Pairwise Identity'
-    elif parse == 'len':
-        parse = 'Alignment Length'
-
-    # Ignore keys with 0 values
-    x = [key for key in dict_m1.keys() if dict_m1[key] != 0]
-    y1 = [val for val in dict_m1.values() if val != 0]
-    y2 = [val for val in dict_m2.values() if val != 0]
-
-    # When making alignment length plot for references 911/912/913, have to include all values
-    # because the TCS values are 0 for lengths in last bucket
-    y3 = [val for val in dict_m3.values()] #if val != 0]
-
-    # Plot line graph with data points
-    plt.plot(x, y1, label='PEbA', marker='o')
-    plt.plot(x, y2, label='BLOSUM62', marker='o')
-    plt.plot(x, y3, label='DEDAL', marker='o')
-    plt.xlabel(f'{parse}')
-    plt.ylabel('Average TC Score')
-    plt.title(f'Average TC Score vs {parse} in {ref}')
-    plt.legend()
-    plt.grid()
+    # Make single line graph
+    methods = ['PEbA', 'vcMSA', 'BLOSUM62', 'DEDAL']
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    for i, method in enumerate(methods):
+        ax.plot(x_labels, ref_values[i], label=method, marker='o')
+    ax.set_xlabel('Length')
+    ax.set_ylabel('Average SP Score')
+    ax.set_title('Average SP Score for Each Reference')
+    ax.legend()
+    ax.grid(color='grey', linestyle='-', linewidth=0.25)
     plt.show()
 
 
 def main():
-    """=============================================================================================
-    ============================================================================================="""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p1', type=str, default='Data/Alignments/PEBA-BLOSUM')
-    parser.add_argument('-p2', type=str, default='Data/Alignments/PEBA-DEDAL')
-    parser.add_argument('-r', type=str, default='9')
-    parser.add_argument('-t', type=str, default='len')
+    parser.add_argument('-t', type=str, default='len', help='pairwise id (id) or length (len)')
     args = parser.parse_args()
 
-    # Initialize dict based on type of info to be parsed
-    dict_m1 = initialize_dict(args.t)
-    dict_m2 = initialize_dict(args.t)
-    dict_m3 = initialize_dict(args.t)
+    methods = ['local_peba_t5', 'vcmsa', 'local_blosum', 'dedal']
+    ref1_values = []
+    ref2_values = []
 
-    # Run directories
-    runs = sorted(os.listdir(args.p1))
-    if args.r == '1':  # '1' stands for references 11 and 12
-        runs = runs[:2]
-    elif args.r == '9':  # '9' stands for references 911, 912, and 913
-        runs = runs[2:]
+    # Get scores for each reference
+    for method in methods:
 
-    # Parse csv's in each run
-    for run in runs:
-        dict2_m1, dict2_m2 = parse_run(f'{args.p1}/{run}', args.t)
+        table = get_table(method, args.t)
 
-        # Add to running total
-        for key, value in dict_m1.items():
-            value[0] += dict2_m1[key][0]
-            value[1] += dict2_m1[key][1]
-        for key, value in dict_m2.items():
-            value[0] += dict2_m2[key][0]
-            value[1] += dict2_m2[key][1]
+        if args.t == 'id':
+            ref1_values.append(table.iloc[0, :].to_list()[:5])
+            ref2_values.append(table.iloc[1, :].to_list()[:8])
 
-    # Same as above but for DEDAL
-    runs = sorted(os.listdir(args.p2))
-    if args.r == '1':
-        runs = runs[:2]
-    elif args.r == '9':
-        runs = runs[2:]
+        # Ignore last column for RV11/12 because no sequences are 1500+ long
+        if args.t == 'len':
+            ref1_values.append(table.iloc[0, :-2].to_list()[:4])
+            ref2_values.append(table.iloc[1, :].to_list()[:5])
 
-    # Parse csv's in each run
-    for run in runs:
-        dict2_m1, dict2_m2 = parse_run(f'{args.p2}/{run}', args.t)
-        for key, value in dict_m3.items():
-            value[0] += dict2_m2[key][0]
-            value[1] += dict2_m2[key][1]
-
-    # Average values and build graph
-    for dct in [dict_m1, dict_m2, dict_m3]:
-        avg_dict(dct)
-        print(dct)
-    build_graph(dict_m1, dict_m2, dict_m3, args.r, args.t)
+    if args.t == 'id':
+        graph_id(ref1_values, 'RV11/RV12')
+        graph_id(ref2_values, 'RV911/RV912/RV913')
+    if args.t == 'len':
+        graph_len(ref1_values, 'RV11/RV12')
+        graph_len(ref2_values, 'RV911/RV912/RV913')
 
 
 if __name__ == '__main__':
