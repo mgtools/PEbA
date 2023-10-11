@@ -32,7 +32,8 @@ def write_fasta(fa1: str, fa2: str) -> tuple:
     :return (str, str, str, str): sequences and ids
     """
 
-    os.mkdir('data/tmp')
+    if not os.path.exists('data/tmp'):
+        os.mkdir('data/tmp')
 
     # Get fasta sequences and ids from file
     for record in SeqIO.parse(fa1, 'fasta'):

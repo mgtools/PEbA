@@ -37,88 +37,90 @@ def parse_ref(method: str, bucket: str) -> dict:
     return refs
 
 
-def parse_scores_id(scores: dict) -> pd.DataFrame:  #\\NOSONAR
-    """Prints a pandas table of the average SP score for each bucket of pairwise id
+def get_table(value: str, scores: dict) -> pd.DataFrame:
+    """Returns a pandas dataframe with appropriate column names for the desired value
 
+    :param value: value of interest for bucketing (id or len)
     :param scores: dict where key is reference name and value is a list of tuples
-    :return pd.DataFrame: pandas table of average SP score for each bucket
+    :return pd.DataFrame: pandas dataframe
     """
 
-    # Create pandas table with columns for each bucket and rows for each reference
-    table = pd.DataFrame(columns=['0-9', '10-19', '20-29', '30-39', '40-49',
+    if value == 'len':
+        table = pd.DataFrame(columns=['0-499', '500-999', '1000-1499', '1500-1999', '2000-2499'],
+                            index=scores.keys())
+    if value == 'id':
+        table = pd.DataFrame(columns=['0-9', '10-19', '20-29', '30-39', '40-49',
                                     '50-59', '60-69', '70-79', '80-89', '90-99'],
                             index=scores.keys())
-
-    # For each reference in dict, add SP score to appropriate bucket
-    for ref in scores:
-
-        # Create dict of lists for each bucket
-        id_dict = {9: [], 19: [], 29: [], 39: [], 49: [],
-                59: [], 69: [], 79: [], 89: [], 99: []}
-
-        for score in scores[ref]:
-
-            # Add SP score to appropriate bucket
-            for bucket in id_dict:  #pylint: disable=C0206
-                if float(score[0])*100 <= bucket:
-                    id_dict[bucket].append(float(score[1]))
-                    break
-
-        # Get average SP score for each bucket
-        for bucket, score_list in id_dict.items():
-            if len(score_list) <= 10:
-                id_dict[bucket] = 0
-                continue
-            id_dict[bucket] = round(sum(score_list)/len(score_list), 2)
-
-        # Add row to table, each value in dict is a column
-        for i, bucket in enumerate(id_dict):
-            table.iloc[table.index.get_loc(ref), i] = id_dict[bucket]
 
     return table
 
 
-def parse_scores_len(scores: dict) -> pd.DataFrame:  #\\NOSONAR
-    """Prints a pandas table of the average SP score for each bucket of length
+def put_scores(id_dict: dict, scores: dict, ref: str, value: str) -> dict:
+    """Adds SP scores to appropriate bucket in dict
+
+    :param id_dict: dict where key is bucket and value is list of SP scores
+    :param scores: dict where key is reference name and value is a list of tuples
+    :param ref: reference name
+    :param value: value of interest for bucketing (id or len)
+    :return dict: dict where key is bucket and value is list of SP scores
+    """
+
+    for score in scores[ref]:
+
+        # Change value to int if bucketing by length
+        if value == 'len':
+            score = (int(score[0]), float(score[1]))
+        if value == 'id':  # Otherwise change value to a percentage
+            score = (float(score[0])*100, float(score[1]))
+
+        # Add SP score to appropriate bucket
+        for bucket in id_dict:  #pylint: disable=C0206
+            if score[0] <= bucket:
+                id_dict[bucket].append(float(score[1]))
+                break  # Only add to one bucket
+
+    return id_dict
+
+
+def parse_scores(scores: dict, value: str) -> pd.DataFrame:  #\\NOSONAR
+    """Prints a pandas table of the average SP score for each bucket of pairwise id
 
     :param scores: dict where key is reference name and value is a list of tuples
+    :param value: value of interest for bucketing (id or len)
     :return pd.DataFrame: pandas table of average SP score for each bucket
     """
 
-    # Create pandas table with columns for each bucket and rows for each reference
-    table = pd.DataFrame(columns=['0-499', '500-999', '1000-1499', '1500-1999', '2000-2499'],
-                            index=scores.keys())
-
     # For each reference in dict, add SP score to appropriate bucket
+    table = get_table(value, scores)
     for ref in scores:
 
         # Create dict of lists for each bucket
-        len_dict = {499: [], 999: [], 1499: [], 1999: [], 2499: []}
+        if value == 'len':
+            value_dict = {499: [], 999: [], 1499: [], 1999: [], 2499: []}
+        if value == 'id':
+            value_dict = {9: [], 19: [], 29: [], 39: [], 49: [],
+                    59: [], 69: [], 79: [], 89: [], 99: []}
 
-        for score in scores[ref]:
-
-            # Add SP score to appropriate bucket
-            for bucket in len_dict:  #pylint: disable=C0206
-                if int(score[0]) <= bucket:
-                    len_dict[bucket].append(float(score[1]))
-                    break
+        # Add SP score to appropriate bucket
+        value_dict = put_scores(value_dict, scores, ref, value)
 
         # Get average SP score for each bucket
-        for bucket, score_list in len_dict.items():
+        for bucket, score_list in value_dict.items():
             if len(score_list) <= 10:
-                len_dict[bucket] = 0
+                value_dict[bucket] = 0
                 continue
-            len_dict[bucket] = round(sum(score_list)/len(score_list), 2)
+            value_dict[bucket] = round(sum(score_list)/len(score_list), 2)
 
         # Add row to table, each value in dict is a column
-        for i, bucket in enumerate(len_dict):
-            table.iloc[table.index.get_loc(ref), i] = len_dict[bucket]
+        for i, bucket in enumerate(value_dict):
+            table.iloc[table.index.get_loc(ref), i] = value_dict[bucket]
 
     return table
 
 
 def main():
-    """Main
+    """Prints a table of average scores for the desired method
     """
 
     parser = argparse.ArgumentParser()
@@ -127,10 +129,7 @@ def main():
     args = parser.parse_args()
 
     scores = parse_ref(args.d, args.t)
-    if args.t == 'id':
-        table = parse_scores_id(scores)
-    if args.t == 'len':
-        table = parse_scores_len(scores)
+    table = parse_scores(scores, args.t)
     print(table)
 
 

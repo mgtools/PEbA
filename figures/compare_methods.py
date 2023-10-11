@@ -41,6 +41,7 @@ def graph_compare(m1: str, m2: str, ref: str, metric: str, m1_scores: list, m2_s
     # Average the similarity scores to put on the graph, rounding to same decimals as in paper
     m1_avg = round(sum(m1_scores)/len(m1_scores), 3)
     m2_avg = round(sum(m2_scores)/len(m2_scores), 3)
+    metric = metric.upper()
 
     # Get method names
     m1_title = m1.split('/')[-1]
@@ -78,8 +79,8 @@ def main():
     parser.add_argument('-s', type=str, default='sp')
     args = parser.parse_args()
 
-    if not os.path.isdir('data/graphs'):
-        os.makedirs('data/graphs')
+    if not os.path.isdir('figures/graphs'):
+        os.makedirs('figures/graphs')
 
     # Get comparison scores for each set of alignments
     m1_dict = get_scores(args.m1, args.r, args.s)

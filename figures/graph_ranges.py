@@ -5,9 +5,10 @@ __date__ = 10/10/23
 """
 
 import argparse
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
-from make_table import parse_ref, parse_scores_id, parse_scores_len
+from make_table import parse_ref, parse_scores
 
 
 def get_table(method: str, bucket: str) -> pd.DataFrame:
@@ -27,11 +28,7 @@ def get_table(method: str, bucket: str) -> pd.DataFrame:
             new_scores['RV11/RV12'] = new_scores.get('RV11/RV12', []) + score_list  #\\NOSONAR
         elif ref in ['RV911', 'RV912', 'RV913']:
             new_scores['RV911/RV912/RV913'] = new_scores.get('RV911/RV912/RV913', []) + score_list  #\\NOSONAR
-
-    if bucket == 'id':
-        table = parse_scores_id(new_scores)
-    if bucket == 'len':
-        table = parse_scores_len(new_scores)
+    table = parse_scores(new_scores, bucket)
 
     return table
 
@@ -45,13 +42,15 @@ def graph_id(ref_values: list, refs: str):
 
     # X axis labels
     if refs == 'RV11/RV12':
+        savefile = 'refs1'
         x_labels = [i*10 for i in range(1, 6)]
     if refs == 'RV911/RV912/RV913':
+        savefile = 'refs2'
         x_labels = [i*10 for i in range(1, 9)]
 
 
     # Make single line graph
-    methods = ['PEbA', 'BLOSUM62', 'DEDAL', 'vcMSA']
+    methods = ['PEbA', 'vcMSA', 'BLOSUM62', 'DEDAL']
     fig = plt.figure()
     ax = fig.add_subplot()
     for i, method in enumerate(methods):
@@ -61,7 +60,7 @@ def graph_id(ref_values: list, refs: str):
     ax.set_title('Average SP Score for Each Reference')
     ax.legend()
     ax.grid(color='grey', linestyle='-', linewidth=0.25)
-    plt.show()
+    plt.savefig(f'figures/graphs/{savefile}_id.png')
 
 
 def graph_len(ref_values: list, refs: str):
@@ -73,8 +72,10 @@ def graph_len(ref_values: list, refs: str):
 
     # X axis labels
     if refs == 'RV11/RV12':
+        savefile = 'refs1'
         x_labels = [(500+i*500) for i in range(0, 3)]
     if refs == 'RV911/RV912/RV913':
+        savefile = 'refs2'
         x_labels = [(500+i*500) for i in range(0, 5)]
 
     # Make single line graph
@@ -88,14 +89,19 @@ def graph_len(ref_values: list, refs: str):
     ax.set_title('Average SP Score for Each Reference')
     ax.legend()
     ax.grid(color='grey', linestyle='-', linewidth=0.25)
-    plt.show()
+    plt.savefig(f'figures/graphs/{savefile}_len.png')
 
 
 def main():
+    """Main
+    """
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-t', type=str, default='len', help='pairwise id (id) or length (len)')
     args = parser.parse_args()
+
+    if not os.path.isdir('figures/graphs'):
+        os.makedirs('figures/graphs')
 
     methods = ['local_peba_t5', 'vcmsa', 'local_blosum', 'dedal']
     ref1_values = []
@@ -103,9 +109,9 @@ def main():
 
     # Get scores for each reference
     for method in methods:
-
         table = get_table(method, args.t)
 
+        # Table has two rows, one for RV11/RV12 and one for RV911/RV912/RV913
         if args.t == 'id':
             ref1_values.append(table.iloc[0, :].to_list()[:5])
             ref2_values.append(table.iloc[1, :].to_list()[:8])
@@ -115,6 +121,7 @@ def main():
             ref1_values.append(table.iloc[0, :-2].to_list()[:4])
             ref2_values.append(table.iloc[1, :].to_list()[:5])
 
+    # Graphing id and length differently
     if args.t == 'id':
         graph_id(ref1_values, 'RV11/RV12')
         graph_id(ref2_values, 'RV911/RV912/RV913')
