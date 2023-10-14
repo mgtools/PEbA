@@ -55,9 +55,9 @@ def graph_id(ref_values: list, refs: str):
     ax = fig.add_subplot()
     for i, method in enumerate(methods):
         ax.plot(x_labels, ref_values[i], label=method, marker='o')
-    ax.set_xlabel('Pairwise Identity')
+    ax.set_xlabel('Pairwise Identity (%)')
     ax.set_ylabel('Average SP Score')
-    ax.set_title('Average SP Score for Each Reference')
+    ax.set_title(f'Average SP Score vs. Pairwise Identity in {refs}')
     ax.legend()
     ax.grid(color='grey', linestyle='-', linewidth=0.25)
     plt.savefig(f'figures/graphs/{savefile}_id.png')
@@ -84,9 +84,9 @@ def graph_len(ref_values: list, refs: str):
     ax = fig.add_subplot()
     for i, method in enumerate(methods):
         ax.plot(x_labels, ref_values[i], label=method, marker='o')
-    ax.set_xlabel('Length')
+    ax.set_xlabel('Alignment Length')
     ax.set_ylabel('Average SP Score')
-    ax.set_title('Average SP Score for Each Reference')
+    ax.set_title(f'Average SP Score vs. Alignment Length in {refs}')
     ax.legend()
     ax.grid(color='grey', linestyle='-', linewidth=0.25)
     plt.savefig(f'figures/graphs/{savefile}_len.png')
