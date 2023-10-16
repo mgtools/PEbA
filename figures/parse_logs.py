@@ -6,6 +6,9 @@ __date__ = "10/12/23"
 
 import argparse
 from datetime import datetime
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.metrics import r2_score
 from Bio import SeqIO
 
 
@@ -102,6 +105,39 @@ def parse_align_log(logfile: str) -> dict:
     return times
 
 
+def plot_times(times: dict):
+    """Plots the times to align each pair of sequences
+
+    :param times: dict where key is alignment and value is time to align
+    """
+
+     # Plot times vs length
+    x, y = [], []
+    for (length, time) in times.values():
+        if time < 0:
+            continue
+        if time > 70:
+            continue
+        x.append(length)
+        y.append(time)
+    plt.scatter(x, y, alpha=0.5)
+    plt.xlabel('Length')
+    plt.ylabel('Time (seconds)')
+    plt.title('vcMSA Alignment Time vs. Sequence Length')
+
+    # Polynomial fit
+    model = np.poly1d(np.polyfit(x, y, 2))
+    line = np.linspace(0, 2250, 1000)
+    plt.plot(line, model(line), 'r--')
+    r2 = r2_score(y, model(x))
+    print(model.coeffs, r2)
+
+    # Display with text
+    plt.text(1150, 20, 'y = 3.07e-6 x^2 + 1.71e-2 x + 0.67')
+    plt.text(1150, 17, f'R^2 = {r2:.2f}')
+    plt.show()
+
+
 def main():
     """Main
     """
@@ -109,9 +145,9 @@ def main():
     # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('-sl1', type=str, default='data/alignments/local_peba_t5/RV911_sp.log')
-    parser.add_argument('-sl2', type=str, default='data/alignments/local_blosum/RV911_sp.log')
+    parser.add_argument('-sl2', type=str, default='data/alignments/vcmsa/RV911_sp.log')
     parser.add_argument('-al1', type=str, default='/home/ben/Desktop/peba_vcmsa_time/RV911/get_aligns_peba.log')
-    parser.add_argument('-al2', type=str, default='/home/ben/Desktop/blosum_vcmsa_time/RV911/get_aligns_vcmsa.log')
+    parser.add_argument('-al2', type=str, default='/home/ben/Desktop/peba_vcmsa_time/RV911/get_aligns_vcmsa.log')
     args = parser.parse_args()
 
     # Get SP scores from log files
@@ -122,22 +158,8 @@ def main():
     #compare_zeros(scores1, scores2)
 
     # Get times from log files
-    times1 = parse_align_log(args.al1)
-    print(times1)
-    
-    # Plot times vs length
-    import matplotlib.pyplot as plt
-    x, y = [], []
-    for (length, time) in times1.values():
-        if time < 0:
-            continue
-        x.append(length)
-        y.append(time)
-
-    plt.scatter(x, y)
-    plt.xlabel('Length')
-    plt.ylabel('Time')
-    plt.show()
+    times1 = parse_align_log(args.al2)
+    plot_times(times1)
 
 
 if __name__ == '__main__':
