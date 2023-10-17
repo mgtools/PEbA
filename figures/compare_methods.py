@@ -65,7 +65,7 @@ def graph_compare(m1: str, m2: str, ref: str, metric: str, m1_scores: list, m2_s
     ax.set_ylabel(f'{m1_title}')
     ax.legend([f'{m2_title} Avg {metric}: {m2_avg}', f'{m1_title} Avg {metric}: {m1_avg}'])
     plt.plot([0, 1], [0, 1], color='black')
-    plt.savefig(f'data/graphs/{m1_title}-{m2_title}-{ref}-comparison-{metric}.png')
+    plt.savefig(f'figures/graphs/{m1_title}-{m2_title}-{ref}-comparison-{metric}.png')
 
 
 def main():
