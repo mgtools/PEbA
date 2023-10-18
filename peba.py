@@ -8,9 +8,10 @@ __date__ = 09/19/23
 import argparse
 import torch
 import numpy as np
+import sys
 from transformers import T5EncoderModel, T5Tokenizer
-from embed_seqs import prot_t5xl_embed
-import utility as ut
+import scripts.utility as ut
+from scripts.embed_seqs import prot_t5xl_embed
 
 
 def score_align(seq1: str, seq2: str, vecs1: list, vecs2:list,
@@ -73,19 +74,34 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--align', type=str, default='local', help='Alignment algorithm to use (global or local)')
-    parser.add_argument('-f1', '--file1', type=str, help='First fasta file')
-    parser.add_argument('-f2', '--file2', type=str, help='Second fasta file')
-    parser.add_argument('-e1', '--embed1', type=str, default='n', help='First embedding file')
-    parser.add_argument('-e2', '--embed2', type=str, default='n', help='Second embedding file')
-    parser.add_argument('-go', '--gopen', type=float, default=-11, help='Gap open penalty')
-    parser.add_argument('-ge', '--gext', type=float, default=-1, help='Gap extension penalty')
-    parser.add_argument('-e', '--encoder', type=str, default='ProtT5', help='Encoder used')
-    parser.add_argument('-o', '--output', type=str, default='msf', help='Output format')
-    parser.add_argument('-s', '--savefile', type=str, default='n', help='File to save alignment')
+    parser.add_argument('-a', '--align', type=str, default='local',
+                         help='Alignment algorithm to use ("global" or "local"), defaults to local')
+    parser.add_argument('-f1', '--file1', type=str,
+                         help='Path to first sequence fasta file')
+    parser.add_argument('-f2', '--file2', type=str,
+                         help='Path to second sequence fasta file')
+    parser.add_argument('-e1', '--embed1', type=str, default='n',
+                         help='Path to first sequence embedding file (.txt)')
+    parser.add_argument('-e2', '--embed2', type=str, default='n',
+                         help='Path to second sequence embedding file (.txt)')
+    parser.add_argument('-go', '--gopen', type=float, default=-11,
+                         help='Gap opening penalty (int/float), defaults to -11')
+    parser.add_argument('-ge', '--gext', type=float, default=-1,
+                         help='Gap extension penalty (int/float), defaults to -1')
+    parser.add_argument('-e', '--encoder', type=str, default='ProtT5',
+                        help='Encoder model used to generate embeddings, defaults to ProtT5')
+    parser.add_argument('-o', '--output', type=str, default='msf'
+                        , help='Output format ("msf" or "fa"), defaults to msf')
+    parser.add_argument('-s', '--savefile', type=str, default='n',
+                         help='Filepath to save alignment, defaults to stdout')
     args = parser.parse_args()
 
-    # Load fasta files and ids
+    # Check for valid arguments
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(1)
+
+    # Load fasta files and ids, embed sequences if not provided
     seq1, id1 = ut.parse_fasta(args.file1)
     seq2, id2 = ut.parse_fasta(args.file2)
 
@@ -113,7 +129,7 @@ def main():
 
     # Write align based on desired output format
     if args.output == 'msf':
-        ut.write_msf(align1, align2, id1, id2, f'{args.encoder}_Sim',
+        ut.write_msf(align1, align2, id1, id2, args.encoder,
                    args.gopen, args.gext, args.savefile, beg, end)
     if args.output == 'fa':
         ut.write_fasta(align1, align2, id1, id2, args.savefile)

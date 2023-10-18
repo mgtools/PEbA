@@ -29,7 +29,7 @@ have already been been embedded and saved as a numpy array:
 Embeddings from any model can be used as long as the embeddings are a 1D array the same length as the sequence.
 peba.py loads embeddings using numpy.loadtext(), so if you are pre-generating your own embeddings make sure they
 are compatible with said numpy function. The -encoder argument is used to specify the model used and written to
-the output for reference.
+output for later reference.
 
 **************************************************************************************************************
 # Installing Requirements
@@ -40,11 +40,10 @@ To install PEbA, clone this repository and install the necessary requirements.
 ```
 git clone https://github.com/mgtools/PEbA.git
 cd PEbA
-pip install -r base_requirements.txt
+pip install -r requirements.txt
 ```
 
-This project was developed using python 3.10.6. Necessary requirements for running PEbA can be installed from
-requirements.txt.
+This project was developed using python 3.10.6.
 
 **************************************************************************************************************
 # Running PEbA
@@ -53,7 +52,7 @@ requirements.txt.
 An example of running PEbA with two fasta files and their corresponding embeddings is shown below:
 
 ```
-python scripts/peba.py -f1 data/example/1j46_A.fa -f2 data/example/1k99_A.fa -e1 data/example/1j46_A.txt -e2 data/example/1k99_A.txt
+python peba.py -f1 data/example/1j46_A.fa -f2 data/example/1k99_A.fa -e1 data/example/1j46_A.txt -e2 data/example/1k99_A.txt
 ```
 
 On default settings, this will produce the following output in the console:
