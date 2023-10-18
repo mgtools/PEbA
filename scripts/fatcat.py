@@ -78,10 +78,10 @@ def main():
     """
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f1', type=str, default='data/pdb/BB11036/1rvk_A.pdb')
-    parser.add_argument('-f2', type=str, default='data/pdb/BB11036/2mnr_.pdb')
+    parser.add_argument('-f1', type=str)
+    parser.add_argument('-f2', type=str)
     parser.add_argument('-o', '--output', type=str, default='msf')
-    parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop')
+    parser.add_argument('-sf', '--savefile', type=str)
     args = parser.parse_args()
 
     align1, align2, beg, end = fatcat(args.f1, args.f2)

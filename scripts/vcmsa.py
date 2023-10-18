@@ -116,7 +116,7 @@ def main():
     parser.add_argument('-f1', type=str, default='data/sequences/RV11/BB11002/1abo_A.fa')
     parser.add_argument('-f2', type=str, default='data/sequences/RV11/BB11002/1bb9_.fa')
     parser.add_argument('-o', '--output', type=str, default='msf')
-    parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop')
+    parser.add_argument('-sf', '--savefile', type=str)
     args = parser.parse_args()
 
     get_model()

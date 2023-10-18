@@ -146,8 +146,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-sl1', type=str, default='data/alignments/local_peba_t5/RV911_sp.log')
     parser.add_argument('-sl2', type=str, default='data/alignments/vcmsa/RV911_sp.log')
-    parser.add_argument('-al1', type=str, default='/home/ben/Desktop/peba_vcmsa_time/RV911/get_aligns_peba.log')
-    parser.add_argument('-al2', type=str, default='/home/ben/Desktop/peba_vcmsa_time/RV911/get_aligns_vcmsa.log')
+    parser.add_argument('-al1', type=str)
+    parser.add_argument('-al2', type=str)
     args = parser.parse_args()
 
     # Get SP scores from log files

@@ -64,14 +64,14 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', '--align', type=str, default='local', help='Alignment algorithm to use (global or local)')
-    parser.add_argument('-f1', '--file1', type=str, help='Name of first fasta file', default='Data/Example/1j46_A.fa')
-    parser.add_argument('-f2', '--file2', type=str, help='Name of second fasta file', default='Data/Example/1k99_A.fa')
+    parser.add_argument('-f1', '--file1', type=str, help='Name of first fasta file')
+    parser.add_argument('-f2', '--file2', type=str, help='Name of second fasta file')
     parser.add_argument('-go', '--gopen', type=float, default=-11, help='Penalty for opening a gap')
     parser.add_argument('-ge', '--gext', type=float, default=-1, help='Penalty for extending a gap')
     parser.add_argument('-m', '--matrix', type=str, default='blosum', help='Substitution matrix to use (blosum or pfasum)')
     parser.add_argument('-s', '--score', type=int, default=62, help='Log odds score of subsitution matrix')
     parser.add_argument('-o', '--output', type=str, default='msf', help='Output format (msf or fa)')
-    parser.add_argument('-sf', '--savefile', type=str, default='/home/ben/Desktop', help='Filename to save alignment to')
+    parser.add_argument('-sf', '--savefile', type=str, help='Filename to save alignment to')
     args = parser.parse_args()
 
     # Parse fasta files for sequences and ids
